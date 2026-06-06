@@ -28,13 +28,13 @@ const extendedItems = [...carouselItems, ...carouselItems, ...carouselItems];
 ---
 
 <div class="relative overflow-hidden w-full py-xl group">
-  <div id="project-track" class="flex gap-lg overflow-x-auto snap-x snap-mandatory scrollbar-hide px-lg md:px-xxl cursor-grab active:cursor-grabbing select-none">
+  <div id="project-track" class="flex gap-lg overflow-x-auto scrollbar-hide px-lg md:px-xxl cursor-grab active:cursor-grabbing select-none">
     {extendedItems.map((item) => (
       <a 
         href={item.href} 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="flex-shrink-0 w-[350px] aspect-video overflow-hidden transition-all duration-500 hover:scale-[1.02] snap-center"
+        class="flex-shrink-0 w-[350px] aspect-video overflow-hidden transition-all duration-500 hover:scale-[1.02]"
       >
         <img 
           src={item.src} 

@@ -8,12 +8,15 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   site: "https://selvaggiesteban.dev",
+  output: "server",
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [sitemap()],
   adapter: cloudflare({
-    imageService: 'cloudflare'
+    imageService: 'cloudflare',
+    platformProxy: {
+      enabled: false
+    }
   })
 });

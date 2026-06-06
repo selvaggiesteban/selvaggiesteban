@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const title = "Blog";
+const description = "Artículos sobre diseño web, SEO y tecnología.";
+---
+
+<BaseLayout {title} {description}>
+  <Section>
+    <h1 class="display-lg mb-xl">Blog</h1>
+    <div class="space-y-xl">
+      {posts.map(post => (
+        <article class="max-w-3xl">
+          <span class="font-mono text-xs uppercase tracking-widest text-ink/40">
+            {post.data.pubDate.toLocaleDateString('es-AR', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
+          <a href={`/blog/${post.id}`} class="block group">
+            <h2 class="text-3xl font-bold mt-sm group-hover:text-primary transition-colors">{post.data.title}</h2>
+          </a>
+          <p class="mt-md text-ink/70 leading-relaxed">{post.data.description}</p>
+          <a href={`/blog/${post.id}`} class="inline-block mt-md font-medium hover:underline">Leer más →</a>
+        </article>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

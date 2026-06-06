@@ -1,0 +1,70 @@
+---
+import Section from './Section.astro';
+
+const posts = [
+  {
+    date: "Hace 2 días",
+    content: "La ingeniería de software no se trata solo de escribir código, sino de construir sistemas robustos, escalables y mantenibles. En mi última auditoría de rendimiento...",
+    tags: "#SoftwareEngineering #Performance #Astro",
+    likes: 42,
+    comments: 12
+  },
+  {
+    date: "Hace 1 semana",
+    content: "Optimizar el SEO técnico es fundamental para el éxito de cualquier proyecto web moderno. No es solo meta-tags, es la estructura del DOM, la velocidad de carga y la accesibilidad.",
+    tags: "#SEO #WebDevelopment #GoogleSearch",
+    likes: 85,
+    comments: 24
+  },
+  {
+    date: "Hace 2 semanas",
+    content: "Integrar Agentes de IA en flujos de trabajo reales está transformando la productividad de los equipos de desarrollo. Aquí les comparto mi experiencia usando Gemini CLI.",
+    tags: "#AI #Productivity #Automation",
+    likes: 120,
+    comments: 31
+  }
+];
+---
+
+<Section variant="white" id="recent-posts" class="reveal">
+  <div class="grid lg:grid-cols-12 gap-xl items-start">
+    {/* Left Column: Heading */}
+    <div class="lg:col-span-4 sticky top-24">
+      <h2 class="display-lg mb-md">Publicaciones recientes</h2>
+      <p class="text-xl text-ink/60 mb-6">Compartiendo conocimiento y avances sobre ingeniería de software e IA.</p>
+      <div class="pt-6 border-t border-hairline">
+        <a href="https://www.linkedin.com/in/selvaggiesteban/" target="_blank" class="btn-secondary w-full justify-center">
+          Seguir en LinkedIn
+        </a>
+      </div>
+    </div>
+
+    {/* Right Column: LinkedIn Style Posts */}
+    <div class="lg:col-span-8 space-y-6">
+      {posts.map(post => (
+        <div class="bg-[#f9f9f9] p-lg rounded-[5px] border border-hairline shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">ES</div>
+            <div>
+              <span class="font-bold text-sm block">Esteban Selvaggi</span>
+              <span class="text-xs text-ink/40">{post.date}</span>
+            </div>
+          </div>
+          <p class="text-sm text-ink/80 leading-relaxed mb-4">
+            {post.content}
+          </p>
+          <p class="text-sm text-primary font-medium mb-4">
+            {post.tags}
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-hairline-soft text-xs text-ink/40 font-medium">
+            <div class="flex gap-4">
+              <span>👍 {post.likes}</span>
+              <span>💬 {post.comments}</span>
+            </div>
+            <span>Ver publicación original →</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>

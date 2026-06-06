@@ -1,0 +1,46 @@
+---
+import Container from './Container.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-canvas border-t border-hairline py-section">
+  <Container>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-xl">
+      <div class="col-span-2">
+        <a href="/" class="text-2xl font-bold tracking-tighter">selvaggiesteban.dev</a>
+        <p class="mt-md text-sm text-ink/60 mb-md">
+          Ingeniero informático especializado en ingeniería de software
+        </p>
+        <ul class="space-y-sm text-sm text-ink/80">
+          <li><a href="/cv/ingeniero-informatico" class="hover:underline text-primary">Ingeniero informático UBA</a></li>
+          <li><a href="/cv/ingeniero-en-software" class="hover:underline text-primary">Ingeniero en software</a></li>
+          <li><a href="/cv/disenador-web" class="hover:underline text-primary">Diseñador web</a></li>
+          <li><a href="/cv/experto-seo" class="hover:underline text-primary">Experto en posicionamiento SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-md">Proyecto</h4>
+        <ul class="space-y-sm text-sm">
+          <li><a href="/servicios" class="hover:underline">Servicios</a></li>
+          <li><a href="/blog" class="hover:underline">Blog</a></li>
+          <li><a href="/productos" class="hover:underline">Productos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-md">Contacto</h4>
+        <ul class="space-y-sm text-sm">
+          <li><a href="/contacto" class="hover:underline">Formulario</a></li>
+          <li><a href="https://wa.me/1153323937" class="hover:underline">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-xl pt-xl border-t border-hairline-soft flex flex-col md:flex-row justify-between text-xs text-ink/40 uppercase tracking-widest font-mono">
+      <span>© {year} Esteban Selvaggi</span>
+      <div class="flex gap-lg mt-md md:mt-0">
+        <a href="/privacidad">Privacidad</a>
+        <a href="/terminos">Términos</a>
+      </div>
+    </div>
+  </Container>
+</footer>

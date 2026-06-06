@@ -1,0 +1,36 @@
+{
+  "name": "receptive-resonance",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.6.1",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.4",
+    "tailwindcss": "^4.3.0",
+    "wrangler": "^4.98.0"
+  },
+  "overrides": {
+    "vite": "^7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.60.1",
+    "@typescript-eslint/parser": "^8.60.1",
+    "axios": "^1.17.0",
+    "cheerio": "^1.2.0",
+    "eslint": "^10.4.1",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}

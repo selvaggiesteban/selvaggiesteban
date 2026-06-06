@@ -1,0 +1,111 @@
+---
+import Container from './Container.astro';
+import Button from './Button.astro';
+
+const navLinks = [
+  { href: '/', label: 'Inicio' },
+  { href: '/sobre-mi', label: 'Sobre mí' },
+  { 
+    label: 'Servicios', 
+    href: '/servicios',
+    dropdown: [
+      { href: '/ingeniero-de-software', label: 'Software a medida' },
+      { href: '/disenador-web', label: 'Diseño web' },
+      { href: '/experto-seo', label: 'Posicionamiento SEO' },
+    ]
+  },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contacto', label: 'Contacto' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-hairline h-[56px] flex items-center">
+  <Container class="flex justify-between items-center w-full">
+    <a href="/" class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
+    
+    <nav class="hidden md:flex gap-lg items-center text-sm font-medium">
+      {navLinks.map(link => (
+        <div class="relative group h-[56px] flex items-center">
+          <a href={link.href} class="hover:text-primary transition-colors flex items-center gap-1">
+            {link.label}
+            {link.dropdown && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+            )}
+          </a>
+          
+          {link.dropdown && (
+            <div class="absolute top-[56px] left-1/2 -translate-x-1/2 w-48 bg-white border border-hairline shadow-xl rounded-b-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2">
+              {link.dropdown.map(subItem => (
+                <a href={subItem.href} class="block px-4 py-2 hover:bg-surface-soft hover:text-primary transition-colors whitespace-nowrap">
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+      <Button href="/contacto" variant="secondary" class="!py-1.5 !text-sm ml-2">Empezar</Button>
+    </nav>
+
+    <button id="menu-toggle" class="md:hidden p-2 z-50" aria-label="Menu" aria-expanded="false">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </Container>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-canvas z-40 flex flex-col items-center justify-center gap-6 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-20 pb-10 px-6 text-center">
+    {navLinks.map(link => (
+      <div class="w-full">
+        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
+        {link.dropdown && (
+          <div class="flex flex-col gap-2 mt-2 bg-surface-soft py-4 rounded-xl">
+            {link.dropdown.map(subItem => (
+              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+    <Button href="/contacto" variant="primary" class="mt-4 w-full max-w-[280px]">Empezar ahora</Button>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let isMenuOpen = false;
+
+  menuToggle?.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      mobileMenu?.classList.remove('translate-x-full');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      menuToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu?.classList.add('translate-x-full');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      document.body.style.overflow = '';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when clicking a link (if not a parent with dropdown in mobile - but here we close on all for simplicity)
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      isMenuOpen = false;
+      mobileMenu?.classList.add('translate-x-full');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      document.body.style.overflow = '';
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

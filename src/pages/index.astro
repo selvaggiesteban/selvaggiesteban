@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import ProjectCarousel from '../components/ProjectCarousel.astro';
+import SkillsSection from '../components/SkillsSection.astro';
+import ReviewsCarousel from '../components/ReviewsCarousel.astro';
+import RecentPosts from '../components/RecentPosts.astro';
+import RecommendedPosts from '../components/RecommendedPosts.astro';
+
+const title = "Diseño Web de Excelencia";
+const description = "Desarrollo de sitios web estáticos, rápidos y optimizados para SEO con Astro y Cloudflare.";
+---
+
+<BaseLayout {title} {description}>
+  <!-- Hero Section -->
+  <Section variant="white" class="pt-24 pb-16 reveal">
+    <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+      <h1 class="display-xl mb-md font-bold">
+        Ingeniero informático <span class="text-primary/60">Esteban Selvaggi</span>
+      </h1>
+      <p class="text-xl text-ink/70 mb-xl max-w-2xl">
+        Ingeniero informático especializado en ingenieria de software residiendo en Buenos Aires, Argentina con 8 años de experiencia
+      </p>
+      <div class="flex flex-wrap justify-center gap-md">
+        <Button href="/contacto">Empezar ahora</Button>
+        <Button href="/servicios" variant="secondary">Ver servicios</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Project Carousel (Full Width) -->
+  <Section variant="white" class="reveal !py-0" fullWidth={true}>
+    <ProjectCarousel />
+  </Section>
+
+  <!-- Skills Section -->
+  <div class="reveal">
+    <SkillsSection />
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reveal">
+    <ReviewsCarousel />
+  </div>
+
+  <!-- Recent Posts Section -->
+  <RecentPosts />
+
+  <!-- Recommended Section (NVIDIA Style) -->
+  <RecommendedPosts />
+</BaseLayout>

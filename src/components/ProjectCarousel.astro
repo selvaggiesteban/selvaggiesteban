@@ -1,0 +1,59 @@
+---
+const carouselItems = [
+  { href: "https://centraldeturbos.com/", src: "/assets/carousel/centraldeturbos.webp" },
+  { href: "https://alquiriasolutions.com/", src: "/assets/carousel/alquiriasolutions.webp" },
+  { href: "https://acuatika25.com.ar/", src: "/assets/carousel/acuatika.webp" },
+  { href: "https://ntkic.com/", src: "/assets/carousel/ntkic.webp" },
+  { href: "https://depaoli.com.ar/", src: "/assets/carousel/depaoli.webp" },
+  { href: "https://consulting-21.com/", src: "/assets/carousel/consulting-21.webp" },
+  { href: "https://saute.es/", src: "/assets/carousel/saute.webp" },
+  { href: "https://matiasgarcetesuarez.com.ar/", src: "/assets/carousel/matiasgarcetesuarez.webp" },
+  { href: "https://talaiotaudio.com/", src: "/assets/carousel/talaiotaudio.webp" },
+  { href: "https://alphatelservices.com/", src: "/assets/carousel/alphatelservices.webp" },
+  { href: "https://draandreamamani.com/", src: "/assets/carousel/draandreamamani.webp" },
+  { href: "https://cvela2017.com/", src: "/assets/carousel/cvela2017.webp" },
+  { href: "https://piscinasluciano.com.ar/", src: "/assets/carousel/piscinasluciano.webp" },
+  { href: "https://petruscigars.com/", src: "/assets/carousel/petruscigars.webp" },
+  { href: "https://yourdream.ae/", src: "/assets/carousel/yourdream.webp" },
+  { href: "https://watervan.com.ar/", src: "/assets/carousel/watervan.webp" },
+  { href: "https://pescaolidvalladolid.com/", src: "/assets/carousel/pescaolidvalladolid.webp" },
+  { href: "https://rocadeguiapsicologia.es/", src: "/assets/carousel/rocadeguiapsicologia.webp" },
+  { href: "https://semikongarden.com.ar/", src: "/assets/carousel/semikongarden.webp" },
+  { href: "https://semikon.com.ar/", src: "/assets/carousel/semikon.webp" },
+  { href: "https://seararefrigeracion.com.ar/", src: "/assets/carousel/seararefrigeracion.webp" },
+];
+
+// Duplicamos 3 veces para asegurar un loop infinito sin huecos en pantallas anchas
+const extendedItems = [...carouselItems, ...carouselItems, ...carouselItems];
+---
+
+<div class="relative overflow-hidden w-full py-xl">
+  <div class="carousel-track flex gap-lg animate-scroll hover:[animation-play-state:paused]">
+    {extendedItems.map((item) => (
+      <a 
+        href={item.href} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="flex-shrink-0 w-[350px] aspect-video overflow-hidden transition-all duration-500 group"
+      >
+        <img 
+          src={item.src} 
+          alt="Proyecto de diseño web" 
+          class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+          loading="lazy"
+        />
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 21 - 1.5rem * 21)); }
+  }
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+    width: max-content;
+  }
+</style>

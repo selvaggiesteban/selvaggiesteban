@@ -1,0 +1,141 @@
+---
+import Section from './Section.astro';
+
+const skillCategories = [
+  {
+    title: "Desarrollo frontend",
+    skills: [
+      { name: "React", icon: "/assets/skills/react.svg" },
+      { name: "Vue.js", icon: "/assets/skills/vue.svg" },
+      { name: "JavaScript", icon: "/assets/skills/js.svg" },
+      { name: "HTML5", icon: "/assets/skills/html5.svg" },
+      { name: "CSS3", icon: "/assets/skills/css3.svg" },
+      { name: "Sass", icon: "/assets/skills/sass.svg" },
+      { name: "Vite", icon: "/assets/skills/vite.webp" },
+      { name: "Bootstrap", icon: "/assets/skills/bootstrap.webp" },
+      { name: "Astro", icon: "https://cdn.worldvectorlogo.com/logos/astro.svg" },
+      { name: "Tailwind CSS", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" }
+    ]
+  },
+  {
+    title: "Desarrollo backend",
+    skills: [
+      { name: "PHP", icon: "/assets/skills/php.svg" },
+      { name: "Laravel", icon: "/assets/skills/laravel.svg" },
+      { name: "CodeIgniter", icon: "/assets/skills/codeigniter.svg" },
+      { name: "Python", icon: "/assets/skills/python.svg" },
+      { name: "Firebase", icon: "/assets/skills/firebase.svg" },
+    ]
+  },
+  {
+    title: "APIs e integraciones",
+    skills: [
+      { name: "REST API", icon: "/assets/skills/fastapi.svg" },
+      { name: "GraphQL", icon: "/assets/skills/graphql.svg" },
+      { name: "Stripe", icon: "/assets/skills/stripe.svg" },
+      { name: "Mercado Pago", icon: "/assets/skills/mercadopago.webp" },
+      { name: "WhatsApp API", icon: "/assets/skills/whatsapp.webp" },
+      { name: "Resend", icon: "https://resend.com/static/brand/resend-icon-black.svg" }
+    ]
+  },
+  {
+    title: "Bases de datos",
+    skills: [
+      { name: "MySQL", icon: "/assets/skills/mysql.svg" },
+      { name: "SQLite", icon: "/assets/skills/sqlite.webp" },
+      { name: "PostgreSQL", icon: "/assets/skills/postgresql.svg" },
+      { name: "MongoDB", icon: "/assets/skills/mongodb.svg" },
+    ]
+  },
+  {
+    title: "Despliegue e infraestructura",
+    skills: [
+      { name: "Docker", icon: "/assets/skills/docker.svg" },
+      { name: "GitHub Actions", icon: "/assets/skills/githubactions.svg" },
+      { name: "Google Cloud", icon: "/assets/skills/googlecloud.svg" },
+      { name: "Nginx", icon: "/assets/skills/nginx.svg" },
+      { name: "Plesk", icon: "/assets/skills/plesk.svg" },
+      { name: "VPS Linux", icon: "/assets/skills/linux.svg" },
+      { name: "Node.js", icon: "/assets/skills/node.webp" },
+      { name: "CF Pages", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" },
+      { name: "CF Functions", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" },
+      { name: "CF Turnstile", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" }
+    ]
+  },
+  {
+    title: "Inteligencia artificial y automatizaciones",
+    skills: [
+      { name: "OpenAI", icon: "/assets/skills/openai.svg" },
+      { name: "Gemini", icon: "/assets/skills/gemini.png" },
+      { name: "Claude", icon: "/assets/skills/claude.webp" },
+      { name: "Ollama", icon: "/assets/skills/ollama.webp" },
+      { name: "n8n", icon: "/assets/skills/n8n.svg" },
+    ]
+  },
+  {
+    title: "Productividad",
+    skills: [
+      { name: "VS Code", icon: "/assets/skills/vscode.webp" },
+      { name: "Trello", icon: "/assets/skills/trello.webp" },
+      { name: "Monday", icon: "/assets/skills/monday.svg" },
+      { name: "ClickUp", icon: "/assets/skills/clickup.webp" },
+    ]
+  },
+  {
+    title: "Gestión de contenido",
+    skills: [
+      { name: "WordPress", icon: "/assets/skills/wordpress.webp" },
+      { name: "Elementor", icon: "/assets/skills/elementor.webp" },
+      { name: "WooCommerce", icon: "/assets/skills/woocommerce.svg" },
+      { name: "PrestaShop", icon: "/assets/skills/prestashop.webp" },
+      { name: "Tienda Nube", icon: "/assets/skills/tiendanube.jpeg" },
+      { name: "Shopify", icon: "/assets/skills/shopify.svg" },
+    ]
+  },
+  {
+    title: "SEO y analítica",
+    skills: [
+      { name: "Google Analytics", icon: "/assets/skills/analytics.svg" },
+      { name: "Search Console", icon: "/assets/skills/searchconsole.svg" },
+      { name: "Tag Manager", icon: "/assets/skills/tagmanager.svg" },
+      { name: "PageSpeed", icon: "/assets/skills/pagespeed.svg" },
+      { name: "Looker Studio", icon: "https://cdn.worldvectorlogo.com/logos/looker-1.svg" }
+    ]
+  }
+];
+---
+
+<Section variant="white" id="skills">
+  {/* Header Row: 2 Columns */}
+  <div class="grid lg:grid-cols-2 gap-xl mb-16 items-start">
+    <div>
+      <h2 class="display-lg mb-md">Habilidades en diseño web profesional</h2>
+      <p class="text-xl text-ink/60 mb-[30px]">Tecnologías de vanguardia para resultados de excelencia.</p>
+    </div>
+    <div>
+      <h3 class="display-md mb-md">Optimizado para el éxito.</h3>
+      <p class="text-xl text-ink/60 mb-[30px]">
+        Cada línea de código pensada para el rendimiento.
+      </p>
+    </div>
+  </div>
+
+  {/* Skills Grid: Full Width (Original 3 Columns) */}
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl">
+    {skillCategories.map(category => (
+      <div class="bg-[#ffffff] p-lg rounded-[5px] border border-hairline flex flex-col h-full">
+        <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-lg border-b border-hairline pb-4 text-center">{category.title}</h4>
+        <div class="flex flex-wrap gap-md items-center justify-start py-4">
+          {category.skills.map(skill => (
+            <div class="flex flex-col items-center gap-xs group w-[calc(33.333%-1rem)] min-w-[70px]">
+              <div class="w-[57px] h-[57px] flex items-center justify-center bg-canvas rounded-[5px] border border-hairline transition-colors p-[4.5px]">
+                <img src={skill.icon} alt={skill.name} class="w-[48px] h-[48px] object-contain filter grayscale group-hover:grayscale-0 transition-all" />
+              </div>
+              <span class="text-[10px] font-medium text-ink/60 text-center line-clamp-1">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>

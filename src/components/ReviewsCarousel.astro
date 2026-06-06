@@ -1,0 +1,310 @@
+---
+import Section from './Section.astro';
+
+const reviews = [
+  {
+    name: "Gian Serrudo",
+    rating: 5,
+    color: "bg-block-lime",
+    text: "Super profesional! Y super atento. Su conocimiento y experiencia con páginas web lo hace alguien super recomendable. Me ayudo a diseñar páginas web para mi negocio y configurarlas desde 0. Si necesitan a alguien para esto llamen a Esteban."
+  },
+  {
+    name: "Aurelia Mood",
+    rating: 5,
+    color: "bg-block-lilac",
+    text: "Tuve la oportunidad de trabajar con Esteban para el diseño y optimización de mi tienda online, y no podría estar más satisfecha con el resultado. Desde el primer momento, la atención fue excepcional. Se tomó el tiempo necesario para entender mis necesidades y objetivos, demostrando una paciencia y dedicación admirables. Los resultados fueron magníficos, gracias!"
+  },
+  {
+    name: "Gabriel Cantero Martínez",
+    rating: 5,
+    color: "bg-block-mint",
+    text: "Contacté a Esteban porque no sabía muy bien cómo desarrollar mi web, y en todo momento demostró ser súper paciente y profesional. Debo de agradecerle lo bien que me ha orientado y explicado cada paso que ha ido dando en el proyecto. Recomendable 100%"
+  },
+  {
+    name: "Carol Venice",
+    rating: 5,
+    color: "bg-block-cream",
+    text: "Contar con Esteban en NICE Diseño y Comunicación, nos permite asegurar que los desarrollos web de nuestros clientes lograrán su máximo cometido a través de un proceso de trabajo súper transparente, respetuoso y profesional. Además Esteban siempre está un paso adelante de las nuevas tecnologías y aplicaciones, dándonos la posibilidad de mejorar en forma contínua nuestros servicios."
+  },
+  {
+    name: "Arlet Lizana",
+    rating: 5,
+    color: "bg-block-pink",
+    text: "Contacté a Esteban ya que necesitaba mejorar y terminar el diseño web de mi tienda que otra persona dejó a medias, Esteban lo solucionó y todo perfecto. Rapidez, responsabilidad y confianza."
+  },
+  {
+    name: "Mario Falcón Suárez",
+    rating: 5,
+    color: "bg-block-coral",
+    text: "Esteban es un profesional de 10! Desarrolló mi web en 5 días con todas las funcionalidades y muchas mejoras más que no teníamos previstas que nos ofreció y son geniales. Muy recomendables sus servicios 💯"
+  },
+  {
+    name: "Yanira Rodríguez Santana",
+    rating: 5,
+    color: "bg-block-lime",
+    text: "Esteban es un profesional de 10! Estaba estancada con mi página web y en tres días me presentó una solución súper práctica y rápida. Sin duda va a ir de la mano en todo el proyecto. Gracias!"
+  },
+  {
+    name: "Matias Dominguez",
+    rating: 5,
+    color: "bg-block-lilac",
+    text: "Un genio Esteban. Me hizo mi primer página, me aumentaron las ventas y la confianza del cliente. Accedió siempre bien a mis cambios y solicitudes y respondió rápido a los problemas que se presentaron"
+  },
+  {
+    name: "Javi",
+    rating: 5,
+    color: "bg-block-mint",
+    text: "Contactó con mi agencia de marketing a través de email ofreciendo sus servicios como programador web. Decidí darle una oportunidad y poder valorar su trabajo. La verdad que no puedo estar más satisfecho, tanto con el trabajo realizado como con su implicación. Recomiendo trabajar con el."
+  },
+  {
+    name: "Milena Gimenez",
+    rating: 5,
+    color: "bg-block-cream",
+    text: "El desarrollo de mi tienda web fue impecable. Muy buena atención se nota que es un experto en el tema. Siempre dispuesto a ayudar y resolver problemas. Gracias!!"
+  },
+  {
+    name: "Alfredo Godoy",
+    rating: 5,
+    color: "bg-block-pink",
+    text: "Excelente trabajo con proyecto de mi tienda online. A tiempo, responsable y muy cordial. Recomiendo totalmente. Muchas gracias"
+  },
+  {
+    name: "Juani Márquez",
+    rating: 5,
+    color: "bg-block-coral",
+    text: "Un servicio impecable, respondio todas mis dudas y me ayudo a crecer en mi emprendimiento :)"
+  },
+  {
+    name: "Roger Caruci",
+    rating: 5,
+    color: "bg-block-lime",
+    text: "Esteban se encargó de optimizar un sitio web para mejorar el posicionamiento SEO con resultados notables en las búsquedas de Google y demostrando su experiencia con excelente atención y profesionalismo"
+  },
+  {
+    name: "Usberto Ayma Ayma",
+    rating: 5,
+    color: "bg-block-lilac",
+    text: "Excelente diseñador web. Me ayudo en varios proyectos. Siempre con buena predisposición y soluciones web robustas."
+  },
+  {
+    name: "Martin",
+    rating: 5,
+    color: "bg-block-mint",
+    text: "Excelente servicio, pudo potenciar mi negocio y llevarlo a otro nivel, totalmente satisfecho!!"
+  },
+  {
+    name: "Valeria Risatti",
+    rating: 5,
+    color: "bg-block-cream",
+    text: "Excelente Profesional! Hemos trabajado juntos el desarrollo y mantenimiento de varios e-commerce y websites."
+  },
+  {
+    name: "Fernando Ybarra",
+    rating: 5,
+    color: "bg-block-pink",
+    text: "Buscaba un diseñador WordPress para terminar un proyecto y di en la tecla. Felicitaciones, excelente trabajo."
+  },
+  {
+    name: "Francisco Lee",
+    rating: 5,
+    color: "bg-block-coral",
+    text: "Contraté a Esteban para el desarrollo de un sitio e-commerce y todo perfecto 💯"
+  },
+  {
+    name: "Ciro Alejandro Querol",
+    rating: 5,
+    color: "bg-block-lime",
+    text: "Excelente Profesional! Muy buen trabajo con calidad. Lo recomiendo."
+  },
+  {
+    name: "Nadia Quetglas",
+    rating: 5,
+    color: "bg-block-lilac",
+    text: "Supo resolver bien varios proyectos web. Seguiremos trabajando juntos 😀"
+  },
+  {
+    name: "Alexander Caruci",
+    rating: 5,
+    color: "bg-block-mint",
+    text: "Todo perfecto en su servicio, cumplió con todo lo deseado, muy contento con su servicio"
+  },
+  {
+    name: "TRANKA PALANKA DOS",
+    rating: 5,
+    color: "bg-block-cream",
+    text: "Esteban un genio. Destaco su compromiso y responsabilidad. Gracias 👌"
+  },
+  {
+    name: "Alejandra Venturelli",
+    rating: 5,
+    color: "bg-block-pink",
+    text: "Excelente profesional!!! Muy recomendable!!!"
+  },
+  {
+    name: "Bruno",
+    rating: 5,
+    color: "bg-block-coral",
+    text: "Excelente trabajo, muy recomendable!!!"
+  },
+  {
+    name: "Pablo",
+    rating: 5,
+    color: "bg-block-lime",
+    text: "Excelente trabajo Lo Recomiendo"
+  },
+  {
+    name: "Abimael Baez",
+    rating: 5,
+    color: "bg-block-lilac",
+    text: "Muy eficiente y siempre tiene una solución"
+  },
+  {
+    name: "Yamila Diego",
+    rating: 5,
+    color: "bg-block-mint",
+    text: "Excelente atención"
+  },
+  {
+    name: "Joaquín Seara",
+    rating: 5,
+    color: "bg-block-cream",
+    text: "Buen servicio de atención, cumplió mis expectativas."
+  },
+  {
+    name: "Joaquin Villarreal",
+    rating: 5,
+    color: "bg-block-pink",
+    text: "Servicio impecable y resultados profesionales."
+  }
+];
+
+const extendedReviews = [...reviews, ...reviews, ...reviews];
+---
+
+<Section variant="white" id="reviews" class="overflow-hidden py-20 relative !py-12" fullWidth={true}>
+  <div class="px-lg md:px-xxl mb-12 reveal">
+    <h2 class="display-lg mb-4 text-center">Reseñas de clientes</h2>
+    <p class="text-xl text-ink/60 mb-8 text-center max-w-2xl mx-auto">Lo que dicen quienes ya confían en nuestra ingeniería de excelencia.</p>
+  </div>
+
+  <div class="relative group">
+    <!-- Botones de Navegación -->
+    <button id="prev-review" class="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 border border-hairline p-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white active:scale-95" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button id="next-review" class="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 border border-hairline p-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white active:scale-95" aria-label="Siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+
+    <div id="review-track" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 px-lg md:px-xxl cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth;">
+      {extendedReviews.map((review) => (
+        <div class="w-[280px] lg:w-[calc(20%-1rem)] h-[300px] flex-shrink-0 bg-white p-5 rounded-3xl border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] snap-center transition-transform duration-300 relative flex flex-col">
+          <img src="/assets/skills/google-icon.svg" alt="Google Review" class="absolute top-5 right-5 w-4 h-4 opacity-80" />
+          
+          <div class="flex items-center gap-3 mb-4">
+            <div class:list={["w-10 h-10 rounded-full overflow-hidden flex items-center justify-center font-bold text-base shadow-sm border border-gray-100", review.color]}>
+              <img 
+                src={`/assets/reviews/${review.name.toLowerCase().replace(/\s+/g, '-')}.webp`} 
+                alt={review.name} 
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <span class="hidden items-center justify-center w-full h-full text-white/90">
+                {review.name.charAt(0)}
+              </span>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 block leading-tight text-sm">{review.name}</span>
+              <div class="flex gap-0.5 mt-1">
+                {[...Array(review.rating)].map((_, i) => (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow overflow-hidden relative">
+            <p class="text-[13px] text-gray-600 leading-relaxed line-clamp-5">
+              "{review.text}"
+            </p>
+            {review.text.length > 120 && (
+              <a 
+                href="https://www.google.com/search?q=Dise%C3%B1ador+web+Esteban+Selvaggi#mpd=~10518474245521333501/customers/reviews" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-[10px] font-bold text-primary mt-2 inline-block hover:underline"
+              >
+                Leer más en Google
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+  const track = document.getElementById('review-track');
+  const prevBtn = document.getElementById('prev-review');
+  const nextBtn = document.getElementById('next-review');
+
+  if (track && prevBtn && nextBtn) {
+    const getCardWidth = () => {
+      const firstCard = track.querySelector('div');
+      return firstCard ? (firstCard as HTMLElement).offsetWidth + 16 : 300; 
+    };
+
+    const totalCards = 29; 
+
+    setTimeout(() => {
+      track.scrollLeft = totalCards * getCardWidth();
+    }, 100);
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollLeft += getCardWidth();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollLeft -= getCardWidth();
+    });
+
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', () => isDown = false);
+    track.addEventListener('mouseup', () => isDown = false);
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2;
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    track.addEventListener('scroll', () => {
+      const setWidth = totalCards * getCardWidth();
+      if (track.scrollLeft >= setWidth * 2) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft = setWidth;
+        track.style.scrollBehavior = 'smooth';
+      } else if (track.scrollLeft <= 0) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft = setWidth;
+        track.style.scrollBehavior = 'smooth';
+      }
+    });
+  }
+</script>

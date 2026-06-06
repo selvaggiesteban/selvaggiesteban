@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+
+const allPosts = await getCollection('blog');
+// Seleccionamos más posts para el carrusel (ej: 12)
+const recommendedPosts = allPosts
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 12);
+
+// Triplicamos para el loop infinito
+const extendedPosts = [...recommendedPosts, ...recommendedPosts, ...recommendedPosts];
+---
+
+<Section variant="white" id="recommended" class="reveal !py-12 overflow-hidden" fullWidth={true}>
+  <div class="px-lg md:px-xxl mb-12">
+    <h2 class="display-lg mb-2">Recomendado para usted</h2>
+    <div class="w-20 h-1 bg-primary mb-8"></div>
+  </div>
+
+  <div class="relative group">
+    {/* Botones de Navegación */}
+    <button id="prev-rec" class="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 border border-hairline p-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white active:scale-95" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button id="next-rec" class="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-white/90 border border-hairline p-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white active:scale-95" aria-label="Siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+
+    <div id="rec-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 px-lg md:px-xxl cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth;">
+      {extendedPosts.map((post) => (
+        <a href={`/blog/${post.id}`} class="w-[300px] md:w-[400px] flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[5px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 snap-center">
+          <div class="aspect-video overflow-hidden bg-surface-soft relative">
+            <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
+              Artículo
+            </span>
+            <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
+               Lectura recomendada
+            </div>
+          </div>
+          
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+              {post.data.title}
+            </h3>
+            <p class="text-xs text-ink/60 line-clamp-3 mb-6 flex-grow">
+              {post.data.description}
+            </p>
+            <div class="flex items-center text-[10px] font-bold uppercase tracking-widest text-primary">
+              Leer más <span class="ml-1">→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+  const track = document.getElementById('rec-track');
+  const prevBtn = document.getElementById('prev-rec');
+  const nextBtn = document.getElementById('next-rec');
+
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = 424; // 400px + 24px gap
+    const totalItems = 12;
+
+    track.scrollLeft = totalItems * cardWidth;
+
+    const checkInfinite = () => {
+      const setWidth = totalItems * cardWidth;
+      if (track.scrollLeft >= setWidth * 2) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft = setWidth;
+        track.style.scrollBehavior = 'smooth';
+      } else if (track.scrollLeft <= 0) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft = setWidth;
+        track.style.scrollBehavior = 'smooth';
+      }
+    };
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollLeft += cardWidth;
+      setTimeout(checkInfinite, 500);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollLeft -= cardWidth;
+      setTimeout(checkInfinite, 500);
+    });
+
+    track.addEventListener('scroll', checkInfinite);
+  }
+</script>

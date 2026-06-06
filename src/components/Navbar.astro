@@ -54,7 +54,7 @@ const navLinks = [
   </Container>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-canvas z-40 flex flex-col items-center justify-center gap-6 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-20 pb-10 px-6 text-center">
+  <div id="mobile-menu" class="fixed top-[56px] left-0 w-full h-[calc(100dvh-56px)] bg-canvas z-40 flex flex-col items-center justify-start gap-6 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-10 pb-10 px-6 text-center">
     {navLinks.map(link => (
       <div class="w-full">
         <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>

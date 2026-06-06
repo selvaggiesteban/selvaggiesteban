@@ -16,7 +16,7 @@ import { render } from 'astro:content';
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout articleSchema={true} pubDate={post.data.pubDate.toISOString()} title={post.data.title} description={post.data.description}>
   <Section>
     <article class="max-w-3xl mx-auto">
       <header class="mb-xl">

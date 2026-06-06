@@ -14,6 +14,8 @@ export default defineConfig({
 
   integrations: [sitemap()],
   adapter: cloudflare({
-    kvNamespaces: []
+    platformProxy: {
+      enabled: false
+    }
   })
 });

@@ -1,7 +1,6 @@
 {
   "compatibility_date": "2026-06-04",
   "name": "selvaggiesteban",
-  "main": "./dist/server/entry.mjs",
   "assets": {
     "directory": "./dist/client"
   },

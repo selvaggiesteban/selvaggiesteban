@@ -14,9 +14,6 @@ export default defineConfig({
 
   integrations: [sitemap()],
   adapter: cloudflare({
-    imageService: 'cloudflare',
-    platformProxy: {
-      enabled: false
-    }
+    imageService: 'cloudflare'
   })
 });

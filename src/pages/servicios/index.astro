@@ -10,11 +10,11 @@ const description = "Explora las soluciones de diseño y desarrollo web que ofre
 
 <BaseLayout {title} {description}>
   <Section>
-    <h1 class="display-lg mb-xl">Nuestros Servicios</h1>
+    <h1 class="display-lg mb-xl text-center">Servicios de ingeniería informática</h1>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-lg">
       {servicios.map(servicio => (
         <a href={`/servicios/${servicio.id}`} class="group p-lg bg-surface-soft rounded-lg border border-hairline hover:border-primary transition-all">
-          <h2 class="text-xl font-bold mb-sm group-hover:text-primary">{servicio.data.title}</h2>
+          <h2 class="text-xl font-bold mb-sm text-center group-hover:text-primary">{servicio.data.title}</h2>
           <p class="text-ink/60">{servicio.data.description}</p>
         </a>
       ))}

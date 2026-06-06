@@ -9,9 +9,11 @@ const navLinks = [
     label: 'Servicios', 
     href: '/servicios',
     dropdown: [
-      { href: '/ingeniero-de-software', label: 'Software a medida' },
-      { href: '/disenador-web', label: 'Diseño web' },
-      { href: '/experto-seo', label: 'Posicionamiento SEO' },
+      { href: '/servicios/software-a-medida', label: 'Software a medida' },
+      { href: '/servicios/diseno-web-responsive', label: 'Diseño web responsive' },
+      { href: '/servicios/posicionamiento-seo', label: 'Posicionamiento SEO' },
+      { href: '/servicios/posicionamiento-sem', label: 'Posicionamiento SEM' },
+      { href: '/servicios/e-mail-marketing', label: 'E-mail marketing' }
     ]
   },
   { href: '/blog', label: 'Blog' },
@@ -59,7 +61,7 @@ const navLinks = [
       <div class="w-full">
         <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
         {link.dropdown && (
-          <div class="flex flex-col gap-2 mt-2 bg-surface-soft py-4 rounded-xl">
+          <div class="flex flex-col gap-2 mt-2 bg-surface-soft py-4 rounded-none">
             {link.dropdown.map(subItem => (
               <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
             ))}

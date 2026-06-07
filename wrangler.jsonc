@@ -1,0 +1,19 @@
+{
+  "compatibility_date": "2026-06-04",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  "name": "receptive-resonance",
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "1c5a4286556f4c4586baa4117d324c21"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

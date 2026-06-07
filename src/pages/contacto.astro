@@ -39,7 +39,7 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
         </div>
 
         <!-- Cloudflare Turnstile -->
-        <div id="my-turnstile-container"></div>
+        <div id="my-turnstile-container" class="min-h-[65px] flex justify-center mb-4"></div>
 
         <Button type="submit" class="w-full">Enviar mensaje</Button>
 
@@ -48,40 +48,59 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
         </div>
         </Section>
 
-        <script is:inline>
-        // Configuración global para el renderizado explícito
-        window.onloadTurnstileCallback = function () {
-        turnstile.render('#my-turnstile-container', {
-        sitekey: '0x4AAAAAADfmwir8zq1wxQE1sJ-I_ezox6A',
-        });
-        };
-        </script>
-
-        <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
-
         <script>
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const status = document.getElementById('form-status');
+        // Inyectamos el script dinámicamente y lo renderizamos de forma segura en Astro
+        const initTurnstile = () => {
+        const container = document.getElementById('my-turnstile-container');
+        // Evitamos re-renderizar si ya existe
+        if (!container || container.innerHTML.trim() !== '') return;
 
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!status) return;
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.async = true;
+        script.defer = true;
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+        script.onload = () => {
+        if (window.turnstile) {
+          window.turnstile.render('#my-turnstile-container', {
+            sitekey: '0x4AAAAAADfmwu_oZrA1JtFm',
+            theme: 'light'
+          });
+        }
+        };
 
-      if (!data['cf-turnstile-response']) {
+        document.head.appendChild(script);
+        };
+
+        // Aseguramos carga inicial
+        document.addEventListener('DOMContentLoaded', initTurnstile);
+        // Aseguramos carga en navegaciones PWA/Astro
+        document.addEventListener('astro:page-load', initTurnstile);
+        // Disparo inmediato por si DOMContentLoaded ya pasó
+        initTurnstile();
+
+        const form = document.getElementById('contact-form') as HTMLFormElement;
+        const status = document.getElementById('form-status');
+
+        form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!status) return;
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        if (!data['cf-turnstile-response']) {
         status.textContent = 'Por favor, espera a que el captcha de seguridad se complete.';
         status.classList.remove('hidden', 'text-semantic-success', 'text-ink/60');
         status.classList.add('text-red-500');
         return;
-      }
+        }
 
-      status.textContent = 'Enviando...';
-      status.classList.remove('hidden', 'text-semantic-success', 'text-red-500');
-      status.classList.add('text-ink/60');
+        status.textContent = 'Enviando...';
+        status.classList.remove('hidden', 'text-semantic-success', 'text-red-500');
+        status.classList.add('text-ink/60');
 
-      try {
+        try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           body: JSON.stringify(data),
@@ -103,10 +122,10 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
           status.textContent = `Error: ${error.message || 'No se pudo enviar el mensaje.'}`;
           status.classList.add('text-red-500');
         }
-      } catch (e) {
+        } catch (e) {
         status.textContent = 'Error de conexión. Inténtalo de nuevo.';
         status.classList.add('text-red-500');
-      }
-    });
-  </script>
-</BaseLayout>
+        }
+        });
+        </script>
+        </BaseLayout>

@@ -10,8 +10,15 @@ export const POST: APIRoute = async (context) => {
     const runtime = (context.locals as any)?.runtime;
     const env = runtime?.env || import.meta.env;
     
-    const TURNSTILE_SECRET_KEY = env.TURNSTILE_SECRET_KEY;
-    const RESEND_API_KEY = env.RESEND_API_KEY;
+    // Fallback universal a process.env habilitado por nodejs_compat
+    const getSecret = (key: string) => {
+      if (env && env[key]) return env[key];
+      if (typeof process !== 'undefined' && process.env && process.env[key]) return process.env[key];
+      return undefined;
+    };
+    
+    const TURNSTILE_SECRET_KEY = getSecret('TURNSTILE_SECRET_KEY');
+    const RESEND_API_KEY = getSecret('RESEND_API_KEY');
 
     if (!TURNSTILE_SECRET_KEY || !RESEND_API_KEY) {
       console.error('Missing API keys in environment.');

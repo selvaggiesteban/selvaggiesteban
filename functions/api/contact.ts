@@ -1,13 +1,12 @@
-import type { APIRoute } from 'astro';
+export async function onRequestPost(context) {
+  const { request, env } = context;
 
-export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
     const { name, email, message, 'cf-turnstile-response': turnstileToken } = data;
 
-    // In a real environment, these would be in import.meta.env or process.env (or locals.runtime.env in CF)
-    const TURNSTILE_SECRET_KEY = import.meta.env.TURNSTILE_SECRET_KEY;
-    const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+    const TURNSTILE_SECRET_KEY = env.TURNSTILE_SECRET_KEY;
+    const RESEND_API_KEY = env.RESEND_API_KEY;
 
     // 1. Verify Turnstile token
     if (turnstileToken) {
@@ -21,7 +20,7 @@ export const POST: APIRoute = async ({ request }) => {
         }),
       });
 
-      const verifyResult: any = await verifyResponse.json();
+      const verifyResult = await verifyResponse.json();
       if (!verifyResult.success) {
         return new Response(JSON.stringify({ message: 'Verificación de seguridad fallida.' }), { status: 400 });
       }
@@ -61,4 +60,4 @@ export const POST: APIRoute = async ({ request }) => {
     console.error('API Error:', error);
     return new Response(JSON.stringify({ message: 'Error interno del servidor.' }), { status: 500 });
   }
-};
+}

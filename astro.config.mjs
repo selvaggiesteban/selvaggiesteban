@@ -1,17 +1,15 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'; 
 
-import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
-import cloudflare from '@astrojs/cloudflare';
+import tailwindcss from '@tailwindcss/vite'; 
+import sitemap from '@astrojs/sitemap';      
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://selvaggiesteban.dev",
+  site: "https://selvaggiesteban.dev",       
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap()],
-  adapter: cloudflare()
+  integrations: [sitemap()]
 });

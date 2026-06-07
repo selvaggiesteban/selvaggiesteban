@@ -39,18 +39,27 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
         </div>
 
         <!-- Cloudflare Turnstile -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAADfmwir8zq1wxQE1sJ-I_ezox6A"></div>
+        <div id="my-turnstile-container"></div>
 
         <Button type="submit" class="w-full">Enviar mensaje</Button>
-        
+
         <p id="form-status" class="text-sm mt-md hidden"></p>
-      </form>
-    </div>
-  </Section>
+        </form>
+        </div>
+        </Section>
 
-  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <script is:inline>
+        // Configuración global para el renderizado explícito
+        window.onloadTurnstileCallback = function () {
+        turnstile.render('#my-turnstile-container', {
+        sitekey: '0x4AAAAAADfmwir8zq1wxQE1sJ-I_ezox6A',
+        });
+        };
+        </script>
 
-  <script>
+        <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+
+        <script>
     const form = document.getElementById('contact-form') as HTMLFormElement;
     const status = document.getElementById('form-status');
 

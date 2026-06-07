@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/Section.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorBox from '../../components/AuthorBox.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -19,6 +21,7 @@ const { Content } = await render(post);
 <BaseLayout articleSchema={true} pubDate={post.data.pubDate.toISOString()} title={post.data.title} description={post.data.description}>
   <Section>
     <article class="max-w-3xl mx-auto">
+      <Breadcrumbs path={[{ label: 'Inicio', href: '/' }, { label: 'Blog', href: '/blog' }, { label: post.data.title }]} />
       <header class="mb-xl">
         <span class="font-mono text-xs uppercase tracking-widest text-ink/40">
            {post.data.pubDate.toLocaleDateString('es-AR', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -28,6 +31,7 @@ const { Content } = await render(post);
       <div class="prose prose-ink max-w-none">
         <Content />
       </div>
+      <AuthorBox />
     </article>
   </Section>
 </BaseLayout>

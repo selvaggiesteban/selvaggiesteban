@@ -4,16 +4,16 @@ description: "Objetivo: en este instructivo aprenderás a revisar la configurac
 pubDate: 2025-12-05
 ---
 
-<div>
 
-					
-						
+
+
+
 <p><strong>Objetivo:</strong>&nbsp;en este instructivo aprenderás a revisar la configuración básica de WooCommerce y a gestionar el catálogo de productos (crear, editar, despublicar y eliminar productos) desde el panel de WordPress.</p>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-1.webp" alt=""></figure>
-</div>
+
 
 
 <h2>1. Requisitos previos</h2>
@@ -73,9 +73,9 @@ pubDate: 2025-12-05
 </ol>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-2.webp" alt=""></figure>
-</div>
+
 
 
 <h2>3. Configuración básica de WooCommerce</h2>
@@ -125,9 +125,9 @@ pubDate: 2025-12-05
 </ul>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-3.webp" alt=""></figure>
-</div>
+
 
 
 <h3>3.3 Pestaña “Envío”</h3>
@@ -229,9 +229,9 @@ pubDate: 2025-12-05
 </ol>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-5.webp" alt=""></figure>
-</div>
+
 
 
 <h3>5.2 Completar la información básica</h3>
@@ -271,9 +271,9 @@ pubDate: 2025-12-05
 </ul>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-6.webp" alt=""></figure>
-</div>
+
 
 
 <figure><img width="1024" height="576" src="/assets/blog/guia-woocommerce-7.webp" alt=""></figure>
@@ -407,9 +407,9 @@ pubDate: 2025-12-05
 </ul>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-8.webp" alt=""></figure>
-</div>
+
 
 
 <h3>8.2 Etiquetas de productos</h3>
@@ -419,9 +419,9 @@ pubDate: 2025-12-05
 <p>Las etiquetas sirven como palabras clave adicionales. Puedes usarlas para materiales, colores, temporadas, etc.</p>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-woocommerce-9.webp" alt=""></figure>
-</div>
+
 
 
 <h3>8.3 Revisión periódica de stock y precios</h3>
@@ -437,7 +437,6 @@ pubDate: 2025-12-05
 </ul>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
                     
-</div>

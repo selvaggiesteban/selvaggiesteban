@@ -4,10 +4,10 @@ description: "Objetivo: esta guía explica cómo exportar los productos de WooC
 pubDate: 2025-12-05
 ---
 
-<div>
 
-					
-						
+
+
+
 <p><strong>Objetivo:</strong>&nbsp;esta guía explica cómo exportar los productos de WooCommerce a un archivo CSV, editarlos de forma masiva en Excel o Google Sheets e importarlos de nuevo para actualizar el catálogo.</p>
 
 
@@ -405,7 +405,6 @@ pubDate: 2025-12-05
 </ul>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
                     
-</div>

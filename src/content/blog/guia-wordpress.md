@@ -4,16 +4,16 @@ description: "Objetivo: esta guía te muestra, paso a paso, cómo entrar al pan
 pubDate: 2025-12-05
 ---
 
-<div>
 
-					
-						
+
+
+
 <p><strong>Objetivo:</strong>&nbsp;esta guía te muestra, paso a paso, cómo entrar al panel de WordPress, identificar las partes principales del escritorio y ajustar la configuración general básica de tu sitio.</p>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-1.webp" alt=""></figure>
-</div>
+
 
 
 <h2>1. Requisitos previos</h2>
@@ -59,9 +59,9 @@ pubDate: 2025-12-05
 </ol>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-2.webp" alt=""></figure>
-</div>
+
 
 
 <h3>2.2 Introducir usuario y contraseña</h3>
@@ -115,9 +115,9 @@ pubDate: 2025-12-05
 <p>El escritorio es la pantalla de inicio del panel de administración. Aquí verás avisos, resúmenes y accesos rápidos a distintas secciones del sitio.</p>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-3.webp" alt=""></figure>
-</div>
+
 
 
 <h3>3.2 Menú lateral de administración</h3>
@@ -169,17 +169,17 @@ pubDate: 2025-12-05
 </ul>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-4.webp" alt=""></figure>
-</div>
 
-<div>
+
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-5.webp" alt=""></figure>
-</div>
 
-<div>
+
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-6.webp" alt=""></figure>
-</div>
+
 
 
 <h3>3.3 Opciones para crear contenido</h3>
@@ -207,21 +207,21 @@ pubDate: 2025-12-05
 </ul>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-7.webp" alt=""></figure>
-</div>
 
-<div>
+
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-8.webp" alt=""></figure>
-</div>
 
-<div>
+
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-9.webp" alt=""></figure>
-</div>
 
-<div>
+
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-10.webp" alt=""></figure>
-</div>
+
 
 
 <h2>4. Acceder a los ajustes generales del sitio</h2>
@@ -245,9 +245,9 @@ pubDate: 2025-12-05
 </ol>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-11.webp" alt=""></figure>
-</div>
+
 
 
 <h3>4.2 Campos principales de los ajustes generales</h3>
@@ -339,9 +339,9 @@ pubDate: 2025-12-05
 </ol>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-12.webp" alt=""></figure>
-</div>
+
 
 
 <h3>5.2 Verificar que todo funciona</h3>
@@ -373,9 +373,9 @@ pubDate: 2025-12-05
 <p>Desde el menú lateral, entra en&nbsp;<strong>Usuarios &gt; Todos los usuarios</strong>&nbsp;para ver quién tiene acceso al panel.</p>
 
 
-<div>
+
 <figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-13.webp" alt=""></figure>
-</div>
+
 
 
 <h3>6.2 Cerrar sesión</h3>
@@ -399,7 +399,6 @@ pubDate: 2025-12-05
 <p>Si al volver atrás el sistema te vuelve a pedir usuario y contraseña, la sesión se ha cerrado correctamente.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
                     
-</div>

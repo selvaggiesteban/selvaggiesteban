@@ -4,11 +4,11 @@ description: "HEARTBEAT.md en OpenClaw es un archivo del workspace del agente qu
 pubDate: 2026-04-17
 ---
 
-<div>
 
-                	<div>
-					
-						
+
+                
+
+
 <p>HEARTBEAT.md en OpenClaw es un archivo del workspace del agente que sirve para definir una pequeña lista de chequeo periódica que el sistema revisa durante los heartbeats. OpenClaw lo inyecta como parte del contexto del proyecto cuando existe, junto con otros archivos como AGENTS.md, TOOLS.md, IDENTITY.md y USER.md.</p>
 
 
@@ -50,8 +50,7 @@ pubDate: 2026-04-17
 <p>Entonces, la respuesta corta sería: <code>HEARTBEAT.md</code> es el archivo donde le decís a OpenClaw <strong>qué chequeos proactivos querés que haga en cada latido programado del agente</strong>.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
-                    </div>
-				
-</div>
+                    
+

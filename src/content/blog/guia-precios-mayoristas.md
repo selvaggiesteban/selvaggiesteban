@@ -4,10 +4,10 @@ description: "La idea quedaría así:"
 pubDate: 2025-12-11
 ---
 
-<div>
 
-					
-						
+
+
+
 <p>La idea quedaría así:</p>
 
 
@@ -287,7 +287,6 @@ pubDate: 2025-12-11
 </ul>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
                     
-</div>

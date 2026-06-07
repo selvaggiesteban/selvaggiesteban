@@ -4,11 +4,11 @@ description: "Cuando trabajo con un VPS en Hostinger, una de las primeras cosas
 pubDate: 2026-04-18
 ---
 
-<div>
 
-                	<div>
-					
-						
+
+                
+
+
 <p>Cuando trabajo con un&nbsp;<strong>VPS en Hostinger</strong>, una de las primeras cosas que hago es configurar un acceso seguro por SSH. No me gusta depender de contraseñas para entrar al servidor ni dejar todo atado al usuario root, porque eso aumenta el riesgo y complica la administración diaria. Por eso, siempre prefiero crear una&nbsp;<strong>clave SSH</strong>, asociarla a un usuario con permisos sudo y dejar una base sólida desde el inicio.</p>
 
 
@@ -196,8 +196,7 @@ sudo ufw status</code></pre>
 <p>Si estás configurando tu servidor por primera vez, este paso te va a ahorrar problemas y te va a permitir trabajar con una base mucho más sólida desde el primer día.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
-                    </div>
-				
-</div>
+                    
+

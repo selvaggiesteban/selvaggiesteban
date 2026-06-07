@@ -4,10 +4,10 @@ description: "Descubre el fascinante mundo de los Agentes de IA: qué son, cómo
 pubDate: 2026-01-06
 ---
 
-<div>
 
-					
-						<p>La inteligencia artificial (IA) ha trascendido las películas de ciencia ficción para convertirse en una fuerza transformadora en nuestro mundo. En el corazón de muchas de sus aplicaciones más avanzadas y autónomas se encuentran los <strong>Agentes de IA</strong>. Estos sistemas inteligentes son la clave para entender cómo la IA puede percibir su entorno, tomar decisiones y actuar de manera independiente para lograr objetivos específicos. Si alguna vez te has preguntado cómo los asistentes virtuales, los vehículos autónomos o incluso los sistemas de recomendación funcionan con tal autonomía, <a href="https://www.google.com/search?q=esta+gu%C3%ADa+te+site%3Abritannica.com" rel="noopener" target="_blank">esta guía te</a> proporcionará una comprensión profunda de la arquitectura y el potencial de los agentes de IA.</p>
+
+
+<p>La inteligencia artificial (IA) ha trascendido las películas de ciencia ficción para convertirse en una fuerza transformadora en nuestro mundo. En el corazón de muchas de sus aplicaciones más avanzadas y autónomas se encuentran los <strong>Agentes de IA</strong>. Estos sistemas inteligentes son la clave para entender cómo la IA puede percibir su entorno, tomar decisiones y actuar de manera independiente para lograr objetivos específicos. Si alguna vez te has preguntado cómo los asistentes virtuales, los vehículos autónomos o incluso los sistemas de recomendación funcionan con tal autonomía, <a href="https://www.google.com/search?q=esta+gu%C3%ADa+te+site%3Abritannica.com" rel="noopener" target="_blank">esta guía te</a> proporcionará una comprensión profunda de la arquitectura y el potencial de los agentes de IA.</p>
 <h2>Tabla de Contenidos</h2>
 <ul>
 <li><a href="#introduccion">Introducción a los Agentes de IA</a></li>
@@ -134,7 +134,6 @@ pubDate: 2026-01-06
 <p>Un sistema multi-agente es una colección de dos o más <strong>Agentes de IA</strong> que interactúan entre sí en un entorno compartido para lograr un objetivo común o individual. Pueden colaborar, competir o coordinarse para resolver problemas complejos que un solo agente no podría manejar eficientemente, como la gestión del tráfico o la coordinación de flotas de drones.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
                     
-</div>

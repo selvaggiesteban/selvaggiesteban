@@ -4,6 +4,5 @@ description: "Welcome to WordPress. This is your first post. Edit or delete it, 
 pubDate: 2022-03-01
 ---
 
-<div>
+
     <p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
-</div>

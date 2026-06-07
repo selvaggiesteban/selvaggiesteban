@@ -4,11 +4,11 @@ description: "Todo empezó una noche de martes, cerca de las tres de la madrugad
 pubDate: 2026-05-04
 ---
 
-<div>
 
-                	<div>
-					
-						
+
+                
+
+
 <p>Todo empezó una noche de martes, cerca de las tres de la madrugada. El frío de Buenos Aires se colaba por las rendijas de mi ventana, pero yo apenas lo notaba. Llevaba más de catorce horas seguidas frente al monitor, consumiendo mate lavado y tecleando sin parar. Estaba trabajando en un proyecto para mi agencia, buscando optimizar los tiempos de respuesta con los clientes. Quería que el sistema fuera perfecto, que operara en las sombras mientras yo descansaba.</p>
 
 
@@ -172,8 +172,7 @@ pubDate: 2026-05-04
 <p></p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
-                    </div>
-				
-</div>
+                    
+

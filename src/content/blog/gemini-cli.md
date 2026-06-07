@@ -4,11 +4,11 @@ description: "Trabajar con inteligencia artificial dentro del editor puede acele
 pubDate: 2026-04-16
 ---
 
-<div>
 
-                	<div>
-					
-						
+
+                
+
+
 <p>Trabajar con inteligencia artificial dentro del editor puede acelerar muchísimo el análisis de proyectos, la revisión de código y la planificación técnica. Sin embargo, cuando uno empieza a integrar herramientas como <strong>Gemini CLI en Visual Studio Code</strong>, no siempre todo funciona a la primera.</p>
 
 
@@ -275,8 +275,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 <p>En este caso, esos comandos fueron suficientes para transformar un entorno confuso en una configuración lista para trabajar con <strong>Vertex AI desde Visual Studio Code</strong>.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
-                    </div>
-				
-</div>
+                    
+

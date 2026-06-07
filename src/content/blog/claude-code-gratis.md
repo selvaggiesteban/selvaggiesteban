@@ -4,11 +4,11 @@ description: "Debes descargar Ollama y registrarte, luego, cuando estés en tu c
 pubDate: 2026-02-17
 ---
 
-<div>
 
-                	<div>
-					
-						
+
+                
+
+
 <h2>Conecta Claude Code a modelos de IA de código abierto</h2>
 
 
@@ -52,8 +52,7 @@ pubDate: 2026-02-17
 <p>Es clave el uso del plugin ralph-loop y ejecutar /ralph-loop:ralph-loop completa todas las tareas pendientes –max-iterations 5 –completion-promise ‘Te confirmo que no hay tareas pendientes por completar’.</p>
                                     
                         <div class="page-links">
-                                                </div>
+                                                
                     
-                    </div>
-				
-</div>
+                    
+

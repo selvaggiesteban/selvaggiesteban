@@ -1,20 +1,20 @@
 import type { APIRoute } from 'astro';
 
-export const POST: APIRoute = async ({ request, locals }) => {
+export const POST: APIRoute = async (context) => {
   try {
-    const data = await request.json();
+    const data = await context.request.json();
     const { name, email, message, privacy, 'cf-turnstile-response': turnstileToken } = data;
 
-    // En Astro + Cloudflare Adapter (v13+), las variables de entorno inyectadas
-    // en el panel de Cloudflare están disponibles en locals.runtime.env
-    // Hacemos fallback a import.meta.env para desarrollo local.
-    const env = (locals as any)?.runtime?.env || import.meta.env;
+    // Use Astro's standard way to access Cloudflare bindings in API routes.
+    // context.locals is cast to any to bypass strict type checking locally.
+    const runtime = (context.locals as any)?.runtime;
+    const env = runtime?.env || import.meta.env;
     
     const TURNSTILE_SECRET_KEY = env.TURNSTILE_SECRET_KEY;
     const RESEND_API_KEY = env.RESEND_API_KEY;
 
     if (!TURNSTILE_SECRET_KEY || !RESEND_API_KEY) {
-      console.error('Faltan claves de API en el entorno.');
+      console.error('Missing API keys in environment.');
       return new Response(JSON.stringify({ message: 'Error de configuración del servidor.' }), { status: 500 });
     }
 

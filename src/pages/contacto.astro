@@ -58,12 +58,19 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
       e.preventDefault();
       if (!status) return;
 
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      if (!data['cf-turnstile-response']) {
+        status.textContent = 'Por favor, espera a que el captcha de seguridad se complete.';
+        status.classList.remove('hidden', 'text-semantic-success', 'text-ink/60');
+        status.classList.add('text-red-500');
+        return;
+      }
+
       status.textContent = 'Enviando...';
       status.classList.remove('hidden', 'text-semantic-success', 'text-red-500');
       status.classList.add('text-ink/60');
-
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
 
       try {
         const response = await fetch('/api/contact', {
@@ -78,6 +85,10 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
           status.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
           status.classList.add('text-semantic-success');
           form.reset();
+          // Reset turnstile
+          if (window.turnstile) {
+            window.turnstile.reset();
+          }
         } else {
           const error = await response.json();
           status.textContent = `Error: ${error.message || 'No se pudo enviar el mensaje.'}`;

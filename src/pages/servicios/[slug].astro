@@ -16,7 +16,7 @@ import { render } from 'astro:content';
 const { Content } = await render(servicio);
 ---
 
-<BaseLayout title={servicio.data.title} description={servicio.data.description}>
+<BaseLayout isService={true} title={servicio.data.title} description={servicio.data.description}>
   <Section>
     <div class="max-w-3xl mx-auto">
       <h1 class="display-lg mb-md">{servicio.data.title}</h1>

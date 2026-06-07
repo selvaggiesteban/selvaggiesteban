@@ -12,21 +12,84 @@ interface Props {
   canonical?: string;
   articleSchema?: boolean;
   pubDate?: string;
+  isService?: boolean;
+  isProfile?: boolean;
 }
 
-const { title, description, image, canonical, articleSchema, pubDate } = Astro.props;
+const { title, description, image, canonical, articleSchema, pubDate, isService, isProfile } = Astro.props;
 
-const schema = articleSchema ? {
+const currentUrl = Astro.url.href;
+
+// 1. Entidad Principal (ProfessionalService + Person Híbrido)
+const baseEntitySchema = {
+  "@context": "https://schema.org",
+  "@type": ["ProfessionalService", "Person"],
+  "@id": "https://selvaggiesteban.dev/#identity",
+  "name": "Esteban Selvaggi",
+  "url": "https://selvaggiesteban.dev",
+  "image": "https://media.licdn.com/dms/image/v2/C4E03AQEYYjT26_Y7Wg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1628026194726?e=1746662400&v=beta&t=90Q5k3s31p6Aqz6m1k46uJ321q535q3065w019p9e9A",
+  "jobTitle": "Ingeniero Informático",
+  "description": "Ingeniero informático especializado en ingeniería de software y posicionamiento SEO.",
+  "sameAs": [
+    "https://x.com/selvaggiesteban",
+    "https://linkedin.com/in/selvaggiesteban",
+    "https://github.com/selvaggiesteban",
+    "https://selvaggiesteban.dev"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "La Rioja 1900",
+    "addressLocality": "Lanús Oeste",
+    "addressRegion": "Provincia de Buenos Aires",
+    "postalCode": "1824",
+    "addressCountry": "AR"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "description": "Worldwide"
+  },
+  "priceRange": "$$"
+};
+
+// 2. Esquema condicional de Blog
+const blogSchema = articleSchema ? {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": currentUrl
+  },
   "headline": title,
   "description": description,
-  "author": {
-    "@type": "Person",
-    "name": "Esteban Selvaggi"
-  },
+  "author": { "@id": "https://selvaggiesteban.dev/#identity" },
+  "publisher": { "@id": "https://selvaggiesteban.dev/#identity" },
   "datePublished": pubDate
 } : null;
+
+// 3. Esquema condicional de Servicio
+const serviceSchema = isService ? {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": title,
+  "description": description,
+  "provider": { "@id": "https://selvaggiesteban.dev/#identity" },
+  "areaServed": "Worldwide",
+  "offers": {
+    "@type": "Offer",
+    "price": "16.00",
+    "priceCurrency": "USD",
+    "description": "Precio base desde 16 USD / 16.000 ARS"
+  }
+} : null;
+
+// 4. Esquema condicional de CV/Profile
+const profileSchema = isProfile ? {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": { "@id": "https://selvaggiesteban.dev/#identity" }
+} : null;
+
+const schemas = [baseEntitySchema, blogSchema, serviceSchema, profileSchema].filter(Boolean);
 ---
 
 <!doctype html>
@@ -37,7 +100,9 @@ const schema = articleSchema ? {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <SEO {title} {description} {image} {canonical} />
-    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+    {schemas.map(schema => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body>
     <Navbar />

@@ -1,14 +1,24 @@
-export async function onRequestPost(context) {
-  const { request, env } = context;
+import type { APIRoute } from 'astro';
 
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const data = await request.json();
-    const { name, email, message, 'cf-turnstile-response': turnstileToken } = data;
+    const { name, email, message, privacy, 'cf-turnstile-response': turnstileToken } = data;
 
+    // En Astro + Cloudflare Adapter (v13+), las variables de entorno inyectadas
+    // en el panel de Cloudflare están disponibles en locals.runtime.env
+    // Hacemos fallback a import.meta.env para desarrollo local.
+    const env = (locals as any)?.runtime?.env || import.meta.env;
+    
     const TURNSTILE_SECRET_KEY = env.TURNSTILE_SECRET_KEY;
     const RESEND_API_KEY = env.RESEND_API_KEY;
 
-    // 1. Verify Turnstile token
+    if (!TURNSTILE_SECRET_KEY || !RESEND_API_KEY) {
+      console.error('Faltan claves de API en el entorno.');
+      return new Response(JSON.stringify({ message: 'Error de configuración del servidor.' }), { status: 500 });
+    }
+
+    // 1. Verificar el token de Turnstile
     if (turnstileToken) {
       const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
       const verifyResponse = await fetch(verifyUrl, {
@@ -20,13 +30,15 @@ export async function onRequestPost(context) {
         }),
       });
 
-      const verifyResult = await verifyResponse.json();
+      const verifyResult: any = await verifyResponse.json();
       if (!verifyResult.success) {
         return new Response(JSON.stringify({ message: 'Verificación de seguridad fallida.' }), { status: 400 });
       }
+    } else {
+       return new Response(JSON.stringify({ message: 'Por favor completa el captcha de seguridad.' }), { status: 400 });
     }
 
-    // 2. Send email via Resend
+    // 2. Enviar email vía Resend
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -44,7 +56,7 @@ export async function onRequestPost(context) {
           <p><strong>Mensaje:</strong></p>
           <p style="white-space: pre-wrap;">${message}</p>
           <hr>
-          <small>El usuario ha aceptado la política de privacidad mediante el formulario.</small>
+          <small>El usuario ha aceptado la política de privacidad (Check: ${privacy ? 'Sí' : 'No'}).</small>
         `,
       }),
     });
@@ -60,4 +72,4 @@ export async function onRequestPost(context) {
     console.error('API Error:', error);
     return new Response(JSON.stringify({ message: 'Error interno del servidor.' }), { status: 500 });
   }
-}
+};

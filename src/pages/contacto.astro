@@ -31,8 +31,15 @@ const description = "Ponte en contacto con nosotros para discutir tu próximo pr
           <textarea id="message" name="message" rows="4" required class="w-full p-md bg-surface-soft border border-hairline rounded-md focus:border-primary outline-none transition-colors"></textarea>
         </div>
 
+        <div class="flex items-start gap-2 pt-2">
+          <input type="checkbox" id="privacy" name="privacy" required class="mt-1 accent-primary focus:ring-primary w-4 h-4" />
+          <label for="privacy" class="text-sm text-ink/70">
+            He leído y acepto la política de privacidad y el tratamiento de mis datos personales.
+          </label>
+        </div>
+
         <!-- Cloudflare Turnstile -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAA... (Configurar en .env)"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADfmwir8zq1wxQE1sJ-I_ezox6A"></div>
 
         <Button type="submit" class="w-full">Enviar mensaje</Button>
         

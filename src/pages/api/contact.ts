@@ -35,15 +35,17 @@ export const POST: APIRoute = async ({ request }) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Contacto <no-reply@selvaggiesteban.dev>',
-        to: ['esteban@selvaggiesteban.dev'],
-        subject: `Nuevo contacto: ${name}`,
+        from: 'Contacto Web <no-reply@selvaggiesteban.dev>',
+        to: ['selvaggiesteban@gmail.com'],
+        subject: `Nuevo mensaje de tu web: ${name}`,
         html: `
-          <h1>Nuevo mensaje de contacto</h1>
+          <h2>Nuevo contacto desde SelvaggiEsteban.dev</h2>
           <p><strong>Nombre:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Mensaje:</strong></p>
-          <p>${message}</p>
+          <p style="white-space: pre-wrap;">${message}</p>
+          <hr>
+          <small>El usuario ha aceptado la política de privacidad mediante el formulario.</small>
         `,
       }),
     });

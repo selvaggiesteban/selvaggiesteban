@@ -1,0 +1,35 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+// Solo tomamos H2 y H3 para el índice para mantenerlo limpio
+const filteredHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
+---
+
+{filteredHeadings.length > 0 && (
+  <details class="bg-surface-soft border border-hairline rounded-xl p-6 mb-8 group open:pb-6 cursor-pointer">
+    <summary class="flex justify-between items-center font-bold text-lg text-ink list-none outline-none">
+      Índice de Contenidos
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+    </summary>
+    <div class="mt-4 pt-4 border-t border-hairline-soft">
+      <ul class="space-y-2 text-sm">
+        {filteredHeadings.map((heading) => (
+          <li class={heading.depth === 3 ? "ml-4" : ""}>
+            <a href={`#${heading.slug}`} class="text-ink/70 hover:text-primary transition-colors block py-1">
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </details>
+)}
+
+<style>
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

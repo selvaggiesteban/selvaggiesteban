@@ -26,7 +26,7 @@ try {
   const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer TEST-5434694386806158-060805-e8b9e4909d88815725096cab38472352-462363177`,
+      "Authorization": `Bearer APP_USR-5434694386806158-060805-0d4d3df7a6a5905505523203f89564d0-462363177`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
@@ -47,7 +47,7 @@ try {
     })
   });
   const mpData = await mpResponse.json();
-  payLink = mpData.sandbox_init_point || mpData.init_point || "#";
+  payLink = mpData.init_point || "#";
 } catch (error) {
   console.error("Error al generar el link de Mercado Pago:", error);
 }

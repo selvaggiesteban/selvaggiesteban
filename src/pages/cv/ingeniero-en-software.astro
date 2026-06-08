@@ -9,7 +9,7 @@ const description = "Curriculum Vitae optimizado para ATS de Esteban Selvaggi, I
 
 <BaseLayout {title} {description} isProfile={true}>
   <Section variant="white" class="pt-24 pb-16 reveal">
-    <div class="max-w-3xl mx-auto">
+    <div class="w-full mx-auto">
       
       <!-- Header -->
       <div class="border-b border-hairline pb-8 mb-8 text-center md:text-left flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
@@ -17,7 +17,7 @@ const description = "Curriculum Vitae optimizado para ATS de Esteban Selvaggi, I
           <h1 class="display-lg mb-2">Esteban Selvaggi</h1>
           <p class="text-2xl text-primary font-medium">Ingeniero de Software</p>
         </div>
-        <div class="text-sm text-ink/70 flex flex-col gap-1 items-center md:items-end">
+        <div class="text-sm text-ink/70 flex flex-col gap-3 items-center sm:items-end flex-shrink-0">
           <span>📍 Provincia de Buenos Aires, Argentina</span>
           <a href="mailto:selvaggiesteban@gmail.com" class="hover:text-primary transition-colors">✉️ selvaggiesteban@gmail.com</a>
           <a href="tel:+5491153323937" class="hover:text-primary transition-colors">📱 (+54) 9 11 5332-3937</a>
@@ -245,18 +245,4 @@ const description = "Curriculum Vitae optimizado para ATS de Esteban Selvaggi, I
         </div>
       </div>
 
-      <!-- Action -->
-      <div class="mt-12 text-center print:hidden border-t border-hairline-soft pt-8">
-        <h3 class="font-bold text-lg mb-4">Descarga mi Currículum Vitae</h3>
-        <p class="text-sm text-ink/70 mb-6">Elige el perfil que mejor se adapte a tus necesidades:</p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <Button href="/cv-ingeniero-en-software.pdf" download variant="primary" class="text-sm">Ingeniero en Software</Button>
-          <Button href="/cv-ingeniero-informatico.pdf" download variant="secondary" class="text-sm">Ingeniero Informático</Button>
-          <Button href="/cv-experto-seo.pdf" download variant="secondary" class="text-sm">Experto SEO</Button>
-          <Button href="/cv-disenador-web.pdf" download variant="secondary" class="text-sm">Diseñador Web</Button>
-        </div>
-      </div>
-
-    </div>
-  </Section>
-</BaseLayout>
+          </div>\n  </Section>\n</BaseLayout>

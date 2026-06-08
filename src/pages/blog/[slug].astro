@@ -18,7 +18,7 @@ import { render } from 'astro:content';
 const { Content } = await render(post);
 ---
 
-<BaseLayout articleSchema={true} pubDate={post.data.pubDate.toISOString()} title={post.data.title} description={post.data.description}>
+<BaseLayout articleSchema={true} pubDate={post.data.pubDate ? new Date(post.data.pubDate).toISOString() : new Date().toISOString()} title={post.data.title} description={post.data.description}>
   <Section>
     <article class="max-w-3xl mx-auto">
       <Breadcrumbs path={[{ label: 'Inicio', href: '/' }, { label: 'Blog', href: '/blog' }, { label: post.data.title }]} />

@@ -13,10 +13,11 @@ const description = "Explora las soluciones de diseño y desarrollo web que ofre
     <h1 class="display-lg mb-xl text-center">Servicios de ingeniería informática</h1>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-lg">
       {servicios.map(servicio => (
-        <a href={`/servicios/${servicio.id}`} class="group p-lg bg-surface-soft rounded-lg border border-hairline hover:border-primary transition-all">
+        <article class="group relative p-lg bg-surface-soft rounded-lg border border-transparent transition-all">
+          <a href={`/servicios/${servicio.id}`} class="absolute inset-0 z-10"><span class="sr-only">Ver servicio</span></a>
           <h2 class="text-xl font-bold mb-sm text-center group-hover:text-primary">{servicio.data.title}</h2>
           <p class="text-ink/60">{servicio.data.description}</p>
-        </a>
+        </article>
       ))}
     </div>
   </Section>

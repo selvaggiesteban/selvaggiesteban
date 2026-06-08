@@ -1,65 +1,55 @@
 ---
-import Section from './Section.astro';
+import Button from './Button.astro';
 
-const posts = [
+// Github Repos Widget Component
+const repos = [
   {
-    date: "Hace 2 días",
-    content: "La ingeniería de software no se trata solo de escribir código, sino de construir sistemas robustos, escalables y mantenibles. En mi última auditoría de rendimiento...",
-    tags: "#SoftwareEngineering #Performance #Astro",
-    likes: 42,
-    comments: 12
+    name: '30_days_coding',
+    url: 'https://github.com/selvaggiesteban/30_days_coding',
+    description: 'A 30-day coding challenge showcasing algorithms, data structures, and daily problem-solving in multiple languages.',
+    language: 'TypeScript',
+    stars: 12
   },
   {
-    date: "Hace 1 semana",
-    content: "Optimizar el SEO técnico es fundamental para el éxito de cualquier proyecto web moderno. No es solo meta-tags, es la estructura del DOM, la velocidad de carga y la accesibilidad.",
-    tags: "#SEO #WebDevelopment #GoogleSearch",
-    likes: 85,
-    comments: 24
+    name: 'spec-driven_development',
+    url: 'https://github.com/selvaggiesteban/spec-driven_development',
+    description: 'Methodology and tools for building robust applications starting from strict specifications and schemas.',
+    language: 'Python',
+    stars: 8
   },
   {
-    date: "Hace 2 semanas",
-    content: "Integrar Agentes de IA en flujos de trabajo reales está transformando la productividad de los equipos de desarrollo. Aquí les comparto mi experiencia usando Gemini CLI.",
-    tags: "#AI #Productivity #Automation",
-    likes: 120,
-    comments: 31
+    name: 'hands-on-ai',
+    url: 'https://github.com/selvaggiesteban/hands-on-ai',
+    description: 'Practical implementations of AI models, LLM agents, and prompt engineering examples.',
+    language: 'Jupyter Notebook',
+    stars: 24
   }
 ];
 ---
 
-<Section variant="white" id="recent-posts" class="reveal">
-  <div class="grid lg:grid-cols-12 gap-xl items-start">
-    {/* Left Column: Heading */}
-    <div class="lg:col-span-4">
-      <h2 class="display-lg mb-md">Publicaciones recientes</h2>
-      <p class="text-xl text-ink/60 mb-6">Compartiendo conocimiento y avances sobre ingeniería de software e IA.</p>
-    </div>
-
-    {/* Right Column: LinkedIn Style Posts */}
-    <div class="lg:col-span-8 space-y-6">
-      {posts.map(post => (
-        <div class="bg-[#f9f9f9] p-lg rounded-[5px] border border-hairline shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">ES</div>
-            <div>
-              <span class="font-bold text-sm block">Esteban Selvaggi</span>
-              <span class="text-xs text-ink/40">{post.date}</span>
-            </div>
-          </div>
-          <p class="text-sm text-ink/80 leading-relaxed mb-4">
-            {post.content}
-          </p>
-          <p class="text-sm text-primary font-medium mb-4">
-            {post.tags}
-          </p>
-          <div class="flex items-center justify-between pt-4 border-t border-hairline-soft text-xs text-ink/40 font-medium">
-            <div class="flex gap-4">
-              <span>👍 {post.likes}</span>
-              <span>💬 {post.comments}</span>
-            </div>
-            <span>Ver publicación original →</span>
-          </div>
-        </div>
-      ))}
-    </div>
+<div class="mb-section">
+  <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+    <h2 class="display-sm text-center md:text-left">Repositorios Destacados</h2>
+    <Button href="https://github.com/selvaggiesteban" variant="outline" target="_blank" class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.24c3-.3 6-1.5 6-6.3 0-1.4-.5-2.5-1.4-3.4.1-.3.6-1.6-.1-3.4 0 0-1.2-.4-3.9 1.8a12.3 12.3 0 0 0-7 0C3.9 2.2 2.7 2.6 2.7 2.6c-.7 1.8-.2 3.1-.1 3.4-.9.9-1.4 2-1.4 3.4 0 4.8 3 6 6 6.3-.3.3-.5.7-.5 1.5v4"/><path d="M9 18c-4.5 1-5-2.5-7-3"/></svg>
+      Ver en GitHub
+    </Button>
   </div>
-</Section>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {repos.map(repo => (
+      <a href={repo.url} target="_blank" class="group relative bg-surface-soft border border-hairline rounded-[9px] p-6 hover:shadow-md transition-shadow flex flex-col h-full overflow-hidden">
+        <div class="flex items-start justify-between mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-ink/60 group-hover:text-primary transition-colors"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.24c3-.3 6-1.5 6-6.3 0-1.4-.5-2.5-1.4-3.4.1-.3.6-1.6-.1-3.4 0 0-1.2-.4-3.9 1.8a12.3 12.3 0 0 0-7 0C3.9 2.2 2.7 2.6 2.7 2.6c-.7 1.8-.2 3.1-.1 3.4-.9.9-1.4 2-1.4 3.4 0 4.8 3 6 6 6.3-.3.3-.5.7-.5 1.5v4"/><path d="M9 18c-4.5 1-5-2.5-7-3"/></svg>
+          <span class="flex items-center gap-1 text-xs font-mono text-ink/50"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> {repo.stars}</span>
+        </div>
+        <h3 class="text-lg font-bold text-ink mb-2 group-hover:text-primary transition-colors break-words">{repo.name}</h3>
+        <p class="text-sm text-ink/70 leading-relaxed mb-6 flex-grow">{repo.description}</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <span class="w-3 h-3 rounded-full bg-primary/20 border border-primary/50"></span>
+          <span class="text-xs font-mono text-ink/60">{repo.language}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>

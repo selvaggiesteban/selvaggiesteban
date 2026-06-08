@@ -20,7 +20,7 @@ const { Content } = await render(servicio);
 
 <BaseLayout isService={true} title={servicio.data.title} description={servicio.data.description}>
   <Section>
-    <div class="max-w-3xl mx-auto">
+    <div class="w-full mx-auto">
       <h1 class="display-lg mb-md">{servicio.data.title}</h1>
       <p class="text-xl text-ink/60 mb-xl italic">{servicio.data.description}</p>
       <div class="prose prose-ink max-w-none">

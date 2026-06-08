@@ -1,0 +1,69 @@
+---
+import PresupuestoLayout from '../../layouts/PresupuestoLayout.astro';
+import Button from '../../components/Button.astro';
+
+const fecha = "08/06/2026";
+const cliente = "María Agustina";
+const agencia = "Identidad Marketing Digital";
+const proyecto = "Desarrollo de Sitio Web Institucional";
+---
+
+<PresupuestoLayout title={`Presupuesto: ${proyecto}`} description={`Propuesta de desarrollo para ${agencia}`}>
+  
+  <div class="bg-white rounded-[9px] shadow-sm border border-hairline p-8 md:p-12 mb-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 border-b border-hairline-soft pb-8">
+      <div>
+        <h1 class="text-3xl font-bold text-ink mb-2">Propuesta de Desarrollo</h1>
+        <p class="text-ink/60 text-lg">{proyecto}</p>
+      </div>
+      <div class="mt-4 md:mt-0 text-left md:text-right font-mono text-sm text-ink/70">
+        <p>Fecha: {fecha}</p>
+        <p>Para: <strong class="text-ink">{cliente}</strong></p>
+        <p>Empresa: <strong>{agencia}</strong></p>
+      </div>
+    </div>
+
+    <div class="prose prose-ink max-w-none mb-12">
+      <h2>El Desafío</h2>
+      <p>Creación de un sitio web institucional ultrarrápido, seguro y optimizado para motores de búsqueda (SEO) y alta conversión. El ecosistema digital estará basado en tecnologías de vanguardia (Astro + Cloudflare) garantizando tiempos de carga inferiores a un segundo, factor clave para retener visitas y posicionar en Google.</p>
+      
+      <h2>Alcance del Proyecto</h2>
+      <ul>
+        <li><strong>Diseño y Desarrollo Frontend:</strong> Interfaz gráfica a medida con enfoque "mobile-first", asegurando compatibilidad perfecta en smartphones, tablets y escritorio.</li>
+        <li><strong>Arquitectura Serverless:</strong> Alojamiento en la red global de Cloudflare Pages (Hosting ultrarrápido).</li>
+        <li><strong>Formulario de Contacto Avanzado:</strong> Integración de formularios conectados vía API, con protección anti-spam inteligente (Cloudflare Turnstile) y envío automatizado de correos (Resend).</li>
+        <li><strong>Optimización SEO Técnica:</strong> Etiquetado HTML semántico, configuración de metadatos, optimización de velocidad de carga (Core Web Vitals) e inyección de datos estructurados (Schema.org).</li>
+      </ul>
+    </div>
+
+    <div class="bg-surface-soft rounded-[9px] p-8 mb-12 border border-hairline">
+      <h3 class="text-xl font-bold mb-6">Inversión del Desarrollo</h3>
+      <div class="flex justify-between items-center py-3 border-b border-hairline-soft">
+        <span class="font-medium text-ink">Desarrollo integral del Sitio Web Institucional</span>
+        <span class="font-bold text-lg">$320.000 ARS</span>
+      </div>
+      
+      <div class="mt-8">
+        <h4 class="text-sm font-bold uppercase tracking-widest text-ink/40 mb-4">Costos de Infraestructura (Mantenimiento)</h4>
+        <div class="flex justify-between items-center py-2 text-sm text-ink/70">
+          <span>Hosting y Soporte Técnico (Mensual) <br/><em class="text-xs opacity-70">*Se actualiza trimestralmente por índice de inflación IPC</em></span>
+          <span>$35.000 ARS / mes</span>
+        </div>
+        <div class="flex justify-between items-center py-2 text-sm text-ink/70">
+          <span>Renovación de Dominio .com.ar (Anual) <br/><em class="text-xs opacity-70">*Costo aproximado sujeto al registrador Nic.ar</em></span>
+          <span>~$8.500 ARS / año</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
+      <p class="text-ink/60 mb-6 text-sm">Al realizar el pago, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
+      <!-- Reemplazar el href con el link real de MercadoPago generado por la app -->
+      <Button href="[LINK_MERCADOPAGO_AQUI]" target="_blank" class="w-full sm:w-auto text-lg px-12 py-4">
+        Pagar con Mercado Pago
+      </Button>
+    </div>
+  </div>
+
+</PresupuestoLayout>

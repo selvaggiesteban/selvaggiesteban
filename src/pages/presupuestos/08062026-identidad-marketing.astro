@@ -86,19 +86,10 @@ try {
         <p><span class="font-bold text-primary">Válido hasta:</span> {fechaVto}</p>
         <div class="my-4 border-t border-hairline-soft"></div>
         <p><span class="font-bold">Apellido y Nombre / Razón Social:</span> {clienteNombre} ({clienteEmpresa})</p>
-        <p><span class="font-bold">CUIT:</span> {clienteCuit === "A COMPLETAR" ? <span class="text-red-500 font-bold">A COMPLETAR</span> : clienteCuit}</p>
-        <p><span class="font-bold">Condición IVA:</span> {clienteIva === "A COMPLETAR" ? <span class="text-red-500 font-bold">A COMPLETAR</span> : clienteIva}</p>
-        <p><span class="font-bold">Domicilio:</span> {clienteDomicilio === "A COMPLETAR" ? <span class="text-red-500 font-bold">A COMPLETAR</span> : clienteDomicilio}</p>
+        <p><span class="font-bold">CUIT:</span> {clienteCuit === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteCuit}</p>
+        <p><span class="font-bold">Condición IVA:</span> {clienteIva === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteIva}</p>
+        <p><span class="font-bold">Domicilio:</span> {clienteDomicilio === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteDomicilio}</p>
         <p><span class="font-bold">Condición de Venta:</span> {condicionVenta}</p>
-      </div>
-    </div>
-
-    <!-- Descripción del Servicio -->
-    <div class="mb-12">
-      <h2 class="text-xl font-bold mb-2">Detalle de la Propuesta</h2>
-      <p class="text-ink/60 text-lg mb-8">{proyecto}</p>
-      <div class="prose prose-ink max-w-none">
-        <h3>El Desafío</h3><p>Creación de un sitio web institucional ultrarrápido, seguro y optimizado para motores de búsqueda (SEO) y alta conversión. El ecosistema digital estará basado en tecnologías de vanguardia (Astro + Cloudflare) garantizando tiempos de carga inferiores a un segundo.</p><h3>Alcance del Proyecto</h3><ul><li><strong>Diseño y Desarrollo Frontend:</strong> Interfaz gráfica a medida con enfoque "mobile-first".</li><li><strong>Arquitectura Serverless:</strong> Alojamiento en la red global de Cloudflare Pages.</li><li><strong>Formulario de Contacto Avanzado:</strong> Integración de formularios conectados vía API (Resend) con anti-spam Turnstile.</li><li><strong>Optimización SEO Técnica:</strong> Configuración de metadatos, optimización Core Web Vitals e inyección de Schema.org.</li></ul>
       </div>
     </div>
 
@@ -168,6 +159,17 @@ try {
           <span>$363.500,00</span>
         </div>
       </div>
+
+    <!-- Descripción del Servicio -->
+    <div class="mb-12">
+      <h2 class="text-xl font-bold mb-2">Detalle de la Propuesta</h2>
+      <p class="text-ink/60 text-lg mb-8">{proyecto}</p>
+      <div class="prose prose-ink max-w-none">
+        <h3>El Desafío</h3><p>Creación de un sitio web institucional ultrarrápido, seguro y optimizado para motores de búsqueda (SEO) y alta conversión. El ecosistema digital estará basado en tecnologías de vanguardia (Astro + Cloudflare) garantizando tiempos de carga inferiores a un segundo.</p><h3>Alcance del Proyecto</h3><ul><li><strong>Diseño y Desarrollo Frontend:</strong> Interfaz gráfica a medida con enfoque "mobile-first".</li><li><strong>Arquitectura Serverless:</strong> Alojamiento en la red global de Cloudflare Pages.</li><li><strong>Formulario de Contacto Avanzado:</strong> Integración de formularios conectados vía API (Resend) con anti-spam Turnstile.</li><li><strong>Optimización SEO Técnica:</strong> Configuración de metadatos, optimización Core Web Vitals e inyección de Schema.org.</li></ul>
+      </div>
+    </div>
+
+    
     </div>
 
     <!-- Cierre y Pago -->
@@ -175,7 +177,7 @@ try {
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
       <p class="text-ink/60 mb-6 text-sm mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
       <a href={payLink} target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#009EE3] hover:bg-[#0088cc] text-white rounded-[9px] px-8 py-4 font-semibold text-lg transition-colors shadow-md mx-auto w-full sm:w-auto">
-        <img src="https://http2.mlstatic.com/storage/pog-cm-admin/calm-assets/default-brand-mercadopago--ee8c4c07.webp" alt="Mercado Pago" class="h-6 object-contain" />
+        <img src="/assets/mp/mp-favicon.svg" alt="Mercado Pago" class="h-6 object-contain" />
         Pagar con Mercado Pago
       </a>
       <div class="mt-6 flex flex-wrap justify-center items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">

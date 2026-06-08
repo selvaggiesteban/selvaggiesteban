@@ -2,65 +2,108 @@
 import PresupuestoLayout from '../../layouts/PresupuestoLayout.astro';
 import Button from '../../components/Button.astro';
 
-const fecha = "08/06/2026";
-const cliente = "Mora García";
-const agencia = "Particular / Evento";
+// Datos Profesionales
+const miRazonSocial = "SELVAGGI ESTEBAN";
+const miDomicilio = "La Rioja 1935 - Villa Industriales, Buenos Aires";
+const miCuit = "20433102593";
+const fechaEmision = "08/06/2026";
+const fechaVto = "22/06/2026"; // 14 días de validez por defecto
+
+// Datos del Cliente
+const clienteNombre = "Mora García";
+const clienteEmpresa = "Particular / Evento";
+const clienteCuit = "A COMPLETAR";
+const clienteIva = "Consumidor Final";
+const clienteDomicilio = "A COMPLETAR";
+const condicionVenta = "Transferencia / MercadoPago (Contado)";
+
 const proyecto = "Landing Page: Festival de Vinos";
+const urlPresupuesto = "https://selvaggiesteban.dev/presupuestos/08062026-mora-garcia";
 ---
 
-<PresupuestoLayout title={`Presupuesto: ${proyecto}`} description={`Propuesta de desarrollo para ${cliente}`}>
-  
+<PresupuestoLayout title={`Presupuesto: ${proyecto}`} description={`Propuesta comercial para ${clienteNombre}`}>
+
+  <!-- Share Buttons -->
+  <div class="flex justify-end gap-3 mb-6">
+    <a href={`mailto:?subject=Presupuesto%20Web%20-%20SelvaggiEsteban.dev&body=Hola!%20Te%20comparto%20el%20link%20de%20la%20cotizaci%C3%B3n:%20${urlPresupuesto}`} class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-primary hover:text-white transition-colors" title="Compartir por Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </a>
+    <a href={`https://api.whatsapp.com/send?text=Hola,%20aquí%20tienes%20el%20presupuesto%20del%20sitio%20web:%20${urlPresupuesto}`} target="_blank" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-[#25D366] hover:text-white transition-colors" title="Compartir por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <a href={`https://t.me/share/url?url=${urlPresupuesto}&text=Presupuesto%20Web`} target="_blank" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-[#0088cc] hover:text-white transition-colors" title="Compartir por Telegram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+    </a>
+  </div>
+
   <div class="bg-white rounded-[9px] shadow-sm border border-hairline p-8 md:p-12 mb-8">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 border-b border-hairline-soft pb-8">
+    
+    <!-- Encabezado de Facturación / Presupuesto -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 border-b border-hairline-soft pb-8">
       <div>
-        <h1 class="text-3xl font-bold text-ink mb-2">Propuesta de Desarrollo</h1>
-        <p class="text-ink/60 text-lg">{proyecto}</p>
+        <h1 class="text-3xl font-bold text-ink mb-6">PRESUPUESTO</h1>
+        <div class="text-sm text-ink/80 space-y-1">
+          <p><span class="font-bold">Razón Social:</span> {miRazonSocial}</p>
+          <p><span class="font-bold">CUIT:</span> {miCuit}</p>
+          <p><span class="font-bold">Domicilio:</span> {miDomicilio}</p>
+        </div>
       </div>
-      <div class="mt-4 md:mt-0 text-left md:text-right font-mono text-sm text-ink/70">
-        <p>Fecha: {fecha}</p>
-        <p>Para: <strong class="text-ink">{cliente}</strong></p>
-        <p>Empresa: <strong>{agencia}</strong></p>
+      <div class="md:text-right text-sm text-ink/80 space-y-1 bg-surface-soft p-4 rounded-[9px] border border-hairline">
+        <p><span class="font-bold">Fecha de Emisión:</span> {fechaEmision}</p>
+        <p><span class="font-bold text-primary">Válido hasta:</span> {fechaVto}</p>
+        <div class="my-3 border-t border-hairline-soft"></div>
+        <p><span class="font-bold">Cliente:</span> {clienteNombre} ({clienteEmpresa})</p>
+        <p><span class="font-bold">CUIT:</span> {clienteCuit}</p>
+        <p><span class="font-bold">Condición IVA:</span> {clienteIva}</p>
+        <p><span class="font-bold">Domicilio:</span> {clienteDomicilio}</p>
+        <p><span class="font-bold">Condición de Venta:</span> {condicionVenta}</p>
       </div>
     </div>
 
-    <div class="prose prose-ink max-w-none mb-12">
-      <h2>El Desafío</h2>
-      <p>Creación de una "Landing Page" (Página de aterrizaje) de alto impacto visual y rendimiento técnico, orientada específicamente a la promoción y conversión de asistentes para el Festival de Vinos. El objetivo es captar la atención del usuario en los primeros segundos y facilitar la obtención de información o compra de entradas sin distracciones.</p>
-      
-      <h2>Alcance del Proyecto</h2>
-      <ul>
-        <li><strong>Estructura de Conversión (One-Page):</strong> Desarrollo de una única página fluida dividida en secciones estratégicas (Hero de impacto, Información del evento, Galería, Llamados a la Acción).</li>
-        <li><strong>Diseño Responsive Premium:</strong> Adaptación visual milimétrica para que el diseño luzca espectacular y sea fácil de navegar desde dispositivos móviles (donde provendrá la mayoría del tráfico de redes sociales).</li>
-        <li><strong>Alta Velocidad de Carga:</strong> Implementación sobre arquitectura estática y CDN global (Cloudflare) para que las imágenes y recursos del festival carguen instantáneamente, evitando abandonos por espera.</li>
-        <li><strong>SEO Básico y Meta Etiquetas:</strong> Configuración inicial para que al compartir el enlace en WhatsApp o Redes Sociales se muestre una imagen de vista previa atractiva, título y descripción del evento.</li>
-      </ul>
+    <!-- Descripción del Servicio -->
+    <div class="mb-12">
+      <h2 class="text-xl font-bold mb-2">Detalle de la Propuesta</h2>
+      <p class="text-ink/60 text-lg mb-8">{proyecto}</p>
+      <div class="prose prose-ink max-w-none">
+        <h3>El Desafío</h3>
+        <p>Creación de una "Landing Page" (Página de aterrizaje) de alto impacto visual y rendimiento técnico, orientada específicamente a la promoción y conversión de asistentes para el Festival de Vinos.</p>
+
+        <h3>Alcance del Proyecto</h3>
+        <ul>
+          <li><strong>Estructura de Conversión (One-Page):</strong> Desarrollo de una única página fluida dividida en secciones estratégicas (Hero, Info, Galería, CTA).</li>
+          <li><strong>Diseño Responsive Premium:</strong> Adaptación visual milimétrica para móviles y escritorio.</li>
+          <li><strong>Alta Velocidad de Carga:</strong> Implementación sobre arquitectura estática y CDN global (Cloudflare).</li>
+          <li><strong>SEO Básico y Meta Etiquetas:</strong> Configuración inicial para vistas previas en WhatsApp y Redes Sociales.</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Tabla de Costos -->
     <div class="bg-surface-soft rounded-[9px] p-8 mb-12 border border-hairline">
       <h3 class="text-xl font-bold mb-6">Inversión del Desarrollo</h3>
-      <div class="flex justify-between items-center py-3 border-b border-hairline-soft">
-        <span class="font-medium text-ink">Desarrollo integral de Landing Page</span>
-        <span class="font-bold text-lg">$85.000 ARS</span>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b border-hairline-soft">
+        <span class="font-medium text-ink text-lg">Desarrollo integral de Landing Page</span>
+        <span class="font-bold text-2xl text-primary mt-2 md:mt-0">$85.000 ARS</span>
       </div>
-      
+
       <div class="mt-8">
         <h4 class="text-sm font-bold uppercase tracking-widest text-ink/40 mb-4">Costos de Infraestructura (Mantenimiento)</h4>
-        <div class="flex justify-between items-center py-2 text-sm text-ink/70">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-3 text-sm text-ink/70 border-b border-hairline-soft border-dashed">
           <span>Hosting y Soporte Técnico (Mensual) <br/><em class="text-xs opacity-70">*Se actualiza trimestralmente por índice de inflación IPC</em></span>
-          <span>$35.000 ARS / mes</span>
+          <span class="font-medium mt-1 md:mt-0">$35.000 ARS / mes</span>
         </div>
-        <div class="flex justify-between items-center py-2 text-sm text-ink/70">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-3 text-sm text-ink/70">
           <span>Renovación de Dominio .com.ar (Anual) <br/><em class="text-xs opacity-70">*Costo aproximado sujeto al registrador Nic.ar</em></span>
-          <span>~$8.500 ARS / año</span>
+          <span class="font-medium mt-1 md:mt-0">~$8.500 ARS / año</span>
         </div>
       </div>
     </div>
 
-    <div class="text-center">
+    <!-- Cierre y Pago -->
+    <div class="text-center pt-8">
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
-      <p class="text-ink/60 mb-6 text-sm">Al realizar el pago, confirmas la aceptación del presupuesto y damos inicio formal al desarrollo del proyecto.</p>
-      <!-- Reemplazar el href con el link real de MercadoPago generado por la app -->
-      <Button href="[LINK_MERCADOPAGO_AQUI]" target="_blank" class="w-full sm:w-auto text-lg px-12 py-4">
+      <p class="text-ink/60 mb-6 text-sm max-w-lg mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
+      <Button href="[LINK_MERCADOPAGO_AQUI]" target="_blank" class="w-full sm:w-auto text-lg px-12 py-4 shadow-md">
         Pagar con Mercado Pago
       </Button>
     </div>

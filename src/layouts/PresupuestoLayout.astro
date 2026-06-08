@@ -22,21 +22,21 @@ const { title, description } = Astro.props;
     <SEO {title} {description} />
   </head>
   <body class="bg-surface">
-    <!-- Header minimalista -->
+    <!-- Header minimalista alineado al ancho global -->
     <header class="py-6 border-b border-hairline bg-white mb-8">
-      <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-        <span class="text-xl font-bold tracking-tighter text-ink">selvaggiesteban.dev</span>
-        <span class="text-sm font-mono text-ink/40 uppercase tracking-widest">Propuesta Confidencial</span>
+      <div class="max-w-7xl mx-auto px-lg md:px-xxl flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold tracking-tighter text-ink">selvaggiesteban.dev</a>
+        <span class="text-sm font-mono text-ink/40 uppercase tracking-widest hidden sm:inline-block">Presupuesto Privado</span>
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 pb-20">
+    <main class="max-w-7xl mx-auto px-lg md:px-xxl pb-20">
       <slot />
     </main>
 
     <!-- Footer minimalista -->
     <footer class="py-8 border-t border-hairline text-center">
-      <p class="text-xs text-ink/40 font-mono uppercase tracking-widest">© {new Date().getFullYear()} Esteban Selvaggi - Documento Privado</p>
+      <p class="text-xs text-ink/40 font-mono uppercase tracking-widest">© {new Date().getFullYear()} SELVAGGI ESTEBAN - Documento Comercial</p>
     </footer>
   </body>
 </html>

@@ -13,7 +13,7 @@ const description = "Nuestros productos y planes.";
     <h1 class="display-lg mb-xl">Productos</h1>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-lg">
       {productos.map(producto => (
-        <a href={`/productos/${producto.id}`} class="group p-lg bg-surface-soft rounded-lg border border-hairline hover:border-primary transition-all">
+        <a href={`/productos/${producto.id}`} class="group p-lg bg-surface-soft rounded-lg border border-hairline  transition-all">
           <h2 class="text-xl font-bold mb-sm">{producto.data.title}</h2>
           <p class="text-ink/60 mb-md">{producto.data.description}</p>
           <span class="text-primary font-bold">${producto.data.price}</span>

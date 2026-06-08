@@ -36,7 +36,7 @@ const navLinks = [
           </a>
           
           {link.dropdown && (
-            <div class="absolute top-[56px] left-1/2 -translate-x-1/2 w-48 bg-white border border-hairline shadow-xl rounded-b-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2">
+            <div class="absolute top-[56px] left-1/2 -translate-x-1/2 w-48 bg-white border border-hairline shadow-xl rounded-none py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2">
               {link.dropdown.map(subItem => (
                 <a href={subItem.href} class="block px-4 py-2 hover:bg-surface-soft hover:text-primary transition-colors whitespace-nowrap">
                   {subItem.label}

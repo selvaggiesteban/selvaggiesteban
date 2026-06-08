@@ -18,7 +18,7 @@ const filteredHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
       <ul class="space-y-2 text-sm">
         {filteredHeadings.map((heading) => (
           <li class={heading.depth === 3 ? "ml-4" : ""}>
-            <a href={`#${heading.slug}`} class="text-ink/70 hover:text-primary transition-colors block py-1">
+            <a href={`#${heading.slug}`} class="text-ink/70 hover:text-primary transition-colors block py-1 underline font-medium">
               {heading.text}
             </a>
           </li>

@@ -19,6 +19,38 @@ const condicionVenta = "Transferencia / MercadoPago (Contado)";
 
 const proyecto = "Landing Page: Festival de Vinos";
 const urlPresupuesto = "https://selvaggiesteban.dev/presupuestos/08062026-mora-garcia";
+
+// Generación dinámica de Link de Pago (Mercado Pago)
+let payLink = "#";
+try {
+  const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer TEST-5434694386806158-060805-e8b9e4909d88815725096cab38472352-462363177`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      items: [
+        {
+          title: "Landing Page - Festival de Vinos",
+          quantity: 1,
+          unit_price: 85000,
+          currency_id: "ARS"
+        }
+      ],
+      back_urls: {
+        success: "https://selvaggiesteban.dev/",
+        failure: "https://selvaggiesteban.dev/",
+        pending: "https://selvaggiesteban.dev/"
+      },
+      auto_return: "approved"
+    })
+  });
+  const mpData = await mpResponse.json();
+  payLink = mpData.sandbox_init_point || mpData.init_point || "#";
+} catch (error) {
+  console.error("Error al generar el link de Mercado Pago:", error);
+}
 ---
 
 <PresupuestoLayout title={`Presupuesto: ${proyecto}`} description={`Propuesta comercial para ${clienteNombre}`}>
@@ -103,7 +135,7 @@ const urlPresupuesto = "https://selvaggiesteban.dev/presupuestos/08062026-mora-g
     <div class="text-center pt-8">
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
       <p class="text-ink/60 mb-6 text-sm max-w-lg mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
-      <Button href="[LINK_MERCADOPAGO_AQUI]" target="_blank" class="w-full sm:w-auto text-lg px-12 py-4 shadow-md">
+      <Button href={payLink} target="_blank" class="w-full sm:w-auto text-lg px-12 py-4 shadow-md">
         Pagar con Mercado Pago
       </Button>
     </div>

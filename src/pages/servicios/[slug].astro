@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
 import Section from '../../components/Section.astro';
 
 export const prerender = true;
@@ -26,5 +27,8 @@ const { Content } = await render(servicio);
         <Content />
       </div>
     </div>
+  </Section>
+  <Section variant="canvas">
+    <ContactForm />
   </Section>
 </BaseLayout>

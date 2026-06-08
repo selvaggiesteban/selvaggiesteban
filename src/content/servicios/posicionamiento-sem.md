@@ -1,26 +1,81 @@
 ---
-title: "Posicionamiento SEM"
-description: "Campañas publicitarias de alto rendimiento para maximizar tu Retorno de Inversión (ROI) de forma inmediata."
-order: 4
-seoTitle: "Campañas de Posicionamiento SEM en Google Ads | Esteban Selvaggi"
-seoDescription: "Acelera tus ventas con mi servicio de posicionamiento SEM. Creación y gestión de anuncios rentables en Google Ads con máxima conversión."
-permalink: "/servicios/posicionamiento-sem"
-altTexts: ["Panel de control de campañas de posicionamiento SEM", "Gráfico de retorno de inversión publicitaria", "Anuncios patrocinados en los resultados de Google", "Configuración de Google Ads avanzada", "Análisis de costo por clic SEM"]
+title: Posicionamiento SEM
+description: Posicionamiento web en Google. Llega a millones de personas en Google con campañas de máximo rendimiento.
 ---
-*   Diseño y ejecución de campañas de **Google Ads (Search, Display, Performance Max)** hiper-segmentadas hacia clientes listos para comprar.
-*   Análisis exhaustivo del Costo por Clic (CPC) y optimización diaria del presupuesto para garantizar el máximo Retorno de Inversión (ROI).
-*   Monitoreo de conversiones en tiempo real y pruebas A/B de anuncios para reducir los costos de adquisición de clientes.
 
-## Acelera tus ventas con el posicionamiento SEM
+<div class="mb-12">
+  <h2 class="text-3xl font-bold mb-6">Capta más ventas en la Búsqueda, YouTube, Gmail y más, todo desde una sola campaña.</h2>
+  <p class="text-ink/80 text-lg mb-8 leading-relaxed">Con las campañas de máximo rendimiento, tienes a tu disposición lo mejor de Google en un solo paquete. Aprovecha la potencia de la IA de Google para llegar a clientes valiosos con alta probabilidad de comprarte en donde se encuentren navegando, todo a partir de una misma campaña.</p>
+  <img src="/assets/servicios/sem/campana-ia.webp" alt="Campañas con IA" class="rounded-[9px] w-full h-auto object-cover border border-hairline" />
+</div>
 
-A diferencia del tráfico orgánico que toma meses en consolidarse, el posicionamiento SEM te coloca en la cima de los resultados de búsqueda desde el primer día. Al configurar anuncios pagados inteligentemente, logramos interceptar a los usuarios exactamente en el momento en que tienen la tarjeta en la mano buscando una solución a su problema. Mi trabajo es asegurar que cada centavo invertido genere rentabilidad medible.
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+  <div class="bg-surface-soft p-6 rounded-[9px] border border-hairline text-center">
+    <img src="/assets/servicios/sem/comienza-busqueda.webp" alt="Búsqueda" class="w-full h-48 object-cover rounded-[9px] mb-4" />
+    <h3 class="text-xl font-bold mb-2">Comienza con la búsqueda</h3>
+    <p class="text-ink/70 text-sm">Aumenta el reconocimiento de tu marca y capta clientes potenciales.</p>
+  </div>
+  <div class="bg-surface-soft p-6 rounded-[9px] border border-hairline text-center">
+    <img src="/assets/servicios/sem/campanas-video.webp" alt="Video" class="w-full h-48 object-cover rounded-[9px] mb-4" />
+    <h3 class="text-xl font-bold mb-2">Da vida a tu marca con videos</h3>
+    <p class="text-ink/70 text-sm">Interactúa con usuarios mientras ven o buscan videos en YouTube.</p>
+  </div>
+</div>
 
-## Optimizando cada campaña de posicionamiento SEM
+<h2 class="text-3xl font-bold mb-8">Planes de posicionamiento SEM</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div class="bg-white border border-hairline p-8 rounded-[9px] flex flex-col h-full shadow-sm">
+    <h3 class="text-2xl font-bold mb-2">Inicial</h3>
+    <p class="text-ink/60 text-sm mb-6 min-h-[40px]">Ideal para: negocios nuevos, webs sin trabajo SEO previo, profesionales independientes.</p>
+    <div class="mb-8">
+      <span class="text-4xl font-bold">$100.000</span><span class="text-ink/60"> / mes</span>
+    </div>
+    <ul class="space-y-3 mb-8 flex-grow text-sm text-ink/80">
+      <li>✓ Auditoría inicial</li>
+      <li>✓ Revisión de indexación</li>
+      <li>✓ Investigación de palabras clave</li>
+      <li>✓ 2 a 4 contenidos mensuales</li>
+    </ul>
+  </div>
 
-Crear un anuncio es fácil; crear un anuncio rentable es una ciencia. A la hora de gestionar campañas de posicionamiento SEM, me enfoco en estructurar grupos de anuncios que tengan una alta relevancia. Me apoyo en las herramientas de [Google Ads](https://ads.google.com/intl/es-419_AR/home/) para descartar tráfico basura mediante palabras clave negativas, garantizando que solo pagues por clics que tienen verdaderas posibilidades de convertirse en ventas.
+  <div class="bg-surface-soft border-2 border-primary p-8 rounded-[9px] flex flex-col h-full shadow-md relative">
+    <span class="absolute top-0 right-0 transform translate-x-2 -translate-y-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Recomendado</span>
+    <h3 class="text-2xl font-bold mb-2">Crecimiento</h3>
+    <p class="text-ink/60 text-sm mb-6 min-h-[40px]">Objetivo: aumentar tráfico cualificado y comenzar a competir comercialmente.</p>
+    <div class="mb-8">
+      <span class="text-4xl font-bold text-primary">$200.000</span><span class="text-ink/60"> / mes</span>
+    </div>
+    <ul class="space-y-3 mb-8 flex-grow text-sm text-ink/80">
+      <li>✓ Todo lo del plan Inicial</li>
+      <li>✓ 4 a 8 contenidos mensuales</li>
+      <li>✓ Clusterización de contenidos</li>
+      <li>✓ Estrategia inicial de link building</li>
+    </ul>
+  </div>
 
-### La sinergia entre el posicionamiento SEM y las Landing Pages
+  <div class="bg-white border border-hairline p-8 rounded-[9px] flex flex-col h-full shadow-sm">
+    <h3 class="text-2xl font-bold mb-2">Dominación</h3>
+    <p class="text-ink/60 text-sm mb-6 min-h-[40px]">Para empresas que quieren escalar fuerte en sectores competitivos.</p>
+    <div class="mb-8">
+      <span class="text-4xl font-bold">$400.000</span><span class="text-ink/60"> / mes</span>
+    </div>
+    <ul class="space-y-3 mb-8 flex-grow text-sm text-ink/80">
+      <li>✓ Todo lo del plan Crecimiento</li>
+      <li>✓ 10 a 12 contenidos mensuales</li>
+      <li>✓ SEO local multiubicación</li>
+      <li>✓ Análisis de competidores</li>
+    </ul>
+  </div>
+</div>
 
-Un error muy común es enviar el tráfico publicitario a la página de inicio de un sitio web. En mis estrategias de posicionamiento SEM, cada campaña está vinculada a una Landing Page optimizada específicamente para ese anuncio. Esta coherencia mejora el "Nivel de Calidad" que nos otorga Google, reduciendo drásticamente el costo que pagas por cada clic y multiplicando las conversiones.
-
-Si quieres dejar de perder dinero en publicidad mal configurada y empezar a obtener prospectos reales hoy mismo, te invito a [ponerte en contacto conmigo](/contacto) para auditar y diseñar tu próxima campaña publicitaria.
+<h2 class="text-3xl font-bold mb-8 mt-12">Preguntas frecuentes</h2>
+<div class="space-y-6">
+  <div class="bg-surface-soft p-6 rounded-[9px] border border-hairline">
+    <h3 class="font-bold text-lg mb-2">¿Cuál es la diferencia entre posicionamiento web y publicidad en Google?</h3>
+    <p class="text-ink/80 text-sm">La principal diferencia es que el posicionamiento web orgánico busca obtener tráfico a medio y largo plazo de forma "gratuita", mientras que la publicidad en Google (SEM) genera visibilidad casi inmediata a través de anuncios por los cuales pagas un presupuesto diario.</p>
+  </div>
+  <div class="bg-surface-soft p-6 rounded-[9px] border border-hairline">
+    <h3 class="font-bold text-lg mb-2">¿Cuánto tiempo tarda en dar resultados?</h3>
+    <p class="text-ink/80 text-sm">En SEM las visitas comienzan el mismo día que se lanza la campaña. Sin embargo, el algoritmo de Google Ads necesita de 2 a 4 semanas de "aprendizaje" para optimizar las conversiones al mejor costo posible.</p>
+  </div>
+</div>

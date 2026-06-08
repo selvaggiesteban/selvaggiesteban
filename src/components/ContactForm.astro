@@ -1,0 +1,124 @@
+---
+import Button from './Button.astro';
+---
+
+<div class="mt-xl pt-xl border-t border-hairline">
+  <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+    <h2 class="display-sm mb-4">¿Hablamos sobre tu proyecto?</h2>
+    <p class="mb-12 text-ink/70 max-w-2xl text-center">
+      Completa el formulario y me pondré en contacto contigo lo antes posible.
+    </p>
+
+    <form id="contact-form" class="w-full space-y-6 bg-canvas p-8 md:p-12 rounded-[9px] border border-hairline shadow-sm text-left">
+      <div class="space-y-2">
+        <label for="name" class="font-mono text-xs uppercase tracking-widest text-ink/40">Nombre</label>
+        <input type="text" id="name" name="name" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors" />
+      </div>
+
+      <div class="space-y-2">
+        <label for="email" class="font-mono text-xs uppercase tracking-widest text-ink/40">Email</label>
+        <input type="email" id="email" name="email" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors" />
+      </div>
+
+      <div class="space-y-2">
+        <label for="message" class="font-mono text-xs uppercase tracking-widest text-ink/40">Mensaje</label>
+        <textarea id="message" name="message" rows="4" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors"></textarea>
+      </div>
+
+      <div class="flex items-start gap-2 pt-2">
+        <input type="checkbox" id="privacy" name="privacy" required class="mt-1 accent-primary focus:ring-primary w-4 h-4" />
+        <label for="privacy" class="text-sm text-ink/70">
+          He leído y acepto la <a href="/politica-de-privacidad" class="text-primary hover:underline" target="_blank">Política de Privacidad</a> y el tratamiento de mis datos personales.
+        </label>
+      </div>
+
+      <!-- Cloudflare Turnstile -->
+      <div id="my-turnstile-container" class="min-h-[65px] flex justify-center mb-4"></div>
+
+      <Button type="submit" class="w-full text-lg py-4">Enviar mensaje</Button>
+
+      <p id="form-status" class="text-sm mt-4 hidden"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Inyectamos el script dinámicamente y lo renderizamos de forma segura en Astro
+  const initTurnstile = () => {
+    const container = document.getElementById('my-turnstile-container');
+    // Evitamos re-renderizar si ya existe
+    if (!container || container.innerHTML.trim() !== '') return;
+
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.async = true;
+    script.defer = true;
+
+    script.onload = () => {
+      if (window.turnstile) {
+        window.turnstile.render('#my-turnstile-container', {
+          sitekey: '0x4AAAAAADfmwu_oZrA1JtFm',
+          theme: 'light'
+        });
+      }
+    };
+
+    document.head.appendChild(script);
+  };
+
+  // Aseguramos carga inicial
+  document.addEventListener('DOMContentLoaded', initTurnstile);
+  // Aseguramos carga en navegaciones PWA/Astro
+  document.addEventListener('astro:page-load', initTurnstile);
+  // Disparo inmediato por si DOMContentLoaded ya pasó
+  initTurnstile();
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('form-status');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!status) return;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    if (!data['cf-turnstile-response']) {
+      status.textContent = 'Por favor, espera a que el captcha de seguridad se complete.';
+      status.classList.remove('hidden', 'text-semantic-success', 'text-ink/60');
+      status.classList.add('text-red-500');
+      return;
+    }
+
+    status.textContent = 'Enviando...';
+    status.classList.remove('hidden', 'text-semantic-success', 'text-red-500');
+    status.classList.add('text-ink/60');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
+        status.classList.add('text-semantic-success');
+        form.reset();
+        // Reset turnstile
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
+      } else {
+        const error = await response.json();
+        status.textContent = `Error: ${error.message || 'No se pudo enviar el mensaje.'}`;
+        status.classList.add('text-red-500');
+      }
+    } catch (e) {
+      status.textContent = 'Error de conexión. Inténtalo de nuevo.';
+      status.classList.add('text-red-500');
+    }
+  });
+</script>

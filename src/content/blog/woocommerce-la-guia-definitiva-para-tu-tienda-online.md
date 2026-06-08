@@ -206,7 +206,7 @@ pubDate: 2026-01-06
 <h3>¿Cómo puedo aceptar pagos en mi tienda WooCommerce?</h3>
 <p>WooCommerce se integra con una amplia gama de pasarelas de pago. Por defecto, incluye opciones como PayPal y Stripe, que son muy populares y fáciles de configurar. También puedes añadir extensiones para integrar pasarelas de pago locales, transferencias bancarias, cheques o pago contra reembolso, ofreciendo flexibilidad a tus clientes.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

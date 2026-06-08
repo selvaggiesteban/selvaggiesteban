@@ -127,7 +127,7 @@ pubDate: 2026-01-06
 <h3>¿Cuánto tiempo se tarda en crear una tienda online?</h3>
 <p>El tiempo para crear una tienda online puede variar desde unos pocos días hasta varios meses. Una tienda básica con una plataforma SaaS y un catálogo pequeño puede estar lista en una semana. Sin embargo, una tienda más compleja, con diseño personalizado, integraciones específicas, un amplio catálogo de productos y funcionalidades avanzadas, puede requerir de 1 a 3 meses o incluso más, especialmente si se trabaja con desarrolladores para una solución de código abierto.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

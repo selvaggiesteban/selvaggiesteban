@@ -127,7 +127,7 @@ El éxito se puede medir a través de varias métricas: tasa de retención de ju
 <p>### ¿Es ético contratar solo juniors para ahorrar costos?<br>
 La ética de esta estrategia depende de su implementación. Si se contrata a juniors con la intención de explotar su bajo costo sin invertir en su desarrollo, crecimiento o ofrecer salarios justos para su nivel, no sería ético. Sin embargo, si la estrategia incluye una inversión robusta en capacitación, mentoreo, un camino de carrera claro y salarios competitivos para el nivel junior, entonces es una práctica mutuamente beneficiosa que impulsa el talento joven y la economía.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

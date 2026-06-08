@@ -136,7 +136,7 @@ pubDate: 2026-01-06
 <h3>¿Qué son los Core Web Vitals y cómo afectan mi SEO?</h3>
 <p>Los Core Web Vitals son un conjunto de métricas de rendimiento y experiencia de usuario introducidas por Google: Largest Contentful Paint (LCP), First Input Delay (FID) y Cumulative Layout Shift (CLS). Google los utiliza como factores de clasificación SEO, lo que significa que un buen rendimiento en estas métricas puede mejorar tu posicionamiento en los resultados de búsqueda, mientras que un mal rendimiento puede perjudicarlo.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

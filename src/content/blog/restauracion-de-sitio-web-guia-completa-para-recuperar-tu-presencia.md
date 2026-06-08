@@ -140,7 +140,7 @@ pubDate: 2026-01-06
 <h3>¿Qué diferencia hay entre una copia de seguridad y una restauración?</h3>
 <p>Una <strong>copia de seguridad</strong> (o backup) es el proceso de crear y almacenar una copia de todos los datos y archivos de tu sitio web en una ubicación segura. Es una medida preventiva. La <strong>restauración</strong>, por otro lado, es el proceso de utilizar esa copia de seguridad para revertir tu sitio web a un estado anterior, recuperándolo de un fallo, un ataque o una pérdida de datos. Es la acción correctiva que se toma cuando algo sale mal.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

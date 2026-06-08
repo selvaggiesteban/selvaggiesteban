@@ -211,7 +211,7 @@ pubDate: 2026-02-23
 <h3 id="faq-6">¿Qué significa el “Green Coding” y por qué será importante en el futuro?</h3>
 <p>El “Green Coding” se refiere a la práctica de escribir código y diseñar arquitecturas de software que minimicen el consumo de energía y, por ende, la huella de carbono. Será importante debido a la creciente conciencia ambiental y la necesidad de reducir el impacto ecológico de la infraestructura digital. Los desarrolladores deberán optimizar el rendimiento, la eficiencia de los algoritmos y el uso de recursos en la nube para contribuir a una web más sostenible.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

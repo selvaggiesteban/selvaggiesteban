@@ -162,7 +162,7 @@ pubDate: 2026-01-06
 <h3 id="faq5">¿Qué es la canibalización de palabras clave y cómo la evito?</h3>
 <p>La canibalización de palabras clave ocurre cuando tienes múltiples páginas en tu sitio web optimizadas para la misma o muy similar palabra clave, compitiendo entre sí en los resultados de búsqueda. Esto confunde a los motores de búsqueda sobre qué página es la más relevante. Para evitarla, asegúrate de que cada página de tu sitio web tenga una palabra clave principal única y bien definida, y utiliza el “keyword mapping” para organizar y asignar tus palabras clave a las páginas correctas.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

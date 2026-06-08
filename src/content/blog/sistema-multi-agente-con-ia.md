@@ -123,7 +123,7 @@ El desarrollo de SMAs a menudo utiliza lenguajes de programación orientados a o
 <p>### ¿Cuál es el futuro de los Sistemas Multi-Agente con IA?<br>
 El futuro de los Sistemas Multi-Agente con IA es muy prometedor. Se espera que jueguen un papel central en la próxima generación de tecnologías inteligentes, desde el **Internet de las Cosas (IoT)** y los **vehículos autónomos** hasta la **medicina personalizada** y la **gestión de recursos a gran escala**. La investigación se enfoca en mejorar la robustez, la explicabilidad de las decisiones de los agentes, la capacidad de aprendizaje en entornos complejos y dinámicos, y la integración con otras ramas de la IA, como la visión por computadora y el procesamiento del lenguaje natural, para crear sistemas aún más sofisticados y colaborativos.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

@@ -398,7 +398,7 @@ pubDate: 2025-12-05
 
 <p>Si al volver atrás el sistema te vuelve a pedir usuario y contraseña, la sesión se ha cerrado correctamente.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

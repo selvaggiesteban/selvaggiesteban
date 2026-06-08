@@ -209,7 +209,7 @@ pubDate: 2026-04-15
 
 <p>Si quieres, en el siguiente paso te lo convierto en una <strong>versión optimizada para WordPress</strong>, con <strong>H1, H2, metadatos, introducción más comercial, CTA final y placeholders de imágenes</strong>.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

@@ -148,7 +148,7 @@ pubDate: 2026-01-06
 <h3>¿Cómo puedo empezar con la analítica web si soy principiante?</h3>
 <p>El mejor punto de partida es instalar Google Analytics 4 en tu sitio web. Luego, familiarízate con los informes básicos (adquisición, comportamiento, conversión). Define 2-3 objetivos clave para tu sitio (por ejemplo, “envío de formulario”, “compra”) y configúralos como conversiones. Dedica tiempo a explorar los datos, haciendo preguntas sobre el comportamiento de tus usuarios y cómo puedes mejorar su experiencia. Hay muchos tutoriales y cursos gratuitos disponibles en línea que pueden guiarte paso a paso.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

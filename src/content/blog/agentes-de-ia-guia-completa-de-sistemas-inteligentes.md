@@ -133,7 +133,7 @@ pubDate: 2026-01-06
 <h3 id="faq5">¿Qué es un sistema multi-agente?</h3>
 <p>Un sistema multi-agente es una colección de dos o más <strong>Agentes de IA</strong> que interactúan entre sí en un entorno compartido para lograr un objetivo común o individual. Pueden colaborar, competir o coordinarse para resolver problemas complejos que un solo agente no podría manejar eficientemente, como la gestión del tráfico o la coordinación de flotas de drones.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

@@ -195,7 +195,7 @@ sudo ufw status</code></pre>
 
 <p>Si estás configurando tu servidor por primera vez, este paso te va a ahorrar problemas y te va a permitir trabajar con una base mucho más sólida desde el primer día.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

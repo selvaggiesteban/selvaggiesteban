@@ -88,7 +88,7 @@ pubDate: 2026-01-06
 <p>Todas las entradas de usuario, sin excepción, deben ser validadas y sanitizadas en el lado del servidor. Esto implica verificar el tipo de datos, el formato, la longitud y el rango, y escapar o codificar caracteres especiales para prevenir ataques como Inyección SQL y XSS. Nunca confíes en los datos recibidos directamente del cliente.</p>
 <h3 id="gestion-sesiones">Gestión de Sesiones Seguras</h3>
 <p>Utiliza identificadores de sesión aleatorios, complejos y de longitud suficiente, establece tiempos de expiración adecuados y asegúrate de que los tokens de sesión se transmitan solo a través de conexiones HTTPS seguras (mediante el atributo <code>Secure</code> y <code>HttpOnly</code> para cookies). Implementa mecanismos para invalidar sesiones después de un cierre de sesión explícito o un período de inactividad.</p>
-<h3 <div="" class="page-links">
+<h3 
                                                 </h3>
                     
                     

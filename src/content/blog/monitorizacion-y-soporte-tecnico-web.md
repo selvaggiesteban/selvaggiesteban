@@ -132,7 +132,7 @@ pubDate: 2026-01-06
 <h3>¿Qué indicadores clave (KPIs) debo seguir en la monitorización?</h3>
 <p>Algunos KPIs esenciales incluyen: **Tiempo de Actividad (Uptime)** (porcentaje de tiempo que tu sitio está online), **Tiempo de Carga de Página** (velocidad a la que se cargan las páginas), **Tiempo de Respuesta del Servidor**, **Tasas de Error** (ej. errores 404, 500), **Consumo de Recursos del Servidor** (CPU, RAM), y **Alertas de Seguridad** (intentos de intrusión, detección de malware). Estos KPIs te darán una visión completa de la salud de tu sitio.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

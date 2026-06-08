@@ -128,7 +128,7 @@ pubDate: 2026-01-06
 <h3>¿Qué habilidades son esenciales para un diseñador UX/UI?</h3>
 <p>Un diseñador UX/UI exitoso posee una combinación de habilidades técnicas y blandas. Entre las esenciales se incluyen: investigación de usuarios, arquitectura de información, wireframing y prototipado, diseño visual, pensamiento crítico, resolución de problemas, empatía, comunicación efectiva, y dominio de herramientas de diseño como Figma o Adobe XD. La capacidad de colaborar con desarrolladores y gerentes de producto también es fundamental.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

@@ -150,7 +150,7 @@ pubDate: 2026-01-06
 <h3>¿Cuánto tiempo debe tardar en cargar una landing page?</h3>
 <p>Una <strong>landing page</strong> debe cargar lo más rápido posible. Los estudios indican que los usuarios esperan que una página cargue en <strong>2 segundos o menos</strong>. Cada segundo adicional en el tiempo de carga puede aumentar significativamente la tasa de rebote y reducir las conversiones. Es crucial optimizar imágenes, scripts y el código para garantizar una experiencia de carga rápida.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

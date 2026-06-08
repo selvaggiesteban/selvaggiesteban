@@ -274,7 +274,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 <p>En este caso, esos comandos fueron suficientes para transformar un entorno confuso en una configuración lista para trabajar con <strong>Vertex AI desde Visual Studio Code</strong>.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

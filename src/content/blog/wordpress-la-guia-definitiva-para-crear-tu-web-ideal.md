@@ -168,7 +168,7 @@ pubDate: 2026-01-06
 <h3 id="faq-6">¿Cuál es la diferencia principal entre WordPress.org y WordPress.com?</h3>
 <p>La diferencia principal es el alojamiento y el nivel de control. <strong>WordPress.org</strong> es el software que descargas y alojas tú mismo, ofreciéndote control total sobre tu sitio, incluyendo la instalación ilimitada de temas y plugins. <strong>WordPress.com</strong> es un servicio de alojamiento gestionado que utiliza el software de WordPress, es más sencillo para principiantes pero con limitaciones en personalización y funcionalidades a menos que pagues por planes premium.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

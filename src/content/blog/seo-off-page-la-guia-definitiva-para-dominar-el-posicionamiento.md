@@ -132,7 +132,7 @@ pubDate: 2026-01-06
 <h3>¿Las redes sociales afectan directamente al SEO Off-Page?</h3>
 <p>Las señales sociales (likes, shares, comentarios) no son un factor de ranking directo para Google. Sin embargo, sí tienen un impacto indirecto significativo. Aumentan la visibilidad de tu contenido, generan tráfico hacia tu sitio web y, al ser más visible, incrementan la probabilidad de que otros sitios web lo encuentren y enlacen, lo que sí afecta directamente al SEO Off-Page.</p>
                                     
-                        <div class="page-links">
+                        
                                                 
                     
                     

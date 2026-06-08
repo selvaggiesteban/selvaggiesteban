@@ -5,7 +5,7 @@ import Section from '../../components/Section.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 
-export async function getStaticPaths() {
+export const prerender = true;\nexport async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
     params: { slug: post.id },

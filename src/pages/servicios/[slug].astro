@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/Section.astro';
 
-export async function getStaticPaths() {
+export const prerender = true;\nexport async function getStaticPaths() {
   const servicios = await getCollection('servicios');
   return servicios.map(servicio => ({
     params: { slug: servicio.id },

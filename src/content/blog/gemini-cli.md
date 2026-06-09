@@ -106,8 +106,10 @@ $env:GEMINI_API_KEY=""
 $env:GOOGLE_API_KEY=""
 
 $env:GOOGLE_GENAI_USE_VERTEXAI="true"
-$env:GOOGLE_CLOUD_PROJECT="project-34567154-44b6-48f8-8d3"
+$env:GOOGLE_CLOUD_PROJECT="project-66dd8011-b5ae-4e29-9e6"
 $env:GOOGLE_CLOUD_LOCATION="global"
+
+gcloud auth application-default login
 
 gcloud auth application-default login</code></pre>
 

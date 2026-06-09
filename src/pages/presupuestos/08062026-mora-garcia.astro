@@ -1,6 +1,7 @@
 ---
 import PresupuestoLayout from '../../layouts/PresupuestoLayout.astro';
 import Button from '../../components/Button.astro';
+import { env } from 'cloudflare:workers';
 
 // Datos Profesionales
 const miRazonSocial = "SELVAGGI ESTEBAN";
@@ -26,7 +27,7 @@ try {
   const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer \`,
+      "Authorization": `Bearer ${env.MP_ACCESS_TOKEN || process.env.MP_ACCESS_TOKEN}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
@@ -178,7 +179,7 @@ try {
     
     </div>
 
-    <!-- Cierre y Pago -->
+    <!-- Descripción del Servicio -->undefined<!-- Cierre y Pago -->
     <div class="text-center pt-8 border-t border-hairline-soft">
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
       <p class="text-ink/60 mb-6 text-sm mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>

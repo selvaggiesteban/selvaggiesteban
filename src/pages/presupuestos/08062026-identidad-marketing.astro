@@ -76,12 +76,12 @@ try {
     </a>
   </div>
 
-  <div class="bg-white rounded-[9px] shadow-sm border border-hairline p-8 md:p-12 mb-8 overflow-hidden">
+  <div class="mb-8">
     
     <!-- Encabezado de Facturación / Presupuesto -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 border-b border-hairline-soft pb-8">
       <div>
-        <h1 class="text-3xl font-bold text-ink mb-6">PRESUPUESTO</h1>
+        <h1 class="text-3xl font-bold text-ink mb-6">Presupuesto</h1>
         <div class="text-sm text-ink/80 space-y-1">
           <p><span class="font-bold">Razón Social:</span> {miRazonSocial}</p>
           <p><span class="font-bold">CUIT:</span> {miCuit}</p>
@@ -89,10 +89,10 @@ try {
         </div>
       </div>
       <div class="md:text-right text-sm text-ink/80 space-y-1 bg-surface-soft p-5 rounded-[9px] border border-hairline">
-        <p><span class="font-bold">Fecha de Emisión:</span> {fechaEmision}</p>
+        <p><span class="font-bold">Fecha de emisión:</span> {fechaEmision}</p>
         <p><span class="font-bold text-primary">Válido hasta:</span> {fechaVto}</p>
         <div class="my-4 border-t border-hairline-soft"></div>
-        <p><span class="font-bold">Apellido y Nombre / Razón Social:</span> {clienteNombre} ({clienteEmpresa})</p>
+        <p><span class="font-bold">Apellido y nombre / Razón social:</span> {clienteNombre} ({clienteEmpresa})</p>
         <p><span class="font-bold">CUIT:</span> {clienteCuit === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteCuit}</p>
         <p><span class="font-bold">Condición IVA:</span> {clienteIva === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteIva}</p>
         <p><span class="font-bold">Domicilio:</span> {clienteDomicilio === "A COMPLETAR" ? <span class="text-red-500 font-normal">A COMPLETAR</span> : clienteDomicilio}</p>
@@ -169,17 +169,17 @@ try {
 
     <!-- Descripción del Servicio -->
     <div class="mb-12">
-      <h2 class="text-xl font-bold mb-2">Detalle de la Propuesta</h2>
+      <h2 class="text-xl font-bold mb-2">Detalle de la propuesta</h2>
       <p class="text-ink/60 text-lg mb-8">{proyecto}</p>
       <div class="prose prose-ink max-w-none">
-        <h3>El Desafío</h3><p>Creación de un sitio web institucional ultrarrápido, seguro y optimizado para motores de búsqueda (SEO) y alta conversión. El ecosistema digital estará basado en tecnologías de vanguardia (Astro + Cloudflare) garantizando tiempos de carga inferiores a un segundo.</p><h3>Alcance del Proyecto</h3><ul><li><strong>Diseño y Desarrollo Frontend:</strong> Interfaz gráfica a medida con enfoque "mobile-first".</li><li><strong>Arquitectura Serverless:</strong> Alojamiento en la red global de Cloudflare Pages.</li><li><strong>Formulario de Contacto Avanzado:</strong> Integración de formularios conectados vía API (Resend) con anti-spam Turnstile.</li><li><strong>Optimización SEO Técnica:</strong> Configuración de metadatos, optimización Core Web Vitals e inyección de Schema.org.</li></ul>
+        <h3>El desafío</h3><p>Creación de un sitio web institucional ultrarrápido, seguro y optimizado para motores de búsqueda (SEO) y alta conversión. El ecosistema digital estará basado en tecnologías de vanguardia (Astro + Cloudflare) garantizando tiempos de carga inferiores a un segundo.</p><h3>Alcance del proyecto</h3><ul><li><strong>Diseño y Desarrollo Frontend:</strong> Interfaz gráfica a medida con enfoque "mobile-first".</li><li><strong>Arquitectura Serverless:</strong> Alojamiento en la red global de Cloudflare Pages.</li><li><strong>Formulario de Contacto Avanzado:</strong> Integración de formularios conectados vía API (Resend) con anti-spam Turnstile.</li><li><strong>Optimización SEO Técnica:</strong> Configuración de metadatos, optimización Core Web Vitals e inyección de Schema.org.</li></ul>
       </div>
     </div>
 
     
     </div>
 
-    <!-- Descripción del Servicio -->undefined<!-- Cierre y Pago -->
+    <!-- Descripción del Servicio --><!-- Cierre y Pago -->
     <div class="text-center pt-8 border-t border-hairline-soft">
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
       <p class="text-ink/60 mb-6 text-sm mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
@@ -188,12 +188,12 @@ try {
         Pagar con Mercado Pago
       </a>
       <div class="mt-6 flex flex-wrap justify-center items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/a5f047d0-9be0-11ec-aad4-c3381f368aaf-m.svg" alt="Visa" class="h-6" title="Visa" />
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/aa2b8f70-5c85-11ec-ae75-df2bef173be7-m.svg" alt="Mastercard" class="h-6" title="Mastercard" />
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/312238e0-571b-11e8-95d8-631c1a95e266-m.svg" alt="American Express" class="h-6" title="American Express" />
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/c2dc1100-34fa-11ed-abdc-d5c2ed7bb969-m.svg" alt="Naranja" class="h-6" title="Naranja" />
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/819cc7b0-13bb-11ef-ad0a-9d2afec3d38e-m.svg" alt="PagoFacil" class="h-6" title="PagoFácil" />
-        <img src="https://http2.mlstatic.com/storage/logos-api-admin/b85ac9c0-13bb-11ef-93e5-8f6a9b9a4c0a-m.svg" alt="Rapipago" class="h-6" title="Rapipago" />
+        <img src="/assets/mp/visa.svg" alt="Visa" class="h-5" title="Visa" />
+        <img src="/assets/mp/mastercard.svg" alt="Mastercard" class="h-5" title="Mastercard" />
+        <img src="/assets/mp/amex.svg" alt="American Express" class="h-5" title="American Express" />
+        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Naranja</span>
+        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Pago Fácil</span>
+        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Rapipago</span>
       </div>
     </div>
   </div>

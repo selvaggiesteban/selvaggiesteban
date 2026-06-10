@@ -14,30 +14,40 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
 ---
 
 <Section variant="white" id="recommended" class="reveal !py-12 overflow-hidden" fullWidth={true}>
-  <div class="px-lg md:px-xxl mb-12">
-    <h2 class="display-lg mb-2">Recomendado para usted</h2>
-    <div class="w-20 h-1 bg-primary mb-8"></div>
+  <div class="px-lg md:px-xxl mb-8 flex items-end justify-between">
+    <div>
+      <h2 class="display-lg mb-2">Recomendado para usted</h2>
+      <div class="w-20 h-1 bg-primary"></div>
+    </div>
+    <!-- Arrow controls -->
+    <div class="flex gap-2">
+      <button id="carousel-prev" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="carousel-next" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label="Siguiente">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
   </div>
 
-  <div class="relative w-full overflow-hidden flex flex-col group">
-    <!-- Mask gradients for smooth edges -->
-    <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+  <div id="carousel-viewport" class="relative w-full overflow-hidden">
+    <!-- Mask gradients -->
+    <div class="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-    <div class="flex w-max animate-marquee">
-      {extendedPosts.map((post) => (
-        <a href={`/blog/${post.id}`} class="w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+    <div id="carousel-track" class="flex">
+      {recommendedPosts.map((post) => (
+        <a href={`/blog/${post.id}`} class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
           <div class="aspect-video overflow-hidden bg-surface-soft relative">
             <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
               Artículo
             </span>
             <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
-               Lectura recomendada
+              Lectura recomendada
             </div>
           </div>
-
           <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+            <h3 class="text-lg font-bold mb-3 line-clamp-2 leading-tight hover:text-primary transition-colors">
               {post.data.title}
             </h3>
             <p class="text-xs text-ink/60 line-clamp-3 mb-6 flex-grow">
@@ -53,28 +63,39 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
   </div>
 </Section>
 
-<style>
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+<script>
+  const track = document.getElementById('carousel-track') as HTMLElement;
+  const prevBtn = document.getElementById('carousel-prev') as HTMLButtonElement;
+  const nextBtn = document.getElementById('carousel-next') as HTMLButtonElement;
 
-  .animate-marquee {
-    animation: marquee 120s linear infinite;
-    animation-play-state: paused;
-  }
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = () => {
+      const card = track.querySelector('.carousel-card') as HTMLElement;
+      return card ? card.offsetWidth + 24 : 424; // width + mx-3*2
+    };
 
-  .animate-marquee:hover {
-    animation-play-state: running;
-  }
+    let offset = 0;
 
-  @media (max-width: 768px) {
-    .animate-marquee {
-      animation-duration: 60s;
-    }
+    const clamp = (val: number) => {
+      const max = track.scrollWidth - (track.parentElement?.offsetWidth || 0);
+      return Math.max(0, Math.min(val, max));
+    };
+
+    const move = (delta: number) => {
+      offset = clamp(offset + delta);
+      track.style.transform = `translateX(-${offset}px)`;
+      track.style.transition = 'transform 0.4s ease';
+    };
+
+    prevBtn.addEventListener('click', () => move(-cardWidth() * 2));
+    nextBtn.addEventListener('click', () => move(cardWidth() * 2));
+
+    // Touch/drag support
+    let startX = 0;
+    track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) move(diff > 0 ? cardWidth() * 2 : -cardWidth() * 2);
+    });
   }
-</style>
+</script>

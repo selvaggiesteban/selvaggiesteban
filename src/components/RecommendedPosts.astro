@@ -14,13 +14,13 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
 ---
 
 <Section variant="white" id="recommended" class="reveal !py-12 overflow-hidden" fullWidth={true}>
-  <div class="px-lg md:px-xxl mb-8 flex items-end justify-between">
-    <div>
+  <div class="px-lg md:px-xxl mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+    <div class="text-center sm:text-left">
       <h2 class="display-lg mb-2">Recomendado para usted</h2>
-      <div class="w-20 h-1 bg-primary"></div>
+      <div class="w-20 h-1 bg-primary mx-auto sm:mx-0"></div>
     </div>
     <!-- Arrow controls -->
-    <div class="flex gap-2">
+    <div class="flex gap-2 justify-center sm:justify-end flex-shrink-0">
       <button id="carousel-prev" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label="Anterior">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
       </button>

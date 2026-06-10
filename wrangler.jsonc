@@ -13,6 +13,13 @@
       "id": "1c5a4286556f4c4586baa4117d324c21"
     }
   ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "presupuestos",
+      "database_id": "1fe23d22-8b6f-4183-841c-f28bdd709f1d"
+    }
+  ],
   "observability": {
     "enabled": true
   }

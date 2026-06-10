@@ -13,7 +13,12 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    filter: (page) =>
+      !page.includes('/presupuestos/') &&
+      !page.includes('/login') &&
+      !page.includes('/api/')
+  })],
   adapter: cloudflare({
     imageService: 'cloudflare'
   })

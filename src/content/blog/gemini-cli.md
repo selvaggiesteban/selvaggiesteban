@@ -71,7 +71,7 @@ pubDate: 2026-04-16
 
 
 
-<h2>La solución: limpiar el entorno y forzar Vertex AI</h2>
+<h2>La solución: Limpiar el entorno y forzar vertex AI</h2>
 
 
 
@@ -91,7 +91,7 @@ pubDate: 2026-04-16
 
 
 
-<h2>Los comandos que utilicé en VS Code</h2>
+<h2>Los comandos que utilicé en vs code</h2>
 
 
 
@@ -147,7 +147,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h3>3. Forzar el uso de Vertex AI</h3>
+<h3>3. Forzar el uso de vertex AI</h3>
 
 
 
@@ -238,7 +238,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h2>Mi conclusión sobre Gemini CLI en VS Code</h2>
+<h2>Mi conclusión sobre Gemini CLI en vs code</h2>
 
 
 

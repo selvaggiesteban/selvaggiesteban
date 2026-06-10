@@ -17,7 +17,7 @@ pubDate: 2026-04-15
 
 
 
-<h2>Qué significa realmente comparar Claude vs OpenClaw</h2>
+<h2>Qué significa realmente comparar Claude vs openclaw</h2>
 
 
 
@@ -33,7 +33,7 @@ pubDate: 2026-04-15
 
 
 
-<h2>Claude vs OpenClaw en scheduled tasks</h2>
+<h2>Claude vs openclaw en scheduled tasks</h2>
 
 
 
@@ -41,7 +41,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>Cómo funciona Claude Code con tareas programadas</h3>
+<h3>Cómo funciona Claude code con tareas programadas</h3>
 
 
 
@@ -57,7 +57,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>Cómo funciona OpenClaw con tareas programadas</h3>
+<h3>Cómo funciona openclaw con tareas programadas</h3>
 
 
 
@@ -69,7 +69,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>Mi lectura profesional sobre Claude vs OpenClaw en schedules</h3>
+<h3>Mi lectura profesional sobre Claude vs openclaw en schedules</h3>
 
 
 
@@ -91,7 +91,7 @@ pubDate: 2026-04-15
 
 
 
-<h2>Claude vs OpenClaw en integración con móvil</h2>
+<h2>Claude vs openclaw en integración con móvil</h2>
 
 
 
@@ -99,7 +99,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>Claude Code: el móvil como control remoto y panel de seguimiento</h3>
+<h3>Claude code: El móvil como control remoto y panel de seguimiento</h3>
 
 
 
@@ -115,7 +115,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>OpenClaw: el móvil como canal real de mensajería</h3>
+<h3>Openclaw: El móvil como canal real de mensajería</h3>
 
 
 
@@ -131,7 +131,7 @@ pubDate: 2026-04-15
 
 
 
-<h2>La gran diferencia práctica: control remoto frente a mensajería real</h2>
+<h2>La gran diferencia práctica: Control remoto frente a mensajería real</h2>
 
 
 
@@ -171,7 +171,7 @@ pubDate: 2026-04-15
 
 
 
-<h2>Entonces, quién gana en Claude vs OpenClaw</h2>
+<h2>Entonces, quién gana en Claude vs openclaw</h2>
 
 
 
@@ -179,7 +179,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>Claude Code me parece mejor cuando:</h3>
+<h3>Claude code me parece mejor cuando:</h3>
 
 
 
@@ -187,7 +187,7 @@ pubDate: 2026-04-15
 
 
 
-<h3>OpenClaw me parece mejor cuando:</h3>
+<h3>Openclaw me parece mejor cuando:</h3>
 
 
 

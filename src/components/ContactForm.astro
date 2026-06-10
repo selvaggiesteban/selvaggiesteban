@@ -104,13 +104,9 @@ import Button from './Button.astro';
       });
 
       if (response.ok) {
-        status.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
-        status.classList.add('text-semantic-success');
         form.reset();
-        // Reset turnstile
-        if (window.turnstile) {
-          window.turnstile.reset();
-        }
+        if (window.turnstile) window.turnstile.reset();
+        window.location.href = '/contacto/gracias/';
       } else {
         const error = await response.json();
         status.textContent = `Error: ${error.message || 'No se pudo enviar el mensaje.'}`;

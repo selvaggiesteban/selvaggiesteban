@@ -22,7 +22,7 @@ pubDate: 2025-12-11
 
 
 
-<h2>1. Crear un rol “Mayorista” en Ultimate Member</h2>
+<h2>1. Crear un rol “mayorista” en ultimate member</h2>
 
 
 
@@ -62,7 +62,7 @@ pubDate: 2025-12-11
 
 
 
-<h2>2. Hacer que tu formulario de Ultimate Member asigne ese rol</h2>
+<h2>2. Hacer que tu formulario de ultimate member asigne ese rol</h2>
 
 
 
@@ -142,7 +142,7 @@ pubDate: 2025-12-11
 
 
 
-<h2>4. Restringir SOLO la categoría “Mayorista”</h2>
+<h2>4. Restringir solo la categoría “mayorista”</h2>
 
 
 

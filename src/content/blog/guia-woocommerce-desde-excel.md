@@ -90,11 +90,11 @@ pubDate: 2025-12-05
 
 
 
-<h2>3. Editar el CSV en Microsoft Excel</h2>
+<h2>3. Editar el csv en microsoft excel</h2>
 
 
 
-<h3>3.1 Abrir el archivo CSV</h3>
+<h3>3.1 Abrir el archivo csv</h3>
 
 
 
@@ -188,7 +188,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>3.4 Guardar el archivo como CSV</h3>
+<h3>3.4 Guardar el archivo como csv</h3>
 
 
 
@@ -214,11 +214,11 @@ pubDate: 2025-12-05
 
 
 
-<h2>4. Editar el CSV en Google Sheets</h2>
+<h2>4. Editar el csv en Google sheets</h2>
 
 
 
-<h3>4.1 Importar el archivo a Google Sheets</h3>
+<h3>4.1 Importar el archivo a Google sheets</h3>
 
 
 
@@ -240,7 +240,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>4.2 Editar datos en Google Sheets</h3>
+<h3>4.2 Editar datos en Google sheets</h3>
 
 
 
@@ -248,7 +248,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>4.3 Descargar el CSV actualizado</h3>
+<h3>4.3 Descargar el csv actualizado</h3>
 
 
 
@@ -270,7 +270,7 @@ pubDate: 2025-12-05
 
 
 
-<h2>5. Importar el CSV actualizado en WooCommerce</h2>
+<h2>5. Importar el csv actualizado en WooCommerce</h2>
 
 
 

@@ -1,28 +1,38 @@
 ---
 import PresupuestoLayout from '../../layouts/PresupuestoLayout.astro';
 import Button from '../../components/Button.astro';
+import { env } from 'cloudflare:workers';
 
-// Datos en bruto simulando una consulta a la BD (Cloudflare D1/KV)
-const presupuestos = [
-  {
-    id: '08062026-identidad-marketing',
-    cliente: 'María Agustina',
-    empresa: 'Identidad Marketing Digital',
-    proyecto: 'Sitio Web Institucional',
-    monto: '$363.500 ARS',
-    fecha: '08/06/2026',
-    estado: 'enviado'
-  },
-  {
-    id: '08062026-mora-garcia',
-    cliente: 'Mora García',
-    empresa: 'Particular',
-    proyecto: 'Landing Page Festival',
-    monto: '$128.500 ARS',
-    fecha: '08/06/2026',
-    estado: 'borrador'
+// Load from D1 when available
+let presupuestos: any[] = [];
+try {
+  const db = (env as any)?.DB as D1Database | undefined;
+  if (db) {
+    const result = await db
+      .prepare(`SELECT p.id, p.proyecto, p.monto_total, p.estado, p.fecha_emision,
+                c.nombre as cliente, c.empresa
+                FROM presupuestos p JOIN clientes c ON p.cliente_id = c.id
+                ORDER BY p.created_at DESC`)
+      .all();
+    presupuestos = (result.results as any[]).map(p => ({
+      id: p.id,
+      cliente: p.cliente,
+      empresa: p.empresa || '',
+      proyecto: p.proyecto,
+      monto: `$${Number(p.monto_total).toLocaleString('es-AR')} ARS`,
+      fecha: p.fecha_emision,
+      estado: p.estado,
+    }));
   }
-];
+} catch {}
+
+// Fallback hardcoded if D1 is empty or unavailable
+if (presupuestos.length === 0) {
+  presupuestos = [
+    { id: '08062026-identidad-marketing', cliente: 'María Agustina', empresa: 'Identidad Marketing Digital', proyecto: 'Sitio Web Institucional', monto: '$363.500 ARS', fecha: '08/06/2026', estado: 'enviado' },
+    { id: '08062026-mora-garcia', cliente: 'Mora García', empresa: 'Particular', proyecto: 'Landing Page Festival', monto: '$128.500 ARS', fecha: '08/06/2026', estado: 'borrador' },
+  ];
+}
 
 const getStatusColor = (status) => {
   switch(status) {
@@ -40,7 +50,7 @@ const getStatusColor = (status) => {
       <h1 class="text-3xl font-bold text-ink mb-2">Panel de Presupuestos</h1>
       <p class="text-ink/60">Gestiona y consulta el estado de tus cotizaciones enviadas.</p>
     </div>
-    <Button href="#" variant="primary" class="flex items-center gap-2 opacity-50 cursor-not-allowed" title="Próximamente">
+    <Button href="/presupuestos/nuevo" variant="primary" class="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
       Nuevo Presupuesto
     </Button>

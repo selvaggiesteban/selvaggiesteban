@@ -9,7 +9,7 @@ pubDate: 2026-02-17
                 
 
 
-<h2>Conecta Claude Code a modelos de IA de código abierto</h2>
+<h2>Conecta Claude code a modelos de IA de código abierto</h2>
 
 
 

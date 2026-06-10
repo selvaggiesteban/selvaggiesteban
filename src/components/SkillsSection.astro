@@ -110,25 +110,13 @@ const skillCategories = [
 ---
 
 <Section variant="white" id="skills">
-  {/* Header Row: 2 Columns */}
-  <div class="grid lg:grid-cols-2 gap-xl mb-16 items-start">
-    <div>
-      <h2 class="display-lg mb-md">Habilidades en diseño web profesional</h2>
-      <p class="text-xl text-ink/60 mb-[30px]">Tecnologías de vanguardia para resultados de excelencia.</p>
-    </div>
-    <div>
-      <h3 class="display-md mb-md">Optimizado para el éxito.</h3>
-      <p class="text-xl text-ink/60 mb-[30px]">
-        Cada línea de código pensada para el rendimiento.
-      </p>
-    </div>
-  </div>
+  <h2 class="display-lg mb-16">Tecnologías de vanguardia</h2>
 
   {/* Skills Grid: Full Width (Original 3 Columns) */}
   <div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl">
     {skillCategories.map(category => (
       <div class="bg-[#ffffff] p-lg rounded-[5px] border border-hairline flex flex-col h-full">
-        <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-lg border-b border-hairline pb-4 text-center">{category.title}</h4>
+        <h3 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-lg border-b border-hairline pb-4 text-center">{category.title}</h3>
         <div class="flex flex-wrap gap-md items-center justify-start py-4">
           {category.skills.map(skill => (
             <div class="flex flex-col items-center gap-xs group w-[calc(33.333%-1rem)] min-w-[70px]">

@@ -8,7 +8,7 @@ pubDate: 2025-12-09
 
 
 
-<h3>1) ¿Qué servicio de OCA se usa para tiendas WooCommerce?</h3>
+<h3>1) ¿Qué servicio de oca se usa para tiendas WooCommerce?</h3>
 
 
 
@@ -30,7 +30,7 @@ pubDate: 2025-12-09
 
 
 
-<h3>2) ¿Cuál es el formulario de alta de OCA para usar el plugin?</h3>
+<h3>2) ¿Cuál es el formulario de alta de oca para usar el plugin?</h3>
 
 
 
@@ -64,7 +64,7 @@ pubDate: 2025-12-09
 
 
 
-<h4>🔹 Opción A – Formulario oficial de OCA Express Pak (recomendado)</h4>
+<h4>🔹 Opción a – formulario oficial de oca express pak (recomendado)</h4>
 
 
 
@@ -88,7 +88,7 @@ pubDate: 2025-12-09
 
 
 
-<h4>🔹 Opción B – Contactar a los ejecutivos que recomienda el propio plugin</h4>
+<h4>🔹 Opción b – contactar a los ejecutivos que recomienda el propio plugin</h4>
 
 
 
@@ -114,7 +114,7 @@ pubDate: 2025-12-09
 
 
 
-<h3>3) Una vez que tengas el alta, ¿qué tenés que cargar en el plugin?</h3>
+<h3>3) Una vez que tengas el alta, ¿Qué tenés que cargar en el plugin?</h3>
 
 
 

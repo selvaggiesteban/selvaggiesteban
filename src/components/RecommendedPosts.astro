@@ -24,7 +24,7 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
     <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
     <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-    <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
+    <div class="flex w-max animate-marquee">
       {extendedPosts.map((post) => (
         <a href={`/blog/${post.id}`} class="w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
           <div class="aspect-video overflow-hidden bg-surface-soft relative">
@@ -65,9 +65,13 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
 
   .animate-marquee {
     animation: marquee 120s linear infinite;
+    animation-play-state: paused;
   }
-  
-  /* Ajuste de velocidad para móvil */
+
+  .animate-marquee:hover {
+    animation-play-state: running;
+  }
+
   @media (max-width: 768px) {
     .animate-marquee {
       animation-duration: 60s;

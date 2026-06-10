@@ -82,7 +82,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>3.1 Pestaña “General”</h3>
+<h3>3.1 Pestaña “general”</h3>
 
 
 
@@ -108,7 +108,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>3.2 Pestaña “Productos”</h3>
+<h3>3.2 Pestaña “productos”</h3>
 
 
 
@@ -130,7 +130,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>3.3 Pestaña “Envío”</h3>
+<h3>3.3 Pestaña “envío”</h3>
 
 
 
@@ -148,7 +148,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>3.4 Pestaña “Pagos”</h3>
+<h3>3.4 Pestaña “pagos”</h3>
 
 
 
@@ -216,7 +216,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>5.1 Acceder a “Añadir nuevo”</h3>
+<h3>5.1 Acceder a “añadir nuevo”</h3>
 
 
 

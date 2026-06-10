@@ -228,7 +228,7 @@ pubDate: 2025-12-05
 
 
 
-<h3>4.1 Ubicar la opción “Ajustes &gt; Generales”</h3>
+<h3>4.1 Ubicar la opción “ajustes &gt; Generales”</h3>
 
 
 
@@ -270,7 +270,7 @@ pubDate: 2025-12-05
 
 
 
-<h4>Dirección de WordPress (URL) y Dirección del sitio (URL)</h4>
+<h4>Dirección de WordPress (URL) y dirección del sitio (URL)</h4>
 
 
 

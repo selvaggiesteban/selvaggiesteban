@@ -17,7 +17,7 @@ pubDate: 2026-04-18
 
 
 
-<h2>Por qué creo una clave SSH en mi VPS en Hostinger</h2>
+<h2>Por qué creo una clave ssh en mi VPS en hostinger</h2>
 
 
 
@@ -29,7 +29,7 @@ pubDate: 2026-04-18
 
 
 
-<h2>Lo primero que hago antes de generar la clave SSH</h2>
+<h2>Lo primero que hago antes de generar la clave ssh</h2>
 
 
 
@@ -64,7 +64,7 @@ su - nombredeusuario</code></pre>
 
 
 
-<h2>Cómo genero mi clave SSH para el VPS en Hostinger</h2>
+<h2>Cómo genero mi clave ssh para el VPS en hostinger</h2>
 
 
 
@@ -128,7 +128,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>Cómo pruebo la conexión SSH al VPS</h2>
+<h2>Cómo pruebo la conexión ssh al VPS</h2>
 
 
 

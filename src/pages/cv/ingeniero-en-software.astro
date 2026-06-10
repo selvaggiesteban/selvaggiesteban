@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/Section.astro';
 import Button from '../../components/Button.astro';
 
-const title = "CV Ingeniero de Software - Esteban Selvaggi";
+const title = "CV Ingeniero en Software - Esteban Selvaggi";
 const description = "Curriculum Vitae optimizado para ATS de Esteban Selvaggi, Ingeniero de Software experto en arquitecturas escalables y Clean Code.";
 ---
 
@@ -11,18 +11,50 @@ const description = "Curriculum Vitae optimizado para ATS de Esteban Selvaggi, I
   <Section variant="white" class="pt-24 pb-16 reveal">
     <div class="w-full mx-auto">
       
-      <!-- Header -->
-      <div class="border-b border-hairline pb-8 mb-8 text-center md:text-left flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+      <!-- Header: 2 columnas -->
+      <div class="border-b border-hairline pb-8 mb-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Columna izquierda: identidad -->
         <div>
-          <h1 class="display-lg mb-2">Esteban Selvaggi</h1>
-          <p class="text-2xl text-primary font-medium">Ingeniero de Software</p>
+          <h1 class="display-lg mb-1">Esteban Selvaggi</h1>
+          <p class="text-2xl text-primary font-medium">Ingeniero en Software</p>
         </div>
-        <div class="text-sm text-ink/70 flex flex-col gap-3 items-center sm:items-end flex-shrink-0">
-          <span>📍 Provincia de Buenos Aires, Argentina</span>
-          <a href="mailto:selvaggiesteban@gmail.com" class="hover:text-primary transition-colors">✉️ selvaggiesteban@gmail.com</a>
-          <a href="tel:+5491153323937" class="hover:text-primary transition-colors">📱 (+54) 9 11 5332-3937</a>
-          <a href="https://linkedin.com/in/selvaggiesteban" target="_blank" class="hover:text-primary transition-colors">💼 linkedin.com/in/selvaggiesteban</a>
-          <a href="https://github.com/selvaggiesteban" target="_blank" class="hover:text-primary transition-colors">🐙 github.com/selvaggiesteban</a>
+
+        <!-- Columna derecha: share + contacto -->
+        <div class="flex flex-col gap-5 md:items-end">
+          <!-- Íconos compartir -->
+          <div class="flex gap-2">
+            <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles');" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" title="Copiar Enlace">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+            <button onclick="window.print()" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" title="Imprimir CV">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+            </button>
+            <a href="mailto:?subject=CV%20Ingeniero%20en%20Software%20-%20Esteban%20Selvaggi&body=https%3A%2F%2Fselvaggiesteban.dev%2Fcv%2Fingeniero-en-software" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" title="Compartir por Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=CV%20Ingeniero%20en%20Software%20-%20Esteban%20Selvaggi:%20https%3A%2F%2Fselvaggiesteban.dev%2Fcv%2Fingeniero-en-software" target="_blank" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-[#25D366] hover:text-white transition-colors text-ink" title="Compartir por WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>
+            </a>
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fselvaggiesteban.dev%2Fcv%2Fingeniero-en-software&text=CV%20Ingeniero%20en%20Software%20-%20Esteban%20Selvaggi" target="_blank" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-[#0088cc] hover:text-white transition-colors text-ink" title="Compartir por Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"/></svg>
+            </a>
+          </div>
+
+          <!-- Datos de contacto con texto -->
+          <div class="text-sm text-ink/70 flex flex-col gap-2 md:items-end">
+            <a href="mailto:selvaggiesteban@gmail.com" class="hover:text-primary transition-colors font-medium">
+              <span class="text-ink/40 font-mono text-xs uppercase tracking-widest mr-1">E-mail:</span>selvaggiesteban@gmail.com
+            </a>
+            <a href="tel:+5491153323937" class="hover:text-primary transition-colors font-medium">
+              <span class="text-ink/40 font-mono text-xs uppercase tracking-widest mr-1">Teléfono:</span>(+54) 9 11 5332-3937
+            </a>
+            <a href="https://linkedin.com/in/selvaggiesteban" target="_blank" class="hover:text-primary transition-colors font-medium">
+              <span class="text-ink/40 font-mono text-xs uppercase tracking-widest mr-1">LinkedIn:</span>/selvaggiesteban
+            </a>
+            <a href="https://github.com/selvaggiesteban" target="_blank" class="hover:text-primary transition-colors font-medium">
+              <span class="text-ink/40 font-mono text-xs uppercase tracking-widest mr-1">GitHub:</span>/selvaggiesteban
+            </a>
+          </div>
         </div>
       </div>
 

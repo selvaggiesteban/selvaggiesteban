@@ -150,24 +150,23 @@ try {
       </table>
     </div>
 
-    <!-- Totales -->
-    <div class="flex justify-end mb-12">
-      <div class="w-full md:w-2/5 bg-surface-soft rounded-[9px] p-6 border border-hairline space-y-3">
-        <div class="flex justify-between items-center text-sm text-ink/80">
-          <span>Subtotal:</span>
-          <span class="font-medium">$128.500,00</span>
-        </div>
-        <div class="flex justify-between items-center text-sm text-ink/80 border-b border-hairline-soft pb-3">
-          <span>Importe Otros Tributos:</span>
-          <span class="font-medium">$0,00</span>
-        </div>
-        <div class="flex justify-between items-center text-xl font-bold text-primary pt-2">
-          <span>Importe Total:</span>
-          <span>$128.500,00</span>
-        </div>
+    <!-- Totales: ancho completo -->
+    <div class="mb-8 bg-surface-soft rounded-[9px] p-6 border border-hairline space-y-3">
+      <div class="flex justify-between items-center text-sm text-ink/80">
+        <span>Subtotal:</span>
+        <span class="font-medium">$128.500,00</span>
       </div>
+      <div class="flex justify-between items-center text-sm text-ink/80 border-b border-hairline-soft pb-3">
+        <span>Importe Otros Tributos:</span>
+        <span class="font-medium">$0,00</span>
+      </div>
+      <div class="flex justify-between items-center text-xl font-bold text-primary pt-2">
+        <span>Importe Total:</span>
+        <span>$128.500,00</span>
+      </div>
+    </div>
 
-    <!-- Descripción del Servicio -->
+    <!-- Detalle de la propuesta: sección completa, debajo del subtotal -->
     <div class="mb-12">
       <h2 class="text-xl font-bold mb-2">Detalle de la propuesta</h2>
       <p class="text-ink/60 text-lg mb-8">{proyecto}</p>
@@ -176,10 +175,7 @@ try {
       </div>
     </div>
 
-    
-    </div>
-
-    <!-- Descripción del Servicio --><!-- Cierre y Pago -->
+    <!-- Cierre y Pago -->
     <div class="text-center pt-8 border-t border-hairline-soft">
       <h3 class="text-lg font-bold mb-4">¿Todo listo para comenzar?</h3>
       <p class="text-ink/60 mb-6 text-sm mx-auto">Al realizar el pago total o la seña inicial según la condición de venta acordada, confirmas la aceptación del presupuesto y damos inicio formal al proyecto.</p>
@@ -187,14 +183,15 @@ try {
         <img src="/assets/mp/mp-favicon.svg" alt="Mercado Pago" class="h-6 object-contain" />
         Pagar con Mercado Pago
       </a>
-      <div class="mt-6 flex flex-wrap justify-center items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
-        <img src="/assets/mp/visa.svg" alt="Visa" class="h-5" title="Visa" />
-        <img src="/assets/mp/mastercard.svg" alt="Mastercard" class="h-5" title="Mastercard" />
-        <img src="/assets/mp/amex.svg" alt="American Express" class="h-5" title="American Express" />
-        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Naranja</span>
-        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Pago Fácil</span>
-        <span class="font-bold text-[10px] border border-ink/40 px-2 py-1 rounded">Rapipago</span>
+      <div class="mt-6 flex flex-wrap justify-center items-center gap-4 opacity-90">
+        <img src="/assets/mp/visa.svg" alt="Visa" class="h-8" title="Visa" />
+        <img src="/assets/mp/mastercard.svg" alt="Mastercard" class="h-8" title="Mastercard" />
+        <img src="/assets/mp/amex.svg" alt="American Express" class="h-8" title="American Express" />
+        <span class="font-bold text-xs border border-ink/40 px-3 py-1.5 rounded text-ink/80" title="Naranja X">Naranja X</span>
+        <span class="font-bold text-xs border border-ink/40 px-3 py-1.5 rounded text-ink/80" title="Pago Fácil">Pago Fácil</span>
+        <span class="font-bold text-xs border border-ink/40 px-3 py-1.5 rounded text-ink/80" title="Rapipago">Rapipago</span>
       </div>
     </div>
   </div>
+
 </PresupuestoLayout>

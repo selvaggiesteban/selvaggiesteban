@@ -11,12 +11,12 @@ const fechaEmision = "08/06/2026";
 const fechaVto = "22/06/2026"; // 14 días de validez por defecto
 
 // Datos del Cliente
-const clienteNombre = "María Agustina";
+const clienteNombre = "María Agostina";
 const clienteEmpresa = "Identidad Marketing Digital";
 const clienteCuit = "A COMPLETAR";
 const clienteIva = "A COMPLETAR";
 const clienteDomicilio = "A COMPLETAR";
-const condicionVenta = "Transferencia / MercadoPago (Contado)";
+const condicionVenta = "MercadoPago";
 
 const proyecto = "Desarrollo de Sitio Web Institucional";
 const urlPresupuesto = "https://selvaggiesteban.dev/presupuestos/08062026-identidad-marketing";
@@ -36,6 +36,12 @@ try {
           title: "Sitio Web Institucional - Identidad Marketing Digital",
           quantity: 1,
           unit_price: 320000,
+          currency_id: "ARS"
+        },
+        {
+          title: "Landing Page - Identidad Marketing Digital",
+          quantity: 1,
+          unit_price: 160000,
           currency_id: "ARS"
         }
       ],
@@ -127,6 +133,16 @@ try {
             <td class="p-4 text-right font-bold">$320.000,00</td>
           </tr>
           <tr class="hover:bg-surface-soft/50 transition-colors">
+            <td class="p-4 font-mono text-xs text-ink/60">DEV-02</td>
+            <td class="p-4 font-bold text-ink whitespace-normal min-w-[200px]">Landing Page: Identidad Marketing Digital</td>
+            <td class="p-4 text-right">1.00</td>
+            <td class="p-4 text-center">unidades</td>
+            <td class="p-4 text-right">$160.000,00</td>
+            <td class="p-4 text-right">0.00</td>
+            <td class="p-4 text-right">$0,00</td>
+            <td class="p-4 text-right font-bold">$160.000,00</td>
+          </tr>
+          <tr class="hover:bg-surface-soft/50 transition-colors">
             <td class="p-4 font-mono text-xs text-ink/60">HOS-01</td>
             <td class="p-4 whitespace-normal min-w-[200px]">Hosting y Soporte Técnico (Mensual)<br/><em class="text-xs text-ink/60">*Actualización trimestral IPC</em></td>
             <td class="p-4 text-right">1.00</td>
@@ -154,7 +170,7 @@ try {
     <div class="mb-8 bg-surface-soft rounded-[9px] p-6 border border-hairline space-y-3">
       <div class="flex justify-between items-center text-sm text-ink/80">
         <span>Subtotal:</span>
-        <span class="font-medium">$363.500,00</span>
+        <span class="font-medium">$523.500,00</span>
       </div>
       <div class="flex justify-between items-center text-sm text-ink/80 border-b border-hairline-soft pb-3">
         <span>Importe Otros Tributos:</span>
@@ -162,7 +178,7 @@ try {
       </div>
       <div class="flex justify-between items-center text-xl font-bold text-primary pt-2">
         <span>Importe Total:</span>
-        <span>$363.500,00</span>
+        <span>$523.500,00</span>
       </div>
     </div>
 

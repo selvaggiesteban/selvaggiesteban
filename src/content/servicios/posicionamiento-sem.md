@@ -1,6 +1,7 @@
 ---
 title: Posicionamiento SEM
 description: Posicionamiento web en Google. Llega a millones de personas en Google con campañas de máximo rendimiento.
+order: 3
 ---
 
 <div class="mb-12">

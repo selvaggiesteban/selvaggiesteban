@@ -22,14 +22,4 @@ const servicios = defineCollection({
   }),
 });
 
-const productos = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/productos' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    price: z.number().optional(),
-    image: z.string().optional(),
-  }),
-});
-
-export const collections = { blog, servicios, productos };
+export const collections = { blog, servicios };

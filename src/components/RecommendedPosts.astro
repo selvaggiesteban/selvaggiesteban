@@ -42,9 +42,13 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
             <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
               Artículo
             </span>
-            <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
-              Lectura recomendada
-            </div>
+            {post.data.heroImage ? (
+              <img src={post.data.heroImage} alt={post.data.title} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            ) : (
+              <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
+                Lectura recomendada
+              </div>
+            )}
           </div>
           <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-lg font-bold mb-3 line-clamp-2 leading-tight hover:text-primary transition-colors">

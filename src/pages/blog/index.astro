@@ -34,8 +34,14 @@ const description = "Artículos técnicos sobre ingeniería de software, automat
 
     {featuredPost && (
       <div class="mb-20">
-        <article class="group relative bg-surface-soft rounded-3xl overflow-hidden border border-hairline transition-all p-8 md:p-12">
+        <article class="group relative bg-surface-soft rounded-3xl overflow-hidden border border-hairline transition-all overflow-hidden">
           <a href={`/blog/${featuredPost.id}`} class="absolute inset-0 z-10"><span class="sr-only">Leer artículo</span></a>
+          {featuredPost.data.heroImage && (
+            <div class="w-full aspect-[21/9] overflow-hidden">
+              <img src={featuredPost.data.heroImage} alt={featuredPost.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+            </div>
+          )}
+          <div class="p-8 md:p-12">
           <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-6">Destacado</span>
           <a href={`/blog/${featuredPost.id}`} class="block">
             <h2 class="text-3xl md:text-5xl font-bold mb-6 group-hover:text-primary transition-colors leading-tight text-pretty">{featuredPost.data.title}</h2>
@@ -51,14 +57,21 @@ const description = "Artículos técnicos sobre ingeniería de software, automat
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
+          </div>
         </article>
       </div>
     )}
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {remainingPosts.map(post => (
-        <article class="group bg-white relative rounded-2xl p-6 border border-hairline hover:shadow-lg transition-all border-transparent flex flex-col h-full">
+        <article class="group bg-white relative rounded-2xl border border-hairline hover:shadow-lg transition-all border-transparent flex flex-col h-full overflow-hidden">
           <a href={`/blog/${post.id}`} class="absolute inset-0 z-10"><span class="sr-only">Leer más</span></a>
+          {post.data.heroImage && (
+            <div class="w-full aspect-video overflow-hidden">
+              <img src={post.data.heroImage} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+          )}
+          <div class="p-6 flex flex-col flex-grow">
           <span class="font-mono text-[10px] uppercase tracking-widest text-ink/40 mb-4 block">
             {post.data.pubDate ? new Date(post.data.pubDate).toLocaleDateString('es-AR', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
           </span>
@@ -71,6 +84,7 @@ const description = "Artículos técnicos sobre ingeniería de software, automat
               Leer más
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
+          </div>
           </div>
         </article>
       ))}

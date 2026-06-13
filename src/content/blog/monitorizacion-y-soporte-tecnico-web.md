@@ -2,6 +2,7 @@
 title: "Monitorización y soporte técnico web"
 description: "Asegura la estabilidad y rendimiento de tu web. Descubre la importancia de la monitorización y el soporte técnico web para prevenir caídas y optimizar tu presencia online."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/monitorizacion-y-soporte-tecnico-web.svg"
 ---
 
 

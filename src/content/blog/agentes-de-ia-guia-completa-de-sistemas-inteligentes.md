@@ -2,6 +2,7 @@
 title: "Agentes de IA: Guía Completa de Sistemas Inteligentes"
 description: "Descubre el fascinante mundo de los Agentes de IA: qué son, cómo funcionan, sus tipos y aplicaciones. Una guía esencial para entender la autonomía inteligente."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/agentes-de-ia-guia-completa-de-sistemas-inteligentes.svg"
 ---
 
 

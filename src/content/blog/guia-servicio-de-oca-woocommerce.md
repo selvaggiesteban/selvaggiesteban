@@ -2,6 +2,7 @@
 title: "Guía servicio de OCA WooCommerce"
 description: "Para WooCommerce (y para el plugin de Wanderlust OCA), el servicio que ofrece OCA es:"
 pubDate: 2025-12-09
+heroImage: "/assets/blog/covers/guia-servicio-de-oca-woocommerce.svg"
 ---
 
 

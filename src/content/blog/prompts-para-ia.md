@@ -2,6 +2,7 @@
 title: "Prompts para IA"
 description: "Redacción de artículo optimizado para SEO de Google en primera persona del singular, en Español de “{%}” de categoría de “{%}” para el blog institucional de"
 pubDate: 2026-04-22
+heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 ---
 
 

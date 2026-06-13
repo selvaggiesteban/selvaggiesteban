@@ -2,6 +2,7 @@
 title: "SEO Off-Page: La Guía Definitiva para Dominar el Posicionamiento Externo"
 description: "Descubre qué es el SEO Off-Page y cómo sus estrategias externas impulsan tu ranking. Guía completa para construir autoridad y mejorar tu posicionamiento web."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/seo-off-page-la-guia-definitiva-para-dominar-el-posicionamiento.svg"
 ---
 
 

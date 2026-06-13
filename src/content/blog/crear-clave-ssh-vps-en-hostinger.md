@@ -2,6 +2,7 @@
 title: "Crear clave SSH de VPS en Hostinger"
 description: "Cuando trabajo con un VPS en Hostinger, una de las primeras cosas que hago es configurar un acceso seguro por SSH. No me gusta depender de contraseñas"
 pubDate: 2026-04-18
+heroImage: "/assets/blog/covers/crear-clave-ssh-vps-en-hostinger.svg"
 ---
 
 

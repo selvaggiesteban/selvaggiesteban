@@ -2,6 +2,7 @@
 title: "Guía OCA vs Correo Argentino"
 description: "Si tienes una tienda online en WooCommerce y estás buscando una solución confiable para los envíos dentro de Argentina, las opciones más populares son **OCA**"
 pubDate: 2025-12-11
+heroImage: "/assets/blog/covers/guia-oca-vs-correo-argentino.svg"
 ---
 
 

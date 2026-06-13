@@ -2,6 +2,7 @@
 title: "Guía precios mayoristas"
 description: "La idea quedaría así:"
 pubDate: 2025-12-11
+heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 ---
 
 

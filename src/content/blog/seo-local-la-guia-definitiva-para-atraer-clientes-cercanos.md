@@ -2,6 +2,7 @@
 title: "SEO Local: La Guía Definitiva para Atraer Clientes Cercanos"
 description: "Domina el SEO Local para tu negocio. Atrae clientes cercanos con estrategias probadas y aumenta tu visibilidad online en Google. ¡Guía completa aquí!"
 pubDate: 2026-01-03
+heroImage: "/assets/blog/covers/seo-local-la-guia-definitiva-para-atraer-clientes-cercanos.svg"
 ---
 
 

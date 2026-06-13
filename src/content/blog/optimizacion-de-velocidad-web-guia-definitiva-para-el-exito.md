@@ -2,6 +2,7 @@
 title: "Optimización de Velocidad Web: Guía Definitiva para el Éxito"
 description: "Aprende a dominar la optimización de velocidad web para mejorar el rendimiento de tu sitio, la experiencia de usuario y tu SEO. Descubre técnicas clave y herramientas esenciales."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/optimizacion-de-velocidad-web-guia-definitiva-para-el-exito.svg"
 ---
 
 

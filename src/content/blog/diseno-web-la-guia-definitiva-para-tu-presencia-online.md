@@ -2,6 +2,7 @@
 title: "Diseño Web: La Guía Definitiva para Tu Presencia Online"
 description: "Descubre el poder del diseño web profesional. Aprende sobre UX, SEO, responsive y herramientas clave para crear una web exitosa. ¡Tu guía completa!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/diseno-web-la-guia-definitiva-para-tu-presencia-online.svg"
 ---
 
 

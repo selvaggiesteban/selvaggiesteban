@@ -2,6 +2,7 @@
 title: "Las Mejores Herramientas de Marketing Digital para 2024"
 description: "Descubre las mejores herramientas de marketing para potenciar tu estrategia digital. Guía completa con software SEO, redes sociales, email marketing y analítica. ¡Optimiza tus campañas hoy!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/las-mejores-herramientas-de-marketing-digital-para-2024.svg"
 ---
 
 

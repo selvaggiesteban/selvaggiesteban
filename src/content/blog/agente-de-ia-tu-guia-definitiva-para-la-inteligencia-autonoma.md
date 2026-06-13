@@ -2,6 +2,7 @@
 title: "Agente de IA: Tu Guía Definitiva para la Inteligencia Autónoma"
 description: "Descubre qué es un Agente de IA, cómo funciona y su impacto transformador. Esta guía completa explora su arquitectura, tipos y aplicaciones prácticas."
 pubDate: 2026-01-20
+heroImage: "/assets/blog/covers/agente-de-ia-tu-guia-definitiva-para-la-inteligencia-autonoma.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "SEO Local: Guía Completa para Dominar la Búsqueda Local"
 description: "Domina el SEO Local y haz que tu negocio sea encontrado por clientes cercanos. Esta guía completa te enseña estrategias clave para posicionar tu empresa localmente."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/seo-local-guia-completa-para-dominar-la-busqueda-local.svg"
 ---
 
 

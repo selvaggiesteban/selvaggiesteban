@@ -2,6 +2,7 @@
 title: "Investigación de Palabras Clave: Guía Completa SEO"
 description: "Domina la **investigación de palabras clave** con nuestra guía exhaustiva. Descubre cómo encontrar las keywords perfectas para tu SEO, atraer tráfico y superar a tu competencia. ¡Empieza hoy!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/investigacion-de-palabras-clave-guia-completa-seo.svg"
 ---
 
 

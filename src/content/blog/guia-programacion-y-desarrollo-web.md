@@ -2,6 +2,7 @@
 title: "Guía programación y desarrollo web"
 description: "Recursos y herramientas para programadores y desarrolladores web."
 pubDate: 2025-11-26
+heroImage: "/assets/blog/covers/guia-programacion-y-desarrollo-web.svg"
 ---
 
 

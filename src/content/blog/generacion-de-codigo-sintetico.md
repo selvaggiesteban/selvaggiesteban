@@ -2,6 +2,7 @@
 title: "Generación de Código Sintético"
 description: "Descubre la Generación de Código Sintético: optimiza desarrollo, pruebas y seguridad. Una guía exhaustiva sobre sus beneficios, aplicaciones y el futuro de la programación."
 pubDate: 2026-01-20
+heroImage: "/assets/blog/covers/generacion-de-codigo-sintetico.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "WordPress: La Guía Definitiva para Crear Tu Web Ideal"
 description: "Descubre WordPress, el CMS líder para crear sitios web profesionales. Guía completa sobre cómo usarlo, sus ventajas, temas, plugins y optimización SEO. ¡Empieza hoy!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/wordpress-la-guia-definitiva-para-crear-tu-web-ideal.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Claude Code gratis"
 description: "Debes descargar Ollama y registrarte, luego, cuando estés en tu computadora con Windows corriendo una sesión de programación y desarrollo web en VS Code,"
 pubDate: 2026-02-17
+heroImage: "/assets/blog/covers/claude-code-gratis.svg"
 ---
 
 

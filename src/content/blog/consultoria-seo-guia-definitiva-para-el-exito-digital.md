@@ -2,6 +2,7 @@
 title: "Consultoría SEO: Guía Definitiva para el Éxito Digital"
 description: "Descubre cómo una Consultoría SEO experta puede transformar tu presencia online. Aumenta tu visibilidad, tráfico orgánico y ventas con estrategias probadas. ¡Tu éxito digital comienza aquí!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/consultoria-seo-guia-definitiva-para-el-exito-digital.svg"
 ---
 
 

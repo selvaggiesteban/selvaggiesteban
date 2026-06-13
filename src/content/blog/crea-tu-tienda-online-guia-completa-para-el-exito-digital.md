@@ -2,6 +2,7 @@
 title: "Crea tu Tienda Online: Guía Completa para el Éxito Digital"
 description: "Descubre cómo crear tu tienda online y escalar tu negocio. Esta guía completa te ofrece pasos clave, plataformas y estrategias SEO para vender más en el mundo digital."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/crea-tu-tienda-online-guia-completa-para-el-exito-digital.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Guía WooCommerce desde Excel"
 description: "Objetivo: esta guía explica cómo exportar los productos de WooCommerce a un archivo CSV, editarlos de forma masiva en Excel o Google Sheets e importarlos"
 pubDate: 2025-12-05
+heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 ---
 
 

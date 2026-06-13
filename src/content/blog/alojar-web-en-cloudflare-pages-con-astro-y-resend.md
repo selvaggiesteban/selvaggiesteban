@@ -2,6 +2,7 @@
 title: "Guía para alojar una web en Cloudflare Pages con Astro y Resend"
 description: "Aprende el método definitivo para desplegar sitios web ultrarrápidos, con formularios funcionales y hosting 100% gratuito usando Astro, Cloudflare y Resend."
 pubDate: 2026-06-07
+heroImage: "/assets/blog/covers/alojar-web-en-cloudflare-pages-con-astro-y-resend.svg"
 seoTitle: "Alojamiento gratuito en Cloudflare Pages con Astro y Resend | Guía"
 seoDescription: "Descubre cómo alojar tu web gratis en Cloudflare Pages usando Astro v6 y Resend. Soluciona el error 10014 y configura Turnstile con este playbook."
 permalink: "/blog/alojar-web-en-cloudflare-pages-con-astro-y-resend"

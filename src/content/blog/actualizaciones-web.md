@@ -2,6 +2,7 @@
 title: "Actualizaciones web"
 description: "Descubre por qué las actualizaciones web son vitales para seguridad, rendimiento y SEO. Nuestra guía completa te enseña a mantener tu sitio web optimizado y competitivo."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/actualizaciones-web.svg"
 ---
 
 

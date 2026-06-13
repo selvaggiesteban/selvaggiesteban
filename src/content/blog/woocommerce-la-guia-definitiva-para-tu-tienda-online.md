@@ -2,6 +2,7 @@
 title: "WooCommerce: La Guía Definitiva para Tu Tienda Online"
 description: "Descubre WooCommerce, el plugin de WordPress líder para crear tiendas online. Esta guía completa cubre instalación, configuración, características y optimización para tu ecommerce."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/woocommerce-la-guia-definitiva-para-tu-tienda-online.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Sistema multi-agente con IA"
 description: "Descubre cómo un Sistema Multi-Agente con IA revoluciona la resolución de problemas complejos. Esta guía completa explora su arquitectura, beneficios y aplicaciones prácticas."
 pubDate: 2026-01-20
+heroImage: "/assets/blog/covers/sistema-multi-agente-con-ia.svg"
 ---
 
 

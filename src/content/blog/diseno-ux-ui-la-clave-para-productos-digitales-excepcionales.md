@@ -2,6 +2,7 @@
 title: "Diseño UX/UI: La Clave para Productos Digitales Excepcionales"
 description: "Descubre el poder del Diseño UX/UI para crear productos digitales excepcionales. Aprende las claves para mejorar la experiencia y la interfaz de usuario de tu proyecto."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/diseno-ux-ui-la-clave-para-productos-digitales-excepcionales.svg"
 ---
 
 

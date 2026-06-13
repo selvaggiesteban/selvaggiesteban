@@ -2,6 +2,7 @@
 title: "SEO de Contenidos: Guía Completa para Dominar el Ranking"
 description: "Descubre el SEO de contenidos: la guía definitiva para crear contenido que rankea. Aprende estrategias, herramientas y cómo optimizar tu estrategia digital hoy mismo."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/seo-de-contenidos-guia-completa-para-dominar-el-ranking.svg"
 ---
 
 

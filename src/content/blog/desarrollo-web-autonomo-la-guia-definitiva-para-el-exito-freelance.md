@@ -2,6 +2,7 @@
 title: "Desarrollo Web Autónomo: La Guía Definitiva para el Éxito Freelance"
 description: "Descubre cómo ser un desarrollador web autónomo exitoso. Esta guía completa te ofrece los pasos clave, habilidades esenciales y estrategias para triunfar en el desarrollo web freelance."
 pubDate: 2026-01-20
+heroImage: "/assets/blog/covers/desarrollo-web-autonomo-la-guia-definitiva-para-el-exito-freelance.svg"
 ---
 
 

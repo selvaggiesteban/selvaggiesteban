@@ -2,6 +2,7 @@
 title: "Guía WooCommerce"
 description: "Objetivo: en este instructivo aprenderás a revisar la configuración básica de WooCommerce y a gestionar el catálogo de productos (crear, editar,"
 pubDate: 2025-12-05
+heroImage: "/assets/blog/covers/guia-woocommerce.svg"
 ---
 
 

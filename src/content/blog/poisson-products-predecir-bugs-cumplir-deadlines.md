@@ -2,7 +2,7 @@
 title: "Poisson Products: Cómo la distribución de Poisson me ayuda a cumplir deadlines al 200% de calidad"
 description: "Descubre cómo nació Poisson Products, una herramienta CLI que usa la distribución de Poisson para predecir bugs, simular carga de trabajo y ayudarte a planificar proyectos con calidad del 200%."
 pubDate: "2026-06-13"
-heroImage: "/assets/blog/poisson/cover-poisson-products.svg"
+heroImage: "/assets/blog/covers/poisson-products-predecir-bugs-cumplir-deadlines.svg"
 tags: ["Python", "Poisson", "Calidad", "Deadlines", "Productividad", "Testing", "Open Source"]
 category: "Herramientas"
 ---

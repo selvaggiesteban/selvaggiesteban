@@ -2,6 +2,7 @@
 title: "Automatización de marketing profesional"
 description: "Todo empezó una noche de martes, cerca de las tres de la madrugada. El frío de Buenos Aires se colaba por las rendijas de mi ventana, pero yo apenas lo"
 pubDate: 2026-05-04
+heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 ---
 
 

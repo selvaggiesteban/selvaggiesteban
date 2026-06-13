@@ -2,6 +2,7 @@
 title: "Experto WordPress: Tu Guía Definitiva para el Éxito Digital"
 description: "Descubre por qué un Experto WordPress es crucial para tu negocio online. Guía completa sobre servicios, beneficios y cómo elegir al mejor especialista."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/experto-wordpress-tu-guia-definitiva-para-el-exito-digital.svg"
 ---
 
 

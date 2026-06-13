@@ -2,6 +2,7 @@
 title: "Seguridad Web: Protegiendo tu Fortaleza Digital"
 description: "Protege tu sitio web de ciberataques. Descubre una guía completa sobre seguridad y protección de ataques web, vulnerabilidades comunes y estrategias de defensa efectivas. ¡Asegura tu presencia online!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/seguridad-web-protegiendo-tu-fortaleza-digital.svg"
 ---
 
 

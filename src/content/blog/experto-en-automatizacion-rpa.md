@@ -2,6 +2,7 @@
 title: "Experto en automatización RPA"
 description: "Si alguna vez te preguntaste cómo podés hacer para que ciertas tareas aburridas, rutinarias y muy repetitivas desaparezcan de tu rutina laboral, acá tenés la"
 pubDate: 2026-05-14
+heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 ---
 
 

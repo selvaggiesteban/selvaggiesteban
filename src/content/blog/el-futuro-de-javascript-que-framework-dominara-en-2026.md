@@ -2,6 +2,7 @@
 title: "El Futuro de JavaScript: ¿Qué Framework Dominará en 2026?"
 description: "Descubre qué nos depara el framework JavaScript en 2026. Analizamos tendencias, predicciones y los desafíos del desarrollo front-end. ¡Prepárate para el futuro!"
 pubDate: 2026-02-23
+heroImage: "/assets/blog/covers/el-futuro-de-javascript-que-framework-dominara-en-2026.svg"
 ---
 
 

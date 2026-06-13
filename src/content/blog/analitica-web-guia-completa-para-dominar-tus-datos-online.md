@@ -2,6 +2,7 @@
 title: "Analítica Web: Guía Completa para Dominar tus Datos Online"
 description: "Descubre la analítica web: optimiza tu sitio, entiende a tus usuarios y mejora tus resultados con nuestra guía completa."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/analitica-web-guia-completa-para-dominar-tus-datos-online.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Ejército de Juniors"
 description: "Descubre cómo construir y gestionar un exitoso Ejército de Juniors. Esta guía explora ventajas, desafíos y mejores prácticas para potenciar tu equipo y escalar tu negocio con talento joven."
 pubDate: 2026-01-20
+heroImage: "/assets/blog/covers/ejercito-de-juniors.svg"
 ---
 
 

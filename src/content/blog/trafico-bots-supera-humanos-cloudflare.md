@@ -2,6 +2,7 @@
 title: "El tráfico automatizado domina la web: Los bots superan a los humanos según Cloudflare"
 description: "Datos en vivo de Cloudflare revelan que los bots ahora generan el 57.3% del tráfico de páginas web, marcando un hito en la historia de Internet donde las máquinas superan la actividad humana."
 pubDate: "2026-06-08"
+heroImage: "/assets/blog/covers/trafico-bots-supera-humanos-cloudflare.svg"
 tags: ["Inteligencia Artificial", "Ciberseguridad", "Cloudflare", "Tráfico Web", "Automatización"]
 category: "Noticias Tecnológicas"
 ---

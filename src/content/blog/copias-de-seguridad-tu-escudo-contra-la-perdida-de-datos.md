@@ -2,6 +2,7 @@
 title: "Copias de Seguridad: Tu Escudo Contra la Pérdida de Datos"
 description: "Protege tus datos críticos con una guía completa de copias de seguridad. Aprende tipos, estrategias (3-2-1) y soluciones para un respaldo de datos infalible."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/copias-de-seguridad-tu-escudo-contra-la-perdida-de-datos.svg"
 ---
 
 

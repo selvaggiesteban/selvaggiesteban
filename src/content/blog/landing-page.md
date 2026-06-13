@@ -2,6 +2,7 @@
 title: "Landing page"
 description: "Descubre cómo una landing page optimizada puede disparar tus conversiones. Guía completa para crear páginas de aterrizaje efectivas, desde diseño hasta SEO y test A/B."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/landing-page.svg"
 ---
 
 

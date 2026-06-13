@@ -2,6 +2,7 @@
 title: "Gemini CLI en VS Code usando Vertex AI"
 description: "Trabajar con inteligencia artificial dentro del editor puede acelerar muchísimo el análisis de proyectos, la revisión de código y la planificación técnica."
 pubDate: 2026-04-16
+heroImage: "/assets/blog/covers/gemini-cli.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Posicionamiento Web: La Guía Definitiva para Dominar los Buscadores"
 description: "Descubre qué es el posicionamiento web, sus pilares fundamentales (SEO, SEM) y las estrategias clave para dominar los motores de búsqueda. ¡Impulsa tu visibilidad online!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/posicionamiento-web-la-guia-definitiva-para-dominar-los-buscadores.svg"
 ---
 
 

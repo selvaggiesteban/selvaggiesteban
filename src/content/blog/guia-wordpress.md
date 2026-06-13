@@ -2,6 +2,7 @@
 title: "Guía WordPress"
 description: "Objetivo: esta guía te muestra, paso a paso, cómo entrar al panel de WordPress, identificar las partes principales del escritorio y ajustar la"
 pubDate: 2025-12-05
+heroImage: "/assets/blog/covers/guia-wordpress.svg"
 ---
 
 

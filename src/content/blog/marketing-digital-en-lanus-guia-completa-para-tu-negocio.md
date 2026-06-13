@@ -2,6 +2,7 @@
 title: "Marketing Digital en Lanús: Guía Completa para tu Negocio"
 description: "Descubre cómo el marketing digital en Lanús impulsa tu negocio local. Guía completa con estrategias SEO, redes sociales y publicidad para crecer en la era digital."
 pubDate: 2026-01-01
+heroImage: "/assets/blog/covers/marketing-digital-en-lanus-guia-completa-para-tu-negocio.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "PrestaShop: Guía Completa para Tu Tienda Online Exitosa"
 description: "Descubre PrestaShop, la plataforma open source líder para crear tu tienda online. Guía completa con características, ventajas, desventajas y cómo empezar. ¡Vende más!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/prestashop-guia-completa-para-tu-tienda-online-exitosa.svg"
 ---
 
 

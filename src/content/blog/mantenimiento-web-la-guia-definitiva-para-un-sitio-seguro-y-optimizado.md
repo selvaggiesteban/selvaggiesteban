@@ -2,6 +2,7 @@
 title: "Mantenimiento Web: La Guía Definitiva para un Sitio Seguro y Optimizado"
 description: "Descubre la guía completa de mantenimiento web esencial para la seguridad, rendimiento y SEO de tu sitio. ¡Asegura el éxito digital de tu negocio!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/mantenimiento-web-la-guia-definitiva-para-un-sitio-seguro-y-optimizado.svg"
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Restauración de Sitio Web: Guía Completa para Recuperar Tu Presencia Online"
 description: "Aprende a restaurar tu sitio web paso a paso con nuestra guía completa. Descubre cómo recuperar tu web, proteger tus datos y asegurar la continuidad de tu negocio online eficazmente."
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/restauracion-de-sitio-web-guia-completa-para-recuperar-tu-presencia.svg"
 ---
 
 

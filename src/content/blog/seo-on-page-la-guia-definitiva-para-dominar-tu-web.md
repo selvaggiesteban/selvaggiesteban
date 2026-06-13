@@ -2,6 +2,7 @@
 title: "SEO On-Page: La Guía Definitiva para Dominar tu Web"
 description: "Domina el SEO On-Page con nuestra guía completa. Aprende a optimizar tu contenido, títulos, imágenes y URL para mejorar tu ranking en Google. ¡Impulsa tu visibilidad web ahora!"
 pubDate: 2026-01-06
+heroImage: "/assets/blog/covers/seo-on-page-la-guia-definitiva-para-dominar-tu-web.svg"
 ---
 
 

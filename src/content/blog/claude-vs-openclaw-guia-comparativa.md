@@ -2,6 +2,7 @@
 title: "Claude vs OpenClaw: Guía comparativa"
 description: "Cuando empecé a revisar a fondo Claude vs OpenClaw, tenía una duda muy concreta: cuál de las dos soluciones resulta más práctica para trabajar con tareas"
 pubDate: 2026-04-15
+heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 ---
 
 

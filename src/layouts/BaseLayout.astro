@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import { getLocaleFromUrl } from '../i18n/utils';
 import '../styles/global.css';
 
 interface Props {
@@ -15,22 +16,41 @@ interface Props {
   pubDate?: string;
   isService?: boolean;
   isProfile?: boolean;
+  locale?: 'es' | 'en';
 }
 
-const { title, description, image, canonical, articleSchema, pubDate, isService, isProfile } = Astro.props;
+const { title, description, image, canonical, articleSchema, pubDate, isService, isProfile, locale: propLocale } = Astro.props;
 
+const locale = propLocale || getLocaleFromUrl(Astro.url);
 const currentUrl = Astro.url.href;
+const siteUrl = 'https://selvaggiesteban.dev';
 
-// 1. Entidad Principal (ProfessionalService + Person Híbrido)
-const baseEntitySchema = {
+// Alternate language URLs for hreflang
+const currentPath = Astro.url.pathname;
+let alternatePath = currentPath;
+if (currentPath.startsWith('/es/')) {
+  alternatePath = '/en' + currentPath.slice(3);
+} else if (currentPath.startsWith('/en/')) {
+  alternatePath = '/es' + currentPath.slice(3);
+} else {
+  alternatePath = '/en' + currentPath;
+}
+
+const alternateUrl = `${siteUrl}${alternatePath}`;
+
+// 1. Main Entity Schema (ProfessionalService + Person Hybrid)
+const baseEntitySchema: Record<string, any> = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Person"],
-  "@id": "https://selvaggiesteban.dev/#identity",
+  "@id": `${siteUrl}/#identity`,
   "name": "Esteban Selvaggi",
-  "url": "https://selvaggiesteban.dev",
+  "url": siteUrl,
   "image": "https://media.licdn.com/dms/image/v2/C4E03AQEYYjT26_Y7Wg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1628026194726?e=1746662400&v=beta&t=90Q5k3s31p6Aqz6m1k46uJ321q535q3065w019p9e9A",
-  "jobTitle": "Ingeniero Informático",
-  "description": "Ingeniero informático especializado en ingeniería de software y posicionamiento SEO.",
+  "jobTitle": locale === 'en' ? 'Computer Engineer' : 'Ingeniero Informático',
+  "description": locale === 'en'
+    ? 'Computer Engineer specialized in software engineering and SEO positioning.'
+    : 'Ingeniero informático especializado en ingeniería de software y posicionamiento SEO.',
+  "inLanguage": locale,
   "sameAs": [
     "https://x.com/selvaggiesteban",
     "https://linkedin.com/in/selvaggiesteban",
@@ -52,7 +72,7 @@ const baseEntitySchema = {
   "priceRange": "$$"
 };
 
-// 2. Esquema condicional de Blog
+// 2. Conditional Blog Schema
 const blogSchema = articleSchema ? {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -62,45 +82,49 @@ const blogSchema = articleSchema ? {
   },
   "headline": title,
   "description": description,
-  "author": { "@id": "https://selvaggiesteban.dev/#identity" },
-  "publisher": { "@id": "https://selvaggiesteban.dev/#identity" },
-  "datePublished": pubDate
+  "author": { "@id": `${siteUrl}/#identity` },
+  "publisher": { "@id": `${siteUrl}/#identity` },
+  "datePublished": pubDate,
+  "inLanguage": locale
 } : null;
 
-// 3. Esquema condicional de Servicio
+// 3. Conditional Service Schema
 const serviceSchema = isService ? {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": title,
   "description": description,
-  "provider": { "@id": "https://selvaggiesteban.dev/#identity" },
+  "provider": { "@id": `${siteUrl}/#identity` },
   "areaServed": "Worldwide",
   "offers": {
     "@type": "Offer",
     "price": "16.00",
     "priceCurrency": "USD",
-    "description": "Precio base desde 16 USD / 16.000 ARS"
+    "description": locale === 'en' ? "Base price from 16 USD" : "Precio base desde 16 USD / 16.000 ARS"
   }
 } : null;
 
-// 4. Esquema condicional de CV/Profile
+// 4. Conditional Profile Schema
 const profileSchema = isProfile ? {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "mainEntity": { "@id": "https://selvaggiesteban.dev/#identity" }
+  "mainEntity": { "@id": `${siteUrl}/#identity` }
 } : null;
 
 const schemas = [baseEntitySchema, blogSchema, serviceSchema, profileSchema].filter(Boolean);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <SEO {title} {description} {image} {canonical} />
+    <link rel="alternate" hreflang={locale} href={currentUrl} />
+    <link rel="alternate" hreflang={locale === 'es' ? 'en' : 'es'} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${currentPath.startsWith('/en') ? currentPath : currentPath}`} />
     {schemas.map(schema => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
@@ -128,15 +152,11 @@ const schemas = [baseEntitySchema, blogSchema, serviceSchema, profileSchema].fil
         });
       }, observerOptions);
 
-      // Initialize observer on all elements with .reveal class
       function initReveal() {
         document.querySelectorAll('.reveal:not(.in)').forEach(el => observer.observe(el));
       }
 
-      // Initial call
       initReveal();
-
-      // For View Transitions (if enabled in future) or dynamic content
       document.addEventListener('astro:after-swap', initReveal);
     </script>
   </body>

@@ -122,6 +122,8 @@ const schemas = [baseEntitySchema, blogSchema, serviceSchema, profileSchema].fil
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <SEO {title} {description} {image} {canonical} />
+    <meta property="og:locale" content={locale === 'es' ? 'es_AR' : 'en_US'} />
+    <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_AR'} />
     <link rel="alternate" hreflang={locale} href={currentUrl} />
     <link rel="alternate" hreflang={locale === 'es' ? 'en' : 'es'} href={alternateUrl} />
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}${currentPath.startsWith('/en') ? currentPath : currentPath}`} />

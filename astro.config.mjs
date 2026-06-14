@@ -44,7 +44,8 @@ export default defineConfig({
       !page.includes('/login') &&
       !page.includes('/api/') &&
       !page.includes('/contacto/gracias') &&
-      !page.includes('/contact/thank-you'),
+      !page.includes('/contact/thank-you') &&
+      !page.includes('/404'),
     serialize(item) {
       const url = item.url;
       const base = 'https://selvaggiesteban.dev';

@@ -9,7 +9,7 @@ import { getLocaleFromUrl, t } from '../../../i18n/utils';
 
 export const prerender = true;
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = (await getCollection('blog')).filter(p => !p.id.startsWith('en/'));
   return posts.map(post => ({
     params: { slug: post.id },
     props: { post },

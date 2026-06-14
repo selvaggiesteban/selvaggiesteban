@@ -1,32 +1,51 @@
 import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
 
+function getLocale(request: Request): string {
+  const referer = request.headers.get('referer') || '';
+  if (referer.includes('/en/')) return 'en';
+  return 'es';
+}
+
+const errors: Record<string, Record<string, string>> = {
+  es: {
+    config: 'Configuración del servidor incompleta.',
+    wrongPassword: 'Contraseña incorrecta.',
+    requestError: 'Error en la solicitud.',
+  },
+  en: {
+    config: 'Incomplete server configuration.',
+    wrongPassword: 'Incorrect password.',
+    requestError: 'Request error.',
+  },
+};
+
 export const POST: APIRoute = async ({ request, cookies }) => {
   try {
     const data = await request.json();
+    const lang = getLocale(request);
+    const t = errors[lang];
     
-    // Fallback to process.env for local dev, env for Cloudflare
     const masterPassword = env.MASTER_PASSWORD || process.env.MASTER_PASSWORD;
     
     if (!masterPassword) {
-      return new Response(JSON.stringify({ error: "Configuración del servidor incompleta." }), { status: 500 });
+      return new Response(JSON.stringify({ error: t.config }), { status: 500 });
     }
 
     if (data.password === masterPassword) {
-      // Set a secure, HTTP-only cookie valid for 7 days
       cookies.set('admin_session', 'authenticated', {
         path: '/',
         httpOnly: true,
         secure: true,
         sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 7 // 7 days
+        maxAge: 60 * 60 * 24 * 7
       });
       
       return new Response(JSON.stringify({ success: true }), { status: 200 });
     }
 
-    return new Response(JSON.stringify({ error: "Contraseña incorrecta." }), { status: 401 });
+    return new Response(JSON.stringify({ error: t.wrongPassword }), { status: 401 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Error en la solicitud." }), { status: 400 });
+    return new Response(JSON.stringify({ error: errors.es.requestError }), { status: 400 });
   }
 };

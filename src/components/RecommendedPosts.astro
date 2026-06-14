@@ -7,7 +7,8 @@ const locale = getLocaleFromUrl(Astro.url);
 const lang = locale as 'es' | 'en';
 
 const allPosts = await getCollection('blog');
-const recommendedPosts = allPosts.sort((a, b) => {
+const localeFilter = locale === 'en' ? (id: string) => id.startsWith('en/') : (id: string) => !id.startsWith('en/');
+const recommendedPosts = allPosts.filter(p => localeFilter(p.id)).sort((a, b) => {
   const dateA = a.data.pubDate ? new Date(a.data.pubDate).valueOf() : 0;
   const dateB = b.data.pubDate ? new Date(b.data.pubDate).valueOf() : 0;
   return dateB - dateA;

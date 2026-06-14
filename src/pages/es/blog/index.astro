@@ -6,7 +6,7 @@ import { getLocaleFromUrl, t } from '../../../i18n/utils';
 
 const locale = getLocaleFromUrl(Astro.url);
 const lang = locale as 'es' | 'en';
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blog')).filter(p => !p.id.startsWith('en/')).sort(
   (a, b) => {
     const dateA = a.data.pubDate ? new Date(a.data.pubDate).valueOf() : 0;
     const dateB = b.data.pubDate ? new Date(b.data.pubDate).valueOf() : 0;

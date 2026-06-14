@@ -1,25 +1,29 @@
 ---
 import Section from './Section.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
 
 const repos = [
   {
     name: '30_days_coding',
     url: 'https://github.com/selvaggiesteban/30_days_coding',
-    description: 'Desafío de programación de 30 días con algoritmos, estructuras de datos y resolución de problemas.',
+    descKey: 'recentPosts.repos.30days',
     language: 'TypeScript',
     stars: 0
   },
   {
     name: 'spec-driven_development',
     url: 'https://github.com/selvaggiesteban/spec-driven_development',
-    description: 'Metodología y herramientas para construir aplicaciones robustas a partir de especificaciones estrictas.',
+    descKey: 'recentPosts.repos.specDriven',
     language: 'Python',
     stars: 0
   },
   {
     name: 'hands-on-ai',
     url: 'https://github.com/selvaggiesteban/hands-on-ai',
-    description: 'Implementaciones prácticas de modelos de Inteligencia Artificial, agentes LLM e ingeniería de prompts.',
+    descKey: 'recentPosts.repos.handsOnAi',
     language: 'Jupyter Notebook',
     stars: 0
   }
@@ -28,13 +32,11 @@ const repos = [
 
 <Section variant="white" id="recent-posts" class="reveal">
   <div class="grid lg:grid-cols-12 gap-xl items-start">
-    {/* Left Column: Heading */}
     <div class="lg:col-span-4 text-center lg:text-left">
-      <h2 class="display-lg mb-md">Publicaciones recientes</h2>
-      <p class="text-xl text-ink/60 mb-6">Compartiendo código, algoritmos y avances sobre ingeniería en software e IA.</p>
+      <h2 class="display-lg mb-md">{t(lang, 'recentPosts.heading')}</h2>
+      <p class="text-xl text-ink/60 mb-6">{t(lang, 'recentPosts.subtitle')}</p>
     </div>
 
-    {/* Right Column: GitHub Repos */}
     <div class="lg:col-span-8 space-y-6">
       {repos.map(repo => (
         <a href={repo.url} target="_blank" class="block bg-[#f9f9f9] p-lg rounded-[9px] border border-hairline hover:border-ink/20 transition-all shadow-sm">
@@ -48,7 +50,7 @@ const repos = [
             </div>
           </div>
           <p class="text-sm text-ink/80 leading-relaxed mb-4">
-            {repo.description}
+            {t(lang, repo.descKey)}
           </p>
           <div class="flex items-center justify-between pt-4 border-t border-hairline-soft text-xs text-ink/60 font-medium">
             <div class="flex items-center gap-4">
@@ -61,7 +63,7 @@ const repos = [
                 {repo.stars}
               </span>
             </div>
-            <span class="hover:underline text-primary">Ver código fuente →</span>
+            <span class="hover:underline text-primary">{t(lang, 'recentPosts.viewSource')} →</span>
           </div>
         </a>
       ))}

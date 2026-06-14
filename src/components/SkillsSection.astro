@@ -1,9 +1,13 @@
 ---
 import Section from './Section.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
 
 const skillCategories = [
   {
-    title: "Desarrollo frontend",
+    titleKey: 'skills.categories.frontend',
     skills: [
       { name: "React", icon: "/assets/skills/react.svg" },
       { name: "Vue.js", icon: "/assets/skills/vue.svg" },
@@ -20,7 +24,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Desarrollo backend",
+    titleKey: 'skills.categories.backend',
     skills: [
       { name: "PHP", icon: "/assets/skills/php.svg" },
       { name: "Laravel", icon: "/assets/skills/laravel.svg" },
@@ -31,7 +35,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "APIs e integraciones",
+    titleKey: 'skills.categories.apis',
     skills: [
       { name: "REST API", icon: "/assets/skills/fastapi.svg" },
       { name: "GraphQL", icon: "/assets/skills/graphql.svg" },
@@ -42,7 +46,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Bases de datos",
+    titleKey: 'skills.categories.databases',
     skills: [
       { name: "MySQL", icon: "/assets/skills/mysql.svg" },
       { name: "SQLite", icon: "/assets/skills/sqlite.webp" },
@@ -51,7 +55,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Despliegue e infraestructura",
+    titleKey: 'skills.categories.infra',
     skills: [
       { name: "AWS", icon: "/assets/skills/aws.png" },
       { name: "Azure", icon: "/assets/skills/azure.svg" },
@@ -67,7 +71,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Inteligencia artificial y automatizaciones",
+    titleKey: 'skills.categories.ai',
     skills: [
       { name: "OpenAI", icon: "/assets/skills/openai.svg" },
       { name: "Gemini", icon: "/assets/skills/gemini.png" },
@@ -77,7 +81,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Productividad",
+    titleKey: 'skills.categories.productivity',
     skills: [
       { name: "VS Code", icon: "/assets/skills/vscode.webp" },
       { name: "Trello", icon: "/assets/skills/trello.webp" },
@@ -86,7 +90,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Gestión de contenido",
+    titleKey: 'skills.categories.cms',
     skills: [
       { name: "WordPress", icon: "/assets/skills/wordpress.webp" },
       { name: "Elementor", icon: "/assets/skills/elementor.webp" },
@@ -97,7 +101,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "SEO y analítica",
+    titleKey: 'skills.categories.seo',
     skills: [
       { name: "Google Analytics", icon: "/assets/skills/analytics.svg" },
       { name: "Search Console", icon: "/assets/skills/searchconsole.svg" },
@@ -111,15 +115,14 @@ const skillCategories = [
 
 <Section variant="white" id="skills">
   <div class="text-center mb-16">
-    <h2 class="display-lg mb-4">Tecnologías de vanguardia</h2>
-    <p class="text-xl text-ink/60">Código optimizado para el máximo rendimiento.</p>
+    <h2 class="display-lg mb-4">{t(lang, 'skills.heading')}</h2>
+    <p class="text-xl text-ink/60">{t(lang, 'skills.subtitle')}</p>
   </div>
 
-  {/* Skills Grid: Full Width (Original 3 Columns) */}
   <div class="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl">
     {skillCategories.map(category => (
       <div class="bg-[#ffffff] p-lg rounded-[5px] border border-hairline flex flex-col h-full">
-        <h3 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-lg border-b border-hairline pb-4 text-center">{category.title}</h3>
+        <h3 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-lg border-b border-hairline pb-4 text-center">{t(lang, category.titleKey)}</h3>
         <div class="flex flex-wrap gap-md items-center justify-start py-4">
           {category.skills.map(skill => (
             <div class="flex flex-col items-center gap-xs group w-[calc(33.333%-1rem)] min-w-[70px]">

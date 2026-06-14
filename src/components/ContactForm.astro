@@ -1,41 +1,45 @@
 ---
 import Button from './Button.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
+const privacyHref = locale === 'es' ? '/es/privacy-policy' : '/en/privacy-policy';
 ---
 
 <div class="mt-xl pt-xl border-t border-hairline">
   <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
-    <h2 class="display-sm mb-4">¿Hablamos sobre tu proyecto?</h2>
+    <h2 class="display-sm mb-4">{t(lang, 'contactPage.form.heading')}</h2>
     <p class="mb-12 text-ink/70 max-w-2xl text-center">
-      Completa el formulario y me pondré en contacto contigo lo antes posible.
+      {t(lang, 'contactPage.form.subtitle')}
     </p>
 
     <form id="contact-form" class="w-full space-y-6 bg-canvas p-8 md:p-12 rounded-[9px] border border-hairline shadow-sm text-left">
       <div class="space-y-2">
-        <label for="name" class="font-mono text-xs uppercase tracking-widest text-ink/40">Nombre</label>
+        <label for="name" class="font-mono text-xs uppercase tracking-widest text-ink/40">{t(lang, 'contactPage.form.name')}</label>
         <input type="text" id="name" name="name" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors" />
       </div>
 
       <div class="space-y-2">
-        <label for="email" class="font-mono text-xs uppercase tracking-widest text-ink/40">Email</label>
+        <label for="email" class="font-mono text-xs uppercase tracking-widest text-ink/40">{t(lang, 'contactPage.form.email')}</label>
         <input type="email" id="email" name="email" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors" />
       </div>
 
       <div class="space-y-2">
-        <label for="message" class="font-mono text-xs uppercase tracking-widest text-ink/40">Mensaje</label>
+        <label for="message" class="font-mono text-xs uppercase tracking-widest text-ink/40">{t(lang, 'contactPage.form.message')}</label>
         <textarea id="message" name="message" rows="4" required class="w-full p-4 bg-surface-soft border border-hairline rounded-[9px] focus:border-primary outline-none transition-colors"></textarea>
       </div>
 
       <div class="flex items-start gap-2 pt-2">
         <input type="checkbox" id="privacy" name="privacy" required class="mt-1 accent-primary focus:ring-primary w-4 h-4" />
         <label for="privacy" class="text-sm text-ink/70">
-          He leído y acepto la <a href="/politica-de-privacidad" class="text-primary underline hover:text-primary-dark" target="_blank">Política de Privacidad</a> y el tratamiento de mis datos personales.
+          {t(lang, 'contactPage.form.privacy')} <a href={privacyHref} class="text-primary underline hover:text-primary-dark" target="_blank">{t(lang, 'contactPage.form.privacyLink')}</a> {t(lang, 'contactPage.form.privacyData')}
         </label>
       </div>
 
-      <!-- Cloudflare Turnstile -->
       <div id="my-turnstile-container" class="min-h-[65px] flex justify-center mb-4"></div>
 
-      <Button type="submit" class="w-full text-lg py-4">Enviar mensaje</Button>
+      <Button type="submit" class="w-full text-lg py-4">{t(lang, 'contactPage.form.submit')}</Button>
 
       <p id="form-status" class="text-sm mt-4 hidden"></p>
     </form>
@@ -43,10 +47,8 @@ import Button from './Button.astro';
 </div>
 
 <script>
-  // Inyectamos el script dinámicamente y lo renderizamos de forma segura en Astro
   const initTurnstile = () => {
     const container = document.getElementById('my-turnstile-container');
-    // Evitamos re-renderizar si ya existe
     if (!container || container.innerHTML.trim() !== '') return;
 
     const script = document.createElement('script');
@@ -66,11 +68,8 @@ import Button from './Button.astro';
     document.head.appendChild(script);
   };
 
-  // Aseguramos carga inicial
   document.addEventListener('DOMContentLoaded', initTurnstile);
-  // Aseguramos carga en navegaciones PWA/Astro
   document.addEventListener('astro:page-load', initTurnstile);
-  // Disparo inmediato por si DOMContentLoaded ya pasó
   initTurnstile();
 
   const form = document.getElementById('contact-form') as HTMLFormElement;
@@ -84,13 +83,13 @@ import Button from './Button.astro';
     const data = Object.fromEntries(formData);
 
     if (!data['cf-turnstile-response']) {
-      status.textContent = 'Por favor, espera a que el captcha de seguridad se complete.';
+      status.textContent = 'Please wait for the security captcha to complete.';
       status.classList.remove('hidden', 'text-semantic-success', 'text-ink/60');
       status.classList.add('text-red-500');
       return;
     }
 
-    status.textContent = 'Enviando...';
+    status.textContent = 'Sending...';
     status.classList.remove('hidden', 'text-semantic-success', 'text-red-500');
     status.classList.add('text-ink/60');
 
@@ -106,14 +105,15 @@ import Button from './Button.astro';
       if (response.ok) {
         form.reset();
         if (window.turnstile) window.turnstile.reset();
-        window.location.href = '/contacto/gracias/';
+        const thankYouHref = window.location.pathname.startsWith('/en') ? '/en/contact/thank-you' : '/es/contact/thank-you';
+        window.location.href = thankYouHref;
       } else {
         const error = await response.json();
-        status.textContent = `Error: ${error.message || 'No se pudo enviar el mensaje.'}`;
+        status.textContent = `Error: ${error.message || 'Could not send message.'}`;
         status.classList.add('text-red-500');
       }
     } catch (e) {
-      status.textContent = 'Error de conexión. Inténtalo de nuevo.';
+      status.textContent = 'Connection error. Please try again.';
       status.classList.add('text-red-500');
     }
   });

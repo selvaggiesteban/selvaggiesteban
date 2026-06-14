@@ -1,6 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import Section from './Section.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
 
 const allPosts = await getCollection('blog');
 const recommendedPosts = allPosts.sort((a, b) => {
@@ -9,60 +13,60 @@ const recommendedPosts = allPosts.sort((a, b) => {
   return dateB - dateA;
 });
 
-// Duplicamos el array para lograr el efecto continuo de "marquee" en CSS puro
 const extendedPosts = [...recommendedPosts, ...recommendedPosts];
 ---
 
 <Section variant="white" id="recommended" class="reveal !py-12 overflow-hidden" fullWidth={true}>
   <div class="px-lg md:px-xxl mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
     <div class="text-center sm:text-left">
-      <h2 class="display-lg mb-2">Recomendado para usted</h2>
+      <h2 class="display-lg mb-2">{t(lang, 'recommended.heading')}</h2>
       <div class="w-20 h-1 bg-primary mx-auto sm:mx-0"></div>
     </div>
-    <!-- Arrow controls -->
     <div class="flex gap-2 justify-center sm:justify-end flex-shrink-0">
-      <button id="carousel-prev" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label="Anterior">
+      <button id="carousel-prev" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label={t(lang, 'recommended.prev')}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
-      <button id="carousel-next" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label="Siguiente">
+      <button id="carousel-next" class="p-2 bg-surface-soft border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink" aria-label={t(lang, 'recommended.next')}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
   </div>
 
   <div id="carousel-viewport" class="relative w-full overflow-hidden">
-    <!-- Mask gradients -->
     <div class="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
     <div class="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
     <div id="carousel-track" class="flex">
-      {recommendedPosts.map((post) => (
-        <a href={`/blog/${post.id}`} class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-          <div class="aspect-video overflow-hidden bg-surface-soft relative">
-            <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
-              Artículo
-            </span>
-            {post.data.heroImage ? (
-              <img src={post.data.heroImage} alt={post.data.title} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-            ) : (
-              <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
-                Lectura recomendada
-              </div>
-            )}
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-lg font-bold mb-3 line-clamp-2 leading-tight hover:text-primary transition-colors">
-              {post.data.title}
-            </h3>
-            <p class="text-xs text-ink/60 line-clamp-3 mb-6 flex-grow">
-              {post.data.description}
-            </p>
-            <div class="flex items-center text-[10px] font-bold uppercase tracking-widest text-primary">
-              Leer más <span class="ml-1">→</span>
+      {recommendedPosts.map((post) => {
+        const postUrl = locale === 'en' ? `/en/blog/${post.id}` : `/es/blog/${post.id}`;
+        return (
+          <a href={postUrl} class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="aspect-video overflow-hidden bg-surface-soft relative">
+              <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
+                {t(lang, 'recommended.article')}
+              </span>
+              {post.data.heroImage ? (
+                <img src={post.data.heroImage} alt={post.data.title} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-ink/20 font-mono text-[10px] uppercase tracking-widest bg-gradient-to-br from-surface-soft to-gray-100">
+                  {t(lang, 'recommended.readSuggestion')}
+                </div>
+              )}
             </div>
-          </div>
-        </a>
-      ))}
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold mb-3 line-clamp-2 leading-tight hover:text-primary transition-colors">
+                {post.data.title}
+              </h3>
+              <p class="text-xs text-ink/60 line-clamp-3 mb-6 flex-grow">
+                {post.data.description}
+              </p>
+              <div class="flex items-center text-[10px] font-bold uppercase tracking-widest text-primary">
+                {t(lang, 'recommended.readMore')} <span class="ml-1">→</span>
+              </div>
+            </div>
+          </a>
+        );
+      })}
     </div>
   </div>
 </Section>
@@ -75,7 +79,7 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
   if (track && prevBtn && nextBtn) {
     const cardWidth = () => {
       const card = track.querySelector('.carousel-card') as HTMLElement;
-      return card ? card.offsetWidth + 24 : 424; // width + mx-3*2
+      return card ? card.offsetWidth + 24 : 424;
     };
 
     let offset = 0;
@@ -94,7 +98,6 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
     prevBtn.addEventListener('click', () => move(-cardWidth() * 2));
     nextBtn.addEventListener('click', () => move(cardWidth() * 2));
 
-    // Touch/drag support
     let startX = 0;
     track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
     track.addEventListener('touchend', (e) => {

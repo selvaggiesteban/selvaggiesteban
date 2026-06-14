@@ -1,29 +1,37 @@
 ---
 import Container from './Container.astro';
 import Button from './Button.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
 
 const navLinks = [
-  { href: '/', label: 'Inicio' },
-  { href: '/sobre-mi', label: 'Sobre mí' },
+  { href: '/', label: t(lang, 'nav.inicio') },
+  { href: locale === 'es' ? '/es/about' : '/en/about', label: t(lang, 'nav.sobreMi') },
   { 
-    label: 'Servicios', 
-    href: '/servicios',
+    label: t(lang, 'nav.servicios'), 
+    href: locale === 'es' ? '/es/services' : '/en/services',
     dropdown: [
-      { href: '/servicios/software-a-medida', label: 'Software a medida' },
-      { href: '/servicios/diseno-web-responsive', label: 'Diseño web responsive' },
-      { href: '/servicios/posicionamiento-seo', label: 'Posicionamiento SEO' },
-      { href: '/servicios/posicionamiento-sem', label: 'Posicionamiento SEM' },
-      { href: '/servicios/e-mail-marketing', label: 'E-mail marketing' }
+      { href: locale === 'es' ? '/es/services/software-a-medida' : '/en/services/software-a-medida', label: t(lang, 'services.softwareAMedida') },
+      { href: locale === 'es' ? '/es/services/diseno-web-responsive' : '/en/services/diseno-web-responsive', label: t(lang, 'services.disenoWeb') },
+      { href: locale === 'es' ? '/es/services/posicionamiento-seo' : '/en/services/posicionamiento-seo', label: t(lang, 'services.seo') },
+      { href: locale === 'es' ? '/es/services/posicionamiento-sem' : '/en/services/posicionamiento-sem', label: t(lang, 'services.sem') },
+      { href: locale === 'es' ? '/es/services/e-mail-marketing' : '/en/services/e-mail-marketing', label: t(lang, 'services.emailMarketing') }
     ]
   },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contacto', label: 'Contacto' },
+  { href: locale === 'es' ? '/es/blog' : '/en/blog', label: t(lang, 'nav.blog') },
+  { href: locale === 'es' ? '/es/contact' : '/en/contact', label: t(lang, 'nav.contacto') },
 ];
+
+const contactHref = locale === 'es' ? '/es/contact' : '/en/contact';
+const homeHref = locale === 'es' ? '/es/' : '/en/';
 ---
 
 <header class="sticky top-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-hairline h-[56px] flex items-center">
   <Container class="flex justify-between items-center w-full">
-    <a href="/" class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
+    <a href={homeHref} class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
     
     <nav class="hidden md:flex gap-lg items-center text-sm font-medium">
       {navLinks.map(link => (
@@ -46,10 +54,11 @@ const navLinks = [
           )}
         </div>
       ))}
-      <Button href="/contacto" variant="secondary" class="!py-1.5 !text-sm ml-2">Empezar</Button>
+      <LanguageSwitcher />
+      <Button href={contactHref} variant="secondary" class="!py-1.5 !text-sm ml-2">{t(lang, 'nav.empezar')}</Button>
     </nav>
 
-    <button id="menu-toggle" class="md:hidden p-2 z-50" aria-label="Menu" aria-expanded="false">
+    <button id="menu-toggle" class="md:hidden p-2 z-50" aria-label={t(lang, 'nav.menu')} aria-expanded="false">
       <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
@@ -69,7 +78,10 @@ const navLinks = [
         )}
       </div>
     ))}
-    <Button href="/contacto" variant="primary" class="mt-4 w-full max-w-[280px]">Empezar ahora</Button>
+    <div class="mt-2">
+      <LanguageSwitcher />
+    </div>
+    <Button href={contactHref} variant="primary" class="mt-4 w-full max-w-[280px]">{t(lang, 'nav.empezarAhora')}</Button>
   </div>
 </header>
 
@@ -98,7 +110,6 @@ const navLinks = [
     }
   });
 
-  // Close menu when clicking a link (if not a parent with dropdown in mobile - but here we close on all for simplicity)
   const mobileLinks = mobileMenu?.querySelectorAll('a');
   mobileLinks?.forEach(link => {
     link.addEventListener('click', () => {

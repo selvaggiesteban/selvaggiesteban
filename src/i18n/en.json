@@ -160,7 +160,8 @@
     "title": "Services",
     "description": "Explore the web design and development solutions we offer.",
     "heading": "Computer Engineering Services",
-    "verServicio": "View service"
+    "verServicio": "View service",
+    "viewService": "View service"
   },
   "login": {
     "title": "Restricted Access",

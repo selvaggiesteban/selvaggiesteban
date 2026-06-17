@@ -160,7 +160,8 @@
     "title": "Servicios",
     "description": "Explora las soluciones de diseño y desarrollo web que ofrecemos.",
     "heading": "Servicios de ingeniería informática",
-    "verServicio": "Ver servicio"
+    "verServicio": "Ver servicio",
+    "viewService": "Ver servicio"
   },
   "login": {
     "title": "Acceso Restringido",

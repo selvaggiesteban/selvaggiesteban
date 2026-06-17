@@ -58,32 +58,39 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
       <Button href={contactHref} variant="secondary" class="!py-1.5 !text-sm ml-2">{t(lang, 'nav.empezar')}</Button>
     </nav>
 
-    <button id="menu-toggle" class="md:hidden p-2 z-50" aria-label={t(lang, 'nav.menu')} aria-expanded="false">
+    <button id="menu-toggle" class="md:hidden p-2 z-50 relative" aria-label={t(lang, 'nav.menu')} aria-expanded="false">
       <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
   </Container>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed top-[56px] left-0 w-full h-[calc(100dvh-56px)] bg-canvas z-40 flex flex-col items-center justify-start gap-6 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-10 pb-10 px-6 text-center">
-    {navLinks.map(link => (
-      <div class="w-full">
-        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
-        {link.dropdown && (
-          <div class="flex flex-col gap-2 mt-2 bg-surface-soft py-4 rounded-none">
-            {link.dropdown.map(subItem => (
-              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
-            ))}
-          </div>
-        )}
-      </div>
-    ))}
-    <div class="mt-2">
-      <LanguageSwitcher />
-    </div>
-    <Button href={contactHref} variant="primary" class="mt-4 w-full max-w-[280px]">{t(lang, 'nav.empezarAhora')}</Button>
-  </div>
 </header>
+
+<!-- Mobile Menu Overlay — OUTSIDE header -->
+<div id="mobile-menu" class="fixed inset-0 top-[56px] bg-canvas z-40 flex flex-col items-center justify-start gap-6 translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-10 pb-10 px-6 text-center">
+  {navLinks.map((link, i) => (
+    <div class="w-full">
+      {link.dropdown ? (
+        <button data-dropdown-toggle={i} class="text-2xl font-bold hover:text-primary transition-colors flex items-center justify-center gap-2 w-full py-2 cursor-pointer">
+          {link.label}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      ) : (
+        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
+      )}
+      {link.dropdown && (
+        <div data-dropdown-content={i} class="flex flex-col gap-2 mt-2 bg-surface-soft py-4 max-h-0 overflow-hidden transition-all duration-300">
+          {link.dropdown.map(subItem => (
+            <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
+          ))}
+        </div>
+      )}
+    </div>
+  ))}
+  <div class="mt-2">
+    <LanguageSwitcher />
+  </div>
+  <Button href={contactHref} variant="primary" class="mt-4 w-full max-w-[280px]">{t(lang, 'nav.empezarAhora')}</Button>
+</div>
 
 <script>
   const menuToggle = document.getElementById('menu-toggle');
@@ -91,6 +98,15 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
   let isMenuOpen = false;
+
+  function closeMenu() {
+    isMenuOpen = false;
+    mobileMenu?.classList.add('translate-x-full');
+    menuIcon?.classList.remove('hidden');
+    closeIcon?.classList.add('hidden');
+    document.body.style.overflow = '';
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  }
 
   menuToggle?.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen;
@@ -102,23 +118,33 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
       document.body.style.overflow = 'hidden';
       menuToggle.setAttribute('aria-expanded', 'true');
     } else {
-      mobileMenu?.classList.add('translate-x-full');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
-      document.body.style.overflow = '';
-      menuToggle.setAttribute('aria-expanded', 'false');
+      closeMenu();
     }
   });
 
   const mobileLinks = mobileMenu?.querySelectorAll('a');
   mobileLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      isMenuOpen = false;
-      mobileMenu?.classList.add('translate-x-full');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
-      document.body.style.overflow = '';
-      menuToggle?.setAttribute('aria-expanded', 'false');
+    link.addEventListener('click', closeMenu);
+  });
+
+  const dropdownToggles = mobileMenu?.querySelectorAll('[data-dropdown-toggle]');
+  dropdownToggles?.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const index = toggle.getAttribute('data-dropdown-toggle');
+      const content = mobileMenu?.querySelector(`[data-dropdown-content="${index}"]`);
+      const svg = toggle.querySelector('svg');
+      if (content) {
+        const isOpen = content.classList.contains('max-h-[500px]');
+        if (isOpen) {
+          content.classList.remove('max-h-[500px]');
+          content.classList.add('max-h-0');
+          svg?.classList.remove('rotate-180');
+        } else {
+          content.classList.remove('max-h-0');
+          content.classList.add('max-h-[500px]');
+          svg?.classList.add('rotate-180');
+        }
+      }
     });
   });
 </script>

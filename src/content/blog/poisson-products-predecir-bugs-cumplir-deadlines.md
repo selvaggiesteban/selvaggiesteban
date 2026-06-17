@@ -71,7 +71,7 @@ La gestión de calidad en proyectos web es todavía muy artesanal. Dependemos de
 Si trabajas con deadlines ajustados, si prometes calidad y quieres respaldarlo con números, o simplemente si te da curiosidad ver cómo la distribución de Poisson puede aplicarse al desarrollo de software, te invito a:
 
 <ul>
-  <li>Clonar el repo: <code>git clone https://github.com/selvaggiesteban/poisson_for_products.git</code></li>
+  <li>Clonar el repo: <code class="break-all">git clone https://github.com/selvaggiesteban/poisson_for_products.git</code></li>
   <li>Instalar: <code>pip install poisson-products</code></li>
   <li>Ejecutar: <code>poisson-products /ruta/a/tu/proyecto</code></li>
   <li>Abrir un issue, sugerir una feature, hacer un PR.</li>

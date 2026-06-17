@@ -81,6 +81,7 @@
     "heading": "Publicaciones recientes",
     "description": "Compartiendo código, algoritmos y avances sobre ingeniería en software e IA.",
     "viewCode": "Ver código fuente →",
+    "githubRepo": "Repositorio en GitHub",
     "repos": {
       "30_days_coding": "Desafío de programación de 30 días con algoritmos, estructuras de datos y resolución de problemas.",
       "spec-driven": "Metodología y herramientas para construir aplicaciones robustas a partir de especificaciones estrictas.",

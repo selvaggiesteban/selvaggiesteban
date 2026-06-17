@@ -81,6 +81,7 @@
     "heading": "Recent Publications",
     "description": "Sharing code, algorithms, and advances in Software Engineering and AI.",
     "viewCode": "View source code →",
+    "githubRepo": "GitHub Repository",
     "repos": {
       "30_days_coding": "30-day programming challenge with algorithms, data structures, and problem solving.",
       "spec-driven": "Methodology and tools for building robust applications from strict specifications.",

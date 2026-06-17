@@ -7,9 +7,12 @@ import SkillsSection from '../../components/SkillsSection.astro';
 import ReviewsCarousel from '../../components/ReviewsCarousel.astro';
 import RecentPosts from '../../components/RecentPosts.astro';
 import RecommendedPosts from '../../components/RecommendedPosts.astro';
+import { getLocaleFromUrl, t } from '../../i18n/utils';
 
-const title = "Web Design of Excellence";
-const description = "Development of static, fast websites optimized for SEO with Astro and Cloudflare.";
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
+const title = t(lang, 'home.title');
+const description = t(lang, 'home.description');
 ---
 
 <BaseLayout {title} {description} locale="en">

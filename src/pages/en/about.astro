@@ -2,9 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/Section.astro';
 import Button from '../../components/Button.astro';
+import { getLocaleFromUrl, t } from '../../i18n/utils';
 
-const title = "About Me";
-const description = "Learn more about Esteban Selvaggi, a software engineer specialized in full-stack development with 10 years of experience.";
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
+const title = t(lang, 'about.title');
+const description = t(lang, 'about.description');
 ---
 
 <BaseLayout {title} {description} isProfile={true} locale="en">

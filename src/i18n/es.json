@@ -17,7 +17,7 @@
     "emailMarketing": "E-mail marketing"
   },
   "footer": {
-    "bio": "Ingeniero en informática especializado en ingeniería en software",
+    "bio": "Ingeniero en Informática especializado en Ingeniería en Software",
     "ingenieroInformatica": "Ingeniero en Informática UBA",
     "ingenieroSoftware": "Ingeniero en software",
     "desarrolladorFullStack": "Desarrollador Web Full-Stack",
@@ -152,9 +152,9 @@
     "description": "Artículos técnicos sobre ingeniería de software, automatización con inteligencia artificial y estrategias avanzadas de posicionamiento web (SEO/SEM).",
     "heading": "Blog",
     "subtitle": "Reflexiones, tutoriales y estrategias sobre ingeniería en software, IA y posicionamiento web.",
-    "destacado": "Destacado",
-    "leerArticulo": "Leer artículo",
-    "leerMas": "Leer más"
+    "featured": "Destacado",
+    "readArticle": "Leer artículo",
+    "readMore": "Leer más"
   },
   "servicesPage": {
     "title": "Servicios",
@@ -175,12 +175,14 @@
   "share": {
     "whatsapp": "Compartir por WhatsApp",
     "twitter": "Compartir en X (Twitter)",
+    "x": "Compartir en X (Twitter)",
     "linkedin": "Compartir en LinkedIn",
     "telegram": "Compartir por Telegram",
     "copyLink": "Copiar enlace",
     "copied": "¡Copiado!"
   },
   "breadcrumbs": {
-    "home": "Inicio"
+    "home": "Inicio",
+    "blog": "Blog"
   }
 }

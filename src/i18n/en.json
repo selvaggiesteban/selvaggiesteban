@@ -175,12 +175,14 @@
   "share": {
     "whatsapp": "Share via WhatsApp",
     "twitter": "Share on X (Twitter)",
+    "x": "Share on X (Twitter)",
     "linkedin": "Share on LinkedIn",
     "telegram": "Share via Telegram",
     "copyLink": "Copy link",
     "copied": "Copied!"
   },
   "breadcrumbs": {
-    "home": "Home"
+    "home": "Home",
+    "blog": "Blog"
   }
 }

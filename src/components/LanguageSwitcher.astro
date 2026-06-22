@@ -1,20 +1,10 @@
 ---
-import { getLocaleFromUrl, getOppositeLocale, getLocalePrefix } from '../i18n/utils';
+import { getLocaleFromUrl, getOppositeLocale, getLocalizedUrl } from '../i18n/utils';
 
 const currentUrl = Astro.url;
 const currentLocale = getLocaleFromUrl(currentUrl);
 const oppositeLocale = getOppositeLocale(currentLocale);
-
-// Build the equivalent URL in the other locale
-let targetPath = currentUrl.pathname;
-// Remove current locale prefix
-if (targetPath.startsWith('/es/')) {
-  targetPath = targetPath.slice(3) || '/';
-} else if (targetPath.startsWith('/en/')) {
-  targetPath = targetPath.slice(3) || '/';
-}
-// Add target locale prefix
-const targetUrl = `${getLocalePrefix(oppositeLocale)}${targetPath === '/' ? '/' : targetPath}`;
+const targetUrl = getLocalizedUrl(currentUrl, oppositeLocale);
 ---
 
 <a

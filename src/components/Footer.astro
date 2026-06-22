@@ -10,6 +10,7 @@ const isCV = Astro.url.pathname.includes('/cv/');
 const p = (path: string) => locale === 'es' ? `/es${path}` : `/en${path}`;
 const serviceLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/services/${esSlug}` : `/en/services/${enSlug}`;
 const cvLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/cv/${esSlug}` : `/en/cv/${enSlug}`;
+const blogLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/blog/${esSlug}` : `/en/blog/${enSlug}`;
 ---
 
 <footer class="bg-canvas border-t border-hairline pt-section pb-8 mt-section">
@@ -50,15 +51,15 @@ const cvLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/cv/${e
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-6">{t(lang, 'footer.guiasSEO')}</h4>
           <ul class="space-y-3 text-sm text-ink/80 flex flex-col">
-            <li><a href={p('/blog/seo-local-guia-completa-para-dominar-la-busqueda-local')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Local</a></li>
-            <li><a href={p('/blog/seo-on-page-la-guia-definitiva-para-dominar-tu-web')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO On-Page</a></li>
-            <li><a href={p('/blog/seo-off-page-la-guia-definitiva-para-dominar-el-posicionamiento')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Off-Page</a></li>
-            <li><a href={p('/blog/seo-de-contenidos-guia-completa-para-dominar-el-ranking')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO de Contenidos</a></li>
-            <li><a href={p('/blog/consultoria-seo-guia-definitiva-para-el-exito-digital')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Consultoría SEO</a></li>
-            <li><a href={p('/blog/seo-local-la-guia-definitiva-para-atraer-clientes-cercanos')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Local Avanzado</a></li>
-            <li><a href={p('/blog/mantenimiento-web-la-guia-definitiva-para-un-sitio-seguro-y-optimizado')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Mantenimiento Web</a></li>
-            <li><a href={p('/blog/las-mejores-herramientas-de-marketing-digital-para-2024')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Herramientas Marketing Digital</a></li>
-            <li><a href={p('/blog/analitica-web-guia-completa-para-dominar-tus-datos-online')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Analítica Web</a></li>
+            <li><a href={blogLink('seo-local-guia-completa-para-dominar-la-busqueda-local', 'local-seo-complete-guide-to-mastering-local-search')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Local</a></li>
+            <li><a href={blogLink('seo-on-page-la-guia-definitiva-para-dominar-tu-web', 'on-page-seo-the-ultimate-guide-to-mastering-your-website')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO On-Page</a></li>
+            <li><a href={blogLink('seo-off-page-la-guia-definitiva-para-dominar-el-posicionamiento', 'off-page-seo-the-ultimate-guide-to-mastering-external-positioning')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Off-Page</a></li>
+            <li><a href={blogLink('seo-de-contenidos-guia-completa-para-dominar-el-ranking', 'content-seo-complete-guide-to-mastering-the-rankings')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO de Contenidos</a></li>
+            <li><a href={blogLink('consultoria-seo-guia-definitiva-para-el-exito-digital', 'seo-consulting-the-ultimate-guide-to-digital-success')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Consultoría SEO</a></li>
+            <li><a href={blogLink('seo-local-la-guia-definitiva-para-atraer-clientes-cercanos', 'local-seo-the-ultimate-guide-to-attracting-nearby-customers')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Local Avanzado</a></li>
+            <li><a href={blogLink('mantenimiento-web-la-guia-definitiva-para-un-sitio-seguro-y-optimizado', 'web-maintenance-the-ultimate-guide-to-a-secure-and-optimized-website')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Mantenimiento Web</a></li>
+            <li><a href={blogLink('las-mejores-herramientas-de-marketing-digital-para-2024', 'the-best-digital-marketing-tools-for-2024')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Herramientas Marketing Digital</a></li>
+            <li><a href={blogLink('analitica-web-guia-completa-para-dominar-tus-datos-online', 'web-analytics-complete-guide-to-mastering-your-online-data')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Analítica Web</a></li>
           </ul>
         </div>
       )}
@@ -67,15 +68,15 @@ const cvLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/cv/${e
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-6">{t(lang, 'footer.desarrolloIA')}</h4>
           <ul class="space-y-3 text-sm text-ink/80 flex flex-col">
-            <li><a href={p('/blog/actualizaciones-web')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Actualizaciones Web</a></li>
-            <li><a href={p('/blog/landing-page')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Landing Pages Optimizadas</a></li>
-            <li><a href={p('/blog/experto-wordpress-tu-guia-definitiva-para-el-exito-digital')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Experto WordPress</a></li>
-            <li><a href={p('/blog/sistema-multi-agente-con-ia')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Sistemas Multi-Agente con IA</a></li>
-            <li><a href={p('/blog/ejercito-de-juniors')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Ejército de Juniors</a></li>
-            <li><a href={p('/blog/claude-code-gratis')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Claude Code Gratis</a></li>
-            <li><a href={p('/blog/prompts-para-ia')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Prompts para IA</a></li>
-            <li><a href={p('/blog/automatizacion-de-marketing-profesional')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Automatización de Marketing</a></li>
-            <li><a href={p('/blog/experto-en-automatizacion-rpa')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Experto en Automatización RPA</a></li>
+            <li><a href={blogLink('actualizaciones-web', 'website-updates')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Actualizaciones Web</a></li>
+            <li><a href={blogLink('landing-page', 'landing-page')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Landing Pages Optimizadas</a></li>
+            <li><a href={blogLink('experto-wordpress-tu-guia-definitiva-para-el-exito-digital', 'wordpress-expert-your-ultimate-guide-to-digital-success')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Experto WordPress</a></li>
+            <li><a href={blogLink('sistema-multi-agente-con-ia', 'ai-multi-agent-system')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Sistemas Multi-Agente con IA</a></li>
+            <li><a href={blogLink('ejercito-de-juniors', 'army-of-juniors')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Ejército de Juniors</a></li>
+            <li><a href={blogLink('claude-code-gratis', 'free-claude-code')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Claude Code Gratis</a></li>
+            <li><a href={blogLink('prompts-para-ia', 'ai-prompts')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Prompts para IA</a></li>
+            <li><a href={blogLink('automatizacion-de-marketing-profesional', 'professional-marketing-automation')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Automatización de Marketing</a></li>
+            <li><a href={blogLink('experto-en-automatizacion-rpa', 'rpa-automation-expert')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Experto en Automatización RPA</a></li>
           </ul>
         </div>
       )}

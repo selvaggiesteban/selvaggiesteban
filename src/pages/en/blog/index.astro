@@ -18,8 +18,8 @@ const blogPrefix = locale === 'es' ? '/es/blog' : '/en/blog';
 const getSlug = (id: string) => id.replace(/^(en|es)\//, '');
 const postUrl = (id: string) => `${blogPrefix}/${getSlug(id)}`;
 
-let featuredPost = posts.find(post => getSlug(post.id) === 'claude-code-gratis');
-let remainingPosts = posts.filter(post => getSlug(post.id) !== 'claude-code-gratis');
+let featuredPost = posts.find(post => getSlug(post.id) === 'free-claude-code');
+let remainingPosts = posts.filter(post => getSlug(post.id) !== 'free-claude-code');
 
 if (!featuredPost && posts.length > 0) {
   featuredPost = posts[0];

@@ -8,7 +8,7 @@ const locale = getLocaleFromUrl(Astro.url);
 const lang = locale as 'es' | 'en';
 
 const navLinks = [
-  { href: '/', label: t(lang, 'nav.inicio') },
+  { href: locale === 'es' ? '/es/' : '/en/', label: t(lang, 'nav.inicio') },
   { href: locale === 'es' ? '/es/about' : '/en/about', label: t(lang, 'nav.sobreMi') },
   { 
     label: t(lang, 'nav.servicios'), 

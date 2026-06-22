@@ -16,7 +16,10 @@ const description = t(lang, 'servicesPage.description');
 
 <BaseLayout {title} {description}>
   <Section>
-    <h1 class="display-lg mb-xl text-center">{t(lang, 'servicesPage.heading')}</h1>
+    <h1 class="font-bold text-[56px] md:text-[86px] leading-tight text-center" style="margin-bottom: 50px;">
+      {t(lang, 'servicesPage.heading')}<br>
+      <span class="text-primary/60">{t(lang, 'servicesPage.description')}</span>
+    </h1>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-lg">
       {servicios.map(servicio => {
         const slug = servicio.id.replace('en/', '');

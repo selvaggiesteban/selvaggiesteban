@@ -39,7 +39,8 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
 
     <div id="carousel-track" class="flex">
       {recommendedPosts.map((post) => {
-        const postUrl = locale === 'en' ? `/en/blog/${post.id}` : `/es/blog/${post.id}`;
+        const slug = post.id.replace(/^(en|es)\//, '');
+        const postUrl = locale === 'en' ? `/en/blog/${slug}` : `/es/blog/${slug}`;
         return (
           <a href={postUrl} class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
             <div class="aspect-video overflow-hidden bg-surface-soft relative">

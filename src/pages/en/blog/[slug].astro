@@ -24,7 +24,8 @@ const { Content, headings } = await render(post);
 
 const blogBase = locale === 'es' ? '/es/blog' : '/en/blog';
 const homeHref = locale === 'es' ? '/es' : '/en';
-const postUrl = encodeURIComponent(`https://selvaggiesteban.dev${blogBase}/${post.id}`);
+const postSlug = post.id.replace(/^(en|es)\//, '');
+const postUrl = encodeURIComponent(`https://selvaggiesteban.dev${blogBase}/${postSlug}`);
 const postTitle = encodeURIComponent(post.data.title);
 const shareWhatsAppTitle = t(lang, 'share.whatsapp');
 const shareXTitle = t(lang, 'share.x');

@@ -8,6 +8,8 @@ const year = new Date().getFullYear();
 const isCV = Astro.url.pathname.includes('/cv/');
 
 const p = (path: string) => locale === 'es' ? `/es${path}` : `/en${path}`;
+const serviceLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/services/${esSlug}` : `/en/services/${enSlug}`;
+const cvLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/cv/${esSlug}` : `/en/cv/${enSlug}`;
 ---
 
 <footer class="bg-canvas border-t border-hairline pt-section pb-8 mt-section">
@@ -19,10 +21,10 @@ const p = (path: string) => locale === 'es' ? `/es${path}` : `/en${path}`;
           {t(lang, 'footer.bio')}
         </p>
         <ul class="space-y-3 text-sm text-ink/80 mb-8">
-          <li><a href={p('/cv/ingeniero-en-informatica')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroInformatica')}</a></li>
-          <li><a href={p('/cv/ingeniero-en-software')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroSoftware')}</a></li>
-          <li><a href={p('/cv/desarrollador-web-full-stack')} class="hover:underline text-primary">{t(lang, 'footer.desarrolladorFullStack')}</a></li>
-          <li><a href={p('/cv/experto-en-posicionamiento-seo')} class="hover:underline text-primary">{t(lang, 'footer.expertoSEO')}</a></li>
+          <li><a href={cvLink('ingeniero-en-informatica', 'computer-science-engineer')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroInformatica')}</a></li>
+          <li><a href={cvLink('ingeniero-en-software', 'software-engineer')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroSoftware')}</a></li>
+          <li><a href={cvLink('desarrollador-web-full-stack', 'full-stack-web-developer')} class="hover:underline text-primary">{t(lang, 'footer.desarrolladorFullStack')}</a></li>
+          <li><a href={cvLink('experto-en-posicionamiento-seo', 'seo-positioning-specialist')} class="hover:underline text-primary">{t(lang, 'footer.expertoSEO')}</a></li>
         </ul>
         <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-4">{t(lang, 'footer.contacto')}</h4>
         <ul class="space-y-2 text-sm text-ink/80 flex flex-col">
@@ -35,11 +37,11 @@ const p = (path: string) => locale === 'es' ? `/es${path}` : `/en${path}`;
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest text-ink/40 mb-6">{t(lang, 'footer.servicios')}</h4>
           <ul class="space-y-3 text-sm text-ink/80">
-            <li><a href={p('/services/software-a-medida')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.softwareAMedida')}</a></li>
-            <li><a href={p('/services/diseno-web-responsive')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.disenoWeb')}</a></li>
-            <li><a href={p('/services/posicionamiento-seo')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.seo')}</a></li>
-            <li><a href={p('/services/posicionamiento-sem')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.sem')}</a></li>
-            <li><a href={p('/services/e-mail-marketing')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.emailMarketing')}</a></li>
+            <li><a href={serviceLink('software-a-medida', 'custom-software')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.softwareAMedida')}</a></li>
+            <li><a href={serviceLink('diseno-web-responsive', 'responsive-web-design')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.disenoWeb')}</a></li>
+            <li><a href={serviceLink('posicionamiento-seo', 'seo-positioning')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.seo')}</a></li>
+            <li><a href={serviceLink('posicionamiento-sem', 'sem-positioning')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.sem')}</a></li>
+            <li><a href={serviceLink('e-mail-marketing', 'e-mail-marketing')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.emailMarketing')}</a></li>
           </ul>
         </div>
       )}

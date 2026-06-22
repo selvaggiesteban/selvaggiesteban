@@ -22,10 +22,8 @@ const { Content } = await render(servicio);
 <BaseLayout isService={true} title={servicio.data.title} description={servicio.data.description}>
   <Section>
     <div class="w-full mx-auto">
-      <h1 class="font-bold text-[56px] md:text-[86px] leading-tight text-center" style="margin-bottom: 50px;">
-        {servicio.data.title}<br>
-        <span class="text-primary/60">{servicio.data.description}</span>
-      </h1>
+      <h1 class="font-bold text-[56px] md:text-[86px] leading-tight text-center">{servicio.data.title}</h1>
+      <p class="text-xl text-ink/60 mb-xl italic text-center">{servicio.data.description}</p>
       <div class="prose prose-ink max-w-none">
         <Content />
       </div>

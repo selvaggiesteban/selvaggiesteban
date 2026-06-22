@@ -1,5 +1,6 @@
 # build output
 dist/
+test-urls.txt
 # generated types
 .astro/
 

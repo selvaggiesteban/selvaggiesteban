@@ -13,6 +13,7 @@ const locale = getLocaleFromUrl(Astro.url);
 const lang = locale as 'es' | 'en';
 const title = t(lang, 'home.title');
 const description = t(lang, 'home.description');
+const p = (path: string) => locale === 'es' ? `/es${path}` : `/en${path}`;
 ---
 
 <BaseLayout {title} {description}>
@@ -23,8 +24,8 @@ const description = t(lang, 'home.description');
         Esteban Selvaggi<br><span class="text-primary/60">Ingeniero en Informática</span>
       </h1>
       <div class="flex flex-wrap justify-center gap-md">
-        <Button href="/contacto">Empezar ahora</Button>
-        <Button href="/servicios" variant="secondary">Ver servicios</Button>
+        <Button href={p('/contact')}>Empezar ahora</Button>
+        <Button href={p('/services')} variant="secondary">Ver servicios</Button>
       </div>
     </div>
   </Section>

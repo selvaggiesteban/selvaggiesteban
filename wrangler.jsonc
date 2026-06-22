@@ -2,6 +2,9 @@
   "compatibility_date": "2026-06-04",
   "compatibility_flags": ["global_fetch_strictly_public", "nodejs_compat"],
   "name": "receptive-resonance",
+  "routes": [
+    { "pattern": "selvaggiesteban.dev", "custom_domain": true }
+  ],
   "kv_namespaces": [
     {
       "binding": "SESSION",

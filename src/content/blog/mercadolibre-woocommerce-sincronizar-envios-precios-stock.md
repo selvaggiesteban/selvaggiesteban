@@ -2,7 +2,7 @@
 title: "MercadoLibre y WooCommerce: Cómo Sincronizar Envíos, Precios y Stock Sin Perder Ventas"
 description: "Guía completa para vender en MercadoLibre y tu web WooCommerce con precios idénticos, logística integrada y sin fricciones entre canales. Solución al problema de envíos que todo vendedor multip canal enfrenta."
 pubDate: "2026-06-14"
-heroImage: "/assets/blog/covers/woocommerce-la-guia-definitiva-para-tu-tienda-online.svg"
+heroImage: "/assets/blog/covers/mercadolibre-woocommerce-sincronizar-envios-precios-stock.svg"
 tags: ["WooCommerce", "MercadoLibre", "E-Commerce", "Logística", "Envíos", "Integración", "Argentina"]
 category: "E-Commerce"
 ---

@@ -2,7 +2,7 @@
 title: "MercadoLibre and WooCommerce: How to Sync Shipments, Prices, and Stock Without Losing Sales"
 description: "Complete guide to selling on MercadoLibre and your WooCommerce website with identical prices, integrated logistics, and no friction between channels. The solution to the shipping problem every multi-channel seller faces."
 pubDate: "2026-06-14"
-heroImage: "/assets/blog/covers/woocommerce-la-guia-definitiva-para-tu-tienda-online.svg"
+heroImage: "/assets/blog/covers/mercadolibre-and-woocommerce-how-to-sync-shipments-prices-and-stock-without-losing-sales.svg"
 tags: ["WooCommerce", "MercadoLibre", "E-Commerce", "Logistics", "Shipping", "Integration", "Argentina"]
 category: "E-Commerce"
 ---

@@ -83,6 +83,7 @@ const blogSlugMap: Record<string, string> = {
   'gemini-cli': 'gemini-cli-in-vs-code-using-vertex-ai',
   'generacion-de-codigo-sintetico': 'synthetic-code-generation',
   'guia-oca-vs-correo-argentino': 'oca-vs-correo-argentino-complete-guide',
+  'guia-optimizar-fotos-sitios-web': 'guide-to-optimizing-photos-for-websites',
   'guia-precios-mayoristas': 'wholesale-pricing-guide',
   'guia-programacion-y-desarrollo-web': 'web-programming-and-development-guide',
   'guia-servicio-de-oca-woocommerce': 'oca-service-for-woocommerce-complete-guide',

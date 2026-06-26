@@ -86,6 +86,7 @@ const blogSlugMap: Record<string, string> = {
   'guia-precios-mayoristas': 'wholesale-pricing-guide',
   'guia-programacion-y-desarrollo-web': 'web-programming-and-development-guide',
   'guia-servicio-de-oca-woocommerce': 'oca-service-for-woocommerce-complete-guide',
+  'guia-api-woocommerce': 'woocommerce-rest-api-guide',
   'guia-woocommerce-desde-excel': 'woocommerce-product-management-via-excel',
   'guia-woocommerce': 'woocommerce-guide',
   'guia-wordpress': 'wordpress-guide',

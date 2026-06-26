@@ -89,6 +89,7 @@ const blogSlugMap: Record<string, string> = {
   'guia-woocommerce-desde-excel': 'woocommerce-product-management-via-excel',
   'guia-woocommerce': 'woocommerce-guide',
   'guia-wordpress': 'wordpress-guide',
+  'hostinger-premium-web-hosting': 'premium-web-hosting-from-hostinger',
   'investigacion-de-palabras-clave-guia-completa-seo': 'keyword-research-complete-seo-guide',
   'landing-page': 'landing-page',
   'las-mejores-herramientas-de-marketing-digital-para-2024': 'the-best-digital-marketing-tools-for-2024',

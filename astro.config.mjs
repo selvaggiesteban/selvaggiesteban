@@ -9,13 +9,6 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: "https://selvaggiesteban.dev",       
   output: "server",
-  i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
-    routing: {
-      prefixDefaultLocale: true,
-    },
-  },
   redirects: {
     '/about': '/es/about',
     '/contact': '/es/contact',

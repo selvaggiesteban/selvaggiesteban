@@ -20,35 +20,62 @@ const condicionVenta = "MercadoPago";
 const proyecto = "Campaña Google Ads + Gestión Redes Sociales (LinkedIn e Instagram)";
 const urlPresupuesto = "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados";
 
-let payLink = "#";
-try {
-  const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${env.MP_ACCESS_TOKEN || process.env.MP_ACCESS_TOKEN}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      items: [
-        {
-          title: "Google Ads + Redes Sociales - GSR Abogados (Plan Seleccionado)",
-          quantity: 1,
-          unit_price: 1,
-          currency_id: "ARS"
-        }
-      ],
-      back_urls: {
-        success: "https://selvaggiesteban.dev/",
-        failure: "https://selvaggiesteban.dev/",
-        pending: "https://selvaggiesteban.dev/"
-      },
-      auto_return: "approved"
-    })
-  });
-  const mpData = await mpResponse.json();
-  payLink = mpData.init_point || "#";
-} catch (error) {
-  console.error("Error al generar el link de Mercado Pago:", error);
+let payLinkBasico = "#";
+let payLinkPremium = "#";
+
+const mpToken = env?.MP_ACCESS_TOKEN || process?.env?.MP_ACCESS_TOKEN;
+if (mpToken) {
+  try {
+    const [resBasico, resPremium] = await Promise.all([
+      fetch("https://api.mercadopago.com/checkout/preferences", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${mpToken}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          items: [{
+            title: "Google Ads + Redes Sociales Plan Básico - GSR Abogados",
+            quantity: 1,
+            unit_price: 422750,
+            currency_id: "ARS"
+          }],
+          back_urls: {
+            success: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados",
+            failure: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados",
+            pending: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados"
+          },
+          auto_return: "approved"
+        })
+      }),
+      fetch("https://api.mercadopago.com/checkout/preferences", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${mpToken}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          items: [{
+            title: "Google Ads + Redes Sociales Plan Premium - GSR Abogados",
+            quantity: 1,
+            unit_price: 497550,
+            currency_id: "ARS"
+          }],
+          back_urls: {
+            success: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados",
+            failure: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados",
+            pending: "https://selvaggiesteban.dev/presupuestos/05072026-gsr-abogados"
+          },
+          auto_return: "approved"
+        })
+      })
+    ]);
+    const [dataBasico, dataPremium] = await Promise.all([resBasico.json(), resPremium.json()]);
+    payLinkBasico = dataBasico.init_point || "#";
+    payLinkPremium = dataPremium.init_point || "#";
+  } catch (error) {
+    console.error("Error MercadoPago:", error);
+  }
 }
 ---
 
@@ -357,11 +384,11 @@ try {
       <h3 class="text-lg font-bold mb-4">¿Listo para impulsar tu presencia digital?</h3>
       <p class="text-ink/60 mb-6 text-sm mx-auto">Al realizar el pago confirmas la aceptación del presupuesto y comenzamos con la configuración de las campañas en un plazo de 48 horas hábiles. Elegí la opción que mejor se adapte a tus necesidades.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={payLink} target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#009EE3] hover:bg-[#0088cc] text-white rounded-[9px] px-8 py-4 font-semibold text-lg transition-colors shadow-md">
+        <a href={payLinkBasico} target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#009EE3] hover:bg-[#0088cc] text-white rounded-[9px] px-8 py-4 font-semibold text-lg transition-colors shadow-md">
           <img src="/assets/mp/mercadopago.svg" alt="Mercado Pago" class="h-6 object-contain" />
           Pagar Plan Básico - $422.750
         </a>
-        <a href={payLink} target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary/80 text-white rounded-[9px] px-8 py-4 font-semibold text-lg transition-colors shadow-md">
+        <a href={payLinkPremium} target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary/80 text-white rounded-[9px] px-8 py-4 font-semibold text-lg transition-colors shadow-md">
           <img src="/assets/mp/mercadopago.svg" alt="Mercado Pago" class="h-6 object-contain" />
           Pagar Plan Premium - $497.550
         </a>

@@ -24,9 +24,10 @@ jobs:
           echo "---whoami---"
           node node_modules/wrangler/bin/wrangler.js whoami 2>&1
           echo "---done---"
-          echo "exit code: $?"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      - name: Fix config paths
+        run: node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('dist/server/wrangler.json','utf8'));delete c.configPath;delete c.userConfigPath;fs.writeFileSync('dist/server/wrangler.json',JSON.stringify(c))"
       - name: Deploy
         id: deploy
         run: |

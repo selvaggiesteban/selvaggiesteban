@@ -16,16 +16,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Debug
-        run: |
-          echo "=== wrangler version ==="
-          npx wrangler --version || node node_modules/wrangler/bin/wrangler.js --version
-          echo "=== config file ==="
-          ls -la dist/server/wrangler.json
-          echo "=== config content ==="
-          head -5 dist/server/wrangler.json
       - name: Deploy
-        run: node node_modules/wrangler/bin/wrangler.js deploy --config dist/server/wrangler.json 2>&1
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          WRANGLER_SEND_METRICS: "false"
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: deploy --config dist/server/wrangler.json

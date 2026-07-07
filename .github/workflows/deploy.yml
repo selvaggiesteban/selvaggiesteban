@@ -23,20 +23,8 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       - name: Deploy
-        id: deploy
         continue-on-error: true
-        working-directory: dist/server
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
-          node ../../node_modules/wrangler/bin/wrangler.js deploy --config wrangler.json 2>&1 | tee /tmp/deploy.log
-      - name: Show deploy log
-        if: always()
-        run: |
-          echo "### Wrangler Deploy Output" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          cat /tmp/deploy.log >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-      - name: Fail if deploy failed
-        if: steps.deploy.outcome == 'failure'
-        run: exit 1
+          node node_modules/wrangler/bin/wrangler.js deploy --config dist/server/wrangler.json 2>&1

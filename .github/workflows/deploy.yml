@@ -16,13 +16,23 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Verify wrangler
+        id: verify
+        run: |
+          set +e
+          node node_modules/wrangler/bin/wrangler.js --version 2>&1
+          echo "---whoami---"
+          node node_modules/wrangler/bin/wrangler.js whoami 2>&1
+          echo "---done---"
+          echo "exit code: $?"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       - name: Deploy
         id: deploy
         run: |
           set +e
-          node node_modules/wrangler/bin/wrangler.js deploy --config dist/server/wrangler.json > /tmp/deploy-out.txt 2>&1
+          node node_modules/wrangler/bin/wrangler.js deploy --config dist/server/wrangler.json 2>&1
           EXIT_CODE=$?
-          cat /tmp/deploy-out.txt
           echo "Deploy exit code: $EXIT_CODE"
           exit $EXIT_CODE
         env:

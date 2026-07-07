@@ -17,7 +17,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Deploy
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: deploy --config dist/server/wrangler.json
+        id: deploy
+        run: |
+          set +e
+          node node_modules/wrangler/bin/wrangler.js deploy --config dist/server/wrangler.json > /tmp/deploy-out.txt 2>&1
+          EXIT_CODE=$?
+          cat /tmp/deploy-out.txt
+          echo "Deploy exit code: $EXIT_CODE"
+          exit $EXIT_CODE
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

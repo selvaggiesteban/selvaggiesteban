@@ -15,17 +15,8 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run build
-      - name: Fix wrangler config for Linux
-        run: |
-          node -e "
-            const fs = require('fs');
-            const cfg = JSON.parse(fs.readFileSync('dist/server/wrangler.json','utf8'));
-            delete cfg.configPath;
-            delete cfg.userConfigPath;
-            cfg.assets.directory = '../client';
-            fs.writeFileSync('dist/server/wrangler.json', JSON.stringify(cfg));
-          "
       - name: Deploy
+        working-directory: dist/server
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        run: npx wrangler deploy --config dist/server/wrangler.json
+        run: npx wrangler deploy

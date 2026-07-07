@@ -33,7 +33,23 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 <p>Redacción de <strong><strong>“{%}”</strong></strong> artículos optimizados para SEO de Google en primera persona del singular, en Español de <strong>{%}</strong>, de categoría de <strong><strong>“{%}”</strong></strong> para el blog institucional de <strong>“{%}”</strong> con extensión mínima de <strong>“{%}”</strong> palabras y con la palabra clave objetivo en el/los subencabezado/s como H2, H3, H4, etc. ordenados con párrafos de hasta 100 palabras cada uno incluyendo de manera natural y atractiva la palabra clave principal <strong>“{%}”, “{%}”, “{%}”</strong> [añadir palabras clave], adicionalmente eres encargado de realizar enlazado externo con dirección URL <strong>{%}</strong> y anchor text <strong>“{%}”</strong>, enlace interno a otra página del sitio web, o entrada, forzando el llamado a la acción con dirección URL <strong>“{%}”</strong>, y cierre con conclusión del tema, consejos e invitación a hacer contacto con <strong>“{%}”</strong>. Adicionalmente eres encargado de crear título SEO, descripción SEO, mínimo 5 textos alternativos de imágenes, y configuración de enlace permanente para cada uno de los <strong>“{%}”</strong> artículos.</p>
                                     
                         
-                                                
+                                   
+
+
+
+<h2>Análisis exhaustivo de código contrastando con fuentes verificables</h2>
+
+
+
+<p>Eres encargado de realizar un análisis exhaustivo contrastando el código con fuentes verificables actualizadas a la fecha de hoy julio 2026 y proponer diferentes ángulos de enfoque antes de editar. El análisis debe incluir: verificación de cada función o método contra la documentación oficial vigente del framework o librería utilizada, identificación de deprecaciones o cambios de API desde la versión instalada hasta la última estable, comparación de al menos 2 (dos) o 3 (tres) enfoques alternativos para resolver cada problema detectado con sus respectivas ventajas y desventajas, revisión de dependencias obsoletas o con vulnerabilidades conocidas, y verificación de compatibilidad entre versiones de las dependencias del proyecto <strong>"{%}"</strong>. Adicionalmente debés generar un informe estructurado con: estado actual del código (qué funciona, qué está roto, qué es subóptimo), priorización de correcciones por impacto y esfuerzo, fuentes consultadas con enlaces directos a la documentación, y recomendación final con el enfoque óptimo para el stack tecnológico <strong>"{%}"</strong> del proyecto <strong>"{%}"</strong>.</p>
+
+
+
+<h2>Plan de Limpieza, Consolidación y Normalización de repositorio</h2>
+
+
+
+<p>El proyecto tiene un potencial enorme, pero la acumulación de scripts temporales, carpetas redundantes y archivos duplicados está generando mucha "basura" visual y técnica. Eres encargado de crear el Plan de Limpieza, Consolidación y Normalización para el repositorio <strong>"{%}"</strong>, asegurando que cero código útil se pierda. Tienes prohibido editar, insisto, solo puedes diagnosticar y planificar ahora. El plan debe incluir: inventario completo de archivos y carpetas del proyecto con clasificación (activo / obsoleto / duplicado / temporal / desconocido), identificación de código duplicado o con funcionalidad superpuesta que pueda consolidarse, detección de dependencias no utilizadas o redundantes, mapeo de scripts temporales que deben eliminarse o integrarse, propuesta de estructura de carpetas normalizada siguiendo las convenciones del framework <strong>"{%}"</strong>, lista de archivos generados por herramientas (build, cache, .wrangler, node_modules) que deben agregarse al <strong>.gitignore</strong>, y cronograma de ejecución en fases para no romper el funcionamiento actual durante la limpieza. Cada hallazgo debe incluir la ruta exacta del archivo, el motivo de la clasificación, y la acción recomendada (eliminar / mover / reemplazar / mantener).</p>
                     
                     
 

@@ -39,18 +39,13 @@ jobs:
           "
       - name: Deploy
         id: deploy
+        continue-on-error: true
         run: |
-          OUTPUT=$(node node_modules/wrangler/bin/wrangler.js deploy --config deploy-config.json 2>&1) || true
-          {
-            echo "## Wrangler Deploy Output"
-            echo '```'
-            echo "$OUTPUT"
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
-          if echo "$OUTPUT" | grep -qi "error\|failed\|ENOENT\|✘"; then
-            echo "Deploy failed. Summary written to step summary."
-            exit 1
-          fi
-          echo "Deploy succeeded!"
+          OUTPUT=$(node node_modules/wrangler/bin/wrangler.js deploy --config deploy-config.json 2>&1)
+          echo "$OUTPUT" >> "$GITHUB_STEP_SUMMARY"
+          [ -n "$(echo "$OUTPUT" | grep -i 'error\|failed\|ENOENT')" ] && echo "FAILED=true" >> "$GITHUB_ENV" || true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      - name: Fail if deploy errored
+        if: env.FAILED == 'true'
+        run: exit 1

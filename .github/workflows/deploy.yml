@@ -17,35 +17,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Verify wrangler
-        id: verify
         run: |
-          set +e
-          node node_modules/wrangler/bin/wrangler.js --version 2>&1
-          echo "---whoami---"
-          node node_modules/wrangler/bin/wrangler.js whoami 2>&1
-          echo "---done---"
+          node node_modules/wrangler/bin/wrangler.js --version
+          node node_modules/wrangler/bin/wrangler.js whoami
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      - name: Prepare deploy config
-        run: |
-          node -e "
-            const fs=require('fs');
-            const c=JSON.parse(fs.readFileSync('dist/server/wrangler.json','utf8'));
-            delete c.configPath;
-            delete c.userConfigPath;
-            c.main='dist/server/entry.mjs';
-            c.assets.directory='dist/client';
-            fs.writeFileSync('deploy-config.json',JSON.stringify(c));
-          "
       - name: Deploy
-        id: deploy
-        continue-on-error: true
-        run: |
-          OUTPUT=$(node node_modules/wrangler/bin/wrangler.js deploy --config deploy-config.json 2>&1)
-          echo "$OUTPUT" >> "$GITHUB_STEP_SUMMARY"
-          [ -n "$(echo "$OUTPUT" | grep -i 'error\|failed\|ENOENT')" ] && echo "FAILED=true" >> "$GITHUB_ENV" || true
+        working-directory: dist/server
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      - name: Fail if deploy errored
-        if: env.FAILED == 'true'
-        run: exit 1
+        run: node ../../node_modules/wrangler/bin/wrangler.js deploy --config wrangler.json

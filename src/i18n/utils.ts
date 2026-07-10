@@ -118,7 +118,7 @@ const blogSlugMap: Record<string, string> = {
   'wordpress-la-guia-definitiva-para-crear-tu-web-ideal': 'wordpress-the-ultimate-guide-to-creating-your-ideal-website',
 };
 
-function getMappedPath(pathname: string, from: Locale, to: Locale): string {
+export function getMappedPath(pathname: string, from: Locale, to: Locale): string {
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length < 2) return pathname;
 

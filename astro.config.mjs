@@ -9,24 +9,6 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: "https://selvaggiesteban.dev",       
   output: "server",
-  redirects: {
-    '/about': '/es/about',
-    '/contact': '/es/contact',
-    '/contact/gracias': '/es/contact/thank-you',
-    '/blog': '/es/blog',
-    '/servicios': '/es/services',
-    '/servicios/software-a-medida': '/es/services/software-a-medida',
-    '/servicios/diseno-web-responsive': '/es/services/diseno-web-responsive',
-    '/servicios/posicionamiento-seo': '/es/services/posicionamiento-seo',
-    '/servicios/posicionamiento-sem': '/es/services/posicionamiento-sem',
-    '/servicios/e-mail-marketing': '/es/services/e-mail-marketing',
-    '/cv/desarrollador-web-full-stack': '/es/cv/desarrollador-web-full-stack',
-    '/cv/ingeniero-en-software': '/es/cv/ingeniero-en-software',
-    '/cv/ingeniero-en-informatica': '/es/cv/ingeniero-en-informatica',
-    '/cv/experto-en-posicionamiento-seo': '/es/cv/experto-en-posicionamiento-seo',
-    '/politica-de-privacidad': '/es/privacy-policy',
-    '/politica-de-cookies': '/es/cookie-policy',
-  },
   vite: {
     plugins: [tailwindcss()]
   },

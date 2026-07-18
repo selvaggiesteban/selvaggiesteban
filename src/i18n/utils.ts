@@ -116,6 +116,7 @@ const blogSlugMap: Record<string, string> = {
   'trafico-bots-supera-humanos-cloudflare': 'automated-traffic-dominates-the-web-bots-outnumber-humans-according-to-cloudflare',
   'woocommerce-la-guia-definitiva-para-tu-tienda-online': 'woocommerce-the-ultimate-guide-for-your-online-store',
   'wordpress-la-guia-definitiva-para-crear-tu-web-ideal': 'wordpress-the-ultimate-guide-to-creating-your-ideal-website',
+  '11-proyectos-llms-produccion-doorDash-american-express': '11-llm-projects-in-production-doorDash-american-express',
 };
 
 export function getMappedPath(pathname: string, from: Locale, to: Locale): string {

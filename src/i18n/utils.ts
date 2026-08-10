@@ -50,6 +50,18 @@ const serviceSlugMap: Record<string, string> = {
   'posicionamiento-seo': 'seo-positioning',
   'posicionamiento-sem': 'sem-positioning',
   'e-mail-marketing': 'e-mail-marketing',
+  'agencia-marketing-digital-lanus': 'digital-marketing-agency-lanus',
+  'agencia-marketing-digital-amba': 'digital-marketing-agency-amba',
+  'programacion': 'programming',
+  'desarrollo-web': 'web-development',
+  'desarrollo-de-aplicaciones': 'application-development',
+  'desarrollo-de-sitios-web': 'website-development',
+  'e-commerce': 'ecommerce',
+  'automatizaciones-inteligencia-artificial': 'ai-automations',
+  'reparacion-de-computadoras': 'computer-repair',
+  'productos-de-tecnologia': 'technology-products',
+  'gestion-google-ads': 'google-ads-management',
+  'gestion-meta-ads': 'meta-ads-management',
 };
 
 const cvSlugMap: Record<string, string> = {

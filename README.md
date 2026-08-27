@@ -1,28 +1,33 @@
-# Esteban Selvaggi - Portafolio y Blog Personal
+# Esteban Selvaggi
 
 [![Sitio Web](https://img.shields.io/badge/Website-selvaggiesteban.dev-blue?style=flat-square)](https://selvaggiesteban.dev)
 
-Código fuente de mi sitio web personal, blog y portafolio, construido con un enfoque riguroso en la performance, el diseño y el SEO.
+Sitio web personal, blog y portafolio.
 
 ## 👨‍💻 Sobre Mí
 
-Soy **Esteban Selvaggi**, Ingeniero Informático y Desarrollador Full-Stack con sede en Buenos Aires, Argentina. Con más de 8 años de experiencia, me especializo en:
+Soy **Esteban Selvaggi**. Con más de 8 años de experiencia, me especializo en:
 
+- Diseño web
 - Arquitectura de sistemas de alto rendimiento.
 - Desarrollo e integración avanzada de Inteligencia Artificial (IA).
 - Automatización Robótica de Procesos (RPA).
 - Optimización técnica y posicionamiento SEO.
 
-A lo largo de mi carrera, he transformado requisitos de negocio complejos en soluciones técnicas escalables, seguras y eficientes.
+A lo largo de mi carrera, he transformado requisitos de negocio complejos en soluciones escalables, seguras y eficientes.
 
 ## 🛠 Stack Tecnológico del Proyecto
 
-Este sitio está construido utilizando tecnologías modernas orientadas a la velocidad y la experiencia de usuario:
+Este sitio está construido utilizando tecnologías modernas orientadas a la velocidad, la experiencia de usuario y la mantenibilidad:
 
-- **Framework:** [Astro](https://astro.build/) - Para la generación de sitios estáticos ultrarrápidos y arquitectura de "islas".
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Implementación mobile-first basada en un sistema de diseño propio documentado en `DESIGN.md`.
-- **Backend / Formularios:** Cloudflare Pages Functions + [Resend](https://resend.com/) + Cloudflare Turnstile.
-- **Hosting y CI/CD:** [Cloudflare Pages](https://pages.cloudflare.com/).
+- **Framework:** [Astro](https://astro.build/) — Output server (SSR) para renderizado dinámico con arquitectura de "islas". Generación de contenido estático y rutas dinámicas.
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) — Sistema de diseño propio documentado en `DESIGN.md`. Implementación mobile-first con tokens de diseño, tipografía y reglas de layout centralizadas.
+- **Backend / Formularios:** Cloudflare Pages Functions + [Resend](https://resend.com/) para envío de emails transaccionales + [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) para protección contra bots.
+- **Base de datos:** [Cloudflare D1](https://developers.cloudflare.com/d1/) (SQLite) para almacenamiento estructurado (clientes, presupuestos).
+- **Sesiones:** [Cloudflare KV](https://developers.cloudflare.com/kv/) para almacenamiento de sesiones.
+- **i18n:** Internacionalización es/en con traducción de slugs y redirección automática basada en el header `Accept-Language`.
+- **Hosting y CI/CD:** [Cloudflare Pages](https://pages.cloudflare.com/) con GitHub Actions para despliegue automático.
+- **SEO:** Sitemap XML, meta tags optimizados, verificación en Google Search Console.
 
 ## ⚙️ Habilidades Técnicas Destacadas
 
@@ -102,16 +107,6 @@ Este sitio está construido utilizando tecnologías modernas orientadas a la vel
   ![Tag Manager](https://img.shields.io/badge/-Tag_Manager-4285F4?logo=googletagmanager&logoColor=white&style=flat-square)
   ![PageSpeed](https://img.shields.io/badge/-PageSpeed-8AB4F8?style=flat-square)
   ![Looker Studio](https://img.shields.io/badge/-Looker_Studio-4285F4?logo=looker&logoColor=white&style=flat-square)
-
-## 📂 Estructura del Repositorio
-
-- `src/pages/`: Rutas del sitio web (páginas, CVs, index del blog).
-- `src/content/`: Colecciones de Astro para los artículos del blog, productos y servicios.
-- `src/components/`: Componentes reutilizables de UI (Botones, Carruseles, Navegación, SEO).
-- `src/layouts/`: Estructura base de las páginas.
-- `public/`: Archivos estáticos como imágenes, PDFs del currículum, y assets del blog.
-- `api/`: Cloudflare Functions (por ejemplo, `contact.ts` para procesar el formulario de contacto).
-- `DESIGN.md`: Documentación central del sistema de diseño (tokens, tipografía, reglas de layout).
 
 ## 🚀 Desarrollo Local
 

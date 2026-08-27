@@ -108,31 +108,6 @@ Este sitio está construido utilizando tecnologías modernas orientadas a la vel
   ![PageSpeed](https://img.shields.io/badge/-PageSpeed-8AB4F8?style=flat-square)
   ![Looker Studio](https://img.shields.io/badge/-Looker_Studio-4285F4?logo=looker&logoColor=white&style=flat-square)
 
-## 🚀 Desarrollo Local
-
-Para correr el proyecto en tu entorno local:
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/selvaggiesteban/selvaggiesteban.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-3. Configura las variables de entorno:
-   Crea un archivo `.env` en la raíz (usa `.env.example` como guía) y añade:
-   ```env
-   RESEND_API_KEY=tu_api_key_aqui
-   TURNSTILE_SECRET_KEY=tu_secret_key_aqui
-   ```
-4. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-
-El sitio estará disponible en `http://localhost:4321`.
-
 ## 📬 Contacto
 
 - **Email:** [selvaggiesteban@gmail.com](mailto:selvaggiesteban@gmail.com)

@@ -1,20 +1,81 @@
-# Esteban Selvaggi
+# Esteban Selvaggi - Portafolio y Blog Personal
 
 [![Sitio Web](https://img.shields.io/badge/Website-selvaggiesteban.dev-blue?style=flat-square)](https://selvaggiesteban.dev)
 
-Sitio web personal, blog y portafolio.
+Código fuente de mi sitio web personal, blog y portafolio, construido con un enfoque riguroso en la performance, el diseño y el SEO.
 
 ## 👨‍💻 Sobre Mí
 
-Soy **Esteban Selvaggi**. Con más de 8 años de experiencia, me especializo en:
+Soy **Esteban Selvaggi**, Ingeniero Informático y Desarrollador Full-Stack con sede en Buenos Aires, Argentina. Con más de 8 años de experiencia, me especializo en:
 
-- Diseño web
 - Arquitectura de sistemas de alto rendimiento.
 - Desarrollo e integración avanzada de Inteligencia Artificial (IA).
 - Automatización Robótica de Procesos (RPA).
 - Optimización técnica y posicionamiento SEO.
 
-A lo largo de mi carrera, he transformado requisitos de negocio complejos en soluciones escalables, seguras y eficientes.
+A lo largo de mi carrera, he transformado requisitos de negocio complejos en soluciones técnicas escalables, seguras y eficientes.
+
+## Contribuciones
+
+- centraldeturbos.com (Diseño y desarrollo web)
+- alquiriasolutions.com (Diseño y desarrollo web)
+- acuatika25.com.ar (Diseño y desarrollo web)
+- ntkic.com (Diseño y desarrollo web)
+- depaoli.com.ar (Diseño y desarrollo web)
+- consulting-21.com (Diseño y desarrollo web)
+- saute.es (Diseño y desarrollo web)
+- matiasgarcetesuarez.com.ar (Diseño y desarrollo web)
+- talaiotaudio.com (Diseño y desarrollo web)
+- alphatelservices.com (Diseño y desarrollo web)
+- draandreamamani.com (Diseño y desarrollo web)
+- cvela2017.com (Diseño y desarrollo web)
+- piscinasluciano.com.ar (Diseño y desarrollo web)
+- petruscigars.com (Diseño y desarrollo web)
+- yourdream.ae (Diseño y desarrollo web)
+- watervan.com.ar (Diseño y desarrollo web)
+- pescaolidvalladolid.com (Diseño y desarrollo web)
+- rocadeguiapsicologia.es (Diseño y desarrollo web)
+- semikongarden.com.ar (Diseño y desarrollo web)
+- semikon.com.ar (Diseño y desarrollo web)
+- seararefrigeracion.com.ar (Diseño y desarrollo web)
+- abogario.com.ar (Diseño y desarrollo web)
+- boscana.com.ar (Diseño y desarrollo web)
+- decotay.com.ar (Diseño y desarrollo web)
+- estudiogsr.com.ar (Diseño y desarrollo web)
+- gsrabogados.com.ar (Diseño y desarrollo web)
+- identidadmarketing.com (Diseño y desarrollo web)
+- ingenieriaproyectos.com.ar (Diseño y desarrollo web)
+- lanuscomputacion.com (Diseño y desarrollo web)
+- lereve.com.ar (Diseño y desarrollo web)
+- mayrea.com (Diseño y desarrollo web)
+- montescookexperiences.com (Diseño y desarrollo web)
+- mueblescavah.com.ar (Diseño y desarrollo web)
+- oteguiobras.com (Diseño y desarrollo web)
+- selvaggiconsultores.com (Diseño y desarrollo web)
+- sich.com.ar (Diseño y desarrollo web)
+- smartalk.cl (Diseño y desarrollo web)
+- somoswanderlust.com (Diseño y desarrollo web)
+- tay.com.ar (Diseño y desarrollo web)
+- zingueriazarza.com.ar (Diseño y desarrollo web)
+- aptofisico.com (Diseño y desarrollo web)
+- bonjour.ar (Diseño y desarrollo web)
+- ciclorural.com (Diseño y desarrollo web)
+- gimenezmilena.com (Diseño y desarrollo web)
+- marking.com.ar (Diseño y desarrollo web)
+- modomaquina.com (Diseño y desarrollo web)
+- nordichairinstitute.com (Diseño y desarrollo web)
+- somostuimpulso.ar (Diseño y desarrollo web)
+- urgenciafunerariars.com.ar (Diseño y desarrollo web)
+- genblocksa.com (Diseño y desarrollo web)
+
+## 🛠 Stack Tecnológico del Proyecto
+
+Este sitio está construido utilizando tecnologías modernas orientadas a la velocidad y la experiencia de usuario:
+
+- **Framework:** [Astro](https://astro.build/) - Para la generación de sitios estáticos ultrarrápidos y arquitectura de "islas".
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Implementación mobile-first basada en un sistema de diseño propio documentado en `DESIGN.md`.
+- **Backend / Formularios:** Cloudflare Pages Functions + [Resend](https://resend.com/) + Cloudflare Turnstile.
+- **Hosting y CI/CD:** [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## ⚙️ Habilidades Técnicas Destacadas
 
@@ -95,79 +156,40 @@ A lo largo de mi carrera, he transformado requisitos de negocio complejos en sol
   ![PageSpeed](https://img.shields.io/badge/-PageSpeed-8AB4F8?style=flat-square)
   ![Looker Studio](https://img.shields.io/badge/-Looker_Studio-4285F4?logo=looker&logoColor=white&style=flat-square)
 
-## 🛠 Stack Tecnológico del Proyecto
+## 📂 Estructura del Repositorio
 
-Este sitio está construido utilizando tecnologías modernas orientadas a la velocidad, la experiencia de usuario y la mantenibilidad:
+- `src/pages/`: Rutas del sitio web (páginas, CVs, index del blog).
+- `src/content/`: Colecciones de Astro para los artículos del blog, productos y servicios.
+- `src/components/`: Componentes reutilizables de UI (Botones, Carruseles, Navegación, SEO).
+- `src/layouts/`: Estructura base de las páginas.
+- `public/`: Archivos estáticos como imágenes, PDFs del currículum, y assets del blog.
+- `api/`: Cloudflare Functions (por ejemplo, `contact.ts` para procesar el formulario de contacto).
+- `DESIGN.md`: Documentación central del sistema de diseño (tokens, tipografía, reglas de layout).
 
-- **Framework:** [Astro](https://astro.build/) — Output server (SSR) para renderizado dinámico con arquitectura de "islas". Generación de contenido estático y rutas dinámicas.
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) — Sistema de diseño propio documentado en `DESIGN.md`. Implementación mobile-first con tokens de diseño, tipografía y reglas de layout centralizadas.
-- **Backend / Formularios:** Cloudflare Pages Functions + [Resend](https://resend.com/) para envío de emails transaccionales + [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) para protección contra bots.
-- **Base de datos:** [Cloudflare D1](https://developers.cloudflare.com/d1/) (SQLite) para almacenamiento estructurado (clientes, presupuestos).
-- **Sesiones:** [Cloudflare KV](https://developers.cloudflare.com/kv/) para almacenamiento de sesiones.
-- **i18n:** Internacionalización es/en con traducción de slugs y redirección automática basada en el header `Accept-Language`.
-- **Hosting y CI/CD:** [Cloudflare Pages](https://pages.cloudflare.com/) con GitHub Actions para despliegue automático.
-- **SEO:** Sitemap XML, meta tags optimizados, verificación en Google Search Console.
+## 🚀 Desarrollo Local
 
-## 📝 Artículos del Blog
+Para correr el proyecto en tu entorno local:
 
-- [11 Proyectos con LLMs en Producción: De DoorDash a American Express](https://selvaggiesteban.dev/es/blog/11-proyectos-llms-produccion-doordash-american-express)
-- [Guía de API de WooCommerce](https://selvaggiesteban.dev/es/blog/guia-api-woocommerce)
-- [Guía para optimizar fotos en sitios web](https://selvaggiesteban.dev/es/blog/guia-optimizar-fotos-sitios-web)
-- [Premium Web Hosting de Hostinger](https://selvaggiesteban.dev/es/blog/hostinger-premium-web-hosting)
-- [MercadoLibre y WooCommerce: Cómo Sincronizar Envíos, Precios y Stock](https://selvaggiesteban.dev/es/blog/mercadolibre-woocommerce-sincronizar-envios-precios-stock)
-- [Poisson Products: Cómo la distribución de Poisson me ayuda a cumplir deadlines](https://selvaggiesteban.dev/es/blog/poisson-products-predecir-bugs-cumplir-deadlines)
-- [El tráfico automatizado domina la web: Los bots superan a los humanos](https://selvaggiesteban.dev/es/blog/trafico-bots-supera-humanos-cloudflare)
-- [Guía para alojar una web en Cloudflare Pages con Astro y Resend](https://selvaggiesteban.dev/es/blog/alojar-web-en-cloudflare-pages-con-astro-y-resend)
-- [Experto en automatización RPA](https://selvaggiesteban.dev/es/blog/experto-en-automatizacion-rpa)
-- [Automatización de marketing profesional](https://selvaggiesteban.dev/es/blog/automatizacion-de-marketing-profesional)
-- [Prompts para IA](https://selvaggiesteban.dev/es/blog/prompts-para-ia)
-- [Crear clave SSH de VPS en Hostinger](https://selvaggiesteban.dev/es/blog/crear-clave-ssh-vps-en-hostinger)
-- [Gemini CLI en VS Code usando Vertex AI](https://selvaggiesteban.dev/es/blog/gemini-cli)
-- [Claude vs OpenClaw: Guía comparativa](https://selvaggiesteban.dev/es/blog/claude-vs-openclaw-guia-comparativa)
-- [El Futuro de JavaScript: ¿Qué Framework Dominará en 2026?](https://selvaggiesteban.dev/es/blog/el-futuro-de-javascript-que-framework-dominara-en-2026)
-- [Framework Python 2026: Tendencias y Predicciones Clave](https://selvaggiesteban.dev/es/blog/framework-python-2026-tendencias-y-predicciones-clave)
-- [Servicios de programación y desarrollo web más demandados en 2026](https://selvaggiesteban.dev/es/blog/servicios-de-programacion-y-desarrollo-web-mas-demandados-en-2026)
-- [Agente de IA: Tu Guía Definitiva para la Inteligencia Autónoma](https://selvaggiesteban.dev/es/blog/agente-de-ia-tu-guia-definitiva-para-la-inteligencia-autonoma)
-- [Desarrollo Web Autónomo: La Guía Definitiva para el Éxito Freelance](https://selvaggiesteban.dev/es/blog/desarrollo-web-autonomo-la-guia-definitiva-para-el-exito-freelance)
-- [Ejército de Juniors](https://selvaggiesteban.dev/es/blog/ejercito-de-juniors)
-- [Generación de Código Sintético](https://selvaggiesteban.dev/es/blog/generacion-de-codigo-sintetico)
-- [Sistema multi-agente con IA](https://selvaggiesteban.dev/es/blog/sistema-multi-agente-con-ia)
-- [Actualizaciones web](https://selvaggiesteban.dev/es/blog/actualizaciones-web)
-- [Agentes de IA: Guía Completa de Sistemas Inteligentes](https://selvaggiesteban.dev/es/blog/agentes-de-ia-guia-completa-de-sistemas-inteligentes)
-- [Analítica Web: Guía Completa para Dominar tus Datos Online](https://selvaggiesteban.dev/es/blog/analitica-web-guia-completa-para-dominar-tus-datos-online)
-- [Consultoría SEO: Guía Definitiva para el Éxito Digital](https://selvaggiesteban.dev/es/blog/consultoria-seo-guia-definitiva-para-el-exito-digital)
-- [Copias de Seguridad: Tu Escudo Contra la Pérdida de Datos](https://selvaggiesteban.dev/es/blog/copias-de-seguridad-tu-escudo-contra-la-perdida-de-datos)
-- [Crea tu Tienda Online: Guía Completa para el Éxito Digital](https://selvaggiesteban.dev/es/blog/crea-tu-tienda-online-guia-completa-para-el-exito-digital)
-- [Diseño UX/UI: La Clave para Productos Digitales Excepcionales](https://selvaggiesteban.dev/es/blog/diseno-ux-ui-la-clave-para-productos-digitales-excepcionales)
-- [Diseño Web: La Guía Definitiva para Tu Presencia Online](https://selvaggiesteban.dev/es/blog/diseno-web-la-guia-definitiva-para-tu-presencia-online)
-- [Experto WordPress: Tu Guía Definitiva para el Éxito Digital](https://selvaggiesteban.dev/es/blog/experto-wordpress-tu-guia-definitiva-para-el-exito-digital)
-- [Investigación de Palabras Clave: Guía Completa SEO](https://selvaggiesteban.dev/es/blog/investigacion-de-palabras-clave-guia-completa-seo)
-- [Landing page](https://selvaggiesteban.dev/es/blog/landing-page)
-- [Las Mejores Herramientas de Marketing Digital para 2024](https://selvaggiesteban.dev/es/blog/las-mejores-herramientas-de-marketing-digital-para-2024)
-- [Mantenimiento Web: La Guía Definitiva para un Sitio Seguro y Optimizado](https://selvaggiesteban.dev/es/blog/mantenimiento-web-la-guia-definitiva-para-un-sitio-seguro-y-optimizado)
-- [Monitorización y soporte técnico web](https://selvaggiesteban.dev/es/blog/monitorizacion-y-soporte-tecnico-web)
-- [Optimización de Velocidad Web: Guía Definitiva para el Éxito](https://selvaggiesteban.dev/es/blog/optimizacion-de-velocidad-web-guia-definitiva-para-el-exito)
-- [Posicionamiento Web: La Guía Definitiva para Dominar los Buscadores](https://selvaggiesteban.dev/es/blog/posicionamiento-web-la-guia-definitiva-para-dominar-los-buscadores)
-- [PrestaShop: Guía Completa para Tu Tienda Online Exitosa](https://selvaggiesteban.dev/es/blog/prestashop-guia-completa-para-tu-tienda-online-exitosa)
-- [Restauración de Sitio Web: Guía Completa para Recuperar Tu Presencia Online](https://selvaggiesteban.dev/es/blog/restauracion-de-sitio-web-guia-completa-para-recuperar-tu-presencia)
-- [Seguridad Web: Protegiendo tu Fortaleza Digital](https://selvaggiesteban.dev/es/blog/seguridad-web-protegiendo-tu-fortaleza-digital)
-- [SEO de Contenidos: Guía Completa para Dominar el Ranking](https://selvaggiesteban.dev/es/blog/seo-de-contenidos-guia-completa-para-dominar-el-ranking)
-- [SEO Local: Guía Completa para Dominar la Búsqueda Local](https://selvaggiesteban.dev/es/blog/seo-local-guia-completa-para-dominar-la-busqueda-local)
-- [SEO Off-Page: La Guía Definitiva para Dominar el Posicionamiento Externo](https://selvaggiesteban.dev/es/blog/seo-off-page-la-guia-definitiva-para-dominar-el-posicionamiento)
-- [SEO On-Page: La Guía Definitiva para Dominar tu Web](https://selvaggiesteban.dev/es/blog/seo-on-page-la-guia-definitiva-para-dominar-tu-web)
-- [WooCommerce: La Guía Definitiva para Tu Tienda Online](https://selvaggiesteban.dev/es/blog/woocommerce-la-guia-definitiva-para-tu-tienda-online)
-- [WordPress: La Guía Definitiva para Crear Tu Web Ideal](https://selvaggiesteban.dev/es/blog/wordpress-la-guia-definitiva-para-crear-tu-web-ideal)
-- [SEO Local: La Guía Definitiva para Atraer Clientes Cercanos](https://selvaggiesteban.dev/es/blog/seo-local-la-guia-definitiva-para-atraer-clientes-cercanos)
-- [Marketing Digital en Lanús: Guía Completa para tu Negocio](https://selvaggiesteban.dev/es/blog/marketing-digital-en-lanus-guia-completa-para-tu-negocio)
-- [Guía OCA vs Correo Argentino](https://selvaggiesteban.dev/es/blog/guia-oca-vs-correo-argentino)
-- [Guía precios mayoristas](https://selvaggiesteban.dev/es/blog/guia-precios-mayoristas)
-- [Guía servicio de OCA WooCommerce](https://selvaggiesteban.dev/es/blog/guia-servicio-de-oca-woocommerce)
-- [Guía WooCommerce](https://selvaggiesteban.dev/es/blog/guia-woocommerce)
-- [Guía WooCommerce desde Excel](https://selvaggiesteban.dev/es/blog/guia-woocommerce-desde-excel)
-- [Guía WordPress](https://selvaggiesteban.dev/es/blog/guia-wordpress)
-- [Guía programación y desarrollo web](https://selvaggiesteban.dev/es/blog/guia-programacion-y-desarrollo-web)
-- [Claude Code gratis](https://selvaggiesteban.dev/es/blog/claude-code-gratis)
-- [Máster en Posicionamiento Web con IA: La Fábrica de SEO que Google No Caza](https://selvaggiesteban.dev/es/blog/maestro-posicionamiento-web-ia-fabrica-seo-google-no-caza)
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/selvaggiesteban/selvaggiesteban.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Configura las variables de entorno:
+   Crea un archivo `.env` en la raíz (usa `.env.example` como guía) y añade:
+   ```env
+   RESEND_API_KEY=tu_api_key_aqui
+   TURNSTILE_SECRET_KEY=tu_secret_key_aqui
+   ```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+El sitio estará disponible en `http://localhost:4321`.
 
 ## 📬 Contacto
 

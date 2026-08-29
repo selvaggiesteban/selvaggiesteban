@@ -6,7 +6,7 @@ Código fuente de mi sitio web personal, blog y portafolio, construido con un en
 
 ## 👨‍💻 Sobre Mí
 
-Soy **Esteban Selvaggi**, Ingeniero Informático y Desarrollador Full-Stack con sede en Buenos Aires, Argentina. Con más de 8 años de experiencia, me especializo en:
+Soy **Esteban Selvaggi**, estudiante de Ingeniería en Informática y Desarrollador Web Full-Stack con sede en Buenos Aires, Argentina. Con más de 8 años de experiencia, me especializo en:
 
 - Arquitectura de sistemas de alto rendimiento.
 - Desarrollo e integración avanzada de Inteligencia Artificial (IA).

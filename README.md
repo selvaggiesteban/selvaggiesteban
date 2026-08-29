@@ -17,56 +17,56 @@ A lo largo de mi carrera, he transformado requisitos de negocio complejos en sol
 
 ## Contribuciones
 
-- centraldeturbos.com (Diseño y desarrollo web)
-- alquiriasolutions.com (Diseño y desarrollo web)
-- acuatika25.com.ar (Diseño y desarrollo web)
-- ntkic.com (Diseño y desarrollo web)
-- depaoli.com.ar (Diseño y desarrollo web)
-- consulting-21.com (Diseño y desarrollo web)
-- saute.es (Diseño y desarrollo web)
-- matiasgarcetesuarez.com.ar (Diseño y desarrollo web)
-- talaiotaudio.com (Diseño y desarrollo web)
-- alphatelservices.com (Diseño y desarrollo web)
-- draandreamamani.com (Diseño y desarrollo web)
-- cvela2017.com (Diseño y desarrollo web)
-- piscinasluciano.com.ar (Diseño y desarrollo web)
-- petruscigars.com (Diseño y desarrollo web)
-- yourdream.ae (Diseño y desarrollo web)
-- watervan.com.ar (Diseño y desarrollo web)
-- pescaolidvalladolid.com (Diseño y desarrollo web)
-- rocadeguiapsicologia.es (Diseño y desarrollo web)
-- semikongarden.com.ar (Diseño y desarrollo web)
-- semikon.com.ar (Diseño y desarrollo web)
-- seararefrigeracion.com.ar (Diseño y desarrollo web)
-- abogario.com.ar (Diseño y desarrollo web)
-- boscana.com.ar (Diseño y desarrollo web)
-- decotay.com.ar (Diseño y desarrollo web)
-- estudiogsr.com.ar (Diseño y desarrollo web)
-- gsrabogados.com.ar (Diseño y desarrollo web)
-- identidadmarketing.com (Diseño y desarrollo web)
-- ingenieriaproyectos.com.ar (Diseño y desarrollo web)
-- lanuscomputacion.com (Diseño y desarrollo web)
-- lereve.com.ar (Diseño y desarrollo web)
-- mayrea.com (Diseño y desarrollo web)
-- montescookexperiences.com (Diseño y desarrollo web)
-- mueblescavah.com.ar (Diseño y desarrollo web)
-- oteguiobras.com (Diseño y desarrollo web)
-- selvaggiconsultores.com (Diseño y desarrollo web)
-- sich.com.ar (Diseño y desarrollo web)
-- smartalk.cl (Diseño y desarrollo web)
-- somoswanderlust.com (Diseño y desarrollo web)
-- tay.com.ar (Diseño y desarrollo web)
-- zingueriazarza.com.ar (Diseño y desarrollo web)
-- aptofisico.com (Diseño y desarrollo web)
-- bonjour.ar (Diseño y desarrollo web)
-- ciclorural.com (Diseño y desarrollo web)
-- gimenezmilena.com (Diseño y desarrollo web)
-- marking.com.ar (Diseño y desarrollo web)
-- modomaquina.com (Diseño y desarrollo web)
-- nordichairinstitute.com (Diseño y desarrollo web)
-- somostuimpulso.ar (Diseño y desarrollo web)
-- urgenciafunerariars.com.ar (Diseño y desarrollo web)
-- genblocksa.com (Diseño y desarrollo web)
+- centraldeturbos.com
+- alquiriasolutions.com
+- acuatika25.com.ar
+- ntkic.com
+- depaoli.com.ar
+- consulting-21.com
+- saute.es
+- matiasgarcetesuarez.com.ar
+- talaiotaudio.com
+- alphatelservices.com
+- draandreamamani.com
+- cvela2017.com
+- piscinasluciano.com.ar
+- petruscigars.com
+- yourdream.ae
+- watervan.com.ar
+- pescaolidvalladolid.com
+- rocadeguiapsicologia.es
+- semikongarden.com.ar
+- semikon.com.ar
+- seararefrigeracion.com.ar
+- abogario.com.ar
+- boscana.com.ar
+- decotay.com.ar
+- estudiogsr.com.ar
+- gsrabogados.com.ar
+- identidadmarketing.com
+- ingenieriaproyectos.com.ar
+- lanuscomputacion.com
+- lereve.com.ar
+- mayrea.com
+- montescookexperiences.com
+- mueblescavah.com.ar
+- oteguiobras.com
+- selvaggiconsultores.com
+- sich.com.ar
+- smartalk.cl
+- somoswanderlust.com
+- tay.com.ar
+- zingueriazarza.com.ar
+- aptofisico.com
+- bonjour.ar
+- ciclorural.com
+- gimenezmilena.com
+- marking.com.ar
+- modomaquina.com
+- nordichairinstitute.com
+- somostuimpulso.ar
+- urgenciafunerariars.com.ar
+- genblocksa.com
 
 ## 🛠 Stack Tecnológico del Proyecto
 

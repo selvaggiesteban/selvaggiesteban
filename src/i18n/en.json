@@ -17,7 +17,7 @@
     "emailMarketing": "Email Marketing"
   },
   "footer": {
-    "bio": "Computer Engineer specialized in Software Engineering",
+    "bio": "Computer Engineering",
     "ingenieroInformatica": "Computer Engineer — UBA",
     "ingenieroSoftware": "Software Engineer",
     "desarrolladorFullStack": "Full-Stack Web Developer",
@@ -58,9 +58,8 @@
     "ariaLabel": "Contact via WhatsApp"
   },
   "author": {
-    "bio": "Computer Engineer specialized in Software Engineering",
-    "description": "With over 10 years of experience, I build responsive and scalable web applications, helping businesses stand out in the digital world with products that load instantly and are optimized for search engines (SEO).",
-    "cta": "Let's talk about your project"
+    "bio": "Computer Engineering",
+    "cta": "Contact"
   },
   "reviews": {
     "heading": "Client Reviews",
@@ -80,7 +79,7 @@
   "recent": {
     "heading": "Recent Publications",
     "description": "Sharing code, algorithms, and advances in Software Engineering and AI.",
-    "viewCode": "View source code →",
+    "viewCode": "See more →",
     "githubRepo": "GitHub Repository",
     "repos": {
       "30_days_coding": "30-day programming challenge with algorithms, data structures, and problem solving.",
@@ -108,8 +107,8 @@
     "filterWords": ["table of contents", "table of content"]
   },
   "home": {
-    "title": "Computer Engineer specialized in Software Engineering",
-    "description": "Professional Computer Engineering from Buenos Aires Argentina - Computer Engineer UBA",
+    "title": "Esteban Selvaggi · Full Stack Web Developer",
+    "description": "Web designer with 8 years of experience. Esteban Selvaggi, Full Stack Web Developer. Scalable web solutions, SEO and high performance.",
     "role": "Computer Engineer",
     "empezarAhora": "Get Started Now",
     "verServicios": "View Services"

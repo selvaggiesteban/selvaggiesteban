@@ -17,7 +17,7 @@
     "emailMarketing": "E-mail marketing"
   },
   "footer": {
-    "bio": "Ingeniero en Informática especializado en Ingeniería en Software",
+    "bio": "Ingeniería en Informática",
     "ingenieroInformatica": "Ingeniero en Informática UBA",
     "ingenieroSoftware": "Ingeniero en software",
     "desarrolladorFullStack": "Desarrollador Web Full-Stack",
@@ -58,9 +58,8 @@
     "ariaLabel": "Contactar por WhatsApp"
   },
   "author": {
-    "bio": "Ingeniero informático especializado en ingeniería de software",
-    "description": "Con más de 10 años de trayectoria, construyo aplicaciones web responsive y escalables, ayudando a negocios a destacar en el mundo digital con productos que cargan instantáneamente y están optimizados para motores de búsqueda (SEO).",
-    "cta": "Hablemos sobre tu proyecto"
+    "bio": "Ingeniería en Informática",
+    "cta": "Contacto"
   },
   "reviews": {
     "heading": "Reseñas de clientes",
@@ -80,7 +79,7 @@
   "recent": {
     "heading": "Publicaciones recientes",
     "description": "Compartiendo código, algoritmos y avances sobre ingeniería en software e IA.",
-    "viewCode": "Ver código fuente →",
+    "viewCode": "Ver más →",
     "githubRepo": "Repositorio en GitHub",
     "repos": {
       "30_days_coding": "Desafío de programación de 30 días con algoritmos, estructuras de datos y resolución de problemas.",
@@ -108,8 +107,8 @@
     "filterWords": ["tabla de contenido", "índice de contenido"]
   },
   "home": {
-    "title": "Ingeniero en Informática especializado en Ingeniería en Software",
-    "description": "Ingeniería en Informática profesional desde Buenos Aires Argentina - Ingeniero en Informática UBA",
+    "title": "Esteban Selvaggi · Desarrollador Web Full-Stack",
+    "description": "Diseñador web con 8 años de experiencia. Esteban Selvaggi, Desarrollador Web Full-Stack. Soluciones web escalables, SEO y alto rendimiento.",
     "role": "Ingeniero en Informática",
     "empezarAhora": "Empezar ahora",
     "verServicios": "Ver servicios"

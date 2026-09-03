@@ -36,7 +36,7 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
     <nav class="hidden md:flex gap-lg items-center text-sm font-medium">
       {navLinks.map(link => (
         <div class="relative group h-[56px] flex items-center">
-          <a href={link.href} class="hover:text-primary transition-colors flex items-center gap-1">
+          <a href={link.href} class="hover:text-primary transition-colors flex items-center gap-1 uppercase">
             {link.label}
             {link.dropdown && (
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
@@ -70,18 +70,18 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
   {navLinks.map((link, i) => (
     <div class="w-full">
       {link.dropdown ? (
-        <button data-dropdown-toggle={i} class="text-2xl font-bold hover:text-primary transition-colors flex items-center justify-center gap-2 w-full py-2 cursor-pointer">
+        <button data-dropdown-toggle={i} class="text-2xl font-bold hover:text-primary transition-colors flex items-center justify-center gap-2 w-full py-2 cursor-pointer uppercase">
           {link.label}
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
         </button>
       ) : (
-        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
+        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2 uppercase">{link.label}</a>
       )}
       {link.dropdown && (
         <div data-dropdown-content={i} class="flex flex-col gap-2 overflow-hidden transition-all duration-300 max-h-0">
           <div class="bg-surface-soft py-4 flex flex-col gap-2">
             {link.dropdown.map(subItem => (
-              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
+              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1 uppercase">{subItem.label}</a>
             ))}
           </div>
         </div>

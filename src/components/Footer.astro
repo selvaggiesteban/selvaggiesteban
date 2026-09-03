@@ -21,7 +21,7 @@ const blogLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/blog
         <p class="mt-4 text-sm text-ink/60 mb-6 leading-relaxed">
           {t(lang, 'footer.bio')}
         </p>
-        <ul class="space-y-3 text-sm text-ink/80 mb-8">
+        <ul class="space-y-3 text-sm text-ink/80 mb-8 uppercase">
           <li><a href={cvLink('ingeniero-en-informatica', 'computer-science-engineer')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroInformatica')}</a></li>
           <li><a href={cvLink('ingeniero-en-software', 'software-engineer')} class="hover:underline text-primary">{t(lang, 'footer.ingenieroSoftware')}</a></li>
           <li><a href={cvLink('desarrollador-web-full-stack', 'full-stack-web-developer')} class="hover:underline text-primary">{t(lang, 'footer.desarrolladorFullStack')}</a></li>
@@ -37,7 +37,7 @@ const blogLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/blog
       {!isCV && (
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest [#000000] mb-6">{t(lang, 'footer.servicios')}</h4>
-          <ul class="space-y-3 text-sm text-ink/80">
+          <ul class="space-y-3 text-sm text-ink/80 uppercase">
             <li><a href={serviceLink('software-a-medida', 'custom-software')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.softwareAMedida')}</a></li>
             <li><a href={serviceLink('diseno-web-responsive', 'responsive-web-design')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.disenoWeb')}</a></li>
             <li><a href={serviceLink('posicionamiento-seo', 'seo-positioning')} class="hover:underline hover:text-primary transition-colors">{t(lang, 'services.seo')}</a></li>
@@ -50,7 +50,7 @@ const blogLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/blog
       {!isCV && (
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest [#000000] mb-6">{t(lang, 'footer.guiasSEO')}</h4>
-          <ul class="space-y-3 text-sm text-ink/80 flex flex-col">
+          <ul class="space-y-3 text-sm text-ink/80 flex flex-col uppercase">
             <li><a href={blogLink('seo-local-guia-completa-para-dominar-la-busqueda-local', 'local-seo-complete-guide-to-mastering-local-search')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Local</a></li>
             <li><a href={blogLink('seo-on-page-la-guia-definitiva-para-dominar-tu-web', 'on-page-seo-the-ultimate-guide-to-mastering-your-website')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO On-Page</a></li>
             <li><a href={blogLink('seo-off-page-la-guia-definitiva-para-dominar-el-posicionamiento', 'off-page-seo-the-ultimate-guide-to-mastering-external-positioning')} class="hover:underline hover:text-primary transition-colors line-clamp-1">SEO Off-Page</a></li>
@@ -67,7 +67,7 @@ const blogLink = (esSlug: string, enSlug: string) => locale === 'es' ? `/es/blog
       {!isCV && (
         <div>
           <h4 class="font-mono text-xs uppercase tracking-widest [#000000] mb-6">{t(lang, 'footer.desarrolloIA')}</h4>
-          <ul class="space-y-3 text-sm text-ink/80 flex flex-col">
+          <ul class="space-y-3 text-sm text-ink/80 flex flex-col uppercase">
             <li><a href={blogLink('actualizaciones-web', 'website-updates')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Actualizaciones Web</a></li>
             <li><a href={blogLink('landing-page', 'landing-page')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Landing Pages Optimizadas</a></li>
             <li><a href={blogLink('experto-wordpress-tu-guia-definitiva-para-el-exito-digital', 'wordpress-expert-your-ultimate-guide-to-digital-success')} class="hover:underline hover:text-primary transition-colors line-clamp-1">Experto WordPress</a></li>

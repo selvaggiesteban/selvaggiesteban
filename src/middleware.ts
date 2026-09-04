@@ -103,6 +103,7 @@ const blogSlugMap: Record<string, string> = {
   'trafico-bots-supera-humanos-cloudflare': 'automated-traffic-dominates-the-web-bots-outnumber-humans-according-to-cloudflare',
   'woocommerce-la-guia-definitiva-para-tu-tienda-online': 'woocommerce-the-ultimate-guide-for-your-online-store',
   'wordpress-la-guia-definitiva-para-crear-tu-web-ideal': 'wordpress-the-ultimate-guide-to-creating-your-ideal-website',
+  'forward-deployed-engineer-exito-del-cliente': 'forward-deployed-engineer-customer-success',
 };
 
 const SECTION_ALIASES: Record<string, string> = {

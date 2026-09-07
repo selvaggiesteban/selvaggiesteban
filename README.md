@@ -52,6 +52,7 @@ A lo largo de mi carrera, he transformado requisitos de negocio complejos en sol
 - matiasgarcetesuarez.com.ar
 - mayrea.com
 - milgrullas.org
+- nadiaquetglas.com
 - montescookexperiences.com
 - mottobasic.com
 - mueblescavah.com.ar
@@ -80,9 +81,11 @@ A lo largo de mi carrera, he transformado requisitos de negocio complejos en sol
 - tvmasmagazine.com
 - urgenciafunerariars.com.ar
 - vintageradio.com.ar
+- vestigiostudio.com
 - watervan.com.ar
 - yourdream.ae
 - zingueriazarza.com.ar
+- zyxmecanizados.com.ar
 
 ## 🛠 Stack Tecnológico del Proyecto
 

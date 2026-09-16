@@ -54,6 +54,7 @@ const blogSlugMap: Record<string, string> = {
   'analitica-web-guia-completa-para-dominar-tus-datos-online': 'web-analytics-complete-guide-to-mastering-your-online-data',
   'automatizacion-de-marketing-profesional': 'professional-marketing-automation',
   'claude-code-gratis': 'free-claude-code',
+  'claude-code-commands': 'claude-code-commands',
   'claude-vs-openclaw-guia-comparativa': 'claude-vs-openclaw-comparative-guide',
   'consultoria-seo-guia-definitiva-para-el-exito-digital': 'seo-consulting-the-ultimate-guide-to-digital-success',
   'copias-de-seguridad-tu-escudo-contra-la-perdida-de-datos': 'backups-your-shield-against-data-loss',

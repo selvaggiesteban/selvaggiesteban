@@ -5,6 +5,13 @@ pubDate: 2026-09-04
 heroImage: "/assets/blog/covers/claude-code-commands.svg"
 ---
 
+<p>Claude Code is Anthropic's AI coding assistant that runs directly in your terminal. This guide covers every command you need — slash commands, keyboard shortcuts, and project configuration — with copy-paste examples. If you're just getting started, my <a href="/en/blog/free-claude-code" target="_blank">free Claude Code</a> guide is the perfect place to begin.</p>
+<ul>
+<li><p>Essential slash commands like /help, /init, /compact, and /clear to navigate the tool from day one.</p></li>
+<li><p>Keyboard shortcuts and terminal commands that streamline your daily Claude Code workflow.</p></li>
+<li><p>Project-level configuration in .claude/settings.json to control permissions and behavior safely.</p></li>
+</ul>
+
 ## TL;DR — Key Takeaways
 
 - **Claude Code** is Anthropic's coding assistant that runs directly in your terminal.
@@ -184,7 +191,7 @@ Yes. Claude Code works on Windows through WSL2 (Windows Subsystem for Linux) or 
 
 Claude Code represents a fundamental shift in how programmers interact with AI. It's not just autocomplete — it's a complete coding agent that understands your project, executes commands, and makes implementation decisions.
 
-If you want to integrate [artificial intelligence](/en/blog/ai-agents-complete-guide-to-intelligent-systems) into your development workflow and need help setting up your environment, [contact me](/en/contact).
+If you want to integrate [artificial intelligence](/en/blog/ai-agents-complete-guide-to-intelligent-systems) into your development workflow and need help setting up your environment, <a href="/en/contact" target="_blank">contact me</a>.
 
 ---
 

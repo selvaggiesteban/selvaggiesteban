@@ -1,9 +1,16 @@
 ---
 title: "Forward Deployed Engineer: The Key to Customer Success in 2026"
-description: "Learn what a Forward Deployed Engineer (FDE) is, why companies like Palantir, OpenAI and Anthropic invest $8B in this role, and how to apply the FDE model to ensure customer success in AI web design projects."
+description: "Learn what a Forward Deployed Engineer (FDE) is, why companies invest $8B in this role, and how to apply the FDE model to ensure customer success in AI projects."
 pubDate: 2026-09-04
 heroImage: "/assets/blog/covers/forward-deployed-engineer-customer-success.svg"
 ---
+
+<p>A Forward Deployed Engineer is a senior engineer who embeds in the customer's environment and stays until the system works in production. This guide breaks down what the role involves, why FDE job postings grew 729% year-over-year, and how to apply the model to your own projects. If you're starting from scratch, check my <a href="/en/blog/web-design-the-ultimate-guide-for-your-online-presence" target="_blank">guide to web design</a> for the online-presence side of things.</p>
+<ul>
+<li><p>What a Forward Deployed Engineer does and how the role differs from consulting, solutions engineering, or customer success.</p></li>
+<li><p>Key market data: 729% growth in job postings and $8B invested in deployment services in 2026.</p></li>
+<li><p>The four phases of the FDE model and how to apply them to AI-powered web design projects.</p></li>
+</ul>
 
 ## TL;DR — Key Takeaways
 
@@ -236,7 +243,7 @@ The Forward Deployed Engineer is not a passing trend. It's the industry's respon
 
 If you have a [web development](/en/services/web-development), [SEO positioning](/en/services/seo-positioning), or [digital marketing](/en/services/google-ads-management) project and want not just a delivered product but a **guarantee that it works in your business**, the FDE model is what you need.
 
-[Contact me](/en/contact) and let's talk.
+<a href="/en/contact" target="_blank">Contact me</a> and let's talk.
 
 ---
 

@@ -1,9 +1,16 @@
 ---
 title: "Comandos de Claude Code: Guia Completa 2026"
-description: "Descubre todos los comandos de Claude Code, el asistente de codificacion con IA de Anthropic. Atajos, slash commands, configuracion avanzada y mejores practicas para programadores."
+description: "Descubre los comandos de Claude Code: slash commands, atajos de teclado, configuracion avanzada y buenas practicas para programadores que quieren dominar la terminal."
 pubDate: 2026-09-04
 heroImage: "/assets/blog/covers/comandos-de-claude-code.svg"
 ---
+
+<p>Claude Code es el asistente de codificacion con IA de Anthropic que trabaja directo en tu terminal. En esta guia repasamos todos sus comandos — slash commands, atajos y configuracion por proyecto — con ejemplos listos para copiar. Si recien empezas, mi articulo sobre <a href="/es/blog/claude-code-gratis" target="_blank">Claude Code Gratis</a> te sirve de punto de partida.</p>
+<ul>
+<li><p>Slash commands esenciales como /help, /init, /compact y /clear para sacarle jugo a Claude Code desde el primer dia.</p></li>
+<li><p>Atajos de teclado y comandos de terminal que agilizan el flujo de trabajo diario con la herramienta.</p></li>
+<li><p>Configuracion por proyecto en .claude/settings.json para definir permisos de lectura, edicion y ejecucion.</p></li>
+</ul>
 
 ## TL;DR — Key Takeaways
 
@@ -184,7 +191,7 @@ Si. Claude Code funciona en Windows a traves de WSL2 (Windows Subsystem for Linu
 
 Claude Code representa un cambio fundamental en la forma en que los programadores interactuan con la IA. No es solo un autocompletado — es un agente de codificacion completo que entiende tu proyecto, ejecuta comandos y toma decisiones de implementacion.
 
-Si queres integrar [inteligencia artificial](/es/blog/agentes-de-ia-guia-completa-de-sistemas-inteligentes) en tu flujo de desarrollo y necesitas ayuda para configurar tu entorno, [contactame](/es/contact).
+Si queres integrar [inteligencia artificial](/es/blog/agentes-de-ia-guia-completa-de-sistemas-inteligentes) en tu flujo de desarrollo y necesitas ayuda para configurar tu entorno, <a href="/es/contact" target="_blank">contactame</a>.
 
 ---
 

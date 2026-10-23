@@ -9,9 +9,11 @@ tags: ["Cloudflare", "Wrangler", "DevOps", "API", "Seguridad"]
 
 Hace poco me encontré con un escenario que se repite cada vez más en mi trabajo: un agente de IA de programación necesita consultar la API de Cloudflare, por ejemplo para listar los deployments de un proyecto de Pages, y no tiene credenciales propias. En lugar de crear un API token nuevo a los apuroes, me di cuenta de que yo ya tenía lo que el agente necesitaba: el token OAuth que Wrangler guardó en mi máquina cuando ejecuté `wrangler login`, un token con **write access** sobre Workers y Pages.
 
-- `wrangler login` crea un token OAuth con permisos amplios que ya vive en tu máquina.
-- `wrangler auth token` lo extrae al instante, sin leer archivos de configuración a mano.
-- En CI/CD conviene un API token con permisos mínimos, nunca tu OAuth personal.
+<ul>
+<li><p><code>wrangler login</code> crea un token OAuth con permisos amplios que ya vive en tu máquina.</p></li>
+<li><p><code>wrangler auth token</code> lo extrae al instante, sin leer archivos de configuración a mano.</p></li>
+<li><p>En CI/CD conviene un API token con permisos mínimos, nunca tu OAuth personal.</p></li>
+</ul>
 
 En este artículo te cuento, paso a paso y desde mi experiencia personal, cómo funciona el **wrangler oauth con write access**, dónde se guarda el token, cómo obtenerlo de forma segura y cómo usarlo contra la API de Cloudflare — incluyendo el caso exacto de consultar deployments de Pages desde un script o desde un agente de código con IA.
 
@@ -146,4 +148,4 @@ Llevar el **wrangler oauth con write access** a tu flujo de trabajo es más simp
 - En CI/CD, creamos API tokens acotados; el OAuth personal se queda en tu máquina.
 - Los agentes de IA de programación son el mejor consumidor de estas credenciales bien gestionadas.
 
-Este blog está desplegado en Cloudflare Workers con deploy automático desde GitHub — un setup que documenté en detalle en mi guía de [alojar web en Cloudflare Pages con Astro](/es/blog/alojar-web-en-cloudflare-pages-con-astro-y-resend). Si querés montar algo parecido o necesitás automatizar despliegues con IA en tu proyecto, <a href="https://selvaggiesteban.dev/es/contact" rel="noopener">contactame</a> y lo vemos juntos.
+Este blog está desplegado en Cloudflare Workers con deploy automático desde GitHub — un setup que documenté en detalle en mi guía de <a href="/es/blog/alojar-web-en-cloudflare-pages-con-astro-y-resend" target="_blank">alojar web en Cloudflare Pages con Astro</a>. Si querés montar algo parecido o necesitás automatizar despliegues con IA en tu proyecto, <a href="/es/contact" target="_blank">contactame</a> y lo vemos juntos.

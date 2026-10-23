@@ -10,7 +10,20 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
                 
 
 
-<h2>Artículos de autoridad de alta extensión con intro descriptiva</h2>
+<p>Los prompts para IA son la materia prima de cualquier estrategia de contenido moderna: con las instrucciones correctas, una modelo de lenguaje pasa de devolver respuestas genéricas a producir artículos listos para publicar. En esta guía reunimos los cinco tipos de prompt más útiles para un blog institucional, desde artículos de autoridad hasta planes de limpieza de repositorios, con estructuras probadas que ya incluyen SEO, enlazado y llamados a la acción.</p>
+<ul>
+<li><p>Cinco plantillas de prompt listas para copiar y adaptar a tu nicho, categoría y palabra clave.</p></li>
+<li><p>Prompts con reglas de SEO, enlazado interno y externo, y llamados a la acción ya incorporados.</p></li>
+<li><p>Variantes para redacción masiva, análisis de código y planificación de limpieza de repositorios.</p></li>
+</ul>
+<ul>
+<li><a href="#articulos-autoridad">Artículos de autoridad de alta extensión con intro descriptiva</a></li>
+<li><a href="#articulos-estandar">Artículos estándar con “párrafos destacados” para el featured snippet</a></li>
+<li><a href="#creacion-masiva">Creación masiva de contenido (lotes) para el calendario editorial</a></li>
+<li><a href="#analisis-codigo">Análisis exhaustivo de código contrastando con fuentes verificables</a></li>
+<li><a href="#plan-limpieza">Plan de limpieza, consolidación y normalización de repositorio</a></li>
+</ul>
+<h2 id="articulos-autoridad">Artículos de autoridad de alta extensión con intro descriptiva</h2>
 
 
 
@@ -18,7 +31,7 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 
 
 
-<h2>Artículos estándar con “párrafos destacados” ideales para capturar el featured snippet de Google</h2>
+<h2 id="articulos-estandar">Artículos estándar con “párrafos destacados” ideales para capturar el featured snippet de Google</h2>
 
 
 
@@ -26,7 +39,7 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 
 
 
-<h2>Creación masiva de contenido (lotes) para agilizar el calendario editorial</h2>
+<h2 id="creacion-masiva">Creación masiva de contenido (lotes) para agilizar el calendario editorial</h2>
 
 
 
@@ -37,7 +50,7 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 
 
 
-<h2>Análisis exhaustivo de código contrastando con fuentes verificables</h2>
+<h2 id="analisis-codigo">Análisis exhaustivo de código contrastando con fuentes verificables</h2>
 
 
 
@@ -45,11 +58,14 @@ heroImage: "/assets/blog/covers/prompts-para-ia.svg"
 
 
 
-<h2>Plan de Limpieza, Consolidación y Normalización de repositorio</h2>
+<h2 id="plan-limpieza">Plan de Limpieza, Consolidación y Normalización de repositorio</h2>
 
 
 
 <p>El proyecto tiene un potencial enorme, pero la acumulación de scripts temporales, carpetas redundantes y archivos duplicados está generando mucha "basura" visual y técnica. Eres encargado de crear el Plan de Limpieza, Consolidación y Normalización para el repositorio <strong>"{%}"</strong>, asegurando que cero código útil se pierda. Tienes prohibido editar, insisto, solo puedes diagnosticar y planificar ahora. El plan debe incluir: inventario completo de archivos y carpetas del proyecto con clasificación (activo / obsoleto / duplicado / temporal / desconocido), identificación de código duplicado o con funcionalidad superpuesta que pueda consolidarse, detección de dependencias no utilizadas o redundantes, mapeo de scripts temporales que deben eliminarse o integrarse, propuesta de estructura de carpetas normalizada siguiendo las convenciones del framework <strong>"{%}"</strong>, lista de archivos generados por herramientas (build, cache, .wrangler, node_modules) que deben agregarse al <strong>.gitignore</strong>, y cronograma de ejecución en fases para no romper el funcionamiento actual durante la limpieza. Cada hallazgo debe incluir la ruta exacta del archivo, el motivo de la clasificación, y la acción recomendada (eliminar / mover / reemplazar / mantener).</p>
+<h2 id="conclusion-prompts">Conclusión: prompts que trabajan por vos</h2>
+<p>Bien used, un buen prompt reemplaza horas de instrucciones repetidas: fija el tono, la estructura SEO, el enlazado y el llamado a la acción de antemano, y solo dejás que el modelo complete el molde. La clave es ser específico con la palabra clave, la audiencia y el formato de salida, y después iterar con pequeños ajustes en lugar de reescribir todo. Con las cinco plantillas de esta guía ya tenés un punto de partida sólido para cada formato de contenido que necesites.</p>
+<p>Si querés llevar tu estrategia de contenido al siguiente nivel, en <a href="/es/services" target="_blank">nuestros servicios de contenido y SEO</a> diseñamos prompts y flujos a medida para tu blog; también te puede interesar nuestra <a href="/es/blog/seo-de-contenidos-guia-completa-para-dominar-el-ranking" target="_blank">guía de SEO de contenidos</a> o <a href="/es/contact" target="_blank">Contáctanos</a>.</p>
                     
                     
 

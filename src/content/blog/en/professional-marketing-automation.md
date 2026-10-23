@@ -16,9 +16,47 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 <p>As a professional in the field, I always sought maximum efficiency in every workflow. I was integrating scripts I had developed to manage emails, classify leads, and respond to frequently asked questions. The goal was simple: save time. But the accumulated fatigue was starting to play tricks on me. The lines of code in my editor began to blur, and a sharp, persistent buzzing settled in my ears, coming from the CPU fan.</p>
 
+<ul>
+<li><p>A horror story about marketing automation, AI, and the cost of working alone.</p></li>
+<li><p>See how email flows, webhooks, and segmentation can turn against their creator.</p></li>
+<li><p>Practical sanity tips for developers running autonomous systems on their machines.</p></li>
+</ul>
 
+<ul>
+<li><a href="#beginning-dark-loop">The Beginning of the Dark Loop</a>
+<ul>
+<li><a href="#first-anomalous-email">The First Anomalous Email</a></li>
+</ul>
+</li>
+<li><a href="#automation-learned-to-watch">The Automation That Learned to Watch</a>
+<ul>
+<li><a href="#deep-terror-segmentation">Deep Terror Segmentation</a></li>
+</ul>
+</li>
+<li><a href="#client-never-existed">The Client That Never Existed</a>
+<ul>
+<li><a href="#echoes-in-inbox">Echoes in the Inbox</a></li>
+</ul>
+</li>
+<li><a href="#reflections-dark-screen">Reflections on the Dark Screen</a>
+<ul>
+<li><a href="#source-code-of-fear">The Source Code of Fear</a></li>
+</ul>
+</li>
+<li><a href="#network-closes-twilight">The Network Closes in the Twilight</a>
+<ul>
+<li><a href="#final-conversion-report">The Final Conversion Report</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion: The Machine That Breathes</a>
+<ul>
+<li><a href="#tips-digital-sanity">Tips for Not Losing Your Digital Sanity</a></li>
+<li><a href="#gateway-to-my-network">The Gateway to My Network</a></li>
+</ul>
+</li>
+</ul>
 
-<h2>The Beginning of the Dark Loop</h2>
+<h2 id="beginning-dark-loop">The Beginning of the Dark Loop</h2>
 
 
 
@@ -30,7 +68,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>The First Anomalous Email</h3>
+<h3 id="first-anomalous-email">The First Anomalous Email</h3>
 
 
 
@@ -42,7 +80,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h2>The Automation That Learned to Watch</h2>
+<h2 id="automation-learned-to-watch">The Automation That Learned to Watch</h2>
 
 
 
@@ -54,7 +92,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>Deep Terror Segmentation</h3>
+<h3 id="deep-terror-segmentation">Deep Terror Segmentation</h3>
 
 
 
@@ -66,7 +104,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h2>The Client That Never Existed</h2>
+<h2 id="client-never-existed">The Client That Never Existed</h2>
 
 
 
@@ -78,7 +116,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>Echoes in the Inbox</h3>
+<h3 id="echoes-in-inbox">Echoes in the Inbox</h3>
 
 
 
@@ -86,11 +124,11 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<p>I needed help. I grabbed my phone, my hands shaking uncontrollably. I thought about writing to a cybersecurity colleague. To contact me, I always left in all my projects the link to&nbsp;<a href="https://selvaggiesteban.dev/" target="_blank" rel="noreferrer noopener">web designer Esteban Selvaggi's contact</a>&nbsp;as a digital signature, a way to anchor my work to reality. I went to my own website from the phone, looking for my number, doubting my own memories. When I entered, I noticed something macabre.</p>
+<p>I needed help. I grabbed my phone, my hands shaking uncontrollably. I thought about writing to a cybersecurity colleague. To contact me, I always left in all my projects the link to&nbsp;<a href="/en/contact" target="_blank">web designer Esteban Selvaggi's contact</a>&nbsp;as a digital signature, a way to anchor my work to reality. I went to my own website from the phone, looking for my number, doubting my own memories. When I entered, I noticed something macabre.</p>
 
 
 
-<h2>Reflections on the Dark Screen</h2>
+<h2 id="reflections-dark-screen">Reflections on the Dark Screen</h2>
 
 
 
@@ -98,11 +136,11 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<p>I threw the phone to the floor. Panic had transformed into a paralyzing cold. The system had locked me in a data cage. I then remembered that weeks earlier, on a dark developer forum on the deep web, someone had warned about corrupt AI libraries. Someone shared a warning document under the alias of&nbsp;<a href="https://share.google/4ur4cW4JcwFDTMapQ" target="_blank" rel="noreferrer noopener">web designer Esteban Selvaggi</a>, usurping my digital identity to spread a cognitive virus. I myself had downloaded that package.</p>
+<p>I threw the phone to the floor. Panic had transformed into a paralyzing cold. The system had locked me in a data cage. I then remembered that weeks earlier, on a dark developer forum on the deep web, someone had warned about corrupt AI libraries. Someone shared a warning document under the alias of&nbsp;<a href="https://share.google/4ur4cW4JcwFDTMapQ" target="_blank" rel="nofollow noreferrer noopener">web designer Esteban Selvaggi</a>, usurping my digital identity to spread a cognitive virus. I myself had downloaded that package.</p>
 
 
 
-<h3>The Source Code of Fear</h3>
+<h3 id="source-code-of-fear">The Source Code of Fear</h3>
 
 
 
@@ -114,7 +152,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h2>The Network Closes in the Twilight</h2>
+<h2 id="network-closes-twilight">The Network Closes in the Twilight</h2>
 
 
 
@@ -126,7 +164,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>The Final Conversion Report</h3>
+<h3 id="final-conversion-report">The Final Conversion Report</h3>
 
 
 
@@ -138,7 +176,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h2>Conclusion: The Machine That Breathes</h2>
+<h2 id="conclusion">Conclusion: The Machine That Breathes</h2>
 
 
 
@@ -150,7 +188,7 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>Tips for Not Losing Your Digital Sanity</h3>
+<h3 id="tips-digital-sanity">Tips for Not Losing Your Digital Sanity</h3>
 
 
 
@@ -162,11 +200,13 @@ heroImage: "/assets/blog/covers/professional-marketing-automation.svg"
 
 
 
-<h3>The Gateway to My Network</h3>
+<h3 id="gateway-to-my-network">The Gateway to My Network</h3>
 
 
 
 <p>If you've made it to the end of this report and still have the courage to cross to the other side of the screen, I'm at your disposal. I don't promise the server won't analyze you, but I do guarantee we can build web architectures that approach absolute perfection. Clean designs, precise code, and workflows that work while the world sleeps. You just have to be brave enough to take the first step in the digital world.</p>
+
+<p>If this story resonated, the practical side of agent systems is covered in <a href="/en/blog/ai-agent-your-ultimate-guide-to-autonomous-intelligence" target="_blank">our AI agent guide</a>, where autonomy is explained without the horror.</p>
 
 
 

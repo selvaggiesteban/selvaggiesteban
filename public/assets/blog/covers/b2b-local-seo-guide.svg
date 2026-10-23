@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+    <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <pattern id="dots" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#334155" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="260" cy="220" r="240" fill="#22c55e" opacity="0.1" filter="url(#blur1)"/>
+  <circle cx="1340" cy="680" r="220" fill="#16a34a" opacity="0.1" filter="url(#blur1)"/>
+  <circle cx="800" cy="720" r="150" fill="#22c55e" opacity="0.06" filter="url(#blur2)"/>
+
+  <!-- Icon: map pin with building -->
+  <g transform="translate(736, 150)" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <path d="M64 150c0 0-40-44-40-76a40 40 0 0 1 80 0c0 32-40 76-40 76Z"/>
+    <rect x="48" y="52" width="32" height="34" rx="2"/>
+    <path d="M56 60h4M68 60h4M56 70h4M68 70h4"/>
+  </g>
+
+  <!-- Title -->
+  <text x="800" y="450" text-anchor="middle" fill="#f8fafc" font-size="76" font-weight="bold">B2B Local SEO</text>
+
+  <!-- Subtitle -->
+  <text x="800" y="512" text-anchor="middle" fill="#cbd5e1" font-size="30">Win nearby business accounts in local search</text>
+
+  <!-- Accent line -->
+  <rect x="640" y="560" width="320" height="6" rx="3" fill="url(#accent)"/>
+
+  <!-- Bottom tag -->
+  <text x="800" y="862" text-anchor="middle" fill="#94a3b8" font-size="18" font-family="monospace">selvaggiesteban.dev/en/blog/b2b-local-seo-guide</text>
+</svg>

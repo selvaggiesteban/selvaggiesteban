@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="280" cy="240" r="260" fill="#34d399" opacity="0.1" filter="url(#blur1)"/>
+  <circle cx="1350" cy="640" r="240" fill="#059669" opacity="0.12" filter="url(#blur1)"/>
+  <circle cx="800" cy="720" r="160" fill="#34d399" opacity="0.06" filter="url(#blur1)"/>
+
+  <g transform="translate(736, 150)" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <svg width="128" height="128" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+  </g>
+
+  <text x="800" y="380" text-anchor="middle" fill="#f8fafc" font-size="56" font-weight="bold">11 Proyectos con LLMs</text>
+  <text x="800" y="450" text-anchor="middle" fill="#6ee7b7" font-size="32" font-weight="normal">en producción</text>
+
+  <rect x="680" y="500" width="240" height="5" rx="3" fill="url(#accent)"/>
+
+  <text x="800" y="860" text-anchor="middle" fill="#475569" font-size="20" font-family="monospace">selvaggiesteban.dev/blog/11-proyectos-llms-produccion-doorDash-american-express</text>
+</svg>

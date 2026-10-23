@@ -1,6 +1,6 @@
 ---
 title: "Wholesale Pricing Guide"
-description: "The idea would look like this:"
+description: "A step-by-step guide to wholesale pricing in WooCommerce: create a custom role, restrict a wholesale category, and keep it hidden from public visitors."
 pubDate: 2025-12-11
 heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 ---
@@ -8,6 +8,21 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
+<p>Setting up wholesale pricing in WooCommerce looks simple on paper, but it hides one tricky question: how do you show your entire catalog to the public while keeping a single category only for wholesale buyers? This guide walks through the exact setup, combining Ultimate Member roles with WooCommerce content restriction.</p>
+<ul>
+<li><p>Restrict one wholesale category so only approved buyers can browse it.</p></li>
+<li><p>Assign a custom role automatically when customers register through your form.</p></li>
+<li><p>Test the setup with real user types before opening it to your audience.</p></li>
+</ul>
+<ul>
+<li><a href="#create-wholesale-role">1. Create a Wholesale Role in Ultimate Member</a></li>
+<li><a href="#ultimate-member-form-role">2. Make Your Ultimate Member Form Assign That Role</a></li>
+<li><a href="#content-restriction">3. Enable Content Restriction for Products and Categories</a></li>
+<li><a href="#restrict-wholesale-category">4. Restrict Only the Wholesale Category</a></li>
+<li><a href="#what-each-user-sees">5. What Each User Type Will See</a></li>
+<li><a href="#testing-checklist">6. Useful Things to Test That Everything Works</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
 <p>The idea would look like this:</p>
 
 
@@ -22,7 +37,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<h2>1. Create a "wholesale" role in Ultimate Member</h2>
+<h2 id="create-wholesale-role">1. Create a "wholesale" role in Ultimate Member</h2>
 
 
 
@@ -57,12 +72,12 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 <blockquote class="is-layout-flow">
-<p>Later on, if you want, you can use the UM–WooCommerce extension to automatically assign roles when they make a purchase, but for your case it's not required. <a href="https://docs.ultimatemember.com/article/1590-how-to-use-user-roles?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>Later on, if you want, you can use the UM–WooCommerce extension to automatically assign roles when they make a purchase, but for your case it's not required. <a href="https://docs.ultimatemember.com/article/1590-how-to-use-user-roles?utm_source=chatgpt.com" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 </blockquote>
 
 
 
-<h2>2. Make your Ultimate Member form assign that role</h2>
+<h2 id="ultimate-member-form-role">2. Make your Ultimate Member form assign that role</h2>
 
 
 
@@ -98,11 +113,11 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<h2>3. Enable content restriction for products and categories</h2>
+<h2 id="content-restriction">3. Enable content restriction for products and categories</h2>
 
 
 
-<p>Ultimate Member allows you to apply restrictions by <strong>post type</strong> and by <strong>taxonomy (categories, tags, etc.)</strong>.<a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>Ultimate Member allows you to apply restrictions by <strong>post type</strong> and by <strong>taxonomy (categories, tags, etc.)</strong>.<a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 
 
 
@@ -111,11 +126,11 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<li>In the section <strong>"Enable the Content Restriction settings for post types"</strong>, check the <code>product</code> post type. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>In the section <strong>"Enable the Content Restriction settings for post types"</strong>, check the <code>product</code> post type. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
-<li>Further down, in <strong>"Enable the Content Restriction settings for taxonomies"</strong>, check the <code>product_cat</code> taxonomy (product categories). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Further down, in <strong>"Enable the Content Restriction settings for taxonomies"</strong>, check the <code>product_cat</code> taxonomy (product categories). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
@@ -138,11 +153,11 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<p>an "Ultimate Member: Content Restriction" box appears to define who can see it. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>an "Ultimate Member: Content Restriction" box appears to define who can see it. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 
 
 
-<h2>4. Restrict only the "wholesale" category</h2>
+<h2 id="restrict-wholesale-category">4. Restrict only the "wholesale" category</h2>
 
 
 
@@ -163,7 +178,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<li>Enable <strong>"Restrict access to this term and its posts?"</strong> (or similar text). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Enable <strong>"Restrict access to this term and its posts?"</strong> (or similar text). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
@@ -173,7 +188,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<li>Select <strong>only</strong> the <code>wholesale</code> role. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Select <strong>only</strong> the <code>wholesale</code> role. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 </ul>
 </li>
 
@@ -181,7 +196,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 <li>Highly recommended: enable the option<br><strong>"Display 404 page for users who do not have access to this term on the term's archive page and terms' posts single pages"</strong>.
 <ul>
-<li>With this, <strong>the Wholesale category and all products under it are securely hidden</strong> — they don't appear in listings and can't be viewed if someone tries to access them directly via URL. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>With this, <strong>the Wholesale category and all products under it are securely hidden</strong> — they don't appear in listings and can't be viewed if someone tries to access them directly via URL. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 </ul>
 </li>
 
@@ -192,7 +207,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<h2>5. What each user type will see</h2>
+<h2 id="what-each-user-sees">5. What each user type will see</h2>
 
 
 
@@ -232,7 +247,7 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 
-<h2>6. Useful things to test that everything works</h2>
+<h2 id="testing-checklist">6. Useful things to test that everything works</h2>
 
 
 
@@ -284,3 +299,10 @@ heroImage: "/assets/blog/covers/wholesale-pricing-guide.svg"
 
 
 <li>How to force a 404 vs. a "restricted access" message on those pages.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Hiding a wholesale category in WooCommerce comes down to three connected pieces: a dedicated Ultimate Member role, a registration form that assigns that role, and Ultimate Member's content restriction applied to the product category itself. With those in place, guests and regular customers only see your public catalog, while wholesale buyers get access to the restricted category and its products.</p>
+
+<p>Before going live, repeat the test with one visitor, one standard customer, and one wholesale user: the category should be invisible to the first two and fully visible to the third. If you want a hand setting this up on your store, <a href="/en/contact" target="_blank">contact us</a> and we will help you configure it. You can also read <a href="/en/blog/woocommerce-the-ultimate-guide-for-your-online-store" target="_blank">the complete WooCommerce guide</a> for more best practices on running an online store.</p>

@@ -12,6 +12,31 @@ heroImage: "/assets/blog/covers/gemini-cli.svg"
 
 <p>Trabajar con inteligencia artificial dentro del editor puede acelerar muchísimo el análisis de proyectos, la revisión de código y la planificación técnica. Sin embargo, cuando uno empieza a integrar herramientas como <strong>Gemini CLI en Visual Studio Code</strong>, no siempre todo funciona a la primera.</p>
 
+<ul>
+<li><p>Gemini CLI en VS Code con Vertex AI puede fallar si el entorno hereda API keys incompatibles.</p></li>
+<li><p>La solución es limpiar las variables, forzar Vertex AI y autenticar con Application Default Credentials.</p></li>
+</ul>
+
+<ul>
+<li><a href="#el-problema">El problema: Gemini CLI no respondía como esperaba</a></li>
+<li><a href="#que-pasaba">Qué estaba pasando realmente</a></li>
+<li><a href="#la-solucion">La solución: Limpiar el entorno y forzar Vertex AI</a></li>
+<li><a href="#comandos-vscode">Los comandos que utilicé en VS Code</a></li>
+<li><a href="#que-hace-cada-comando">Qué hace cada comando</a>
+<ul>
+<li><a href="#eliminar-claves">1. Eliminar claves antiguas del entorno</a></li>
+<li><a href="#vaciar-api-keys">2. Vaciar explícitamente las API keys</a></li>
+<li><a href="#forzar-vertex-ai">3. Forzar el uso de Vertex AI</a></li>
+<li><a href="#proyecto-ubicacion">4. Definir proyecto y ubicación</a></li>
+<li><a href="#autenticacion-adc">5. Autenticación con credenciales por defecto</a></li>
+</ul>
+</li>
+<li><a href="#el-resultado">El resultado después de aplicar la solución</a></li>
+<li><a href="#que-aprendi">Qué aprendí de esta experiencia</a></li>
+<li><a href="#mi-conclusion">Mi conclusión sobre Gemini CLI en VS Code</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+
 
 
 <p>En mi caso, el objetivo era claro: usar <strong>Gemini CLI en VS Code</strong> conectado a <strong>Vertex AI</strong> dentro de <strong>Google Cloud</strong>, en lugar de depender de una API key tradicional. La idea era aprovechar un entorno más sólido, más profesional y mejor alineado con un flujo de trabajo real de desarrollo.</p>
@@ -22,7 +47,7 @@ heroImage: "/assets/blog/covers/gemini-cli.svg"
 
 
 
-<h2>El problema: Gemini CLI no respondía como esperaba</h2>
+<h2 id="el-problema">El problema: Gemini CLI no respondía como esperaba</h2>
 
 
 
@@ -38,7 +63,7 @@ heroImage: "/assets/blog/covers/gemini-cli.svg"
 
 
 
-<h2>Qué estaba pasando realmente</h2>
+<h2 id="que-pasaba">Qué estaba pasando realmente</h2>
 
 
 
@@ -72,7 +97,7 @@ heroImage: "/assets/blog/covers/gemini-cli.svg"
 
 
 
-<h2>La solución: Limpiar el entorno y forzar vertex AI</h2>
+<h2 id="la-solucion">La solución: Limpiar el entorno y forzar vertex AI</h2>
 
 
 
@@ -92,7 +117,7 @@ heroImage: "/assets/blog/covers/gemini-cli.svg"
 
 
 
-<h2>Los comandos que utilicé en vs code</h2>
+<h2 id="comandos-vscode">Los comandos que utilicé en vs code</h2>
 
 
 
@@ -116,7 +141,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h2>Qué hace cada comando</h2>
+<h2 id="que-hace-cada-comando">Qué hace cada comando</h2>
 
 
 
@@ -124,7 +149,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h3>1. Eliminar claves antiguas del entorno</h3>
+<h3 id="eliminar-claves">1. Eliminar claves antiguas del entorno</h3>
 
 
 
@@ -136,7 +161,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h3>2. Vaciar explícitamente las API keys</h3>
+<h3 id="vaciar-api-keys">2. Vaciar explícitamente las API keys</h3>
 
 
 
@@ -148,7 +173,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h3>3. Forzar el uso de vertex AI</h3>
+<h3 id="forzar-vertex-ai">3. Forzar el uso de vertex AI</h3>
 
 
 
@@ -160,7 +185,7 @@ gcloud auth application-default login</code></pre>
 
 
 
-<h3>4. Definir proyecto y ubicación</h3>
+<h3 id="proyecto-ubicacion">4. Definir proyecto y ubicación</h3>
 
 
 
@@ -173,7 +198,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h3>5. Autenticación con credenciales por defecto</h3>
+<h3 id="autenticacion-adc">5. Autenticación con credenciales por defecto</h3>
 
 
 
@@ -185,7 +210,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h2>El resultado después de aplicar la solución</h2>
+<h2 id="el-resultado">El resultado después de aplicar la solución</h2>
 
 
 
@@ -201,7 +226,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h2>Qué aprendí de esta experiencia</h2>
+<h2 id="que-aprendi">Qué aprendí de esta experiencia</h2>
 
 
 
@@ -239,7 +264,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h2>Mi conclusión sobre Gemini CLI en vs code</h2>
+<h2 id="mi-conclusion">Mi conclusión sobre Gemini CLI en vs code</h2>
 
 
 
@@ -263,7 +288,7 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 
-<h2>Conclusión</h2>
+<h2 id="conclusion">Conclusión</h2>
 
 
 
@@ -276,6 +301,8 @@ $env:GOOGLE_CLOUD_LOCATION="global"</code></pre>
 
 
 <p>En este caso, esos comandos fueron suficientes para transformar un entorno confuso en una configuración lista para trabajar con <strong>Vertex AI desde Visual Studio Code</strong>.</p>
+
+<p>Si querés llevar la IA a tus proyectos con una implementación profesional, también te puede interesar nuestra <a href="/es/blog/agente-de-ia-tu-guia-definitiva-para-la-inteligencia-autonoma" target="_blank">guía definitiva de agentes de IA</a>. ¿Necesitás ayuda con una integración de este tipo? <a href="/es/contact" target="_blank">Contáctanos</a> y lo resolvemos juntos.</p>
                                     
                         
                                                 

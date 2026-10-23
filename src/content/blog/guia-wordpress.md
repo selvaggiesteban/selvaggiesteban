@@ -1,6 +1,6 @@
 ---
 title: "Guía WordPress"
-description: "Objetivo: esta guía te muestra, paso a paso, cómo entrar al panel de WordPress, identificar las partes principales del escritorio y ajustar la"
+description: "Aprendé a usar el panel de WordPress: cómo entrar, conocer el escritorio, ajustar la configuración general y gestionar usuarios paso a paso."
 pubDate: 2025-12-05
 heroImage: "/assets/blog/covers/guia-wordpress.svg"
 ---
@@ -10,14 +10,55 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 <p><strong>Objetivo:</strong>&nbsp;esta guía te muestra, paso a paso, cómo entrar al panel de WordPress, identificar las partes principales del escritorio y ajustar la configuración general básica de tu sitio.</p>
+<ul>
+<li><p>Accedé al panel de WordPress sin trabas aprendiendo a usar la URL correcta y a resolver los errores de inicio de sesión más comunes.</p></li>
+<li><p>Reconocé cada zona del escritorio y del menú lateral para crear entradas, páginas y gestionar usuarios con seguridad.</p></li>
+<li><p>Configurá los ajustes generales esenciales: título, zona horaria, formato de fecha y correo de administración.</p></li>
+</ul>
+<ul>
+<li><a href="#requisitos-previos">1. Requisitos previos</a></li>
+<li><a href="#acceder-panel-wordpress">2. Cómo acceder al panel de WordPress</a>
+<ul>
+<li><a href="#abrir-url-acceso">2.1 Abrir la URL de acceso</a></li>
+<li><a href="#introducir-usuario-contrasena">2.2 Introducir usuario y contraseña</a></li>
+<li><a href="#errores-habituales-sesion">2.3 Errores habituales al iniciar sesión</a></li>
+</ul>
+</li>
+<li><a href="#conocer-escritorio">3. Conocer el escritorio de WordPress</a>
+<ul>
+<li><a href="#elementos-principales">3.1 Elementos principales</a></li>
+<li><a href="#menu-lateral-administracion">3.2 Menú lateral de administración</a></li>
+<li><a href="#opciones-crear-contenido">3.3 Opciones para crear contenido</a></li>
+</ul>
+</li>
+<li><a href="#ajustes-generales-sitio">4. Acceder a los ajustes generales del sitio</a>
+<ul>
+<li><a href="#ubicar-ajustes-generales">4.1 Ubicar la opción “Ajustes &gt; Generales”</a></li>
+<li><a href="#campos-principales-ajustes">4.2 Campos principales de los ajustes generales</a></li>
+</ul>
+</li>
+<li><a href="#guardar-cambios-revisar">5. Guardar cambios y revisar el sitio</a>
+<ul>
+<li><a href="#guardar-cambios">5.1 Guardar cambios</a></li>
+<li><a href="#verificar-que-funciona">5.2 Verificar que todo funciona</a></li>
+</ul>
+</li>
+<li><a href="#gestionar-usuarios-cerrar-sesion">6. Gestionar usuarios y cerrar sesión</a>
+<ul>
+<li><a href="#lista-usuarios">6.1 Ver la lista de usuarios</a></li>
+<li><a href="#cerrar-sesion">6.2 Cerrar sesión</a></li>
+</ul>
+</li>
+<li><a href="#conclusion-guia-wordpress">Conclusión</a></li>
+</ul>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-1.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-1.webp" alt="Portada de inicio de sesión de WordPress en la URL wp-admin"></figure>
 
 
 
-<h2>1. Requisitos previos</h2>
+<h2 id="requisitos-previos">1. Requisitos previos</h2>
 
 
 
@@ -39,11 +80,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<h2>2. Cómo acceder al panel de WordPress</h2>
+<h2 id="acceder-panel-wordpress">2. Cómo acceder al panel de WordPress</h2>
 
 
 
-<h3>2.1 Abrir la URL de acceso</h3>
+<h3 id="abrir-url-acceso">2.1 Abrir la URL de acceso</h3>
 
 
 
@@ -61,11 +102,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-2.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-2.webp" alt="Formulario de acceso de WordPress con campos de usuario y contraseña"></figure>
 
 
 
-<h3>2.2 Introducir usuario y contraseña</h3>
+<h3 id="introducir-usuario-contrasena">2.2 Introducir usuario y contraseña</h3>
 
 
 
@@ -87,7 +128,7 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<h3>2.3 Errores habituales al iniciar sesión</h3>
+<h3 id="errores-habituales-sesion">2.3 Errores habituales al iniciar sesión</h3>
 
 
 
@@ -105,11 +146,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<h2>3. Conocer el escritorio de WordPress</h2>
+<h2 id="conocer-escritorio">3. Conocer el escritorio de WordPress</h2>
 
 
 
-<h3>3.1 Elementos principales</h3>
+<h3 id="elementos-principales">3.1 Elementos principales</h3>
 
 
 
@@ -117,11 +158,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-3.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-3.webp" alt="Escritorio de WordPress con avisos, resumen y accesos rápidos"></figure>
 
 
 
-<h3>3.2 Menú lateral de administración</h3>
+<h3 id="menu-lateral-administracion">3.2 Menú lateral de administración</h3>
 
 
 
@@ -171,19 +212,19 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-4.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-4.webp" alt="Menú lateral de administración de WordPress con todas sus secciones"></figure>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-5.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-5.webp" alt="Detalle del menú lateral de WordPress con las opciones de Entradas y Medios"></figure>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-6.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-6.webp" alt="Detalle del menú lateral de WordPress con Ajustes, Plugins y Herramientas"></figure>
 
 
 
-<h3>3.3 Opciones para crear contenido</h3>
+<h3 id="opciones-crear-contenido">3.3 Opciones para crear contenido</h3>
 
 
 
@@ -209,27 +250,27 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-7.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-7.webp" alt="Opción para crear una nueva entrada de blog desde el menú de WordPress"></figure>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-8.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-8.webp" alt="Biblioteca de medios de WordPress para subir imágenes y documentos"></figure>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-9.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-9.webp" alt="Gestión de páginas y usuarios nuevos desde el menú de WordPress"></figure>
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-10.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-10.webp" alt="Editor de contenido de WordPress con las opciones de publicación"></figure>
 
 
 
-<h2>4. Acceder a los ajustes generales del sitio</h2>
+<h2 id="ajustes-generales-sitio">4. Acceder a los ajustes generales del sitio</h2>
 
 
 
-<h3>4.1 Ubicar la opción “ajustes &gt; Generales”</h3>
+<h3 id="ubicar-ajustes-generales">4.1 Ubicar la opción “Ajustes &gt; Generales”</h3>
 
 
 
@@ -247,11 +288,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-11.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-11.webp" alt="Ubicación de la opción Ajustes Generales en el menú de WordPress"></figure>
 
 
 
-<h3>4.2 Campos principales de los ajustes generales</h3>
+<h3 id="campos-principales-ajustes">4.2 Campos principales de los ajustes generales</h3>
 
 
 
@@ -323,11 +364,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<h2>5. Guardar cambios y revisar el sitio</h2>
+<h2 id="guardar-cambios-revisar">5. Guardar cambios y revisar el sitio</h2>
 
 
 
-<h3>5.1 Guardar cambios</h3>
+<h3 id="guardar-cambios">5.1 Guardar cambios</h3>
 
 
 
@@ -341,11 +382,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-12.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-12.webp" alt="Botón Guardar cambios al final de los ajustes generales de WordPress"></figure>
 
 
 
-<h3>5.2 Verificar que todo funciona</h3>
+<h3 id="verificar-que-funciona">5.2 Verificar que todo funciona</h3>
 
 
 
@@ -363,11 +404,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<h2>6. Gestionar usuarios y cerrar sesión</h2>
+<h2 id="gestionar-usuarios-cerrar-sesion">6. Gestionar usuarios y cerrar sesión</h2>
 
 
 
-<h3>6.1 Ver la lista de usuarios</h3>
+<h3 id="lista-usuarios">6.1 Ver la lista de usuarios</h3>
 
 
 
@@ -375,11 +416,11 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 
-<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-13.webp" alt=""></figure>
+<figure class="aligncenter"><img width="1024" height="576" src="/assets/blog/guia-wordpress-13.webp" alt="Lista de usuarios de WordPress con sus roles y estado de acceso"></figure>
 
 
 
-<h3>6.2 Cerrar sesión</h3>
+<h3 id="cerrar-sesion">6.2 Cerrar sesión</h3>
 
 
 
@@ -398,6 +439,9 @@ heroImage: "/assets/blog/covers/guia-wordpress.svg"
 
 
 <p>Si al volver atrás el sistema te vuelve a pedir usuario y contraseña, la sesión se ha cerrado correctamente.</p>
+<h2 id="conclusion-guia-wordpress">Conclusión</h2>
+<p>Dominar el panel de WordPress es el primer paso para administrar tu sitio con autonomía y seguridad. En esta guía repasamos cómo acceder al escritorio, reconocer cada sección del menú lateral, ajustar la configuración general y gestionar usuarios y sesiones. Con esa base, ya podés publicar contenido y mantener tu web bajo control desde el primer día.</p>
+<p>Si necesitás ayuda profesional con tu sitio —desde la configuración inicial hasta el desarrollo a medida—, visitá nuestra <a href="/es/blog/wordpress-la-guia-definitiva-para-crear-tu-web-ideal" target="_blank">guía completa de WordPress para crear tu web ideal</a> o <a href="/es/contact" target="_blank">Contáctanos</a> y te acompañamos en cada paso.</p>
                                     
                         
                                                 

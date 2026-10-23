@@ -1,6 +1,6 @@
 ---
 title: "Guía para optimizar fotos en sitios web"
-description: "Aprende las mejores técnicas y herramientas para optimizar imágenes web: formatos modernos, compresión, responsive images, lazy loading y CDN para mejorar velocidad y SEO."
+description: "Aprende técnicas y herramientas para optimizar imágenes web: formatos modernos, compresión, responsive images, lazy loading y CDN para mejorar velocidad y SEO."
 pubDate: 2026-06-26
 heroImage: "/assets/blog/covers/guia-optimizar-fotos-sitios-web.svg"
 seoTitle: "Guía para optimizar fotos en sitios web | Formatos, compresión y SEO"
@@ -8,9 +8,11 @@ seoDescription: "Domina la optimización de imágenes web: WebP, AVIF, compresi�
 permalink: "/blog/guia-optimizar-fotos-sitios-web"
 altTexts: ["Comparativa de formatos de imagen web", "Herramienta de compresión de imágenes", "Código srcset para responsive images", "Arquitectura CDN para imágenes"]
 ---
-*   Las imágenes son el recurso más pesado en la mayoría de los sitios web; optimizarlas correctamente puede reducir el peso total de la página hasta un 80%.
-*   Los formatos modernos WebP y AVIF ofrecen una compresión muy superior a JPEG y PNG con la misma calidad visual.
-*   La combinación de formatos modernos, compresión, `srcset`, lazy loading y un CDN de imágenes es la estrategia definitiva para maximizar la velocidad y el SEO.
+<ul>
+<li><p>Las imágenes son el recurso más pesado en la mayoría de los sitios web; optimizarlas correctamente puede reducir el peso total de la página hasta un 80%.</p></li>
+<li><p>Los formatos modernos WebP y AVIF ofrecen una compresión muy superior a JPEG y PNG con la misma calidad visual.</p></li>
+<li><p>La combinación de formatos modernos, compresión, srcset, lazy loading y un CDN de imágenes es la estrategia definitiva para maximizar la velocidad y el SEO.</p></li>
+</ul>
 
 ## Por qué es crítico optimizar las imágenes
 
@@ -99,11 +101,11 @@ Un CDN de imágenes (como Cloudflare Images, Imgix, Cloudinary o ImageKit) ofrec
 
 ```html
 <img
-  src="https://imagenes.tudominio.com/cdn-cgi/image/width=800,format=auto/foto.jpg"
+  src="https://imagenes.tudominio.com/cdn-cgi/image/width=800,format=auto/foto.webp"
   srcset="
-    https://imagenes.tudominio.com/cdn-cgi/image/width=400,format=auto/foto.jpg 400w,
-    https://imagenes.tudominio.com/cdn-cgi/image/width=800,format=auto/foto.jpg 800w,
-    https://imagenes.tudominio.com/cdn-cgi/image/width=1200,format=auto/foto.jpg 1200w
+    https://imagenes.tudominio.com/cdn-cgi/image/width=400,format=auto/foto.webp 400w,
+    https://imagenes.tudominio.com/cdn-cgi/image/width=800,format=auto/foto.webp 800w,
+    https://imagenes.tudominio.com/cdn-cgi/image/width=1200,format=auto/foto.webp 1200w
   "
   sizes="(max-width: 600px) 100vw, 800px"
   alt="..."
@@ -120,3 +122,7 @@ El parámetro `format=auto` hace que Cloudflare sirva automáticamente AVIF si e
 - **SVG para iconos:** Los SVG son livianos, escalables y editables con CSS
 - **Auditá con Lighthouse:** Pasá la auditoría de rendimiento de Chrome DevTools y revisá las oportunidades de optimización de imágenes
 - **Automatizá en el build:** Integrá sharp o un plugin de Vite/Webpack para que las imágenes se compriman automáticamente al hacer deploy
+
+## Conclusión
+
+Optimizar las imágenes de tu sitio web no es una tarea puntual, sino un hábito técnico que impacta directamente en la velocidad, la experiencia de usuario y el posicionamiento en buscadores. Con formatos modernos como WebP y AVIF, compresión inteligente, imágenes responsive con `srcset`, lazy loading y un CDN de imágenes, podés reducir drásticamente el peso de tus páginas sin sacrificar calidad visual. Si querés seguir profundizando en técnicas de posicionamiento, te recomendamos leer nuestra <a href="/es/blog/seo-on-page-la-guia-definitiva-para-dominar-tu-web" target="_blank">guía de SEO On-Page</a>. Y si necesitás ayuda profesional para implementar todo esto en tu proyecto, <a href="/es/contact" target="_blank">Contáctanos</a> y trabajemos juntos.

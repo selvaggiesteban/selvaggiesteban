@@ -8,12 +8,50 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-
 <p><strong>Objetivo:</strong>&nbsp;esta guía explica cómo exportar los productos de WooCommerce a un archivo CSV, editarlos de forma masiva en Excel o Google Sheets e importarlos de nuevo para actualizar el catálogo.</p>
 
+<ul>
+<li><p>Exportás el catálogo de WooCommerce a CSV, editás precios y stock en Excel o Google Sheets e importás los cambios.</p></li>
+<li><p>El flujo permite actualizar masivamente cientos de productos sin tocar el panel uno por uno.</p></li>
+</ul>
 
+<ul>
+<li><a href="#1-flujo-general">1. Flujo general de trabajo</a></li>
+<li><a href="#2-exportar-productos">2. Exportar productos desde WooCommerce</a>
+<ul>
+<li><a href="#2-1-listado-productos">2.1 Acceder al listado de productos</a></li>
+<li><a href="#2-2-herramienta-exportacion">2.2 Usar la herramienta de exportación</a></li>
+</ul>
+</li>
+<li><a href="#3-editar-csv-excel">3. Editar el CSV en Microsoft Excel</a>
+<ul>
+<li><a href="#3-1-abrir-csv">3.1 Abrir el archivo CSV</a></li>
+<li><a href="#3-2-columnas-importantes">3.2 Columnas más importantes</a></li>
+<li><a href="#3-3-modificar-datos">3.3 Modificar datos del catálogo</a></li>
+<li><a href="#3-4-guardar-csv">3.4 Guardar el archivo como CSV</a></li>
+</ul>
+</li>
+<li><a href="#4-editar-csv-sheets">4. Editar el CSV en Google Sheets</a>
+<ul>
+<li><a href="#4-1-importar-sheets">4.1 Importar el archivo a Google Sheets</a></li>
+<li><a href="#4-2-editar-sheets">4.2 Editar datos en Google Sheets</a></li>
+<li><a href="#4-3-descargar-csv">4.3 Descargar el CSV actualizado</a></li>
+</ul>
+</li>
+<li><a href="#5-importar-csv">5. Importar el CSV actualizado en WooCommerce</a>
+<ul>
+<li><a href="#5-1-herramienta-importacion">5.1 Acceder a la herramienta de importación</a></li>
+<li><a href="#5-2-archivo-opciones">5.2 Seleccionar el archivo y opciones de actualización</a></li>
+<li><a href="#5-3-mapeo-columnas">5.3 Revisar el mapeo de columnas</a></li>
+<li><a href="#5-4-ejecutar-importador">5.4 Ejecutar el importador</a></li>
+</ul>
+</li>
+<li><a href="#6-verificar-cambios">6. Verificar los cambios en el catálogo</a></li>
+<li><a href="#7-recomendaciones">7. Recomendaciones y buenas prácticas</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
 
-<h2>1. Flujo general de trabajo</h2>
+<h2 id="1-flujo-general">1. Flujo general de trabajo</h2>
 
 
 
@@ -43,11 +81,11 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>2. Exportar productos desde WooCommerce</h2>
+<h2 id="2-exportar-productos">2. Exportar productos desde WooCommerce</h2>
 
 
 
-<h3>2.1 Acceder al listado de productos</h3>
+<h3 id="2-1-listado-productos">2.1 Acceder al listado de productos</h3>
 
 
 
@@ -61,7 +99,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>2.2 Usar la herramienta de exportación</h3>
+<h3 id="2-2-herramienta-exportacion">2.2 Usar la herramienta de exportación</h3>
 
 
 
@@ -91,11 +129,11 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>3. Editar el csv en microsoft excel</h2>
+<h2 id="3-editar-csv-excel">3. Editar el csv en microsoft excel</h2>
 
 
 
-<h3>3.1 Abrir el archivo csv</h3>
+<h3 id="3-1-abrir-csv">3.1 Abrir el archivo csv</h3>
 
 
 
@@ -117,7 +155,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>3.2 Columnas más importantes</h3>
+<h3 id="3-2-columnas-importantes">3.2 Columnas más importantes</h3>
 
 
 
@@ -155,7 +193,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>3.3 Modificar datos del catálogo</h3>
+<h3 id="3-3-modificar-datos">3.3 Modificar datos del catálogo</h3>
 
 
 
@@ -189,7 +227,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>3.4 Guardar el archivo como csv</h3>
+<h3 id="3-4-guardar-csv">3.4 Guardar el archivo como csv</h3>
 
 
 
@@ -215,11 +253,11 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>4. Editar el csv en Google sheets</h2>
+<h2 id="4-editar-csv-sheets">4. Editar el csv en Google sheets</h2>
 
 
 
-<h3>4.1 Importar el archivo a Google sheets</h3>
+<h3 id="4-1-importar-sheets">4.1 Importar el archivo a Google sheets</h3>
 
 
 
@@ -241,7 +279,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>4.2 Editar datos en Google sheets</h3>
+<h3 id="4-2-editar-sheets">4.2 Editar datos en Google sheets</h3>
 
 
 
@@ -249,7 +287,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>4.3 Descargar el csv actualizado</h3>
+<h3 id="4-3-descargar-csv">4.3 Descargar el csv actualizado</h3>
 
 
 
@@ -271,11 +309,11 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>5. Importar el csv actualizado en WooCommerce</h2>
+<h2 id="5-importar-csv">5. Importar el csv actualizado en WooCommerce</h2>
 
 
 
-<h3>5.1 Acceder a la herramienta de importación</h3>
+<h3 id="5-1-herramienta-importacion">5.1 Acceder a la herramienta de importación</h3>
 
 
 
@@ -293,7 +331,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>5.2 Seleccionar el archivo y opciones de actualización</h3>
+<h3 id="5-2-archivo-opciones">5.2 Seleccionar el archivo y opciones de actualización</h3>
 
 
 
@@ -311,7 +349,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>5.3 Revisar el mapeo de columnas</h3>
+<h3 id="5-3-mapeo-columnas">5.3 Revisar el mapeo de columnas</h3>
 
 
 
@@ -349,7 +387,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h3>5.4 Ejecutar el importador</h3>
+<h3 id="5-4-ejecutar-importador">5.4 Ejecutar el importador</h3>
 
 
 
@@ -363,7 +401,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>6. Verificar los cambios en el catálogo</h2>
+<h2 id="6-verificar-cambios">6. Verificar los cambios en el catálogo</h2>
 
 
 
@@ -385,7 +423,7 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 
-<h2>7. Recomendaciones y buenas prácticas</h2>
+<h2 id="7-recomendaciones">7. Recomendaciones y buenas prácticas</h2>
 
 
 
@@ -399,11 +437,17 @@ heroImage: "/assets/blog/covers/guia-woocommerce-desde-excel.svg"
 
 
 <li>Aplica filtros en Excel o Google Sheets para revisar series de productos (por categoría, por rango de precios, etc.).</li>
-
-
-
 <li>Realiza cambios masivos en horarios de baja actividad para minimizar riesgos.</li>
+
+
+
 </ul>
+
+<h2 id="conclusion">Conclusión</h2>
+
+<p>Exportar, editar e importar productos de WooCommerce mediante CSV es la forma más eficiente de mantener tu catálogo actualizado sin editar producto por producto. Con este flujo podés ajustar precios, stock y datos generales desde Excel o Google Sheets con la seguridad de un respaldo previo y una verificación posterior.</p>
+
+<p>Si preferís automatizar estos procesos vía API o necesitás ayuda con tu tienda, conocé nuestra <a href="/es/blog/guia-api-woocommerce" target="_blank">guía de la API de WooCommerce</a> o nuestros servicios de <a href="/es/services/e-commerce" target="_blank">e-commerce</a>. Para trabajar juntos, <a href="/es/contact" target="_blank">Contáctanos</a>.</p>
                                     
                         
                                                 

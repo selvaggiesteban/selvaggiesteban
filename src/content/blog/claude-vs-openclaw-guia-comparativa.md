@@ -16,9 +16,35 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 <p>Tras revisar la documentación oficial actual, la conclusión es bastante clara: <strong>Claude Code</strong> destaca por su enfoque más directo para automatizar trabajo técnico y controlarlo desde distintos dispositivos, mientras que <strong>OpenClaw</strong> sobresale cuando la prioridad es convertir el agente en una pieza central de mensajería, capaz de vivir en canales como Telegram o WhatsApp.</p>
 
+<ul>
+<li><p>Claude Code destaca para automatizar trabajo técnico y supervisarlo desde distintos dispositivos.</p></li>
+<li><p>OpenClaw brilla cuando querés un agente autoalojado que viva en Telegram o WhatsApp.</p></li>
+</ul>
+
+<ul>
+<li><a href="#que-significa-comparar">Qué significa realmente comparar Claude vs OpenClaw</a></li>
+<li><a href="#scheduled-tasks">Claude vs OpenClaw en scheduled tasks</a>
+<ul>
+<li><a href="#claude-scheduled-tasks">Cómo funciona Claude Code con tareas programadas</a></li>
+<li><a href="#openclaw-scheduled-tasks">Cómo funciona OpenClaw con tareas programadas</a></li>
+<li><a href="#lectura-profesional-schedules">Mi lectura profesional sobre los schedules</a></li>
+</ul>
+</li>
+<li><a href="#integracion-movil">Claude vs OpenClaw en integración con móvil</a>
+<ul>
+<li><a href="#claude-movil">Claude Code: el móvil como control remoto</a></li>
+<li><a href="#openclaw-movil">OpenClaw: el móvil como canal de mensajería</a></li>
+</ul>
+</li>
+<li><a href="#diferencia-practica">La gran diferencia práctica: control remoto frente a mensajería real</a></li>
+<li><a href="#opciones-estables">Qué opción veo más estable hoy</a></li>
+<li><a href="#quien-gana">Entonces, quién gana en Claude vs OpenClaw</a></li>
+<li><a href="#conclusion-final">Conclusión final</a></li>
+</ul>
 
 
-<h2>Qué significa realmente comparar Claude vs openclaw</h2>
+
+<h2 id="que-significa-comparar">Qué significa realmente comparar Claude vs openclaw</h2>
 
 
 
@@ -34,7 +60,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>Claude vs openclaw en scheduled tasks</h2>
+<h2 id="scheduled-tasks">Claude vs openclaw en scheduled tasks</h2>
 
 
 
@@ -42,7 +68,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Cómo funciona Claude code con tareas programadas</h3>
+<h3 id="claude-scheduled-tasks">Cómo funciona Claude code con tareas programadas</h3>
 
 
 
@@ -58,7 +84,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Cómo funciona openclaw con tareas programadas</h3>
+<h3 id="openclaw-scheduled-tasks">Cómo funciona openclaw con tareas programadas</h3>
 
 
 
@@ -70,7 +96,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Mi lectura profesional sobre Claude vs openclaw en schedules</h3>
+<h3 id="lectura-profesional-schedules">Mi lectura profesional sobre Claude vs openclaw en schedules</h3>
 
 
 
@@ -92,7 +118,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>Claude vs openclaw en integración con móvil</h2>
+<h2 id="integracion-movil">Claude vs openclaw en integración con móvil</h2>
 
 
 
@@ -100,7 +126,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Claude code: El móvil como control remoto y panel de seguimiento</h3>
+<h3 id="claude-movil">Claude code: El móvil como control remoto y panel de seguimiento</h3>
 
 
 
@@ -116,7 +142,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Openclaw: El móvil como canal real de mensajería</h3>
+<h3 id="openclaw-movil">Openclaw: El móvil como canal real de mensajería</h3>
 
 
 
@@ -132,7 +158,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>La gran diferencia práctica: Control remoto frente a mensajería real</h2>
+<h2 id="diferencia-practica">La gran diferencia práctica: Control remoto frente a mensajería real</h2>
 
 
 
@@ -152,7 +178,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>Qué opción veo más estable hoy</h2>
+<h2 id="opciones-estables">Qué opción veo más estable hoy</h2>
 
 
 
@@ -172,7 +198,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>Entonces, quién gana en Claude vs openclaw</h2>
+<h2 id="quien-gana">Entonces, quién gana en Claude vs openclaw</h2>
 
 
 
@@ -180,7 +206,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Claude code me parece mejor cuando:</h3>
+<h3 id="claude-mejor-cuando">Claude code me parece mejor cuando:</h3>
 
 
 
@@ -188,7 +214,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h3>Openclaw me parece mejor cuando:</h3>
+<h3 id="openclaw-mejor-cuando">Openclaw me parece mejor cuando:</h3>
 
 
 
@@ -196,7 +222,7 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 
-<h2>Conclusión final</h2>
+<h2 id="conclusion-final">Conclusión final</h2>
 
 
 
@@ -205,6 +231,8 @@ heroImage: "/assets/blog/covers/claude-vs-openclaw-guia-comparativa.svg"
 
 
 <p>No creo que exista un ganador absoluto. Todo depende de la arquitectura que se quiera montar. Para flujos de desarrollo, seguimiento remoto y scheduled tasks con baja fricción, me inclino por Claude Code. Para una estrategia más amplia de mensajería, cron autoalojado y asistente que opere desde WhatsApp o Telegram, OpenClaw ofrece una propuesta más ambiciosa.</p>
+
+<p>Si te interesa llevar la automatización con IA a tu negocio, también te puede interesar nuestra <a href="/es/blog/agente-de-ia-tu-guia-definitiva-para-la-inteligencia-autonoma" target="_blank">guía definitiva de agentes de IA</a>. ¿Querés implementar un asistente automatizado? <a href="/es/contact" target="_blank">Contáctanos</a> y lo diseñamos juntos.</p>
 
 
 

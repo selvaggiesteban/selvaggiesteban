@@ -8,9 +8,12 @@ seoDescription: "Master web image optimization: WebP, AVIF, lossless compression
 permalink: "/blog/guia-optimizar-fotos-sitios-web"
 altTexts: ["Web image format comparison chart", "Image compression tool interface", "Srcset code for responsive images", "CDN image delivery architecture"]
 ---
-*   Images are the heaviest resource on most websites; proper optimization can reduce total page weight by up to 80%.
-*   Modern formats WebP and AVIF offer far superior compression compared to JPEG and PNG at the same visual quality.
-*   Combining modern formats, compression, `srcset`, lazy loading, and an image CDN is the ultimate strategy for maximizing speed and SEO.
+<p>Before anything else, it helps to know where the biggest wins are. Optimizing photos for the web is usually the fastest way to cut load time, improve Core Web Vitals, and keep both users and search engines happy.</p>
+<ul>
+<li><p>Images are the heaviest resource on most websites; proper optimization can reduce total page weight by up to 80%.</p></li>
+<li><p>Modern formats WebP and AVIF offer far superior compression compared to JPEG and PNG at the same visual quality.</p></li>
+<li><p>Combining modern formats, compression, <code>srcset</code>, lazy loading, and an image CDN is the ultimate strategy for speed and SEO.</p></li>
+</ul>
 
 ## Why image optimization is critical
 
@@ -99,11 +102,11 @@ An image CDN (such as Cloudflare Images, Imgix, Cloudinary, or ImageKit) provide
 
 ```html
 <img
-  src="https://images.yourdomain.com/cdn-cgi/image/width=800,format=auto/photo.jpg"
+  src="https://images.yourdomain.com/cdn-cgi/image/width=800,format=auto/photo.webp"
   srcset="
-    https://images.yourdomain.com/cdn-cgi/image/width=400,format=auto/photo.jpg 400w,
-    https://images.yourdomain.com/cdn-cgi/image/width=800,format=auto/photo.jpg 800w,
-    https://images.yourdomain.com/cdn-cgi/image/width=1200,format=auto/photo.jpg 1200w
+    https://images.yourdomain.com/cdn-cgi/image/width=400,format=auto/photo.webp 400w,
+    https://images.yourdomain.com/cdn-cgi/image/width=800,format=auto/photo.webp 800w,
+    https://images.yourdomain.com/cdn-cgi/image/width=1200,format=auto/photo.webp 1200w
   "
   sizes="(max-width: 600px) 100vw, 800px"
   alt="..."
@@ -120,3 +123,9 @@ The `format=auto` parameter makes Cloudflare automatically serve AVIF if the bro
 - **SVG for icons:** SVGs are lightweight, scalable, and editable with CSS
 - **Audit with Lighthouse:** Run the Chrome DevTools performance audit and review image optimization opportunities
 - **Automate in the build:** Integrate sharp or a Vite/Webpack plugin so images are automatically compressed on deploy
+
+## Conclusion
+
+Image optimization is the highest-leverage performance work you can do on most websites: the right format, sane compression, responsive `srcset`, lazy loading, and a CDN all compound into faster loads, better Core Web Vitals, and stronger SEO.
+
+Pick one page with heavy visuals, run it through Lighthouse today, and apply at least the format and compression changes before anything else. If you want a hand auditing and optimizing the media on your site, <a href="/en/contact" target="_blank">contact us</a>. For the broader performance picture, read <a href="/en/blog/web-speed-optimization-the-ultimate-guide-to-success" target="_blank">the ultimate guide to web speed optimization</a>.

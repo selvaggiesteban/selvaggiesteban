@@ -1,11 +1,18 @@
 ---
 title: "Poisson Products: Cómo la distribución de Poisson me ayuda a cumplir deadlines al 200% de calidad"
-description: "Descubre cómo nació Poisson Products, una herramienta CLI que usa la distribución de Poisson para predecir bugs, simular carga de trabajo y ayudarte a planificar proyectos con calidad del 200%."
+description: "Poisson Products es una herramienta CLI que usa la distribución de Poisson para predecir bugs, simular carga de trabajo y planificar proyectos con calidad del 200%."
 pubDate: "2026-06-13"
 heroImage: "/assets/blog/covers/poisson-products-predecir-bugs-cumplir-deadlines.svg"
 tags: ["Python", "Poisson", "Calidad", "Deadlines", "Productividad", "Testing", "Open Source"]
 category: "Herramientas"
 ---
+
+<p>Cuando prometés calidad al 200% no alcanza con la intuición: hace falta medir. Poisson Products nació para responder con datos una pregunta concreta: ¿cuántos bugs quedan por descubrir antes del deadline?</p>
+
+<ul>
+<li><p>Poisson Products simula con estadística cuántos bugs te quedan por descubrir antes de entregar.</p></li>
+<li><p>La herramienta es open source, corre en local y soporta más de 45 tecnologías detectadas automáticamente.</p></li>
+</ul>
 
 ## De una urgencia nació una obsesión
 
@@ -13,7 +20,7 @@ Todo empezó con el famoso pánico del día antes de la entrega. Había prometid
 
 Los deadlines se cumplen, sí, pero a qué costo. Horas extras, decisiones apresuradas, features que quedan al debe. Necesitaba una forma de predecir, antes de entregar, cuántos bugs me iba a encontrar, qué tan estable era el sistema, y si el nivel de calidad realmente alcanzaba ese 200% que prometí.
 
-Así nació <strong><a href="https://github.com/selvaggiesteban/poisson_for_products" rel="noopener" target="_blank">Poisson Products</a></strong>.
+Así nació <strong><a href="https://github.com/selvaggiesteban/poisson_for_products" rel="nofollow noopener" target="_blank">Poisson Products</a></strong>.
 
 ## ¿Qué es la distribución de Poisson y qué tiene que ver con los bugs?
 
@@ -91,3 +98,7 @@ Poisson Products está en sus primeras semanas de vida. Tengo planes de:
 Pero el camino lo construye la comunidad. Cada PR, cada issue, cada estrella en GitHub me dice que esto no es solo una herramienta más, sino algo que realmente necesitamos en la industria.
 
 Así que si llegaste hasta acá, ya sabes. <strong>El 200% de calidad no se promete, se demuestra</strong>. Y Poisson Products es mi forma de demostrarlo.
+
+## Conclusión
+
+Los deadlines no se cumplen con suerte: se cumplen con método. La distribución de Poisson aplicada al desarrollo de software te da una forma objetiva de anticipar bugs, simular carga y evaluar si tu calidad real alcanza el nivel que prometiste. Poisson Products convierte esa matematica en una CLI simple que podés correr en tu propio proyecto en minutos. Si te interesa explorar más herramientas de IA aplicadas al desarrollo, te invitamos a leer nuestra <a href="/es/blog/gemini-cli" target="_blank">guía de Gemini CLI con Vertex AI</a>. ¿Querés implementar un flujo de calidad basado en datos en tu equipo? <a href="/es/contact" target="_blank">Contáctanos</a> y lo diseñamos juntos.

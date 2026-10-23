@@ -15,15 +15,32 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 <ul>
-<li>Transformá por completo la manera en que gestionás tu negocio online ahorrando cientos de horas valiosas con herramientas verdaderamente inteligentes.</li>
+<li><p>Transformá por completo la manera en que gestionás tu negocio online ahorrando cientos de horas valiosas con herramientas verdaderamente inteligentes.</p></li>
 
 
 
-<li>Descubrí cómo la integración de procesos automáticos puede elevar la experiencia de tus clientes sin sumar absolutamente más trabajo manual a tu día.</li>
+<li><p>Descubrí cómo la integración de procesos automáticos puede elevar la experiencia de tus clientes sin sumar absolutamente más trabajo manual a tu día.</p></li>
 
 
 
-<li>Llevá el rendimiento de tu página al siguiente nivel fusionando estética profesional con sistemas eficientes que trabajan por vos las 24 horas.</li>
+<li><p>Llevá el rendimiento de tu página al siguiente nivel fusionando estética profesional con sistemas eficientes que trabajan por vos las 24 horas.</p></li>
+</ul>
+
+
+
+<ul>
+<li><a href="#que-es-rpa">¿Qué es exactamente la automatización RPA en el diseño web?</a>
+<ul>
+<li><a href="#beneficios-rpa">Los beneficios reales de la automatización RPA para tu negocio</a></li>
+<li><a href="#integracion-proyectos">Cómo integro la automatización RPA en mis proyectos de diseño</a></li>
+</ul>
+</li>
+<li><a href="#ejemplos-practicos">Ejemplos prácticos de automatización RPA aplicada a tiendas</a>
+<ul>
+<li><a href="#futuro-digital">El futuro digital y la automatización RPA en el diseño</a></li>
+</ul>
+</li>
+<li><a href="#conclusion-rpa">Conclusión y consejos finales sobre automatización RPA</a></li>
 </ul>
 
 
@@ -36,7 +53,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h2>¿Qué es exactamente la automatización RPA en el diseño web?</h2>
+<h2 id="que-es-rpa">¿Qué es exactamente la automatización RPA en el diseño web?</h2>
 
 
 
@@ -48,11 +65,11 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h3>Los beneficios reales de la automatización RPA para tu negocio</h3>
+<h3 id="beneficios-rpa">Los beneficios reales de la automatización RPA para tu negocio</h3>
 
 
 
-<p>Implementar esta tecnología tiene ventajas directas, palpables y económicas que vas a notar desde el primer día de uso. En mi rol como <a target="_blank" rel="noreferrer noopener" href="">Diseñador web Esteban Selvaggi</a>, siempre le recuerdo a mis clientes que el tiempo es nuestro recurso más escaso y valioso. Con este sistema integrado en tu plataforma, ganás muchísimas horas libres.</p>
+<p>Implementar esta tecnología tiene ventajas directas, palpables y económicas que vas a notar desde el primer día de uso. En mi rol como <a target="_blank" rel="nofollow noreferrer noopener" href="https://selvaggiesteban.dev/">Diseñador web Esteban Selvaggi</a>, siempre le recuerdo a mis clientes que el tiempo es nuestro recurso más escaso y valioso. Con este sistema integrado en tu plataforma, ganás muchísimas horas libres.</p>
 
 
 
@@ -60,7 +77,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h4>Cómo integro la automatización RPA en mis proyectos de diseño</h4>
+<h4 id="integracion-proyectos">Cómo integro la automatización RPA en mis proyectos de diseño</h4>
 
 
 
@@ -72,7 +89,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h2>Ejemplos prácticos de automatización RPA aplicada a tiendas</h2>
+<h2 id="ejemplos-practicos">Ejemplos prácticos de automatización RPA aplicada a tiendas</h2>
 
 
 
@@ -84,7 +101,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h3>El futuro digital y la automatización RPA en el diseño</h3>
+<h3 id="futuro-digital">El futuro digital y la automatización RPA en el diseño</h3>
 
 
 
@@ -96,7 +113,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<h2>Conclusión y consejos finales sobre automatización RPA</h2>
+<h2 id="conclusion-rpa">Conclusión y consejos finales sobre automatización RPA</h2>
 
 
 
@@ -108,7 +125,7 @@ heroImage: "/assets/blog/covers/experto-en-automatizacion-rpa.svg"
 
 
 
-<p>Si querés dar este gran salto tecnológico hoy mismo y transformar tu página en una verdadera máquina de ventas que trabaje sola, no dudes en escribirme para asesorarte. Te invito a dar el siguiente paso en tu negocio digital; <a target="_blank" rel="noreferrer noopener" href="">contactame ahora mismo para empezar a trabajar juntos</a> y llevar tu presencia web al próximo nivel.</p>
+<p>Si querés dar este gran salto tecnológico hoy mismo y transformar tu página en una verdadera máquina de ventas que trabaje sola, no dudes en escribirme para asesorarte. Te invito a dar el siguiente paso en tu negocio digital; <a href="/es/contact" target="_blank">contactame ahora mismo para empezar a trabajar juntos</a> y llevar tu presencia web al próximo nivel.</p>
                                     
                         
                                                 

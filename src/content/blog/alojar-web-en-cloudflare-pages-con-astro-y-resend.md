@@ -8,9 +8,11 @@ seoDescription: "Descubre cómo alojar tu web gratis en Cloudflare Pages usando 
 permalink: "/blog/alojar-web-en-cloudflare-pages-con-astro-y-resend"
 altTexts: ["Arquitectura de Cloudflare Pages y Astro", "Panel de configuración de base de datos KV en Cloudflare", "Código de configuración de Astro v6", "Integración de Resend para envío de emails", "Widget de seguridad Turnstile de Cloudflare"]
 ---
-*   El hosting en Cloudflare Pages permite alojar proyectos desarrollados en Astro con una velocidad de respuesta inigualable gracias a su red de distribución global (Edge).
-*   Integrar Resend y Cloudflare Turnstile te asegura tener formularios de contacto profesionales, libres de spam y sin necesidad de pagar servidores backend tradicionales.
-*   Para evitar errores de despliegue como el código 10014, es obligatorio configurar correctamente el archivo wrangler.jsonc y declarar el ID de la base de datos KV existente.
+<ul>
+<li><p>El hosting en Cloudflare Pages permite alojar proyectos Astro con velocidad de respuesta gracias a su red global Edge.</p></li>
+<li><p>Integrar Resend y Turnstile te da formularios de contacto profesionales, libres de spam y sin backend tradicional.</p></li>
+<li><p>Para evitar el error 10014, es obligatorio configurar wrangler.jsonc con el ID de un namespace KV existente.</p></li>
+</ul>
 
 ## Por qué elegir alojar una web en Cloudflare pages con Astro
 
@@ -213,4 +215,8 @@ Antes de dar por terminado el setup, verificá que todo esté en orden:
 - [ ] Turnstile con Explicit Rendering en el frontend
 - [ ] Formulario testeado en producción (no solo en local)
 
-El despliegue de tecnologías modernas requiere precisión. Si necesitas que configure esta arquitectura de máxima velocidad para tu próximo negocio, te invito a visitar mi sección de [desarrollo de software a medida](/servicios/software-a-medida) o enviarme un mensaje hoy mismo para empezar a trabajar juntos.
+El despliegue de tecnologías modernas requiere precisión. Si necesitas que configure esta arquitectura de máxima velocidad para tu próximo negocio, te invito a visitar mi sección de <a href="/es/services/software-a-medida" target="_blank">desarrollo de software a medida</a> o enviarme un mensaje hoy mismo para empezar a trabajar juntos.
+
+## Conclusión
+
+Alojar una web en Cloudflare Pages con Astro y Resend es una combinación gratuita, veloz y lista para producción: dominio y DNS en Cloudflare, emails transaccionales con Resend, protección anti-spam con Turnstile y variables de entorno bien declaradas. Siguiendo los nueve pasos de esta guía —incluyendo el wrangler.jsonc con el KV namespace y la importación de <code>env</code> desde <code>cloudflare:workers</code>— evitás los errores más comunes de despliegue. Si querés que tu web esté en línea con esta arquitectura, <a href="/es/contact" target="_blank">Contáctanos</a> y la implementamos juntos.

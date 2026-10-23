@@ -1,6 +1,6 @@
 ---
 title: "11 Proyectos con LLMs en Producción: De DoorDash a American Express"
-description: "Descubre 11 proyectos reales con LLMs corriendo en producción en empresas como Microsoft, DoorDash y American Express. Incluye bullets ATS y repositorios GitHub para tu portafolio."
+description: "Descubre 11 proyectos con LLMs en producción en empresas como Microsoft, DoorDash y American Express. Incluye bullets ATS y repositorios GitHub para tu portafolio."
 pubDate: 2026-07-18
 heroImage: "/assets/blog/covers/llm-projects-production.svg"
 ---
@@ -8,6 +8,11 @@ heroImage: "/assets/blog/covers/llm-projects-production.svg"
 # 11 Proyectos con LLMs en Producción: De DoorDash a American Express
 
 ¿Querés que tu CV pase los filtros ATS y te meta en entrevistas reales? Estos **11 proyectos con LLMs** están corriendo en producción en empresas como Microsoft, DoorDash y American Express. Cada uno incluye los bullets exactos del CV que usan los sistemas ATS para filtrar candidatos.
+
+<ul>
+<li><p>Los 11 proyectos incluyen los bullets exactos del CV que los filtros ATS buscan en candidatos de IA.</p></li>
+<li><p>Cada proyecto usa tecnologías reales en producción: fine-tuning, RAG, agentes y automatización.</p></li>
+</ul>
 
 ## ¿Por qué estos proyectos importan?
 
@@ -135,9 +140,9 @@ Sistema de automatización de campañas de email marketing con templates HTML pe
 
 ## Conclusión
 
-Estos **11 proyectos con LLMs** demuestran experiencia práctica en las tecnologías más demandadas del mercado laboral de IA. Cada proyecto incluye métricas reales de producción y los bullets exactos que los sistemas ATS buscan en tu CV.
+Estos **11 proyectos con LLMs** demuestran experiencia práctica en las tecnologías más demandadas del mercado laboral de IA. Cada proyecto incluye métricas reales de producción y los bullets exactos que los sistemas ATS buscan en tu CV. Si querés seguir aprendiendo, explorá nuestra <a href="/es/blog/agente-de-ia-tu-guia-definitiva-para-la-inteligencia-autonoma" target="_blank">guía definitiva de agentes de IA</a>.
 
-¿Querés implementar alguno de estos proyectos en tu empresa? [Contactanos](https://selvaggiesteban.dev/contacto) para una consultoría personalizada.
+¿Querés implementar alguno de estos proyectos en tu empresa? <a href="/es/contact" target="_blank">Contáctanos</a> para una consultoría personalizada.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Guía precios mayoristas"
-description: "La idea quedaría así:"
+description: "Guía práctica para restringir la categoría Mayorista de WooCommerce con Ultimate Member: crear el rol, asignarlo al formulario y ocultar productos solo para mayoristas."
 pubDate: 2025-12-11
 heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 ---
@@ -8,6 +8,13 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
+
+<p>Tener una sección de precios mayoristas en tu tienda WooCommerce no significa tener que abrir toda la tienda al público. Con Ultimate Member podés mostrar la tienda completa a cualquiera y dejar que la categoría <code>Mayorista</code> solo la vean los usuarios con un rol especial.</p>
+
+<ul>
+<li><p>Aprendé a ocultar la categoría Mayorista de WooCommerce solo para usuarios con un rol especial de Ultimate Member.</p></li>
+<li><p>El visitante y el cliente normal ven toda la tienda; el mayorista ve además los productos exclusivos.</p></li>
+</ul>
 
 <p>La idea quedaría así:</p>
 
@@ -17,13 +24,19 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 <p>Toda la tienda visible para cualquiera (invitados + clientes WooCommerce normales)<br><strong>EXCEPTO</strong> la categoría <code>Mayorista</code>, que solo la ve el rol especial que creás con Ultimate Member.</p>
 </blockquote>
 
-
-
 <p>Te explico cómo montarlo paso a paso.</p>
 
+<ul>
+<li><a href="#1-crear-rol-mayorista">1. Crear un rol “mayorista” en Ultimate Member</a></li>
+<li><a href="#2-formulario-asigna-rol">2. Hacer que tu formulario de Ultimate Member asigne ese rol</a></li>
+<li><a href="#3-restriccion-productos-categorias">3. Activar la restricción de contenido para productos y categorías</a></li>
+<li><a href="#4-restringir-categoria-mayorista">4. Restringir solo la categoría “mayorista”</a></li>
+<li><a href="#5-que-ve-cada-usuario">5. Qué va a ver cada tipo de usuario</a></li>
+<li><a href="#6-testear-funcionamiento">6. Cosas útiles para testear que todo funcione</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
 
-
-<h2>1. Crear un rol “mayorista” en ultimate member</h2>
+<h2 id="1-crear-rol-mayorista">1. Crear un rol “mayorista” en ultimate member</h2>
 
 
 
@@ -58,12 +71,12 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 <blockquote class="is-layout-flow">
-<p>Más adelante, si querés, podés usar la extensión UM–WooCommerce para cambiar o asignar roles automáticamente cuando compran algo, pero para tu caso no es obligatorio. <a href="https://docs.ultimatemember.com/article/1590-how-to-use-user-roles?utm_source=chatgpt.com" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>Más adelante, si querés, podés usar la extensión UM–WooCommerce para cambiar o asignar roles automáticamente cuando compran algo, pero para tu caso no es obligatorio. <a href="https://docs.ultimatemember.com/article/1590-how-to-use-user-roles?utm_source=chatgpt.com" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 </blockquote>
 
 
 
-<h2>2. Hacer que tu formulario de ultimate member asigne ese rol</h2>
+<h2 id="2-formulario-asigna-rol">2. Hacer que tu formulario de ultimate member asigne ese rol</h2>
 
 
 
@@ -99,11 +112,11 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<h2>3. Activar la restricción de contenido para productos y categorías</h2>
+<h2 id="3-restriccion-productos-categorias">3. Activar la restricción de contenido para productos y categorías</h2>
 
 
 
-<p>Ultimate Member permite aplicar restricción por <strong>post type</strong> y por <strong>taxonomía (categorías, tags, etc.)</strong>.<a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>Ultimate Member permite aplicar restricción por <strong>post type</strong> y por <strong>taxonomía (categorías, tags, etc.)</strong>.<a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 
 
 
@@ -112,11 +125,11 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<li>En la sección <strong>“Enable the Content Restriction settings for post types”</strong>, marcá el post type <code>product</code>. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>En la sección <strong>“Enable the Content Restriction settings for post types”</strong>, marcá el post type <code>product</code>. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
-<li>Más abajo, en <strong>“Enable the Content Restriction settings for taxonomies”</strong>, marcá la taxonomía <code>product_cat</code> (categorías de producto). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Más abajo, en <strong>“Enable the Content Restriction settings for taxonomies”</strong>, marcá la taxonomía <code>product_cat</code> (categorías de producto). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
@@ -139,11 +152,11 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<p>aparezca un cuadro “Ultimate Member: Content Restriction” para definir quién lo puede ver. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com+1</a></p>
+<p>aparezca un cuadro “Ultimate Member: Content Restriction” para definir quién lo puede ver. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com+1</a></p>
 
 
 
-<h2>4. Restringir solo la categoría “mayorista”</h2>
+<h2 id="4-restringir-categoria-mayorista">4. Restringir solo la categoría “mayorista”</h2>
 
 
 
@@ -164,7 +177,7 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<li>Activá <strong>“Restrict access to this term and its posts?”</strong> (o texto similar). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Activá <strong>“Restrict access to this term and its posts?”</strong> (o texto similar). <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 
 
 
@@ -174,7 +187,7 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<li>Seleccioná <strong>solo</strong> el rol <code>mayorista</code>. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Seleccioná <strong>solo</strong> el rol <code>mayorista</code>. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 </ul>
 </li>
 
@@ -182,7 +195,7 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 <li>Muy recomendable: activar la opción<br><strong>“Display 404 page for users who do not have access to this term on the term’s archive page and terms’ posts single pages”</strong>.
 <ul>
-<li>Con esto, <strong>la categoría Mayorista y todos los productos que cuelgan de ella quedan ocultos de forma segura</strong>, no aparecen en listados ni se pueden ver si alguien intenta entrar directo por URL. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="noreferrer noopener">docs.ultimatemember.com</a></li>
+<li>Con esto, <strong>la categoría Mayorista y todos los productos que cuelgan de ella quedan ocultos de forma segura</strong>, no aparecen en listados ni se pueden ver si alguien intenta entrar directo por URL. <a href="https://docs.ultimatemember.com/article/1623-post-term-restriction-content-settings" target="_blank" rel="nofollow noreferrer noopener">docs.ultimatemember.com</a></li>
 </ul>
 </li>
 
@@ -193,7 +206,7 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<h2>5. Qué va a ver cada tipo de usuario</h2>
+<h2 id="5-que-ve-cada-usuario">5. Qué va a ver cada tipo de usuario</h2>
 
 
 
@@ -233,7 +246,7 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<h2>6. Cosas útiles para testear que todo funcione</h2>
+<h2 id="6-testear-funcionamiento">6. Cosas útiles para testear que todo funcione</h2>
 
 
 
@@ -271,23 +284,20 @@ heroImage: "/assets/blog/covers/guia-precios-mayoristas.svg"
 
 
 
-<p>Si querés, en un siguiente mensaje te puedo escribir un <strong>checklist corto</strong> en formato “manual técnico” tipo:</p>
+<p>Si querés llevar el control de tu catálogo un paso más allá, también te puede servir nuestra guía de <a href="/es/blog/guia-woocommerce-desde-excel" target="_blank">WooCommerce desde Excel</a> para gestionar productos de forma masiva.</p>
 
-
+<p>A continuación, un checklist corto en formato “manual técnico” que te ayuda a cerrar la implementación:</p>
 
 <ul>
 <li>Ruta exacta de cada pantalla del panel.</li>
 
-
-
 <li>Frases que deberían aparecer (para que puedas comparar).</li>
-
-
 
 <li>Cómo forzar un 404 vs mensaje de “acceso restringido” en esas páginas.</li>
 </ul>
-                                    
-                        
-                                                
-                    
-                    
+
+<h2 id="conclusion">Conclusión</h2>
+
+<p>Restringir la categoría <code>Mayorista</code> con Ultimate Member es una solución robusta para vender a precios mayoristas sin exponer ese catálogo al público general. Creaste un rol exclusivo, lo asignaste a tu formulario de registro, activaste la restricción por taxonomía y verificaste con usuarios de prueba que cada perfil ve exactamente lo que debe ver.</p>
+
+<p>Si necesitás ayuda para implementar esta u otra funcionalidad de WooCommerce en tu tienda, <a href="/es/contact" target="_blank">Contáctanos</a> y lo resolvemos juntos.</p>

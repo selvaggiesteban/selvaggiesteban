@@ -1,11 +1,18 @@
 ---
 title: "MercadoLibre and WooCommerce: How to Sync Shipments, Prices, and Stock Without Losing Sales"
-description: "Complete guide to selling on MercadoLibre and your WooCommerce website with identical prices, integrated logistics, and no friction between channels. The solution to the shipping problem every multi-channel seller faces."
+description: "Learn how to sync MercadoLibre and WooCommerce: identical prices, unified stock, and a practical logistics architecture for multi-channel sellers."
 pubDate: "2026-06-14"
 heroImage: "/assets/blog/covers/mercadolibre-and-woocommerce-how-to-sync-shipments-prices-and-stock-without-losing-sales.svg"
 tags: ["WooCommerce", "MercadoLibre", "E-Commerce", "Logistics", "Shipping", "Integration", "Argentina"]
 category: "E-Commerce"
 ---
+
+<p>Selling on both MercadoLibre and your own store should multiply revenue, not create chaos. This guide explains how to keep prices, stock, and logistics aligned across both channels without losing sales.</p>
+<ul>
+<li><p>Sync catalog, stock, and prices with MercadoLibre as the single source of truth.</p></li>
+<li><p>Understand why the ML API cannot import WooCommerce orders, and what to do instead.</p></li>
+<li><p>Pair external logistics with your store so both channels offer labels and tracking.</p></li>
+</ul>
 
 ## The dilemma of every seller who uses MercadoLibre and their own website
 
@@ -159,3 +166,5 @@ The problem of inconsistent pricing and unequal logistics between MercadoLibre a
 But it can be solved with the right architecture: **sync catalog and stock (ML as source of truth) + integrate external logistics for the website**. This way you maintain identical prices, manage everything from a single place, and each channel has the logistics it needs.
 
 If you're facing this problem, the first thing to understand is that you don't have to choose between ML and your website. You can have both, working in synergy, with the right tool for each part of the process.
+
+If you want a hand designing this architecture for your own store, <a href="/en/contact" target="_blank">contact us</a>. For the carrier side of the equation, read <a href="/en/blog/oca-vs-correo-argentino-complete-guide" target="_blank">our OCA vs Correo Argentino comparison</a> to pick the right shipping partner for your website orders.

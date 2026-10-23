@@ -1,6 +1,6 @@
 ---
 title: "Crear clave SSH de VPS en Hostinger"
-description: "Cuando trabajo con un VPS en Hostinger, una de las primeras cosas que hago es configurar un acceso seguro por SSH. No me gusta depender de contraseñas"
+description: "Cuando trabajo con un VPS en Hostinger, lo primero que hago es configurar acceso SSH seguro: clave, usuario sudo, permisos y firewall paso a paso."
 pubDate: 2026-04-18
 heroImage: "/assets/blog/covers/crear-clave-ssh-vps-en-hostinger.svg"
 ---
@@ -11,14 +11,25 @@ heroImage: "/assets/blog/covers/crear-clave-ssh-vps-en-hostinger.svg"
 
 
 <p>Cuando trabajo con un&nbsp;<strong>VPS en Hostinger</strong>, una de las primeras cosas que hago es configurar un acceso seguro por SSH. No me gusta depender de contraseñas para entrar al servidor ni dejar todo atado al usuario root, porque eso aumenta el riesgo y complica la administración diaria. Por eso, siempre prefiero crear una&nbsp;<strong>clave SSH</strong>, asociarla a un usuario con permisos sudo y dejar una base sólida desde el inicio.</p>
-
-
-
+<ul>
+<li><p>Seguridad real: reemplazá las contraseñas por autenticación criptográfica y dejá atrás el acceso root directo.</p></li>
+<li><p>Un flujo paso a paso probado: actualizar, generar la clave, copiarla, ajustar permisos, probar y activar firewall.</p></li>
+<li><p>Bases profesionales: usuario dedicado con sudo, permisos correctos y servidor listo para despliegues.</p></li>
+</ul>
 <p>En esta guía explico exactamente cómo hago yo este proceso paso a paso: desde actualizar el servidor hasta generar la clave, copiar la clave pública al VPS, ajustar permisos, probar la conexión y reforzar la seguridad con firewall. Si estás empezando con un&nbsp;<strong>VPS en Hostinger</strong>, este flujo te va a ayudar a dejar tu servidor mucho mejor preparado para trabajar.</p>
-
-
-
-<h2>Por qué creo una clave ssh en mi VPS en hostinger</h2>
+<ul>
+<li><a href="#por-que-clave-ssh">Por qué creo una clave SSH en mi VPS en Hostinger</a></li>
+<li><a href="#antes-de-generar">Lo primero que hago antes de generar la clave SSH</a></li>
+<li><a href="#usuario-nuevo">Después creo un usuario nuevo y dejo de usar root</a></li>
+<li><a href="#generar-clave">Cómo genero mi clave SSH para el VPS en Hostinger</a></li>
+<li><a href="#copiar-clave-publica">Cómo copio la clave pública al servidor</a></li>
+<li><a href="#permisos">Los permisos que siempre configuro después</a></li>
+<li><a href="#probar-conexion">Cómo pruebo la conexión SSH al VPS</a></li>
+<li><a href="#firewall">Después activo el firewall</a></li>
+<li><a href="#reinicio-final">El reinicio final</a></li>
+<li><a href="#conclusion-ssh">Conclusión</a></li>
+</ul>
+<h2 id="por-que-clave-ssh">Por qué creo una clave ssh en mi VPS en hostinger</h2>
 
 
 
@@ -30,7 +41,7 @@ heroImage: "/assets/blog/covers/crear-clave-ssh-vps-en-hostinger.svg"
 
 
 
-<h2>Lo primero que hago antes de generar la clave ssh</h2>
+<h2 id="antes-de-generar">Lo primero que hago antes de generar la clave ssh</h2>
 
 
 
@@ -46,7 +57,7 @@ heroImage: "/assets/blog/covers/crear-clave-ssh-vps-en-hostinger.svg"
 
 
 
-<h2>Después creo un usuario nuevo y dejo de usar root como cuenta principal</h2>
+<h2 id="usuario-nuevo">Después creo un usuario nuevo y dejo de usar root como cuenta principal</h2>
 
 
 
@@ -65,7 +76,7 @@ su - nombredeusuario</code></pre>
 
 
 
-<h2>Cómo genero mi clave ssh para el VPS en hostinger</h2>
+<h2 id="generar-clave">Cómo genero mi clave ssh para el VPS en hostinger</h2>
 
 
 
@@ -95,7 +106,7 @@ su - nombredeusuario</code></pre>
 
 
 
-<h2>Cómo copio la clave pública al servidor</h2>
+<h2 id="copiar-clave-publica">Cómo copio la clave pública al servidor</h2>
 
 
 
@@ -112,7 +123,7 @@ nano ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>Los permisos que siempre configuro después</h2>
+<h2 id="permisos">Los permisos que siempre configuro después</h2>
 
 
 
@@ -129,7 +140,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>Cómo pruebo la conexión ssh al VPS</h2>
+<h2 id="probar-conexion">Cómo pruebo la conexión ssh al VPS</h2>
 
 
 
@@ -153,7 +164,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>Después activo el firewall</h2>
+<h2 id="firewall">Después activo el firewall</h2>
 
 
 
@@ -174,7 +185,7 @@ sudo ufw status</code></pre>
 
 
 
-<h2>El reinicio final</h2>
+<h2 id="reinicio-final">El reinicio final</h2>
 
 
 
@@ -195,6 +206,9 @@ sudo ufw status</code></pre>
 
 
 <p>Si estás configurando tu servidor por primera vez, este paso te va a ahorrar problemas y te va a permitir trabajar con una base mucho más sólida desde el primer día.</p>
+<h2 id="conclusion-ssh">Conclusión</h2>
+<p>Crear una clave SSH para tu VPS en Hostinger es una de las tareas más rentables que podés hacer al preparar un servidor nuevo: mejora la seguridad, elimina la dependencia de contraseñas y te obliga a trabajar con un flujo más profesional desde el primer día. Con el usuario dedicado, los permisos correctos y el firewall activo, tu base queda lista para cualquier despliegue.</p>
+<p>Si necesitás ayuda para configurar o administrar tu servidor, en <a href="/es/services" target="_blank">nuestros servicios</a> acompañamos cada paso; también podés leer nuestra <a href="/es/blog/hostinger-premium-web-hosting" target="_blank">review de Hostinger Premium</a> o <a href="/es/contact" target="_blank">Contáctanos</a> y dejamos tu VPS blindado.</p>
                                     
                         
                                                 

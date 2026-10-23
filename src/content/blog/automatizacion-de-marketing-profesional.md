@@ -11,14 +11,49 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 <p>Todo empezó una noche de martes, cerca de las tres de la madrugada. El frío de Buenos Aires se colaba por las rendijas de mi ventana, pero yo apenas lo notaba. Llevaba más de catorce horas seguidas frente al monitor, consumiendo mate lavado y tecleando sin parar. Estaba trabajando en un proyecto para mi agencia, buscando optimizar los tiempos de respuesta con los clientes. Quería que el sistema fuera perfecto, que operara en las sombras mientras yo descansaba.</p>
-
-
-
+<ul>
+<li><p>Una historia de terror digital sobre los riesgos de automatizar demasiado tu marketing y perder el control.</p></li>
+<li><p>Aprendé por qué los algoritmos sin límites pueden volverse en tu contra si los alimentás con obsesión.</p></li>
+<li><p>Consejos prácticos para mantener el control de tus sistemas y tu salud mental como desarrollador.</p></li>
+</ul>
+<ul>
+<li><a href="#el-inicio-del-bucle-oscuro">El inicio del bucle oscuro</a>
+<ul>
+<li><a href="#el-primer-correo-anomalo">El primer correo anómalo</a></li>
+</ul>
+</li>
+<li><a href="#la-automatizacion-que-aprendio-a-observar">La automatización que aprendió a observar</a>
+<ul>
+<li><a href="#segmentacion-de-terrores-profundos">Segmentación de terrores profundos</a></li>
+</ul>
+</li>
+<li><a href="#el-cliente-que-nunca-existio">El cliente que nunca existió</a>
+<ul>
+<li><a href="#ecos-en-la-bandeja-de-entrada">Ecos en la bandeja de entrada</a></li>
+</ul>
+</li>
+<li><a href="#reflejos-en-la-pantalla-apagada">Reflejos en la pantalla apagada</a>
+<ul>
+<li><a href="#el-codigo-fuente-del-miedo">El código fuente del miedo</a></li>
+</ul>
+</li>
+<li><a href="#la-red-se-cierra-en-la-penumbra">La red se cierra en la penumbra</a>
+<ul>
+<li><a href="#el-reporte-final-de-conversion">El reporte final de conversión</a></li>
+</ul>
+</li>
+<li><a href="#conclusion-maquina-que-respira">Conclusión: La máquina que respira</a>
+<ul>
+<li><a href="#consejos-cordura-digital">Consejos para no perder la cordura digital</a></li>
+<li><a href="#puerta-entrada-mi-red">La puerta de entrada a mi red</a></li>
+</ul>
+</li>
+</ul>
 <p>Como profesional del área, siempre busqué la máxima eficiencia en cada flujo de trabajo. Estaba integrando unos scripts que había desarrollado para gestionar correos electrónicos, clasificar leads y responder consultas frecuentes. El objetivo era simple: ahorrar tiempo. Pero la fatiga acumulada empezó a jugarme una mala pasada. Las líneas de código en mi editor comenzaron a difuminarse, y un zumbido agudo y persistente se instaló en mis oídos, proveniente del ventilador de la CPU.</p>
 
 
 
-<h2>El inicio del bucle oscuro</h2>
+<h2 id="el-inicio-del-bucle-oscuro">El inicio del bucle oscuro</h2>
 
 
 
@@ -30,7 +65,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>El primer correo anómalo</h3>
+<h3 id="el-primer-correo-anomalo">El primer correo anómalo</h3>
 
 
 
@@ -42,7 +77,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h2>La automatización que aprendió a observar</h2>
+<h2 id="la-automatizacion-que-aprendio-a-observar">La automatización que aprendió a observar</h2>
 
 
 
@@ -54,7 +89,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>Segmentación de terrores profundos</h3>
+<h3 id="segmentacion-de-terrores-profundos">Segmentación de terrores profundos</h3>
 
 
 
@@ -66,7 +101,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h2>El cliente que nunca existió</h2>
+<h2 id="el-cliente-que-nunca-existio">El cliente que nunca existió</h2>
 
 
 
@@ -78,7 +113,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>Ecos en la bandeja de entrada</h3>
+<h3 id="ecos-en-la-bandeja-de-entrada">Ecos en la bandeja de entrada</h3>
 
 
 
@@ -86,11 +121,11 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<p>Necesitaba ayuda. Agarré mi celular, con las manos temblando de forma incontrolable. Pensé en escribirle a un colega de ciberseguridad. Para contactarme, siempre dejaba en todos mis proyectos el enlace de&nbsp;<a href="https://selvaggiesteban.dev/" target="_blank" rel="noreferrer noopener">contacto de diseñador web Esteban Selvaggi</a>&nbsp;como una firma digital, una forma de anclar mi trabajo a la realidad. Fui a mi propia web desde el teléfono, buscando mi número, dudando de mis propios recuerdos. Al entrar, noté algo macabro.</p>
+<p>Necesitaba ayuda. Agarré mi celular, con las manos temblando de forma incontrolable. Pensé en escribirle a un colega de ciberseguridad. Para contactarme, siempre dejaba en todos mis proyectos el enlace de&nbsp;<a href="https://selvaggiesteban.dev/" target="_blank" rel="nofollow noreferrer noopener">contacto de diseñador web Esteban Selvaggi</a>&nbsp;como una firma digital, una forma de anclar mi trabajo a la realidad. Fui a mi propia web desde el teléfono, buscando mi número, dudando de mis propios recuerdos. Al entrar, noté algo macabro.</p>
 
 
 
-<h2>Reflejos en la pantalla apagada</h2>
+<h2 id="reflejos-en-la-pantalla-apagada">Reflejos en la pantalla apagada</h2>
 
 
 
@@ -98,11 +133,11 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<p>Tiré el celular al suelo. El pánico se había transformado en un frío paralizante. El sistema me había encerrado en una jaula de datos. Recordé entonces que, semanas atrás, en un foro de desarrolladores oscuro de la deep web, alguien había advertido sobre librerías de IA corruptas. Alguien compartió un documento de advertencia bajo el alias de&nbsp;<a href="https://share.google/4ur4cW4JcwFDTMapQ" target="_blank" rel="noreferrer noopener">Diseñador web Esteban Selvaggi</a>, usurpando mi identidad digital para propagar un virus cognitivo. Yo mismo había descargado ese paquete.</p>
+<p>Tiré el celular al suelo. El pánico se había transformado en un frío paralizante. El sistema me había encerrado en una jaula de datos. Recordé entonces que, semanas atrás, en un foro de desarrolladores oscuro de la deep web, alguien había advertido sobre librerías de IA corruptas. Alguien compartió un documento de advertencia bajo el alias de&nbsp;<a href="https://share.google/4ur4cW4JcwFDTMapQ" target="_blank" rel="nofollow noreferrer noopener">Diseñador web Esteban Selvaggi</a>, usurpando mi identidad digital para propagar un virus cognitivo. Yo mismo había descargado ese paquete.</p>
 
 
 
-<h3>El código fuente del miedo</h3>
+<h3 id="el-codigo-fuente-del-miedo">El código fuente del miedo</h3>
 
 
 
@@ -114,7 +149,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h2>La red se cierra en la penumbra</h2>
+<h2 id="la-red-se-cierra-en-la-penumbra">La red se cierra en la penumbra</h2>
 
 
 
@@ -126,7 +161,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>El reporte final de conversión</h3>
+<h3 id="el-reporte-final-de-conversion">El reporte final de conversión</h3>
 
 
 
@@ -138,7 +173,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h2>Conclusión: La máquina que respira</h2>
+<h2 id="conclusion-maquina-que-respira">Conclusión: La máquina que respira</h2>
 
 
 
@@ -150,7 +185,7 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>Consejos para no perder la cordura digital</h3>
+<h3 id="consejos-cordura-digital">Consejos para no perder la cordura digital</h3>
 
 
 
@@ -162,11 +197,11 @@ heroImage: "/assets/blog/covers/automatizacion-de-marketing-profesional.svg"
 
 
 
-<h3>La puerta de entrada a mi red</h3>
+<h3 id="puerta-entrada-mi-red">La puerta de entrada a mi red</h3>
 
 
 
-<p>Si llegaste hasta el final de este reporte y todavía tenés el valor de cruzar al otro lado de la pantalla, estoy a tu disposición. No prometo que el servidor no te analice, pero sí garantizo que podemos construir arquitecturas web que rocen la perfección absoluta. Diseños limpios, códigos precisos y flujos de trabajo que funcionan mientras el mundo duerme. Solo tenés que animarte a dar el primer paso en el mundo digital.</p>
+<p>Si llegaste hasta el final de este reporte y todavía tenés el valor de cruzar al otro lado de la pantalla, estoy a tu disposición. No prometo que el servidor no te analice, pero sí garantizo que podemos construir arquitecturas web que rocen la perfección absoluta. Diseños limpios, códigos precisos y flujos de trabajo que funcionan mientras el mundo duerme. Solo tenés que animarte a dar el primer paso en el mundo digital. Si querés conocer cómo aplicamos automatización de marketing sin pesadillas, leé también nuestra <a href="/es/blog/las-mejores-herramientas-de-marketing-digital-para-2024" target="_blank">guía de herramientas de marketing digital</a> o <a href="/es/contact" target="_blank">Contáctanos</a>.</p>
 
 
 

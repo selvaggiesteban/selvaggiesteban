@@ -1,6 +1,6 @@
 ---
 title: "Máster en Posicionamiento Web con IA"
-description: "Descubre qué hacer para decirle a la IA cómo entrar a los datos de Google de tu sitio web y sacar los temas donde ya aparecés pero muy abajo, y escriba SOLO sobre ellos, los que la gente busca de verdad, con tu experiencia dentro."
+description: "Guía práctica para usar la IA con tus datos de Search Console: escribí solo los temas que Google ya te confirma que busca la gente y subí de página 2 a la 1."
 pubDate: 2026-07-19
 heroImage: "/assets/blog/covers/maestro-posicionamiento-web-ia.svg"
 ---
@@ -12,31 +12,82 @@ heroImage: "/assets/blog/covers/maestro-posicionamiento-web-ia.svg"
  	<li>El prompt completo, (el largo, el que valida la demanda con tus datos reales de Google antes de escribir una sola palabra) cómo conectar los datos a tu IA, la arquitectura de temas para no canibalizar keywords, el estándar exacto que hace que Google premie tu contenido en vez de cazarlo, y el kit de venta a empresas para conseguir el primer cliente).</li>
 </ul>
 
-<h2>1. El sistema, sin humo: el volumen es el riesgo, no la jugada</h2>
+<ul>
+<li><p>Escribí solo los temas que Google ya te confirma que la gente busca en tus datos reales.</p></li>
+<li><p>Filtrá por posición 11 a 30 con muchas impresiones y poco clic: ahí está el golpe barato.</p></li>
+<li><p>Armá clusters pilar-satélite y un estándar E-E-A-T para que tu contenido no sea cazado.</p></li>
+</ul>
 
-La tentación es pensar que el truco es el volumen: soltar cien mil artículos con bots y a facturar. Es exactamente al revés. El volumen es lo que Google penaliza. Lo que de verdad separa una <a href="https://selvaggiesteban.dev/es/services/posicionamiento-seo/">estrategia SEO</a> que aguanta del spam es una sola disciplina, y es la que casi nadie copia: no escribir nada que Google no confirme que la gente busca.
+<ul>
+<li><a href="#1-el-sistema-sin-humo-el-volumen-es-el-riesgo-no-la-jugada">1. El sistema, sin humo: el volumen es el riesgo, no la jugada</a>
+</li>
+<li><a href="#2-como-conectar-los-datos-de-google-con-la-ia">2. Cómo conectar los datos de Google con la IA</a>
+<ul>
+<li><a href="#camino-a-cero-setup-el-csv">Camino A: cero setup, el CSV.</a></li>
+<li><a href="#camino-b-queda-montado-para-siempre-un-conector">Camino B: queda montado para siempre, un conector.</a></li>
+<li><a href="#que-significan-esos-datos">Qué significan esos datos</a></li>
+</ul>
+</li>
+<li><a href="#3-el-prompt-para-hacer-el-trabajo-de-un-consultor-seo">3. El prompt para hacer el trabajo de un consultor SEO</a>
+<ul>
+<li><a href="#el-freno-del-final">El freno del final</a></li>
+<li><a href="#segundo-prompt-escribir-un-articulo-para-capturar-el-featured-snippet-de-google">Segundo prompt: escribir un artículo para capturar el featured snippet de Google</a></li>
+</ul>
+</li>
+<li><a href="#4-la-arquitectura-de-temas-sin-canibalizarte">4. La arquitectura de temas (sin canibalizarte)</a>
+<ul>
+<li><a href="#la-trampa-a-evitar-la-canibalizacion">La trampa a evitar: la canibalización</a></li>
+</ul>
+</li>
+<li><a href="#5-el-estandar-que-google-premia-para-no-ser-cazado">5. El estándar que Google premia (para no ser cazado)</a>
+<ul>
+<li><a href="#e-e-a-t-el-escudo">E-E-A-T: el escudo</a></li>
+</ul>
+</li>
+<li><a href="#6-nicho-precio-y-primer-cliente-el-kit-de-venta-a-empresas">6. Nicho, precio y primer cliente: el kit de venta a empresas</a>
+<ul>
+<li><a href="#que-cobrar-rangos-reales-2025-2026">Qué cobrar (rangos reales 2025-2026)</a></li>
+<li><a href="#como-conseguis-el-primer-cliente-en-orden">Cómo conseguís el primer cliente (en orden)</a></li>
+</ul>
+</li>
+<li><a href="#7-la-frontera-honesta-lo-que-no-te-sale-gratis-ni-rapido">7. La frontera honesta (lo que no te sale gratis ni rápido)</a>
+<ul>
+<li><a href="#el-volumen-es-el-riesgo-no-la-jugada">El volumen es el riesgo, no la jugada</a></li>
+<li><a href="#el-seo-tarda">El SEO tarda</a></li>
+<li><a href="#la-demanda-validada-tiene-techo">La demanda validada tiene techo</a></li>
+<li><a href="#el-primer-cliente-cuesta">El primer cliente cuesta</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusión</a>
+</li>
+</ul>
 
-Eso es el sistema de <a href="https://selvaggiesteban.dev/es/blog/automatizacion-de-marketing-profesional/">automatización con IA</a>. Un filtro que va delante de la máquina de escribir y solo deja pasar los temas que cumplen dos cosas: que hay demanda real (Google ya te enseña para esa búsqueda) y que tú tienes algo real que decir (experiencia, un caso, un dato tuyo). Todo lo que no pasa ese filtro, no se escribe. Suena obvio dicho así, pero el 99% de la gente que "hace <a href="https://selvaggiesteban.dev/es/services/posicionamiento-seo/">SEO con IA</a>" hace lo contrario: le pide a la IA cien temas de la nada y publica los cien. Esos cien son ruido, y el ruido es lo que penaliza Google.
+
+<h2 id="1-el-sistema-sin-humo-el-volumen-es-el-riesgo-no-la-jugada">1. El sistema, sin humo: el volumen es el riesgo, no la jugada</h2>
+
+La tentación es pensar que el truco es el volumen: soltar cien mil artículos con bots y a facturar. Es exactamente al revés. El volumen es lo que Google penaliza. Lo que de verdad separa una <a href="/es/services/posicionamiento-seo/" target="_blank">estrategia SEO</a> que aguanta del spam es una sola disciplina, y es la que casi nadie copia: no escribir nada que Google no confirme que la gente busca.
+
+Eso es el sistema de <a href="/es/blog/automatizacion-de-marketing-profesional/" target="_blank">automatización con IA</a>. Un filtro que va delante de la máquina de escribir y solo deja pasar los temas que cumplen dos cosas: que hay demanda real (Google ya te enseña para esa búsqueda) y que tú tienes algo real que decir (experiencia, un caso, un dato tuyo). Todo lo que no pasa ese filtro, no se escribe. Suena obvio dicho así, pero el 99% de la gente que "hace <a href="/es/services/posicionamiento-seo/" target="_blank">SEO con IA</a>" hace lo contrario: le pide a la IA cien temas de la nada y publica los cien. Esos cien son ruido, y el ruido es lo que penaliza Google.
 
 El sitio web ya te está diciendo, en los datos de Google, dónde estás a un empujón de la primera página. Son las búsquedas donde ya apareces pero en la página 2 o 3 (el puesto 11 al 30, más o menos), con muchas impresiones y pocos clics. Eso quiere decir que Google ya te considera relevante para ese tema y te enseña, pero no lo suficiente arriba para que te visiten. Un artículo bueno sobre justo ese tema es el que más barato te sube, porque no partes de cero: partes de la página 2.
 
-<h2>2. Cómo conectar los datos de Google con la IA</h2>
+<h2 id="2-como-conectar-los-datos-de-google-con-la-ia">2. Cómo conectar los datos de Google con la IA</h2>
 
 Para que la automatización funcione, tu IA necesita ver los datos de tu web en Google. Esos datos viven en una herramienta gratuita de Google que se llama Search Console (si tienes web y no la tienes dada de alta, hazlo primero, es gratis y es de Google).
 
-<h3>Camino A: cero setup, el CSV.</h3>
+<h3 id="camino-a-cero-setup-el-csv">Camino A: cero setup, el CSV.</h3>
 
 En Search Console entras en el informe de Rendimiento, pestaña Consultas, pones el rango de los últimos 6 meses, activas las cuatro columnas (Clics, Impresiones, CTR y Posición media) y le das a Exportar. Te baja un documento. Se lo adjuntas a tu IA y listo. Suficiente para empezar hoy sin tocar nada más.
 
-<h3>Camino B: queda montado para siempre, un conector.</h3>
+<h3 id="camino-b-queda-montado-para-siempre-un-conector">Camino B: queda montado para siempre, un conector.</h3>
 
 Hay un conector (lo que en el mundo de la IA se llama un MCP) que enchufa Search Console directo a Claude Code, de modo que tu IA le pregunta a Google sola cuando lo necesita. El más usado es un proyecto abierto de la comunidad llamado mcp-gsc: le da a tu IA acceso a tus consultas, clics, impresiones, CTR y posición. Se instala con uvx mcp-search-console y se autentica con tu cuenta de Google (por login de navegador o por una clave de servicio). Es un proyecto de un tercero, no de Google ni de Anthropic, así que le estás dando acceso a tus datos con tus credenciales. Revisa la versión antes de usarlo en serio, y si no quieres tocar nada de esto, tira del CSV del camino A, que hace el mismo trabajo.
 
-<h3>Qué significan esos datos</h3>
+<h3 id="que-significan-esos-datos">Qué significan esos datos</h3>
 
 La consulta es lo que la gente escribió; las impresiones, cuántas veces te enseñó Google; los clics, cuántas veces te visitaron; el CTR es clics partido por impresiones (si es bajo, te ven pero no te eligen); y la posición media, tu puesto medio. La distancia de golpeo vive en posición 11 a 30 con impresiones altas.
 
-<h3>3. El prompt para hacer el trabajo de un consultor SEO</h3>
+<h2 id="3-el-prompt-para-hacer-el-trabajo-de-un-consultor-seo">3. El prompt para hacer el trabajo de un consultor SEO</h2>
 
 Importante: Requiere haber conectado antes tus datos de Google (bloque 2). Pegalo tal cual y cambiá lo que va entre {llaves}:
 
@@ -59,29 +110,29 @@ PASO 5 → Entrégame una tabla con: búsqueda | posición actual | impresiones/
 
 PASO 6 → Agrupa esas búsquedas en temas (clusters) y dime, para cada uno, cuál será la página gorda (el pilar) y cuáles los artículos satélite. Avísame si dos búsquedas son tan parecidas que dos artículos se pelearían por lo mismo: en ese caso fundelos en uno. No escribas ningún artículo todavía. Primero quiero ver la tabla y los temas y decidir yo.</pre>
 
-<h3>El freno del final</h3>
+<h3 id="el-freno-del-final">El freno del final</h3>
 
 Fijate en el freno del final: "no escribas nada todavía". El <strong>sistema de automatización con IA</strong> no es una máquina de escribir, es una máquina de decidir qué merece escribirse. Vos mirás la tabla, tachás lo que no encaja con tu negocio, y solo entonces le das luz verde a los diez primeros. Ese "decido yo" es la mitad del sistema.
 
-<h3>Segundo prompt: escribir un artículo para capturar el featured snippet de Google</h3>
+<h3 id="segundo-prompt-escribir-un-articulo-para-capturar-el-featured-snippet-de-google">Segundo prompt: escribir un artículo para capturar el featured snippet de Google</h3>
 
 Cuando ya tengas los temas aprobados, el segundo prompt es para escribir uno, y ahí entra el estándar del bloque 5.
 
 <pre>Redacción de artículo optimizado para SEO de Google en primera persona del singular, en Español de {%}, de categoría de {%} para el blog institucional de "{%}" con extensión mínima de "{%}" palabras y con la palabra clave objetivo en el/los subencabezado/s como H2, H3, H4, etc. ordenados con párrafos de hasta 100 palabras cada uno incluyendo de manera natural y atractiva la palabra clave principal "{%}", adicionalmente enlazado externo con dirección URL {%} y anchor text "{%}", enlace interno a otra página del sitio web, o entrada, forzando el llamado a la acción con dirección URL {%}, y cierre con conclusión del tema, consejos e invitación a hacer contacto con "{%}". Adicionalmente eres encargado de crear título SEO, descripción SEO, mínimo 5 textos alternativos de imágenes, y configuración de enlace permanente. Nota: El cuerpo debe incluir al principio una lista desordenada con 2 (dos) o 3 (tres) párrafos destacados de hasta 160 caracteres cada uno.</pre>
 
-<h3>4. La arquitectura de temas (sin canibalizarte)</h3>
+<h2 id="4-la-arquitectura-de-temas-sin-canibalizarte">4. La arquitectura de temas (sin canibalizarte)</h2>
 
 No sueltes artículos huérfanos. Se organizan en pilar y satélites: una página gorda por tema central, y entre seis y doce artículos alrededor que responden subpreguntas, todos enlazados entre sí y hacia el pilar. Eso le dice a Google que dominás el tema, no que tenés un artículo suelto.
 
-<h3>La trampa a evitar: la canibalización</h3>
+<h3 id="la-trampa-a-evitar-la-canibalizacion">La trampa a evitar: la canibalización</h3>
 
 La canibalización es cuando dos páginas tuyas se pelean por la misma búsqueda y se hacen sombra la una a la otra (Google no sabe cuál mostrar y acaba mostrando peor las dos). La regla práctica: si no sabés decir en una frase en qué se diferencia un satélite del de al lado, es que se van a pelear; fundelos en uno. La señal de que ya te está pasando: la página tuya que sale para una búsqueda va cambiando de una semana a otra entre dos URLs.
 
-<h3>5. El estándar que Google premia (para no ser cazado)</h3>
+<h2 id="5-el-estandar-que-google-premia-para-no-ser-cazado">5. El estándar que Google premia (para no ser cazado)</h2>
 
 Acá está la letra pequeña que hace que todo lo demás no te explote. Google tiene una política pública contra lo que llama "abuso de contenido a escala". La definición oficial es: generar muchas páginas cuyo fin principal es manipular el ranking sin ayudar al usuario. Y aclara algo importante: da igual el método. La política aplica "sea con IA, con esfuerzo humano o una mezcla". O sea, la IA no es el delito. El delito es el resultado: montones de páginas sin valor para trepar en Google. De hecho Google pone como ejemplo explícito de infracción "usar IA generativa para producir muchas páginas sin añadir valor".
 
-<h3>E-E-A-T: el escudo</h3>
+<h3 id="e-e-a-t-el-escudo">E-E-A-T: el escudo</h3>
 
 El escudo tiene nombre y son unas siglas que verás por todas partes: E-E-A-T. La primera E es de Experiencia (Google la añadió en 2022). Traducido a lo que vos hacés al escribir con IA:
 
@@ -93,15 +144,15 @@ El escudo tiene nombre y son unas siglas que verás por todas partes: E-E-A-T. L
 
 Para que no te lo vendan como un botón mágico: E-E-A-T no es un interruptor de ranking directo. Es el marco con el que los revisores humanos de Google juzgan la calidad. Hacer las cosas así baja el riesgo de que te cacen y sube tus opciones; no te garantiza el puesto 1. Google además aprieta esto en cada actualización grande de su algoritmo (las llamadas core updates), y las páginas de relleno son las primeras que caen.
 
-<h2>6. Nicho, precio y primer cliente: el kit de venta a empresas</h2>
+<h2 id="6-nicho-precio-y-primer-cliente-el-kit-de-venta-a-empresas">6. Nicho, precio y primer cliente: el kit de venta a empresas</h2>
 
 Este mismo sistema es vendible como servicio, y ahí está la segunda salida de todo esto. No le vendés a una empresa "cien mil artículos". Le vendés esto: escribir solo lo que Google ya confirma que buscan sus clientes, con la experiencia del negocio dentro, para subir de la página 2 a la 1 en los temas que ya casi tienen ganados.
 
-<h3>Qué cobrar (rangos reales 2025-2026)</h3>
+<h3 id="que-cobrar-rangos-reales-2025-2026">Qué cobrar (rangos reales 2025-2026)</h3>
 
-El <a href="https://selvaggiesteban.dev/es/services/posicionamiento-seo/">SEO para pyme</a> se mueve en unos pocos miles al mes. La agencia media cobra alrededor de 3.200 dólares mensuales, y la mayoría cobra por encima de los 1.000 (los datos varían por país: en EE. UU. y Canadá casi el 80% de las agencias cobra más de 1.000 al mes; a nivel mundial hay más agencias por debajo). Se cobra por cuota mensual recurrente, no por horas: cobrás por el resultado que se acumula. Algunas agencias cobran además una cuota de arranque de una vez, pero no es la norma (la mayoría no la cobra); si la ponés, va bien para filtrar a quien va en serio.
+El <a href="/es/services/posicionamiento-seo/" target="_blank">SEO para pyme</a> se mueve en unos pocos miles al mes. La agencia media cobra alrededor de 3.200 dólares mensuales, y la mayoría cobra por encima de los 1.000 (los datos varían por país: en EE. UU. y Canadá casi el 80% de las agencias cobra más de 1.000 al mes; a nivel mundial hay más agencias por debajo). Se cobra por cuota mensual recurrente, no por horas: cobrás por el resultado que se acumula. Algunas agencias cobran además una cuota de arranque de una vez, pero no es la norma (la mayoría no la cobra); si la ponés, va bien para filtrar a quien va en serio.
 
-<h3>Cómo conseguís el primer cliente (en orden)</h3>
+<h3 id="como-conseguis-el-primer-cliente-en-orden">Cómo conseguís el primer cliente (en orden)</h3>
 
 Elegí un nicho estrecho. Clínicas dentales de tu ciudad, fisios, despachos, un tipo concreto de e-commerce. "Hago SEO para cualquiera" no vende; "monto el SEO de clínicas dentales" sí, porque el de al lado te recomienda.
 
@@ -111,25 +162,29 @@ Un caso. Hacé el primero gratis o a mitad de precio a cambio de un testimonio c
 
 La auditoría gratis bien hecha convierte bien según la gente del oficio, porque cambia la conversación de "te vendo SEO" a "mirá este problema tuyo que te cuesta dinero". Y esa conversación la gana el especialista, no el generalista.
 
-<h2>7. La frontera honesta (lo que no te sale gratis ni rápido)</h2>
+<h2 id="7-la-frontera-honesta-lo-que-no-te-sale-gratis-ni-rapido">7. La frontera honesta (lo que no te sale gratis ni rápido)</h2>
 
-<h3>El volumen es el riesgo, no la jugada</h3>
+<h3 id="el-volumen-es-el-riesgo-no-la-jugada">El volumen es el riesgo, no la jugada</h3>
 
 Cientos de miles de artículos generados son exactamente el perfil que vigila la política de abuso de contenido a escala. Que a ellos les funcione hoy no significa que tu web sobreviva si copiás el volumen sin la experiencia real dentro. Una actualización del algoritmo te puede borrar de un día para otro.
 
-<h3>El SEO tarda</h3>
+<h3 id="el-seo-tarda">El SEO tarda</h3>
 
 No es dinero mañana. Indexar lleva semanas, ver tráfico lleva meses, y el crecimiento de verdad, medio año. El sistema no acelera eso; lo que hace es que no tires ese tiempo escribiendo de lo que nadie busca.
 
-<h3>La demanda validada tiene techo</h3>
+<h3 id="la-demanda-validada-tiene-techo">La demanda validada tiene techo</h3>
 
 Solo podés escribir de lo que la gente YA busca y donde YA aparecés. Es una máquina de exprimir lo que tenés, no de inventar demanda nueva. Para crear una categoría desde cero, esto no sirve.
 
-<h3>El primer cliente cuesta</h3>
+<h3 id="el-primer-cliente-cuesta">El primer cliente cuesta</h3>
 
 La auditoría gratis convierte bien, pero primero tenés que conseguir a quién auditar. El nicho estrecho es lo que hace que el boca a boca empiece a rodar.
 
 Todo lo de arriba lo montás y lo vendés vos. No necesitás nada más.
+
+<h2 id="conclusion">Conclusión</h2>
+<p>El sistema no funciona por magia: conectá tus datos de Search Console, aplicá el filtro de demanda validada, respetá la arquitectura pilar-satélite y escribí con experiencia real dentro. Eso es lo que separa un contenido que sube y se sostiene de cien artículos de ruido que Google borra en la siguiente actualización.</p>
+<p>Si querés poner este sistema a trabajar en tu proyecto, <a href="/es/contact" target="_blank">Contáctanos</a> y lo armamos con tus datos.</p>
 
 <h4>Google define el "abuso de contenido a escala"</h4>
 

@@ -14,9 +14,26 @@ heroImage: "/assets/blog/covers/creating-an-ssh-key-for-a-vps-on-hostinger.svg"
 
 <p>In this guide, I explain exactly how I do this process step by step: from updating the server to generating the key, copying the public key to the VPS, adjusting permissions, testing the connection, and strengthening security with a firewall. If you're getting started with a <strong>VPS on Hostinger</strong>, this workflow will help you get your server much better prepared for work.</p>
 
+<ul>
+<li><p>Set up SSH key authentication on your VPS so you never have to rely on passwords for remote access again.</p></li>
+<li><p>Follow a step-by-step workflow that covers user creation, key generation, permissions, testing, and firewall hardening.</p></li>
+<li><p>Start every new server with a clean, updated, and secure base ready for real projects and deployments.</p></li>
+</ul>
 
+<ul>
+<li><a href="#why-create-an-ssh-key">Why I Create an SSH Key on My VPS on Hostinger</a></li>
+<li><a href="#before-generating-the-key">The First Thing I Do Before Generating the SSH Key</a></li>
+<li><a href="#create-a-new-user">Then I Create a New User and Stop Using Root as the Main Account</a></li>
+<li><a href="#generate-the-ssh-key">How I Generate My SSH Key for the VPS on Hostinger</a></li>
+<li><a href="#copy-the-public-key">How I Copy the Public Key to the Server</a></li>
+<li><a href="#configure-permissions">The Permissions I Always Configure Afterward</a></li>
+<li><a href="#test-the-connection">How I Test the SSH Connection to the VPS</a></li>
+<li><a href="#activate-the-firewall">Then I Activate the Firewall</a></li>
+<li><a href="#final-reboot">The Final Reboot</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
 
-<h2>Why I create an SSH key on my VPS on Hostinger</h2>
+<h2 id="why-create-an-ssh-key">Why I create an SSH key on my VPS on Hostinger</h2>
 
 
 
@@ -28,7 +45,7 @@ heroImage: "/assets/blog/covers/creating-an-ssh-key-for-a-vps-on-hostinger.svg"
 
 
 
-<h2>The first thing I do before generating the SSH key</h2>
+<h2 id="before-generating-the-key">The first thing I do before generating the SSH key</h2>
 
 
 
@@ -44,7 +61,7 @@ heroImage: "/assets/blog/covers/creating-an-ssh-key-for-a-vps-on-hostinger.svg"
 
 
 
-<h2>Then I create a new user and stop using root as the main account</h2>
+<h2 id="create-a-new-user">Then I create a new user and stop using root as the main account</h2>
 
 
 
@@ -63,7 +80,7 @@ su - nombredeusuario</code></pre>
 
 
 
-<h2>How I generate my SSH key for the VPS on Hostinger</h2>
+<h2 id="generate-the-ssh-key">How I generate my SSH key for the VPS on Hostinger</h2>
 
 
 
@@ -93,7 +110,7 @@ su - nombredeusuario</code></pre>
 
 
 
-<h2>How I copy the public key to the server</h2>
+<h2 id="copy-the-public-key">How I copy the public key to the server</h2>
 
 
 
@@ -110,7 +127,7 @@ nano ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>The permissions I always configure afterward</h2>
+<h2 id="configure-permissions">The permissions I always configure afterward</h2>
 
 
 
@@ -127,7 +144,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>How I test the SSH connection to the VPS</h2>
+<h2 id="test-the-connection">How I test the SSH connection to the VPS</h2>
 
 
 
@@ -151,7 +168,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
 
 
 
-<h2>Then I activate the firewall</h2>
+<h2 id="activate-the-firewall">Then I activate the firewall</h2>
 
 
 
@@ -172,7 +189,7 @@ sudo ufw status</code></pre>
 
 
 
-<h2>The final reboot</h2>
+<h2 id="final-reboot">The final reboot</h2>
 
 
 
@@ -188,8 +205,10 @@ sudo ufw status</code></pre>
 
 
 
+<h2 id="conclusion">Conclusion</h2>
+
 <p>Creating an SSH key for a <strong>VPS on Hostinger</strong> is one of those tasks that's worth doing right from the start. In my case, it's part of the base procedure every time I prepare a new server. Not only because it improves security, but also because it forces me to establish a more professional workflow: separate user, more robust access, correct permissions, and an active firewall.</p>
 
+<p>If you're setting up your server for the first time, this step will save you problems and allow you to work with a much more solid foundation from day one. And if you want to go further with your server setup, my guide on <a href="/en/blog/premium-web-hosting-from-hostinger" target="_blank">premium web hosting from Hostinger</a> covers the hosting side of the equation.</p>
 
-
-<p>If you're setting up your server for the first time, this step will save you problems and allow you to work with a much more solid foundation from day one.</p>
+<p>Need a hand preparing your server or deploying your project? <a href="/en/contact" target="_blank">Contact me</a> and I'll help you get everything up and running securely.</p>

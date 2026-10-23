@@ -20,6 +20,7 @@ const Tag = href ? 'a' : 'button';
 
 <Tag 
   href={href} 
+  target={href?.startsWith('/') ? '_blank' : undefined}
   type={!href ? type : undefined}
   class:list={[variants[variant], className]} 
   {...rest}

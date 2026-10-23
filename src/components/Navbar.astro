@@ -31,12 +31,12 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
 
 <header class="sticky top-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-hairline h-[56px] flex items-center">
   <Container class="flex justify-between items-center w-full">
-    <a href={homeHref} class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
+    <a href={homeHref} target="_blank" class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
     
     <nav class="hidden md:flex gap-lg items-center text-sm font-medium">
       {navLinks.map(link => (
         <div class="relative group h-[56px] flex items-center">
-          <a href={link.href} class="hover:text-primary transition-colors flex items-center gap-1 uppercase">
+          <a href={link.href} target="_blank" class="hover:text-primary transition-colors flex items-center gap-1 uppercase">
             {link.label}
             {link.dropdown && (
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
@@ -46,7 +46,7 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
           {link.dropdown && (
             <div class="absolute top-[56px] left-1/2 -translate-x-1/2 w-48 bg-white border border-hairline shadow-xl rounded-none py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2">
               {link.dropdown.map(subItem => (
-                <a href={subItem.href} class="block px-4 py-2 hover:bg-surface-soft hover:text-primary transition-colors whitespace-nowrap">
+                <a href={subItem.href} target="_blank" class="block px-4 py-2 hover:bg-surface-soft hover:text-primary transition-colors whitespace-nowrap">
                   {subItem.label}
                 </a>
               ))}
@@ -75,13 +75,13 @@ const homeHref = locale === 'es' ? '/es/' : '/en/';
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
         </button>
       ) : (
-        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2 uppercase">{link.label}</a>
+        <a href={link.href} target="_blank" class="text-2xl font-bold hover:text-primary transition-colors block py-2 uppercase">{link.label}</a>
       )}
       {link.dropdown && (
         <div data-dropdown-content={i} class="flex flex-col gap-2 overflow-hidden transition-all duration-300 max-h-0">
           <div class="bg-surface-soft py-4 flex flex-col gap-2">
             {link.dropdown.map(subItem => (
-              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1 uppercase">{subItem.label}</a>
+              <a href={subItem.href} target="_blank" class="text-lg text-ink/60 hover:text-primary transition-colors py-1 uppercase">{subItem.label}</a>
             ))}
           </div>
         </div>

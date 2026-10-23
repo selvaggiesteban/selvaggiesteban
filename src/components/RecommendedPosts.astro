@@ -42,7 +42,7 @@ const extendedPosts = [...recommendedPosts, ...recommendedPosts];
         const slug = post.id.replace(/^(en|es)\//, '');
         const postUrl = locale === 'en' ? `/en/blog/${slug}` : `/es/blog/${slug}`;
         return (
-          <a href={postUrl} class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <a href={postUrl} target="_blank" class="carousel-card w-[300px] md:w-[400px] mx-3 flex-shrink-0 flex flex-col bg-[#f9f9f9] rounded-[9px] border border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
             <div class="aspect-video overflow-hidden bg-surface-soft relative">
               <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest rounded-[2px]">
                 {t(lang, 'recommended.badge')}

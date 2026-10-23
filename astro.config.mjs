@@ -5,10 +5,29 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';      
 import cloudflare from '@astrojs/cloudflare';
 
+// Markdown internal links [text](/path) render as <a> without target — force new tab site-wide
+const rehypeInternalBlank = () => (tree) => {
+  const walk = (node) => {
+    if (
+      node.type === 'element' &&
+      node.tagName === 'a' &&
+      typeof node.properties?.href === 'string' &&
+      node.properties.href.startsWith('/')
+    ) {
+      node.properties.target = '_blank';
+    }
+    if (node.children) node.children.forEach(walk);
+  };
+  walk(tree);
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://selvaggiesteban.dev",       
   output: "server",
+  markdown: {
+    rehypePlugins: [rehypeInternalBlank],
+  },
   vite: {
     plugins: [tailwindcss()]
   },

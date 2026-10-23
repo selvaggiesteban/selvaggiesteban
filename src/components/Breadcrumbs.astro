@@ -23,7 +23,7 @@ const schema = {
     {path.map((item, index) => (
       <li class="flex items-center gap-2">
         {item.href ? (
-          <a href={item.href} class="hover:text-primary transition-colors">{item.label}</a>
+          <a href={item.href} target="_blank" class="hover:text-primary transition-colors">{item.label}</a>
         ) : (
           <span class="text-ink/80">{item.label}</span>
         )}

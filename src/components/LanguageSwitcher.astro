@@ -9,6 +9,7 @@ const targetUrl = getLocalizedUrl(currentUrl, oppositeLocale);
 
 <a
   href={targetUrl}
+  target="_blank"
   class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-widest border border-hairline rounded-full hover:bg-ink hover:text-white transition-colors text-ink"
   aria-label={oppositeLocale === 'en' ? 'Switch to English' : 'Cambiar a Español'}
 >

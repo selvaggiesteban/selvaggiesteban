@@ -1,2 +1,0 @@
-Set-Location "C:\Users\Esteban Selvaggi\.local\share\opencode\worktree\55a4ad332f8ee36b1d920be8458b62fdde6ebd72\happy-forest"
-& "C:\Users\Esteban Selvaggi\.local\share\opencode\worktree\55a4ad332f8ee36b1d920be8458b62fdde6ebd72\happy-forest\node_modules\.bin\vite.cmd" build --config repo/vite.config.js

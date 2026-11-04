@@ -1,0 +1,152 @@
+---
+import Container from './Container.astro';
+import Button from './Button.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getLocaleFromUrl, t } from '../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale as 'es' | 'en';
+
+const navLinks = [
+  { href: locale === 'es' ? '/es/' : '/en/', label: t(lang, 'nav.inicio') },
+  { href: locale === 'es' ? '/es/about' : '/en/about', label: t(lang, 'nav.sobreMi') },
+  { 
+    label: t(lang, 'nav.servicios'), 
+    href: locale === 'es' ? '/es/services' : '/en/services',
+    dropdown: [
+      { href: locale === 'es' ? '/es/services/software-a-medida' : '/en/services/custom-software', label: t(lang, 'services.softwareAMedida') },
+      { href: locale === 'es' ? '/es/services/diseno-web-responsive' : '/en/services/responsive-web-design', label: t(lang, 'services.disenoWeb') },
+      { href: locale === 'es' ? '/es/services/posicionamiento-seo' : '/en/services/seo-positioning', label: t(lang, 'services.seo') },
+      { href: locale === 'es' ? '/es/services/posicionamiento-sem' : '/en/services/sem-positioning', label: t(lang, 'services.sem') },
+      { href: locale === 'es' ? '/es/services/e-mail-marketing' : '/en/services/e-mail-marketing', label: t(lang, 'services.emailMarketing') }
+    ]
+  },
+  { href: locale === 'es' ? '/es/blog' : '/en/blog', label: t(lang, 'nav.blog') },
+  { href: locale === 'es' ? '/es/contact' : '/en/contact', label: t(lang, 'nav.contacto') },
+];
+
+const contactHref = locale === 'es' ? '/es/contact' : '/en/contact';
+const homeHref = locale === 'es' ? '/es/' : '/en/';
+---
+
+<header class="sticky top-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-hairline h-[56px] flex items-center">
+  <Container class="flex justify-between items-center w-full">
+    <a href={homeHref} class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">selvaggiesteban<span class="text-primary/50">.dev</span></a>
+    
+    <nav class="hidden md:flex gap-lg items-center text-sm font-medium">
+      {navLinks.map(link => (
+        <div class="relative group h-[56px] flex items-center">
+          <a href={link.href} class="hover:text-primary transition-colors flex items-center gap-1">
+            {link.label}
+            {link.dropdown && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+            )}
+          </a>
+          
+          {link.dropdown && (
+            <div class="absolute top-[56px] left-1/2 -translate-x-1/2 w-48 bg-white border border-hairline shadow-xl rounded-none py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2">
+              {link.dropdown.map(subItem => (
+                <a href={subItem.href} class="block px-4 py-2 hover:bg-surface-soft hover:text-primary transition-colors whitespace-nowrap">
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+      <LanguageSwitcher />
+      <Button href={contactHref} variant="secondary" class="!py-1.5 !text-sm ml-2">{t(lang, 'nav.empezar')}</Button>
+    </nav>
+
+    <button id="menu-toggle" class="md:hidden p-2 z-50 relative" aria-label={t(lang, 'nav.menu')} aria-expanded="false">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </Container>
+</header>
+
+<!-- Mobile Menu Overlay — OUTSIDE header -->
+<div id="mobile-menu" class="fixed inset-0 top-[56px] bg-canvas z-40 flex flex-col items-center justify-start gap-6 translate-x-full transition-transform duration-300 md:hidden overflow-y-auto pt-10 pb-10 px-6 text-center">
+  {navLinks.map((link, i) => (
+    <div class="w-full">
+      {link.dropdown ? (
+        <button data-dropdown-toggle={i} class="text-2xl font-bold hover:text-primary transition-colors flex items-center justify-center gap-2 w-full py-2 cursor-pointer">
+          {link.label}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      ) : (
+        <a href={link.href} class="text-2xl font-bold hover:text-primary transition-colors block py-2">{link.label}</a>
+      )}
+      {link.dropdown && (
+        <div data-dropdown-content={i} class="flex flex-col gap-2 overflow-hidden transition-all duration-300 max-h-0">
+          <div class="bg-surface-soft py-4 flex flex-col gap-2">
+            {link.dropdown.map(subItem => (
+              <a href={subItem.href} class="text-lg text-ink/60 hover:text-primary transition-colors py-1">{subItem.label}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  ))}
+  <div class="mt-2">
+    <LanguageSwitcher />
+  </div>
+  <Button href={contactHref} variant="primary" class="mt-4 w-full max-w-[280px]">{t(lang, 'nav.empezarAhora')}</Button>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let isMenuOpen = false;
+
+  function closeMenu() {
+    isMenuOpen = false;
+    mobileMenu?.classList.add('translate-x-full');
+    menuIcon?.classList.remove('hidden');
+    closeIcon?.classList.add('hidden');
+    document.body.style.overflow = '';
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  menuToggle?.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      mobileMenu?.classList.remove('translate-x-full');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      menuToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      closeMenu();
+    }
+  });
+
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  const dropdownToggles = mobileMenu?.querySelectorAll('[data-dropdown-toggle]');
+  dropdownToggles?.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const index = toggle.getAttribute('data-dropdown-toggle');
+      const content = mobileMenu?.querySelector(`[data-dropdown-content="${index}"]`);
+      const svg = toggle.querySelector('svg');
+      if (content) {
+        const isOpen = content.classList.contains('max-h-[500px]');
+        if (isOpen) {
+          content.classList.remove('max-h-[500px]');
+          content.classList.add('max-h-0');
+          svg?.classList.remove('rotate-180');
+        } else {
+          content.classList.remove('max-h-0');
+          content.classList.add('max-h-[500px]');
+          svg?.classList.add('rotate-180');
+        }
+      }
+    });
+  });
+</script>

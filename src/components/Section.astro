@@ -1,0 +1,34 @@
+---
+import Container from './Container.astro';
+
+interface Props {
+  variant?: 'white' | 'lime' | 'lilac' | 'cream' | 'mint' | 'pink' | 'coral' | 'navy';
+  class?: string;
+  fullWidth?: boolean;
+}
+
+const { variant = 'white', class: className, fullWidth = false } = Astro.props;
+
+const variants = {
+  white: 'bg-canvas text-ink',
+  lime: 'bg-block-lime text-ink',
+  lilac: 'bg-block-lilac text-ink',
+  cream: 'bg-block-cream text-ink',
+  mint: 'bg-block-mint text-ink',
+  pink: 'bg-block-pink text-ink',
+  coral: 'bg-block-coral text-ink',
+  navy: 'bg-block-navy text-inverse-ink',
+};
+---
+
+<section class:list={['py-section', variants[variant], className]}>
+  {fullWidth ? (
+    <slot />
+  ) : (
+    <Container>
+      <div class:list={[variant !== 'white' ? 'section-block' : '']}>
+        <slot />
+      </div>
+    </Container>
+  )}
+</section>

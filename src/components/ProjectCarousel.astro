@@ -1,0 +1,119 @@
+---
+const carouselItems = [
+  { href: "https://centraldeturbos.com/", src: "/assets/carousel/centraldeturbos.webp" },
+  { href: "https://alquiriasolutions.com/", src: "/assets/carousel/alquiriasolutions.webp" },
+  { href: "https://acuatika25.com.ar/", src: "/assets/carousel/acuatika.webp" },
+  { href: "https://ntkic.com/", src: "/assets/carousel/ntkic.webp" },
+  { href: "https://depaoli.com.ar/", src: "/assets/carousel/depaoli.webp" },
+  { href: "https://consulting-21.com/", src: "/assets/carousel/consulting-21.webp" },
+  { href: "https://saute.es/", src: "/assets/carousel/saute.webp" },
+  { href: "https://matiasgarcetesuarez.com.ar/", src: "/assets/carousel/matiasgarcetesuarez.webp" },
+  { href: "https://talaiotaudio.com/", src: "/assets/carousel/talaiotaudio.webp" },
+  { href: "https://alphatelservices.com/", src: "/assets/carousel/alphatelservices.webp" },
+  { href: "https://draandreamamani.com/", src: "/assets/carousel/draandreamamani.webp" },
+  { href: "https://cvela2017.com/", src: "/assets/carousel/cvela2017.webp" },
+  { href: "https://piscinasluciano.com.ar/", src: "/assets/carousel/piscinasluciano.webp" },
+  { href: "https://petruscigars.com/", src: "/assets/carousel/petruscigars.webp" },
+  { href: "https://yourdream.ae/", src: "/assets/carousel/yourdream.webp" },
+  { href: "https://watervan.com.ar/", src: "/assets/carousel/watervan.webp" },
+  { href: "https://pescaolidvalladolid.com/", src: "/assets/carousel/pescaolidvalladolid.webp" },
+  { href: "https://rocadeguiapsicologia.es/", src: "/assets/carousel/rocadeguiapsicologia.webp" },
+  { href: "https://semikongarden.com.ar/", src: "/assets/carousel/semikongarden.webp" },
+  { href: "https://semikon.com.ar/", src: "/assets/carousel/semikon.webp" },
+  { href: "https://seararefrigeracion.com.ar/", src: "/assets/carousel/seararefrigeracion.webp" },
+];
+
+// Duplicamos 3 veces para asegurar un loop infinito sin huecos en pantallas anchas
+const extendedItems = [...carouselItems, ...carouselItems, ...carouselItems];
+---
+
+<div class="relative overflow-hidden w-full py-xl group">
+  <div id="project-track" class="flex gap-lg overflow-x-auto scrollbar-hide px-lg md:px-xxl cursor-grab active:cursor-grabbing select-none">
+    {extendedItems.map((item) => (
+      <a 
+        href={item.href} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="flex-shrink-0 w-[350px] aspect-video overflow-hidden transition-all duration-500 hover:scale-[1.02]"
+      >
+        <img 
+          src={item.src} 
+          alt="Proyecto de diseño web" 
+          class="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          loading="lazy"
+        />
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  const track = document.getElementById('project-track');
+
+  if (track) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let animationId;
+    let isHovering = false;
+
+    // Automatic infinite scroll
+    const autoScroll = () => {
+      if (!isDown && !isHovering) {
+        track.scrollLeft += 1;
+        
+        // Reset scroll when reaching the duplicated threshold to create infinite loop
+        // The first set of items width is: (350 + 32(gap)) * 21 = 8022px roughly.
+        // We can just check if we've scrolled past 1/3 of the total scroll width
+        if (track.scrollLeft >= track.scrollWidth / 3) {
+          track.scrollLeft = 0;
+        }
+      }
+      animationId = requestAnimationFrame(autoScroll);
+    };
+
+    // Start auto-scroll
+    animationId = requestAnimationFrame(autoScroll);
+
+    // Pause on hover
+    track.addEventListener('mouseenter', () => isHovering = true);
+    track.addEventListener('mouseleave', () => {
+      isHovering = false;
+      isDown = false;
+    });
+
+    // Touch/Mouse Drag to scroll
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('active:cursor-grabbing');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2;
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    // Support touch devices
+    track.addEventListener('touchstart', () => isDown = true, { passive: true });
+    track.addEventListener('touchend', () => isDown = false);
+  }
+</script>

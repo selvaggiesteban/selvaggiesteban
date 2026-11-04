@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import Button from '../../components/Button.astro';
+import { getLocaleFromUrl } from '../../i18n/utils';
+
+const locale = getLocaleFromUrl(Astro.url);
+const title = 'Suite de Ofimática Todo en Uno | Selvaggi Esteban';
+const description = 'Suite de ofimática completa con herramientas de productividad: OCR de PDF, extraer texto, plantillas, backup automática, PDF a Word, imagen a PDF. Descarga gratuita.';
+const siteUrl = 'https://selvaggiesteban.dev';
+const currentUrl = `${siteUrl}/es/suite-de-ofimatica`;
+const imageUrl = `${siteUrl}/images/suite-de-ofimatica.webp`;
+
+const tools = [
+  {
+    title: 'OCR de PDF',
+    description: 'Extrae texto de documentos escaneados e imágenes con precisión profesional.',
+    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+  },
+  {
+    title: 'Extraer Texto',
+    description: 'Obtén el contenido de cualquier documento de forma rápida y precisa.',
+    icon: 'M4 6h16M4 12h16m-7 6h7'
+  },
+  {
+    title: 'Plantillas',
+    description: 'Accede a plantillas profesionales para documentos, presentaciones y más.',
+    icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z'
+  },
+  {
+    title: 'Backup Automática',
+    description: 'Protege tus archivos con copias de seguridad automáticas en la nube.',
+    icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
+  },
+  {
+    title: 'PDF a Word',
+    description: 'Convierte tus documentos PDF a editables de Word manteniendo el formato.',
+    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+  },
+  {
+    title: 'Imagen a PDF',
+    description: 'Transforma tus imágenes en documentos PDF de alta calidad al instante.',
+    icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
+  }
+];
+
+const benefits = [
+  {
+    title: 'Todo en Uno',
+    description: 'Una única aplicación con todas las herramientas de productividad que necesitas.'
+  },
+  {
+    title: 'Rápido y Eficiente',
+    description: 'Procesamiento en tiempo real con resultados instantáneos.'
+  },
+  {
+    title: 'Seguro y Privado',
+    description: 'Tus documentos se procesan localmente, nunca salen de tu dispositivo.'
+  },
+  {
+    title: 'Gratis',
+    description: 'Sin costos ocultos, sin suscripciones. Usa todas las herramientas sin límites.'
+  }
+];
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Suite de Ofimática Selvaggi",
+  "description": description,
+  "url": currentUrl,
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Esteban Selvaggi",
+    "url": siteUrl
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": `${siteUrl}/es`
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Suite de Ofimática",
+      "item": currentUrl
+    }
+  ]
+};
+---
+
+<BaseLayout {title} {description} image={imageUrl}>
+  <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <Section variant="white" class="pt-24 pb-16 reveal">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div class="flex-1 text-center lg:text-left">
+        <h1 class="font-bold text-[48px] md:text-[64px] leading-tight mb-6">
+          Suite de Ofimática<br>
+          <span class="text-primary/60">Todo en Uno</span>
+        </h1>
+        <p class="text-xl text-ink/70 mb-8 max-w-lg mx-auto lg:mx-0">
+          Potente conjunto de herramientas de productividad para optimizar tu trabajo diario. OCR, conversión de documentos, plantillas y más.
+        </p>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-md">
+          <Button href="#descargar">Descargar AI Agent</Button>
+          <Button href="#herramientas" variant="secondary">Ver herramientas</Button>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="relative">
+          <img
+            src="/images/suite-de-ofimatica.webp"
+            alt="Suite de ofimática - Herramientas de productividad"
+            class="w-full max-w-md rounded-2xl shadow-2xl"
+            loading="eager"
+            width="600"
+            height="400"
+          />
+          <div class="absolute -bottom-4 -right-4 bg-primary text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
+            100% Gratis
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section variant="lime" class="reveal" id="herramientas">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-bold text-[36px] md:text-[48px] mb-4">Herramientas Incluidas</h2>
+        <p class="text-xl text-ink/70 max-w-2xl mx-auto">
+          Suite de ofimática todo en uno con un potente conjunto de herramientas para todas tus necesidades de productividad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tools.map(tool => (
+          <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tool.icon} />
+              </svg>
+            </div>
+            <h3 class="font-bold text-xl mb-2">{tool.title}</h3>
+            <p class="text-ink/70">{tool.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Section>
+
+  <Section variant="white" class="reveal">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-bold text-[36px] md:text-[48px] mb-4">¿Por Qué Elegir Nuestra Suite?</h2>
+        <p class="text-xl text-ink/70 max-w-2xl mx-auto">
+          Diseñada para profesionales que buscan eficiencia y calidad en cada tarea.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {benefits.map(benefit => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-xl mb-2">{benefit.title}</h3>
+            <p class="text-ink/70">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Section>
+
+  <Section variant="navy" class="reveal" id="descargar">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-bold text-[36px] md:text-[48px] text-white mb-6">
+        Descarga Gratuita
+      </h2>
+      <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+        Obtén acceso completo a todas las herramientas de nuestra suite de ofimática sin costo alguno. Compatible con Windows, macOS y Linux.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="https://github.com/selvaggiesteban/suite-ofimatica/releases" class="text-lg px-8 py-4">
+          Descargar AI Agent
+        </Button>
+        <Button href="#herramientas" variant="secondary" class="text-lg px-8 py-4">
+          Ver Demo
+        </Button>
+      </div>
+      <p class="text-white/60 mt-6 text-sm">
+        Versión 1.0.0 • Última actualización: Agosto 2026 • Licencia MIT
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
